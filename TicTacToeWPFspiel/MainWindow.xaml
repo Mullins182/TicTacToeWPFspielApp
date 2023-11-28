@@ -1,0 +1,14 @@
+﻿<Window x:Class="TicTacToeWPFspiel.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TicTacToeWPFspiel"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="800" Width="800" Cursor="Arrow" Background="Olive">
+    <Grid Cursor="Hand">
+        <Label Height="60" Width="500" Margin="0,5,0,0" VerticalAlignment="Top" HorizontalAlignment="center" HorizontalContentAlignment="center" VerticalContentAlignment="center" FontFamily="chiller" FontSize="60" Foreground="DarkOrange" FontWeight="Bold" Content="TicTacToe"/>
+        <Image x:Name="TicTacToeRaster" Height="300" Width="300" Margin="0,80,0,0" VerticalAlignment="center" HorizontalAlignment="Center" Cursor="Arrow" Source="/e797539a1376987930021d2cf4ef74dd5e2ea131.png"/>
+
+    </Grid>
+</Window>
