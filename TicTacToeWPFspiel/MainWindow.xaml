@@ -48,32 +48,135 @@
             </Button.Background>
         </Button>
 
-        <Image x:Name="XA1" Grid.Column="2" HorizontalAlignment="center" Height="100" Grid.Row="4" VerticalAlignment="center" Width="100" Source="/X.png" Visibility="Collapsed"/>
-        <Image x:Name="OA1" Grid.Column="2" HorizontalAlignment="center" Height="100" Grid.Row="4" VerticalAlignment="center" Width="100" Source="/O.png" Visibility="Collapsed"/>
+        <Button x:Name="BA2" Grid.Column="3" HorizontalAlignment="center" Height="100" Grid.Row="4" VerticalAlignment="center" Width="100">
+            <Button.Background>
+                <ImageBrush Stretch="None" ImageSource="/Muster.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="BXA2" Grid.Column="3" HorizontalAlignment="center" Height="100" Grid.Row="4" VerticalAlignment="center" Width="100" Visibility="Hidden">
+            <Button.Background>
+                <ImageBrush ImageSource="/X.png" Stretch="None" TileMode="None" Opacity="0.85"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="BOA2" Grid.Column="3" HorizontalAlignment="center" Height="100" Grid.Row="4" VerticalAlignment="center" Width="100" Visibility="Hidden">
+            <Button.Background>
+                <ImageBrush ImageSource="/O.png" Stretch="None" TileMode="None" Opacity="0.85"/>
+            </Button.Background>
+        </Button>
+        
+        <Button x:Name="BA3" Grid.Column="4" HorizontalAlignment="center" Height="100" Grid.Row="4" VerticalAlignment="center" Width="100">
+            <Button.Background>
+                <ImageBrush Stretch="None" ImageSource="/Muster.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="BXA3" Grid.Column="4" HorizontalAlignment="center" Height="100" Grid.Row="4" VerticalAlignment="center" Width="100" Visibility="Hidden">
+            <Button.Background>
+                <ImageBrush ImageSource="/X.png" Stretch="None" TileMode="None" Opacity="0.85"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="BOA3" Grid.Column="4" HorizontalAlignment="center" Height="100" Grid.Row="4" VerticalAlignment="center" Width="100" Visibility="Hidden">
+            <Button.Background>
+                <ImageBrush ImageSource="/O.png" Stretch="None" TileMode="None" Opacity="0.85"/>
+            </Button.Background>
+        </Button>
 
-        <Image x:Name="XA2" Grid.Column="3" HorizontalAlignment="center" Height="100" Grid.Row="4" VerticalAlignment="center" Width="100" Source="/X.png" Visibility="Collapsed"/>
-        <Image x:Name="OA2" Grid.Column="3" HorizontalAlignment="center" Height="100" Grid.Row="4" VerticalAlignment="center" Width="100" Source="/O.png" Visibility="Collapsed"/>
+        <Button x:Name="BB1" Grid.Column="2" HorizontalAlignment="center" Height="100" Grid.Row="5" VerticalAlignment="center" Width="100">
+            <Button.Background>
+                <ImageBrush Stretch="None" ImageSource="/Muster.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="BXB1" Grid.Column="2" HorizontalAlignment="center" Height="100" Grid.Row="5" VerticalAlignment="center" Width="100" Visibility="Hidden">
+            <Button.Background>
+                <ImageBrush ImageSource="/X.png" Stretch="None" TileMode="None" Opacity="0.85"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="BOB1" Grid.Column="2" HorizontalAlignment="center" Height="100" Grid.Row="5" VerticalAlignment="center" Width="100" Visibility="Hidden">
+            <Button.Background>
+                <ImageBrush ImageSource="/O.png" Stretch="None" TileMode="None" Opacity="0.85"/>
+            </Button.Background>
+        </Button>
 
-        <Image x:Name="XA3" Grid.Column="4" HorizontalAlignment="center" Height="100" Grid.Row="4" VerticalAlignment="center" Width="100" Source="/X.png" Visibility="Collapsed"/>
-        <Image x:Name="OA3" Grid.Column="4" HorizontalAlignment="center" Height="100" Grid.Row="4" VerticalAlignment="center" Width="100" Source="/O.png" Visibility="Collapsed"/>
+        <Button x:Name="BB2" Grid.Column="3" HorizontalAlignment="center" Height="100" Grid.Row="5" VerticalAlignment="center" Width="100">
+            <Button.Background>
+                <ImageBrush Stretch="None" ImageSource="/Muster.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="BXB2" Grid.Column="3" HorizontalAlignment="center" Height="100" Grid.Row="5" VerticalAlignment="center" Width="100" Visibility="Hidden">
+            <Button.Background>
+                <ImageBrush ImageSource="/X.png" Stretch="None" TileMode="None" Opacity="0.85"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="BOB2" Grid.Column="3" HorizontalAlignment="center" Height="100" Grid.Row="5" VerticalAlignment="center" Width="100" Visibility="Hidden">
+            <Button.Background>
+                <ImageBrush ImageSource="/O.png" Stretch="None" TileMode="None" Opacity="0.85"/>
+            </Button.Background>
+        </Button>
 
-        <Image x:Name="XB1" Grid.Column="2" HorizontalAlignment="center" Height="100" Grid.Row="5" VerticalAlignment="center" Width="100" Source="/X.png" Visibility="Collapsed"/>
-        <Image x:Name="OB1" Grid.Column="2" HorizontalAlignment="center" Height="100" Grid.Row="5" VerticalAlignment="center" Width="100" Source="/O.png" Visibility="Collapsed"/>
+        <Button x:Name="BB3" Grid.Column="4" HorizontalAlignment="center" Height="100" Grid.Row="5" VerticalAlignment="center" Width="100">
+            <Button.Background>
+                <ImageBrush Stretch="None" ImageSource="/Muster.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="BXB3" Grid.Column="4" HorizontalAlignment="center" Height="100" Grid.Row="5" VerticalAlignment="center" Width="100" Visibility="Hidden">
+            <Button.Background>
+                <ImageBrush ImageSource="/X.png" Stretch="None" TileMode="None" Opacity="0.85"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="BOB3" Grid.Column="4" HorizontalAlignment="center" Height="100" Grid.Row="5" VerticalAlignment="center" Width="100" Visibility="Hidden">
+            <Button.Background>
+                <ImageBrush ImageSource="/O.png" Stretch="None" TileMode="None" Opacity="0.85"/>
+            </Button.Background>
+        </Button>
 
-        <Image x:Name="XB2" Grid.Column="3" HorizontalAlignment="center" Height="100" Grid.Row="5" VerticalAlignment="center" Width="100" Source="/X.png" Visibility="Collapsed"/>
-        <Image x:Name="OB2" Grid.Column="3" HorizontalAlignment="center" Height="100" Grid.Row="5" VerticalAlignment="center" Width="100" Source="/O.png" Visibility="Collapsed"/>
 
-        <Image x:Name="XB3" Grid.Column="4" HorizontalAlignment="center" Height="100" Grid.Row="5" VerticalAlignment="center" Width="100" Source="/X.png" Visibility="Collapsed"/>
-        <Image x:Name="OB3" Grid.Column="4" HorizontalAlignment="center" Height="100" Grid.Row="5" VerticalAlignment="center" Width="100" Source="/O.png" Visibility="Collapsed"/>
+        <Button x:Name="BC1" Grid.Column="2" HorizontalAlignment="center" Height="100" Grid.Row="6" VerticalAlignment="center" Width="100">
+            <Button.Background>
+                <ImageBrush Stretch="None" ImageSource="/Muster.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="BXC1" Grid.Column="2" HorizontalAlignment="center" Height="100" Grid.Row="6" VerticalAlignment="center" Width="100" Visibility="Hidden">
+            <Button.Background>
+                <ImageBrush ImageSource="/X.png" Stretch="None" TileMode="None" Opacity="0.85"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="BOC1" Grid.Column="2" HorizontalAlignment="center" Height="100" Grid.Row="6" VerticalAlignment="center" Width="100" Visibility="Hidden">
+            <Button.Background>
+                <ImageBrush ImageSource="/O.png" Stretch="None" TileMode="None" Opacity="0.85"/>
+            </Button.Background>
+        </Button>
 
-        <Image x:Name="XC1" Grid.Column="2" HorizontalAlignment="center" Height="100" Grid.Row="6" VerticalAlignment="center" Width="100" Source="/X.png" Visibility="Collapsed"/>
-        <Image x:Name="OC1" Grid.Column="2" HorizontalAlignment="center" Height="100" Grid.Row="6" VerticalAlignment="center" Width="100" Source="/O.png" Visibility="Collapsed"/>
+        <Button x:Name="BC2" Grid.Column="3" HorizontalAlignment="center" Height="100" Grid.Row="6" VerticalAlignment="center" Width="100">
+            <Button.Background>
+                <ImageBrush Stretch="None" ImageSource="/Muster.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="BXC2" Grid.Column="3" HorizontalAlignment="center" Height="100" Grid.Row="6" VerticalAlignment="center" Width="100" Visibility="Hidden">
+            <Button.Background>
+                <ImageBrush ImageSource="/X.png" Stretch="None" TileMode="None" Opacity="0.85"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="BOC2" Grid.Column="3" HorizontalAlignment="center" Height="100" Grid.Row="6" VerticalAlignment="center" Width="100" Visibility="Hidden">
+            <Button.Background>
+                <ImageBrush ImageSource="/O.png" Stretch="None" TileMode="None" Opacity="0.85"/>
+            </Button.Background>
+        </Button>
 
-        <Image x:Name="XC2" Grid.Column="3" HorizontalAlignment="center" Height="100" Grid.Row="6" VerticalAlignment="center" Width="100" Source="/X.png" Visibility="Collapsed"/>
-        <Image x:Name="OC2" Grid.Column="3" HorizontalAlignment="center" Height="100" Grid.Row="6" VerticalAlignment="center" Width="100" Source="/O.png" Visibility="Collapsed"/>
+        <Button x:Name="BC3" Grid.Column="4" HorizontalAlignment="center" Height="100" Grid.Row="6" VerticalAlignment="center" Width="100">
+            <Button.Background>
+                <ImageBrush Stretch="None" ImageSource="/Muster.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="BXC3" Grid.Column="4" HorizontalAlignment="center" Height="100" Grid.Row="6" VerticalAlignment="center" Width="100" Visibility="Hidden">
+            <Button.Background>
+                <ImageBrush ImageSource="/X.png" Stretch="None" TileMode="None" Opacity="0.85"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="BOC3" Grid.Column="4" HorizontalAlignment="center" Height="100" Grid.Row="6" VerticalAlignment="center" Width="100" Visibility="Hidden">
+            <Button.Background>
+                <ImageBrush ImageSource="/O.png" Stretch="None" TileMode="None" Opacity="0.85"/>
+            </Button.Background>
+        </Button>
 
-        <Image x:Name="XC3" Grid.Column="4" HorizontalAlignment="center" Height="100" Grid.Row="6" VerticalAlignment="center" Width="100" Source="/X.png" Visibility="Collapsed"/>
-        <Image x:Name="OC3" Grid.Column="4" HorizontalAlignment="center" Height="100" Grid.Row="6" VerticalAlignment="center" Width="100" Source="/O.png" Visibility="Collapsed"/>
 
 
     </Grid>
