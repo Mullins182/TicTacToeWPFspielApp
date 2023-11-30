@@ -57,7 +57,7 @@ namespace TicTacToeWPFspiel
 
             BA1.Visibility = Visibility.Hidden;
             BXA1.Visibility = Visibility.Visible;
-
+            
 
             INFO.Visibility = Visibility.Visible;
 
