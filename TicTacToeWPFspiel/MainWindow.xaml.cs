@@ -22,7 +22,9 @@ namespace TicTacToeWPFspiel
     public partial class MainWindow : Window
     {
         int cpu_choice       = 0;
+        bool game_ended      = false;
 
+        // Diese Variablen bestimmen ob ein Feld von Spieler oder CPU bereits gewählt wurde !
         bool FA1 = false;
         bool FA2 = false;
         bool FA3 = false;
@@ -61,6 +63,11 @@ namespace TicTacToeWPFspiel
 
         private async void BA1_Click(object sender, RoutedEventArgs e)
         {
+            if (game_ended == true)
+            {
+                return;
+            }
+            
             FA1 = true;
 
             var rd_number_generated = new Random();
@@ -76,48 +83,72 @@ namespace TicTacToeWPFspiel
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (player_choosed4 && player_choosed5 && player_choosed6 == true)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (player_choosed7 && player_choosed8 && player_choosed9 == true)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (player_choosed1 && player_choosed4 && player_choosed7 == true)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (player_choosed2 && player_choosed5 && player_choosed8 == true)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (player_choosed3 && player_choosed6 && player_choosed9 == true)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (player_choosed1 && player_choosed5 && player_choosed9 == true)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (player_choosed3 && player_choosed5 && player_choosed7 == true)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
 
@@ -125,10 +156,13 @@ namespace TicTacToeWPFspiel
             {
                 INFO.Content = "SPIEL BEENDET...KEINER HAT GEWONNEN !";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
 
-            await Task.Delay(5000);
+            await Task.Delay(3000);
 
         J1:
 
@@ -204,6 +238,9 @@ namespace TicTacToeWPFspiel
                 {
                     INFO.Content = "SPIEL BEENDET...KEINER HAT GEWONNEN !";
                     INFO.Visibility = Visibility.Visible;
+                    game_ended = true;
+                    restart.Visibility = Visibility.Visible;
+                    exit.Visibility = Visibility.Visible;
                     return;
                 }
 
@@ -214,48 +251,72 @@ namespace TicTacToeWPFspiel
             {
                 INFO.Content = "DU HAST LEIDER VERLOREN !!!";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (cpu_choosed4 && cpu_choosed5 && cpu_choosed6 == true)
             {
                 INFO.Content = "DU HAST LEIDER VERLOREN !!!";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (cpu_choosed7 && cpu_choosed8 && cpu_choosed9 == true)
             {
                 INFO.Content = "DU HAST LEIDER VERLOREN !!!";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (cpu_choosed1 && cpu_choosed5 && cpu_choosed9 == true)
             {
                 INFO.Content = "DU HAST LEIDER VERLOREN !!!";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (cpu_choosed3 && cpu_choosed5 && cpu_choosed7 == true)
             {
                 INFO.Content = "DU HAST LEIDER VERLOREN !!!";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (cpu_choosed1 && cpu_choosed4 && cpu_choosed7 == true)
             {
                 INFO.Content = "DU HAST LEIDER VERLOREN !!!";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (cpu_choosed2 && cpu_choosed5 && cpu_choosed8 == true)
             {
                 INFO.Content = "DU HAST LEIDER VERLOREN !!!";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (cpu_choosed3 && cpu_choosed6 && cpu_choosed9 == true)
             {
                 INFO.Content = "DU HAST LEIDER VERLOREN !!!";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
 
@@ -264,6 +325,11 @@ namespace TicTacToeWPFspiel
 
         private async void BA2_Click(object sender, RoutedEventArgs e)
         {
+            if (INFO.Content.ToString() != "CPU DENKT ... BITTE WARTEN !")
+            {
+                return;
+            }
+
             FA2 = true;
 
             var rd_number_generated = new Random();
@@ -279,48 +345,72 @@ namespace TicTacToeWPFspiel
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (player_choosed4 && player_choosed5 && player_choosed6 == true)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (player_choosed7 && player_choosed8 && player_choosed9 == true)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (player_choosed1 && player_choosed4 && player_choosed7 == true)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (player_choosed2 && player_choosed5 && player_choosed8 == true)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (player_choosed3 && player_choosed6 && player_choosed9 == true)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (player_choosed1 && player_choosed5 && player_choosed9 == true)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (player_choosed3 && player_choosed5 && player_choosed7 == true)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
 
@@ -328,10 +418,13 @@ namespace TicTacToeWPFspiel
             {
                 INFO.Content = "SPIEL BEENDET...KEINER HAT GEWONNEN !";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
 
-            await Task.Delay(5000);
+            await Task.Delay(3000);
 
         J1:
 
@@ -407,6 +500,9 @@ namespace TicTacToeWPFspiel
                 {
                     INFO.Content = "SPIEL BEENDET...KEINER HAT GEWONNEN !";
                     INFO.Visibility = Visibility.Visible;
+                    game_ended = true;
+                    restart.Visibility = Visibility.Visible;
+                    exit.Visibility = Visibility.Visible;
                     return;
                 }
 
@@ -419,48 +515,72 @@ namespace TicTacToeWPFspiel
             {
                 INFO.Content = "DU HAST LEIDER VERLOREN !!!";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (cpu_choosed4 && cpu_choosed5 && cpu_choosed6 == true)
             {
                 INFO.Content = "DU HAST LEIDER VERLOREN !!!";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (cpu_choosed7 && cpu_choosed8 && cpu_choosed9 == true)
             {
                 INFO.Content = "DU HAST LEIDER VERLOREN !!!";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (cpu_choosed1 && cpu_choosed5 && cpu_choosed9 == true)
             {
                 INFO.Content = "DU HAST LEIDER VERLOREN !!!";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (cpu_choosed3 && cpu_choosed5 && cpu_choosed7 == true)
             {
                 INFO.Content = "DU HAST LEIDER VERLOREN !!!";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (cpu_choosed1 && cpu_choosed4 && cpu_choosed7 == true)
             {
                 INFO.Content = "DU HAST LEIDER VERLOREN !!!";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (cpu_choosed2 && cpu_choosed5 && cpu_choosed8 == true)
             {
                 INFO.Content = "DU HAST LEIDER VERLOREN !!!";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (cpu_choosed3 && cpu_choosed6 && cpu_choosed9 == true)
             {
                 INFO.Content = "DU HAST LEIDER VERLOREN !!!";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
 
@@ -469,6 +589,11 @@ namespace TicTacToeWPFspiel
 
         private async void BA3_Click(object sender, RoutedEventArgs e)
         {
+            if (INFO.Content.ToString() != "CPU DENKT ... BITTE WARTEN !")
+            {
+                return;
+            }
+
             FA3 = true;
 
             var rd_number_generated = new Random();
@@ -484,48 +609,72 @@ namespace TicTacToeWPFspiel
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (player_choosed4 && player_choosed5 && player_choosed6 == true)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (player_choosed7 && player_choosed8 && player_choosed9 == true)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (player_choosed1 && player_choosed4 && player_choosed7 == true)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (player_choosed2 && player_choosed5 && player_choosed8 == true)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (player_choosed3 && player_choosed6 && player_choosed9 == true)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (player_choosed1 && player_choosed5 && player_choosed9 == true)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (player_choosed3 && player_choosed5 && player_choosed7 == true)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
 
@@ -533,10 +682,13 @@ namespace TicTacToeWPFspiel
             {
                 INFO.Content = "SPIEL BEENDET...KEINER HAT GEWONNEN !";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
 
-            await Task.Delay(5000);
+            await Task.Delay(3000);
 
         J1:
 
@@ -612,6 +764,9 @@ namespace TicTacToeWPFspiel
                 {
                     INFO.Content = "SPIEL BEENDET...KEINER HAT GEWONNEN !";
                     INFO.Visibility = Visibility.Visible;
+                    game_ended = true;
+                    restart.Visibility = Visibility.Visible;
+                    exit.Visibility = Visibility.Visible;
                     return;
                 }
 
@@ -624,48 +779,72 @@ namespace TicTacToeWPFspiel
             {
                 INFO.Content = "DU HAST LEIDER VERLOREN !!!";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (cpu_choosed4 && cpu_choosed5 && cpu_choosed6 == true)
             {
                 INFO.Content = "DU HAST LEIDER VERLOREN !!!";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (cpu_choosed7 && cpu_choosed8 && cpu_choosed9 == true)
             {
                 INFO.Content = "DU HAST LEIDER VERLOREN !!!";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (cpu_choosed1 && cpu_choosed5 && cpu_choosed9 == true)
             {
                 INFO.Content = "DU HAST LEIDER VERLOREN !!!";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (cpu_choosed3 && cpu_choosed5 && cpu_choosed7 == true)
             {
                 INFO.Content = "DU HAST LEIDER VERLOREN !!!";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (cpu_choosed1 && cpu_choosed4 && cpu_choosed7 == true)
             {
                 INFO.Content = "DU HAST LEIDER VERLOREN !!!";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (cpu_choosed2 && cpu_choosed5 && cpu_choosed8 == true)
             {
                 INFO.Content = "DU HAST LEIDER VERLOREN !!!";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (cpu_choosed3 && cpu_choosed6 && cpu_choosed9 == true)
             {
                 INFO.Content = "DU HAST LEIDER VERLOREN !!!";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
 
@@ -674,6 +853,11 @@ namespace TicTacToeWPFspiel
 
         private async void BB1_Click(object sender, RoutedEventArgs e)
         {
+            if (INFO.Content.ToString() != "CPU DENKT ... BITTE WARTEN !")
+            {
+                return;
+            }
+
             FB1 = true;
 
             var rd_number_generated = new Random();
@@ -689,48 +873,72 @@ namespace TicTacToeWPFspiel
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (player_choosed4 && player_choosed5 && player_choosed6 == true)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (player_choosed7 && player_choosed8 && player_choosed9 == true)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (player_choosed1 && player_choosed4 && player_choosed7 == true)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (player_choosed2 && player_choosed5 && player_choosed8 == true)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (player_choosed3 && player_choosed6 && player_choosed9 == true)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (player_choosed1 && player_choosed5 && player_choosed9 == true)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (player_choosed3 && player_choosed5 && player_choosed7 == true)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
 
@@ -738,10 +946,13 @@ namespace TicTacToeWPFspiel
             {
                 INFO.Content = "SPIEL BEENDET...KEINER HAT GEWONNEN !";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
 
-            await Task.Delay(5000);
+            await Task.Delay(3000);
 
         J1:
 
@@ -817,6 +1028,9 @@ namespace TicTacToeWPFspiel
                 {
                     INFO.Content = "SPIEL BEENDET...KEINER HAT GEWONNEN !";
                     INFO.Visibility = Visibility.Visible;
+                    game_ended = true;
+                    restart.Visibility = Visibility.Visible;
+                    exit.Visibility = Visibility.Visible;
                     return;
                 }
 
@@ -829,48 +1043,72 @@ namespace TicTacToeWPFspiel
             {
                 INFO.Content = "DU HAST LEIDER VERLOREN !!!";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (cpu_choosed4 && cpu_choosed5 && cpu_choosed6 == true)
             {
                 INFO.Content = "DU HAST LEIDER VERLOREN !!!";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (cpu_choosed7 && cpu_choosed8 && cpu_choosed9 == true)
             {
                 INFO.Content = "DU HAST LEIDER VERLOREN !!!";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (cpu_choosed1 && cpu_choosed5 && cpu_choosed9 == true)
             {
                 INFO.Content = "DU HAST LEIDER VERLOREN !!!";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (cpu_choosed3 && cpu_choosed5 && cpu_choosed7 == true)
             {
                 INFO.Content = "DU HAST LEIDER VERLOREN !!!";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (cpu_choosed1 && cpu_choosed4 && cpu_choosed7 == true)
             {
                 INFO.Content = "DU HAST LEIDER VERLOREN !!!";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (cpu_choosed2 && cpu_choosed5 && cpu_choosed8 == true)
             {
                 INFO.Content = "DU HAST LEIDER VERLOREN !!!";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (cpu_choosed3 && cpu_choosed6 && cpu_choosed9 == true)
             {
                 INFO.Content = "DU HAST LEIDER VERLOREN !!!";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
 
@@ -879,6 +1117,11 @@ namespace TicTacToeWPFspiel
 
         private async void BB2_Click(object sender, RoutedEventArgs e)
         {
+            if (INFO.Content.ToString() != "CPU DENKT ... BITTE WARTEN !")
+            {
+                return;
+            }
+
             FB2 = true;
 
             var rd_number_generated = new Random();
@@ -894,48 +1137,72 @@ namespace TicTacToeWPFspiel
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (player_choosed4 && player_choosed5 && player_choosed6 == true)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (player_choosed7 && player_choosed8 && player_choosed9 == true)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (player_choosed1 && player_choosed4 && player_choosed7 == true)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (player_choosed2 && player_choosed5 && player_choosed8 == true)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (player_choosed3 && player_choosed6 && player_choosed9 == true)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (player_choosed1 && player_choosed5 && player_choosed9 == true)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (player_choosed3 && player_choosed5 && player_choosed7 == true)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
 
@@ -943,10 +1210,13 @@ namespace TicTacToeWPFspiel
             {
                 INFO.Content = "SPIEL BEENDET...KEINER HAT GEWONNEN !";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
 
-            await Task.Delay(5000);
+            await Task.Delay(3000);
 
         J1:
 
@@ -1022,6 +1292,9 @@ namespace TicTacToeWPFspiel
                 {
                     INFO.Content = "SPIEL BEENDET...KEINER HAT GEWONNEN !";
                     INFO.Visibility = Visibility.Visible;
+                    game_ended = true;
+                    restart.Visibility = Visibility.Visible;
+                    exit.Visibility = Visibility.Visible;
                     return;
                 }
 
@@ -1034,48 +1307,72 @@ namespace TicTacToeWPFspiel
             {
                 INFO.Content = "DU HAST LEIDER VERLOREN !!!";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (cpu_choosed4 && cpu_choosed5 && cpu_choosed6 == true)
             {
                 INFO.Content = "DU HAST LEIDER VERLOREN !!!";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (cpu_choosed7 && cpu_choosed8 && cpu_choosed9 == true)
             {
                 INFO.Content = "DU HAST LEIDER VERLOREN !!!";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (cpu_choosed1 && cpu_choosed5 && cpu_choosed9 == true)
             {
                 INFO.Content = "DU HAST LEIDER VERLOREN !!!";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (cpu_choosed3 && cpu_choosed5 && cpu_choosed7 == true)
             {
                 INFO.Content = "DU HAST LEIDER VERLOREN !!!";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (cpu_choosed1 && cpu_choosed4 && cpu_choosed7 == true)
             {
                 INFO.Content = "DU HAST LEIDER VERLOREN !!!";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (cpu_choosed2 && cpu_choosed5 && cpu_choosed8 == true)
             {
                 INFO.Content = "DU HAST LEIDER VERLOREN !!!";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (cpu_choosed3 && cpu_choosed6 && cpu_choosed9 == true)
             {
                 INFO.Content = "DU HAST LEIDER VERLOREN !!!";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
 
@@ -1084,6 +1381,11 @@ namespace TicTacToeWPFspiel
 
         private async void BB3_Click(object sender, RoutedEventArgs e)
         {
+            if (INFO.Content.ToString() != "CPU DENKT ... BITTE WARTEN !")
+            {
+                return;
+            }
+
             FB3 = true;
 
             var rd_number_generated = new Random();
@@ -1099,48 +1401,72 @@ namespace TicTacToeWPFspiel
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (player_choosed4 && player_choosed5 && player_choosed6 == true)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (player_choosed7 && player_choosed8 && player_choosed9 == true)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (player_choosed1 && player_choosed4 && player_choosed7 == true)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (player_choosed2 && player_choosed5 && player_choosed8 == true)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (player_choosed3 && player_choosed6 && player_choosed9 == true)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (player_choosed1 && player_choosed5 && player_choosed9 == true)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (player_choosed3 && player_choosed5 && player_choosed7 == true)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
 
@@ -1148,11 +1474,14 @@ namespace TicTacToeWPFspiel
             {
                 INFO.Content = "SPIEL BEENDET...KEINER HAT GEWONNEN !";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
 
 
-            await Task.Delay(5000);
+            await Task.Delay(3000);
 
         J1:
 
@@ -1228,6 +1557,9 @@ namespace TicTacToeWPFspiel
                 {
                     INFO.Content = "SPIEL BEENDET...KEINER HAT GEWONNEN !";
                     INFO.Visibility = Visibility.Visible;
+                    game_ended = true;
+                    restart.Visibility = Visibility.Visible;
+                    exit.Visibility = Visibility.Visible;
                     return;
                 }
 
@@ -1240,48 +1572,72 @@ namespace TicTacToeWPFspiel
             {
                 INFO.Content = "DU HAST LEIDER VERLOREN !!!";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (cpu_choosed4 && cpu_choosed5 && cpu_choosed6 == true)
             {
                 INFO.Content = "DU HAST LEIDER VERLOREN !!!";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (cpu_choosed7 && cpu_choosed8 && cpu_choosed9 == true)
             {
                 INFO.Content = "DU HAST LEIDER VERLOREN !!!";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (cpu_choosed1 && cpu_choosed5 && cpu_choosed9 == true)
             {
                 INFO.Content = "DU HAST LEIDER VERLOREN !!!";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (cpu_choosed3 && cpu_choosed5 && cpu_choosed7 == true)
             {
                 INFO.Content = "DU HAST LEIDER VERLOREN !!!";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (cpu_choosed1 && cpu_choosed4 && cpu_choosed7 == true)
             {
                 INFO.Content = "DU HAST LEIDER VERLOREN !!!";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (cpu_choosed2 && cpu_choosed5 && cpu_choosed8 == true)
             {
                 INFO.Content = "DU HAST LEIDER VERLOREN !!!";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (cpu_choosed3 && cpu_choosed6 && cpu_choosed9 == true)
             {
                 INFO.Content = "DU HAST LEIDER VERLOREN !!!";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
 
@@ -1290,6 +1646,11 @@ namespace TicTacToeWPFspiel
 
         private async void BC1_Click(object sender, RoutedEventArgs e)
         {
+            if (INFO.Content.ToString() != "CPU DENKT ... BITTE WARTEN !")
+            {
+                return;
+            }
+
             FC1 = true;
 
             var rd_number_generated = new Random();
@@ -1305,48 +1666,72 @@ namespace TicTacToeWPFspiel
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (player_choosed4 && player_choosed5 && player_choosed6 == true)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (player_choosed7 && player_choosed8 && player_choosed9 == true)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (player_choosed1 && player_choosed4 && player_choosed7 == true)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (player_choosed2 && player_choosed5 && player_choosed8 == true)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (player_choosed3 && player_choosed6 && player_choosed9 == true)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (player_choosed1 && player_choosed5 && player_choosed9 == true)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (player_choosed3 && player_choosed5 && player_choosed7 == true)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
 
@@ -1354,11 +1739,14 @@ namespace TicTacToeWPFspiel
             {
                 INFO.Content = "SPIEL BEENDET...KEINER HAT GEWONNEN !";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
 
 
-            await Task.Delay(5000);
+            await Task.Delay(3000);
 
         J1:
 
@@ -1434,6 +1822,9 @@ namespace TicTacToeWPFspiel
                 {
                     INFO.Content = "SPIEL BEENDET...KEINER HAT GEWONNEN !";
                     INFO.Visibility = Visibility.Visible;
+                    game_ended = true;
+                    restart.Visibility = Visibility.Visible;
+                    exit.Visibility = Visibility.Visible;
                     return;
                 }
 
@@ -1446,48 +1837,72 @@ namespace TicTacToeWPFspiel
             {
                 INFO.Content = "DU HAST LEIDER VERLOREN !!!";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (cpu_choosed4 && cpu_choosed5 && cpu_choosed6 == true)
             {
                 INFO.Content = "DU HAST LEIDER VERLOREN !!!";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (cpu_choosed7 && cpu_choosed8 && cpu_choosed9 == true)
             {
                 INFO.Content = "DU HAST LEIDER VERLOREN !!!";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (cpu_choosed1 && cpu_choosed5 && cpu_choosed9 == true)
             {
                 INFO.Content = "DU HAST LEIDER VERLOREN !!!";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (cpu_choosed3 && cpu_choosed5 && cpu_choosed7 == true)
             {
                 INFO.Content = "DU HAST LEIDER VERLOREN !!!";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (cpu_choosed1 && cpu_choosed4 && cpu_choosed7 == true)
             {
                 INFO.Content = "DU HAST LEIDER VERLOREN !!!";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (cpu_choosed2 && cpu_choosed5 && cpu_choosed8 == true)
             {
                 INFO.Content = "DU HAST LEIDER VERLOREN !!!";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (cpu_choosed3 && cpu_choosed6 && cpu_choosed9 == true)
             {
                 INFO.Content = "DU HAST LEIDER VERLOREN !!!";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
 
@@ -1496,6 +1911,11 @@ namespace TicTacToeWPFspiel
 
         private async void BC2_Click(object sender, RoutedEventArgs e)
         {
+            if (INFO.Content.ToString() != "CPU DENKT ... BITTE WARTEN !")
+            {
+                return;
+            }
+
             FC2 = true;
 
             var rd_number_generated = new Random();
@@ -1511,48 +1931,72 @@ namespace TicTacToeWPFspiel
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (player_choosed4 && player_choosed5 && player_choosed6 == true)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (player_choosed7 && player_choosed8 && player_choosed9 == true)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (player_choosed1 && player_choosed4 && player_choosed7 == true)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (player_choosed2 && player_choosed5 && player_choosed8 == true)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (player_choosed3 && player_choosed6 && player_choosed9 == true)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (player_choosed1 && player_choosed5 && player_choosed9 == true)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (player_choosed3 && player_choosed5 && player_choosed7 == true)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
 
@@ -1560,11 +2004,14 @@ namespace TicTacToeWPFspiel
             {
                 INFO.Content = "SPIEL BEENDET...KEINER HAT GEWONNEN !";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
 
 
-            await Task.Delay(5000);
+            await Task.Delay(3000);
 
         J1:
 
@@ -1640,6 +2087,9 @@ namespace TicTacToeWPFspiel
                 {
                     INFO.Content = "SPIEL BEENDET...KEINER HAT GEWONNEN !";
                     INFO.Visibility = Visibility.Visible;
+                    game_ended = true;
+                    restart.Visibility = Visibility.Visible;
+                    exit.Visibility = Visibility.Visible;
                     return;
                 }
 
@@ -1652,48 +2102,72 @@ namespace TicTacToeWPFspiel
             {
                 INFO.Content = "DU HAST LEIDER VERLOREN !!!";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (cpu_choosed4 && cpu_choosed5 && cpu_choosed6 == true)
             {
                 INFO.Content = "DU HAST LEIDER VERLOREN !!!";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (cpu_choosed7 && cpu_choosed8 && cpu_choosed9 == true)
             {
                 INFO.Content = "DU HAST LEIDER VERLOREN !!!";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (cpu_choosed1 && cpu_choosed5 && cpu_choosed9 == true)
             {
                 INFO.Content = "DU HAST LEIDER VERLOREN !!!";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (cpu_choosed3 && cpu_choosed5 && cpu_choosed7 == true)
             {
                 INFO.Content = "DU HAST LEIDER VERLOREN !!!";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (cpu_choosed1 && cpu_choosed4 && cpu_choosed7 == true)
             {
                 INFO.Content = "DU HAST LEIDER VERLOREN !!!";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (cpu_choosed2 && cpu_choosed5 && cpu_choosed8 == true)
             {
                 INFO.Content = "DU HAST LEIDER VERLOREN !!!";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (cpu_choosed3 && cpu_choosed6 && cpu_choosed9 == true)
             {
                 INFO.Content = "DU HAST LEIDER VERLOREN !!!";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
 
@@ -1702,6 +2176,11 @@ namespace TicTacToeWPFspiel
 
         private async void BC3_Click(object sender, RoutedEventArgs e)
         {
+            if (INFO.Content.ToString() != "CPU DENKT ... BITTE WARTEN !")
+            {
+                return;
+            }
+
             FC3 = true;
 
             var rd_number_generated = new Random();
@@ -1717,48 +2196,72 @@ namespace TicTacToeWPFspiel
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (player_choosed4 && player_choosed5 && player_choosed6 == true)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (player_choosed7 && player_choosed8 && player_choosed9 == true)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (player_choosed1 && player_choosed4 && player_choosed7 == true)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (player_choosed2 && player_choosed5 && player_choosed8 == true)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (player_choosed3 && player_choosed6 && player_choosed9 == true)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (player_choosed1 && player_choosed5 && player_choosed9 == true)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (player_choosed3 && player_choosed5 && player_choosed7 == true)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
 
@@ -1766,10 +2269,13 @@ namespace TicTacToeWPFspiel
             {
                 INFO.Content = "SPIEL BEENDET...KEINER HAT GEWONNEN !";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
 
-            await Task.Delay(5000);
+            await Task.Delay(3000);
 
         J1:
 
@@ -1845,6 +2351,9 @@ namespace TicTacToeWPFspiel
                 {
                     INFO.Content = "SPIEL BEENDET...KEINER HAT GEWONNEN !";
                     INFO.Visibility = Visibility.Visible;
+                    game_ended = true;
+                    restart.Visibility = Visibility.Visible;
+                    exit.Visibility = Visibility.Visible;
                     return;
                 }
 
@@ -1857,52 +2366,148 @@ namespace TicTacToeWPFspiel
             {
                 INFO.Content = "DU HAST LEIDER VERLOREN !!!";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (cpu_choosed4 && cpu_choosed5 && cpu_choosed6 == true)
             {
                 INFO.Content = "DU HAST LEIDER VERLOREN !!!";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (cpu_choosed7 && cpu_choosed8 && cpu_choosed9 == true)
             {
                 INFO.Content = "DU HAST LEIDER VERLOREN !!!";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (cpu_choosed1 && cpu_choosed5 && cpu_choosed9 == true)
             {
                 INFO.Content = "DU HAST LEIDER VERLOREN !!!";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (cpu_choosed3 && cpu_choosed5 && cpu_choosed7 == true)
             {
                 INFO.Content = "DU HAST LEIDER VERLOREN !!!";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (cpu_choosed1 && cpu_choosed4 && cpu_choosed7 == true)
             {
                 INFO.Content = "DU HAST LEIDER VERLOREN !!!";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (cpu_choosed2 && cpu_choosed5 && cpu_choosed8 == true)
             {
                 INFO.Content = "DU HAST LEIDER VERLOREN !!!";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
             else if (cpu_choosed3 && cpu_choosed6 && cpu_choosed9 == true)
             {
                 INFO.Content = "DU HAST LEIDER VERLOREN !!!";
                 INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
                 return;
             }
 
             INFO.Visibility = Visibility.Hidden;
+        }
+
+        private void restart_Click(object sender, RoutedEventArgs e)
+        {
+            cpu_choice = 0;
+            cpu_choosed1 = false;
+            cpu_choosed2 = false;
+            cpu_choosed3 = false;
+            cpu_choosed4 = false;
+            cpu_choosed5 = false;
+            cpu_choosed6 = false;
+            cpu_choosed7 = false;
+            cpu_choosed8 = false;
+            cpu_choosed9 = false;
+            player_choosed1 = false;
+            player_choosed2 = false;
+            player_choosed3 = false;
+            player_choosed4 = false;
+            player_choosed5 = false;
+            player_choosed6 = false;
+            player_choosed7 = false;
+            player_choosed8 = false;
+            player_choosed9 = false;
+            FA1 = false;
+            FA2 = false;
+            FA3 = false;
+            FB1 = false;
+            FB2 = false;
+            FB3 = false;
+            FC1 = false;
+            FC2 = false;
+            FC3 = false;
+
+
+
+            INFO.Visibility = Visibility.Hidden;
+            INFO.Content = "CPU DENKT ... BITTE WARTEN !";
+            BA1.Visibility = Visibility.Visible;
+            BA2.Visibility = Visibility.Visible;
+            BA3.Visibility = Visibility.Visible;
+            BB1.Visibility = Visibility.Visible;
+            BB2.Visibility = Visibility.Visible;
+            BB3.Visibility = Visibility.Visible;
+            BC1.Visibility = Visibility.Visible;
+            BC2.Visibility = Visibility.Visible;
+            BC3.Visibility = Visibility.Visible;
+            BXA1.Visibility = Visibility.Hidden;
+            BXA2.Visibility = Visibility.Hidden;
+            BXA3.Visibility = Visibility.Hidden;
+            BOA1.Visibility = Visibility.Hidden;
+            BOA2.Visibility = Visibility.Hidden;
+            BOA3.Visibility = Visibility.Hidden;
+            BXB1.Visibility = Visibility.Hidden;
+            BXB2.Visibility = Visibility.Hidden;
+            BXB3.Visibility = Visibility.Hidden;
+            BOB1.Visibility = Visibility.Hidden;
+            BOB2.Visibility = Visibility.Hidden;
+            BOB3.Visibility = Visibility.Hidden;
+            BXC1.Visibility = Visibility.Hidden;
+            BXC2.Visibility = Visibility.Hidden;
+            BXC3.Visibility = Visibility.Hidden;
+            BOC1.Visibility = Visibility.Hidden;
+            BOC2.Visibility = Visibility.Hidden;
+            BOC3.Visibility = Visibility.Hidden;
+            restart.Visibility = Visibility.Hidden;
+            exit.Visibility = Visibility.Visible;
+            game_ended = false;
+        }
+
+        private void exit_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }
