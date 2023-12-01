@@ -895,69 +895,533 @@ namespace TicTacToeWPFspiel
 
             cpu_choice = rd_number_generated.Next(1, 10);
 
+            if (cpu_choice == 1 && player_choosed1 != true)
+            {
+                if (cpu_choosed1 == true)
+                {
+                    if (player_choosed2 && player_choosed3 != true)
+                    {
+                        if (cpu_choosed3 != true)
+                        {
+                            FA3 = true;
+                            cpu_choosed3 = true;
+                            BA3.Visibility = Visibility.Hidden;
+                            BOA3.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed2 != true)
+                        {
+                            FA2 = true;
+                            cpu_choosed2 = true;
+                            BA2.Visibility = Visibility.Hidden;
+                            BOA2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed4 && player_choosed7 != true)
+                    {
+                        if (cpu_choosed7 != true)
+                        {
+                            FC1 = true;
+                            cpu_choosed7 = true;
+                            BC1.Visibility = Visibility.Hidden;
+                            BOC1.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed4 != true)
+                        {
+                            FB1 = true;
+                            cpu_choosed4 = true;
+                            BB1.Visibility = Visibility.Hidden;
+                            BOB1.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed5 && player_choosed9 != true)
+                    {
+                        if (cpu_choosed9 != true)
+                        {
+                            FC3 = true;
+                            cpu_choosed9 = true;
+                            BC3.Visibility = Visibility.Hidden;
+                            BOC3.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed5 != true)
+                        {
+                            FB2 = true;
+                            cpu_choosed5 = true;
+                            BB2.Visibility = Visibility.Hidden;
+                            BOB2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else
+                    {
+                        goto J1;
+                    }
+                }
+                else
+                {
+                    FA1 = true;
+                    cpu_choosed1 = true;
+                    BA1.Visibility = Visibility.Hidden;
+                    BOA1.Visibility = Visibility.Visible;
+                }
+            }
+            else if (cpu_choice == 2 && player_choosed2 != true)
+            {
+                if (cpu_choosed2 == true)
+                {
+                    if (player_choosed3 && player_choosed1 != true)
+                    {
+                        if (cpu_choosed3 != true)
+                        {
+                            FA3 = true;
+                            cpu_choosed3 = true;
+                            BA3.Visibility = Visibility.Hidden;
+                            BOA3.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed1 != true)
+                        {
+                            FA1 = true;
+                            cpu_choosed1 = true;
+                            BA1.Visibility = Visibility.Hidden;
+                            BOA1.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed5 && player_choosed8 != true)
+                    {
+                        if (cpu_choosed8 != true)
+                        {
+                            FC2 = true;
+                            cpu_choosed8 = true;
+                            BC2.Visibility = Visibility.Hidden;
+                            BOC2.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed5 != true)
+                        {
+                            FB2 = true;
+                            cpu_choosed5 = true;
+                            BB2.Visibility = Visibility.Hidden;
+                            BOB2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else
+                    {
+                        goto J1;
+                    }
+                }
+                else
+                {
+                    FA2 = true;
+                    cpu_choosed2 = true;
+                    BA2.Visibility = Visibility.Hidden;
+                    BOA2.Visibility = Visibility.Visible;
+                }
 
-            if (cpu_choice == 1 && cpu_choosed1 != true && player_choosed1 != true)
-            {
-                FA1 = true;
-                cpu_choosed1 = true;
-                BA1.Visibility = Visibility.Hidden;
-                BOA1.Visibility = Visibility.Visible;
             }
-            else if (cpu_choice == 2 && cpu_choosed2 != true && player_choosed2 != true)
+            else if (cpu_choice == 3 && player_choosed3 != true)
             {
-                FA2 = true;
-                cpu_choosed2 = true;
-                BA2.Visibility = Visibility.Hidden;
-                BOA2.Visibility = Visibility.Visible;
+                if (cpu_choosed3 == true)
+                {
+                    if (player_choosed2 && player_choosed1 != true)
+                    {
+                        if (cpu_choosed1 != true)
+                        {
+                            FA1 = true;
+                            cpu_choosed1 = true;
+                            BA1.Visibility = Visibility.Hidden;
+                            BOA1.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed2 != true)
+                        {
+                            FA2 = true;
+                            cpu_choosed2 = true;
+                            BA2.Visibility = Visibility.Hidden;
+                            BOA2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed6 && player_choosed9 != true)
+                    {
+                        if (cpu_choosed9 != true)
+                        {
+                            FC3 = true;
+                            cpu_choosed9 = true;
+                            BC3.Visibility = Visibility.Hidden;
+                            BOC3.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed6 != true)
+                        {
+                            FB3 = true;
+                            cpu_choosed6 = true;
+                            BB3.Visibility = Visibility.Hidden;
+                            BOB3.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else
+                    {
+                        goto J1;
+                    }
+                }
+                else
+                {
+                    FA3 = true;
+                    cpu_choosed3 = true;
+                    BA3.Visibility = Visibility.Hidden;
+                    BOA3.Visibility = Visibility.Visible;
+                }
             }
-            else if (cpu_choice == 3 && cpu_choosed3 != true && player_choosed3 != true)
+            else if (cpu_choice == 4 && player_choosed4 != true)
             {
-                FA3 = true;
-                cpu_choosed3 = true;
-                BA3.Visibility = Visibility.Hidden;
-                BOA3.Visibility = Visibility.Visible;
+                if (cpu_choosed4 == true)
+                {
+                    if (player_choosed5 && player_choosed6 != true)
+                    {
+                        if (cpu_choosed6 != true)
+                        {
+                            FB3 = true;
+                            cpu_choosed6 = true;
+                            BB3.Visibility = Visibility.Hidden;
+                            BOB3.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed5 != true)
+                        {
+                            FB2 = true;
+                            cpu_choosed5 = true;
+                            BB2.Visibility = Visibility.Hidden;
+                            BOB2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed1 && player_choosed7 != true)
+                    {
+                        if (cpu_choosed7 != true)
+                        {
+                            FC1 = true;
+                            cpu_choosed7 = true;
+                            BC1.Visibility = Visibility.Hidden;
+                            BOC1.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed1 != true)
+                        {
+                            FA1 = true;
+                            cpu_choosed1 = true;
+                            BA1.Visibility = Visibility.Hidden;
+                            BOA1.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else
+                    {
+                        goto J1;
+                    }
+                }
+                else
+                {
+                    FB1 = true;
+                    cpu_choosed4 = true;
+                    BB1.Visibility = Visibility.Hidden;
+                    BOB1.Visibility = Visibility.Visible;
+                }
             }
-            else if (cpu_choice == 4 && cpu_choosed4 != true && player_choosed4 != true)
+            else if (cpu_choice == 5 && player_choosed5 != true)
             {
-                FB1 = true;
-                cpu_choosed4 = true;
-                BB1.Visibility = Visibility.Hidden;
-                BOB1.Visibility = Visibility.Visible;
+                if (cpu_choosed5 == true)
+                {
+                    if (player_choosed4 && player_choosed6 != true)
+                    {
+                        if (cpu_choosed4 != true)
+                        {
+                            FB1 = true;
+                            cpu_choosed4 = true;
+                            BB1.Visibility = Visibility.Hidden;
+                            BOB1.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed6 != true)
+                        {
+                            FB3 = true;
+                            cpu_choosed6 = true;
+                            BB3.Visibility = Visibility.Hidden;
+                            BOB3.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed2 && player_choosed8 != true)
+                    {
+                        if (cpu_choosed8 != true)
+                        {
+                            FC2 = true;
+                            cpu_choosed8 = true;
+                            BC2.Visibility = Visibility.Hidden;
+                            BOC2.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed2 != true)
+                        {
+                            FA2 = true;
+                            cpu_choosed2 = true;
+                            BA2.Visibility = Visibility.Hidden;
+                            BOA2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed1 && player_choosed9 != true)
+                    {
+                        if (cpu_choosed1 != true)
+                        {
+                            FA1 = true;
+                            cpu_choosed1 = true;
+                            BA1.Visibility = Visibility.Hidden;
+                            BOA2.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed9 != true)
+                        {
+                            FC3 = true;
+                            cpu_choosed9 = true;
+                            BC3.Visibility = Visibility.Hidden;
+                            BOC3.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed3 && player_choosed7 != true)
+                    {
+                        if (cpu_choosed7 != true)
+                        {
+                            FC1 = true;
+                            cpu_choosed7 = true;
+                            BC1.Visibility = Visibility.Hidden;
+                            BOC1.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed3 != true)
+                        {
+                            FA3 = true;
+                            cpu_choosed3 = true;
+                            BA3.Visibility = Visibility.Hidden;
+                            BOA3.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else
+                    {
+                        goto J1;
+                    }
+                }
+                else
+                {
+                    FB2 = true;
+                    cpu_choosed5 = true;
+                    BB2.Visibility = Visibility.Hidden;
+                    BOB2.Visibility = Visibility.Visible;
+                }
             }
-            else if (cpu_choice == 5 && cpu_choosed5 != true && player_choosed5 != true)
+            else if (cpu_choice == 6 && player_choosed6 != true)
             {
-                FB2 = true;
-                cpu_choosed5 = true;
-                BB2.Visibility = Visibility.Hidden;
-                BOB2.Visibility = Visibility.Visible;
+                if (cpu_choosed6 == true)
+                {
+                    if (player_choosed4 && player_choosed5 != true)
+                    {
+                        if (cpu_choosed4 != true)
+                        {
+                            FB1 = true;
+                            cpu_choosed4 = true;
+                            BB1.Visibility = Visibility.Hidden;
+                            BOB1.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed5 != true)
+                        {
+                            FB2 = true;
+                            cpu_choosed5 = true;
+                            BB2.Visibility = Visibility.Hidden;
+                            BOB2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed3 && player_choosed9 != true)
+                    {
+                        if (cpu_choosed9 != true)
+                        {
+                            FC3 = true;
+                            cpu_choosed9 = true;
+                            BC3.Visibility = Visibility.Hidden;
+                            BOC3.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed3 != true)
+                        {
+                            FA3 = true;
+                            cpu_choosed3 = true;
+                            BA3.Visibility = Visibility.Hidden;
+                            BOA3.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else
+                    {
+                        goto J1;
+                    }
+                }
+                else
+                {
+                    FB3 = true;
+                    cpu_choosed6 = true;
+                    BB3.Visibility = Visibility.Hidden;
+                    BOB3.Visibility = Visibility.Visible;
+                }
             }
-            else if (cpu_choice == 6 && cpu_choosed6 != true && player_choosed6 != true)
+            else if (cpu_choice == 7 && player_choosed7 != true)
             {
-                FB3 = true;
-                cpu_choosed6 = true;
-                BB3.Visibility = Visibility.Hidden;
-                BOB3.Visibility = Visibility.Visible;
+                if (cpu_choosed7 == true)
+                {
+                    if (player_choosed9 && player_choosed8 != true)
+                    {
+                        if (cpu_choosed9 != true)
+                        {
+                            FC3 = true;
+                            cpu_choosed9 = true;
+                            BC3.Visibility = Visibility.Hidden;
+                            BOC3.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed8 != true)
+                        {
+                            FC2 = true;
+                            cpu_choosed8 = true;
+                            BC2.Visibility = Visibility.Hidden;
+                            BOC2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed1 && player_choosed4 != true)
+                    {
+                        if (cpu_choosed1 != true)
+                        {
+                            FA1 = true;
+                            cpu_choosed1 = true;
+                            BA1.Visibility = Visibility.Hidden;
+                            BOA1.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed4 != true)
+                        {
+                            FB1 = true;
+                            cpu_choosed4 = true;
+                            BB1.Visibility = Visibility.Hidden;
+                            BOB1.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed5 && player_choosed3 != true)
+                    {
+                        if (cpu_choosed3 != true)
+                        {
+                            FA3 = true;
+                            cpu_choosed3 = true;
+                            BA3.Visibility = Visibility.Hidden;
+                            BOA3.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed5 != true)
+                        {
+                            FB2 = true;
+                            cpu_choosed5 = true;
+                            BB2.Visibility = Visibility.Hidden;
+                            BOB2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else
+                    {
+                        goto J1;
+                    }
+                }
+                else
+                {
+                    FC1 = true;
+                    cpu_choosed7 = true;
+                    BC1.Visibility = Visibility.Hidden;
+                    BOC1.Visibility = Visibility.Visible;
+                }
             }
-            else if (cpu_choice == 7 && cpu_choosed7 != true && player_choosed7 != true)
+            else if (cpu_choice == 8 && player_choosed8 != true)
             {
-                FC1 = true;
-                cpu_choosed7 = true;
-                BC1.Visibility = Visibility.Hidden;
-                BOC1.Visibility = Visibility.Visible;
+                if (cpu_choosed8 == true)
+                {
+                    if (player_choosed5 && player_choosed2 != true)
+                    {
+                        if (cpu_choosed2 != true)
+                        {
+                            FA2 = true;
+                            cpu_choosed2 = true;
+                            BA2.Visibility = Visibility.Hidden;
+                            BOA2.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed5 != true)
+                        {
+                            FB2 = true;
+                            cpu_choosed5 = true;
+                            BB2.Visibility = Visibility.Hidden;
+                            BOB2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed7 && player_choosed9 != true)
+                    {
+                        if (cpu_choosed7 != true)
+                        {
+                            FC1 = true;
+                            cpu_choosed7 = true;
+                            BC1.Visibility = Visibility.Hidden;
+                            BOC1.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed9 != true)
+                        {
+                            FC3 = true;
+                            cpu_choosed9 = true;
+                            BC3.Visibility = Visibility.Hidden;
+                            BOC3.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else
+                    {
+                        goto J1;
+                    }
+                }
+                else
+                {
+                    FC2 = true;
+                    cpu_choosed8 = true;
+                    BC2.Visibility = Visibility.Hidden;
+                    BOC2.Visibility = Visibility.Visible;
+                }
             }
-            else if (cpu_choice == 8 && cpu_choosed8 != true && player_choosed8 != true)
+            else if (cpu_choice == 9 && player_choosed9 != true)
             {
-                FC2 = true;
-                cpu_choosed8 = true;
-                BC2.Visibility = Visibility.Hidden;
-                BOC2.Visibility = Visibility.Visible;
-            }
-            else if (cpu_choice == 9 && cpu_choosed9 != true && player_choosed9 != true)
-            {
-                FC3 = true;
-                cpu_choosed9 = true;
-                BC3.Visibility = Visibility.Hidden;
-                BOC3.Visibility = Visibility.Visible;
+                if (cpu_choosed9 == true)
+                {
+                    if (player_choosed7 && player_choosed8 != true)
+                    {
+                        if (cpu_choosed7 != true)
+                        {
+                            FC1 = true;
+                            cpu_choosed7 = true;
+                            BC1.Visibility = Visibility.Hidden;
+                            BOC1.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed8 != true)
+                        {
+                            FC2 = true;
+                            cpu_choosed8 = true;
+                            BC2.Visibility = Visibility.Hidden;
+                            BOC2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed3 && player_choosed6 != true)
+                    {
+                        if (cpu_choosed3 != true)
+                        {
+                            FA3 = true;
+                            cpu_choosed3 = true;
+                            BA3.Visibility = Visibility.Hidden;
+                            BOA3.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed6 != true)
+                        {
+                            FB3 = true;
+                            cpu_choosed6 = true;
+                            BB3.Visibility = Visibility.Hidden;
+                            BOB3.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else
+                    {
+                        goto J1;
+                    }
+                }
+                else
+                {
+                    FC3 = true;
+                    cpu_choosed9 = true;
+                    BC3.Visibility = Visibility.Hidden;
+                    BOC3.Visibility = Visibility.Visible;
+                }
             }
             else
             {
@@ -1159,69 +1623,533 @@ namespace TicTacToeWPFspiel
 
             cpu_choice = rd_number_generated.Next(1, 10);
 
+            if (cpu_choice == 1 && player_choosed1 != true)
+            {
+                if (cpu_choosed1 == true)
+                {
+                    if (player_choosed2 && player_choosed3 != true)
+                    {
+                        if (cpu_choosed3 != true)
+                        {
+                            FA3 = true;
+                            cpu_choosed3 = true;
+                            BA3.Visibility = Visibility.Hidden;
+                            BOA3.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed2 != true)
+                        {
+                            FA2 = true;
+                            cpu_choosed2 = true;
+                            BA2.Visibility = Visibility.Hidden;
+                            BOA2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed4 && player_choosed7 != true)
+                    {
+                        if (cpu_choosed7 != true)
+                        {
+                            FC1 = true;
+                            cpu_choosed7 = true;
+                            BC1.Visibility = Visibility.Hidden;
+                            BOC1.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed4 != true)
+                        {
+                            FB1 = true;
+                            cpu_choosed4 = true;
+                            BB1.Visibility = Visibility.Hidden;
+                            BOB1.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed5 && player_choosed9 != true)
+                    {
+                        if (cpu_choosed9 != true)
+                        {
+                            FC3 = true;
+                            cpu_choosed9 = true;
+                            BC3.Visibility = Visibility.Hidden;
+                            BOC3.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed5 != true)
+                        {
+                            FB2 = true;
+                            cpu_choosed5 = true;
+                            BB2.Visibility = Visibility.Hidden;
+                            BOB2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else
+                    {
+                        goto J1;
+                    }
+                }
+                else
+                {
+                    FA1 = true;
+                    cpu_choosed1 = true;
+                    BA1.Visibility = Visibility.Hidden;
+                    BOA1.Visibility = Visibility.Visible;
+                }
+            }
+            else if (cpu_choice == 2 && player_choosed2 != true)
+            {
+                if (cpu_choosed2 == true)
+                {
+                    if (player_choosed3 && player_choosed1 != true)
+                    {
+                        if (cpu_choosed3 != true)
+                        {
+                            FA3 = true;
+                            cpu_choosed3 = true;
+                            BA3.Visibility = Visibility.Hidden;
+                            BOA3.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed1 != true)
+                        {
+                            FA1 = true;
+                            cpu_choosed1 = true;
+                            BA1.Visibility = Visibility.Hidden;
+                            BOA1.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed5 && player_choosed8 != true)
+                    {
+                        if (cpu_choosed8 != true)
+                        {
+                            FC2 = true;
+                            cpu_choosed8 = true;
+                            BC2.Visibility = Visibility.Hidden;
+                            BOC2.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed5 != true)
+                        {
+                            FB2 = true;
+                            cpu_choosed5 = true;
+                            BB2.Visibility = Visibility.Hidden;
+                            BOB2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else
+                    {
+                        goto J1;
+                    }
+                }
+                else
+                {
+                    FA2 = true;
+                    cpu_choosed2 = true;
+                    BA2.Visibility = Visibility.Hidden;
+                    BOA2.Visibility = Visibility.Visible;
+                }
 
-            if (cpu_choice == 1 && cpu_choosed1 != true && player_choosed1 != true)
-            {
-                FA1 = true;
-                cpu_choosed1 = true;
-                BA1.Visibility = Visibility.Hidden;
-                BOA1.Visibility = Visibility.Visible;
             }
-            else if (cpu_choice == 2 && cpu_choosed2 != true && player_choosed2 != true)
+            else if (cpu_choice == 3 && player_choosed3 != true)
             {
-                FA2 = true;
-                cpu_choosed2 = true;
-                BA2.Visibility = Visibility.Hidden;
-                BOA2.Visibility = Visibility.Visible;
+                if (cpu_choosed3 == true)
+                {
+                    if (player_choosed2 && player_choosed1 != true)
+                    {
+                        if (cpu_choosed1 != true)
+                        {
+                            FA1 = true;
+                            cpu_choosed1 = true;
+                            BA1.Visibility = Visibility.Hidden;
+                            BOA1.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed2 != true)
+                        {
+                            FA2 = true;
+                            cpu_choosed2 = true;
+                            BA2.Visibility = Visibility.Hidden;
+                            BOA2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed6 && player_choosed9 != true)
+                    {
+                        if (cpu_choosed9 != true)
+                        {
+                            FC3 = true;
+                            cpu_choosed9 = true;
+                            BC3.Visibility = Visibility.Hidden;
+                            BOC3.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed6 != true)
+                        {
+                            FB3 = true;
+                            cpu_choosed6 = true;
+                            BB3.Visibility = Visibility.Hidden;
+                            BOB3.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else
+                    {
+                        goto J1;
+                    }
+                }
+                else
+                {
+                    FA3 = true;
+                    cpu_choosed3 = true;
+                    BA3.Visibility = Visibility.Hidden;
+                    BOA3.Visibility = Visibility.Visible;
+                }
             }
-            else if (cpu_choice == 3 && cpu_choosed3 != true && player_choosed3 != true)
+            else if (cpu_choice == 4 && player_choosed4 != true)
             {
-                FA3 = true;
-                cpu_choosed3 = true;
-                BA3.Visibility = Visibility.Hidden;
-                BOA3.Visibility = Visibility.Visible;
+                if (cpu_choosed4 == true)
+                {
+                    if (player_choosed5 && player_choosed6 != true)
+                    {
+                        if (cpu_choosed6 != true)
+                        {
+                            FB3 = true;
+                            cpu_choosed6 = true;
+                            BB3.Visibility = Visibility.Hidden;
+                            BOB3.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed5 != true)
+                        {
+                            FB2 = true;
+                            cpu_choosed5 = true;
+                            BB2.Visibility = Visibility.Hidden;
+                            BOB2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed1 && player_choosed7 != true)
+                    {
+                        if (cpu_choosed7 != true)
+                        {
+                            FC1 = true;
+                            cpu_choosed7 = true;
+                            BC1.Visibility = Visibility.Hidden;
+                            BOC1.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed1 != true)
+                        {
+                            FA1 = true;
+                            cpu_choosed1 = true;
+                            BA1.Visibility = Visibility.Hidden;
+                            BOA1.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else
+                    {
+                        goto J1;
+                    }
+                }
+                else
+                {
+                    FB1 = true;
+                    cpu_choosed4 = true;
+                    BB1.Visibility = Visibility.Hidden;
+                    BOB1.Visibility = Visibility.Visible;
+                }
             }
-            else if (cpu_choice == 4 && cpu_choosed4 != true && player_choosed4 != true)
+            else if (cpu_choice == 5 && player_choosed5 != true)
             {
-                FB1 = true;
-                cpu_choosed4 = true;
-                BB1.Visibility = Visibility.Hidden;
-                BOB1.Visibility = Visibility.Visible;
+                if (cpu_choosed5 == true)
+                {
+                    if (player_choosed4 && player_choosed6 != true)
+                    {
+                        if (cpu_choosed4 != true)
+                        {
+                            FB1 = true;
+                            cpu_choosed4 = true;
+                            BB1.Visibility = Visibility.Hidden;
+                            BOB1.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed6 != true)
+                        {
+                            FB3 = true;
+                            cpu_choosed6 = true;
+                            BB3.Visibility = Visibility.Hidden;
+                            BOB3.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed2 && player_choosed8 != true)
+                    {
+                        if (cpu_choosed8 != true)
+                        {
+                            FC2 = true;
+                            cpu_choosed8 = true;
+                            BC2.Visibility = Visibility.Hidden;
+                            BOC2.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed2 != true)
+                        {
+                            FA2 = true;
+                            cpu_choosed2 = true;
+                            BA2.Visibility = Visibility.Hidden;
+                            BOA2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed1 && player_choosed9 != true)
+                    {
+                        if (cpu_choosed1 != true)
+                        {
+                            FA1 = true;
+                            cpu_choosed1 = true;
+                            BA1.Visibility = Visibility.Hidden;
+                            BOA2.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed9 != true)
+                        {
+                            FC3 = true;
+                            cpu_choosed9 = true;
+                            BC3.Visibility = Visibility.Hidden;
+                            BOC3.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed3 && player_choosed7 != true)
+                    {
+                        if (cpu_choosed7 != true)
+                        {
+                            FC1 = true;
+                            cpu_choosed7 = true;
+                            BC1.Visibility = Visibility.Hidden;
+                            BOC1.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed3 != true)
+                        {
+                            FA3 = true;
+                            cpu_choosed3 = true;
+                            BA3.Visibility = Visibility.Hidden;
+                            BOA3.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else
+                    {
+                        goto J1;
+                    }
+                }
+                else
+                {
+                    FB2 = true;
+                    cpu_choosed5 = true;
+                    BB2.Visibility = Visibility.Hidden;
+                    BOB2.Visibility = Visibility.Visible;
+                }
             }
-            else if (cpu_choice == 5 && cpu_choosed5 != true && player_choosed5 != true)
+            else if (cpu_choice == 6 && player_choosed6 != true)
             {
-                FB2 = true;
-                cpu_choosed5 = true;
-                BB2.Visibility = Visibility.Hidden;
-                BOB2.Visibility = Visibility.Visible;
+                if (cpu_choosed6 == true)
+                {
+                    if (player_choosed4 && player_choosed5 != true)
+                    {
+                        if (cpu_choosed4 != true)
+                        {
+                            FB1 = true;
+                            cpu_choosed4 = true;
+                            BB1.Visibility = Visibility.Hidden;
+                            BOB1.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed5 != true)
+                        {
+                            FB2 = true;
+                            cpu_choosed5 = true;
+                            BB2.Visibility = Visibility.Hidden;
+                            BOB2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed3 && player_choosed9 != true)
+                    {
+                        if (cpu_choosed9 != true)
+                        {
+                            FC3 = true;
+                            cpu_choosed9 = true;
+                            BC3.Visibility = Visibility.Hidden;
+                            BOC3.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed3 != true)
+                        {
+                            FA3 = true;
+                            cpu_choosed3 = true;
+                            BA3.Visibility = Visibility.Hidden;
+                            BOA3.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else
+                    {
+                        goto J1;
+                    }
+                }
+                else
+                {
+                    FB3 = true;
+                    cpu_choosed6 = true;
+                    BB3.Visibility = Visibility.Hidden;
+                    BOB3.Visibility = Visibility.Visible;
+                }
             }
-            else if (cpu_choice == 6 && cpu_choosed6 != true && player_choosed6 != true)
+            else if (cpu_choice == 7 && player_choosed7 != true)
             {
-                FB3 = true;
-                cpu_choosed6 = true;
-                BB3.Visibility = Visibility.Hidden;
-                BOB3.Visibility = Visibility.Visible;
+                if (cpu_choosed7 == true)
+                {
+                    if (player_choosed9 && player_choosed8 != true)
+                    {
+                        if (cpu_choosed9 != true)
+                        {
+                            FC3 = true;
+                            cpu_choosed9 = true;
+                            BC3.Visibility = Visibility.Hidden;
+                            BOC3.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed8 != true)
+                        {
+                            FC2 = true;
+                            cpu_choosed8 = true;
+                            BC2.Visibility = Visibility.Hidden;
+                            BOC2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed1 && player_choosed4 != true)
+                    {
+                        if (cpu_choosed1 != true)
+                        {
+                            FA1 = true;
+                            cpu_choosed1 = true;
+                            BA1.Visibility = Visibility.Hidden;
+                            BOA1.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed4 != true)
+                        {
+                            FB1 = true;
+                            cpu_choosed4 = true;
+                            BB1.Visibility = Visibility.Hidden;
+                            BOB1.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed5 && player_choosed3 != true)
+                    {
+                        if (cpu_choosed3 != true)
+                        {
+                            FA3 = true;
+                            cpu_choosed3 = true;
+                            BA3.Visibility = Visibility.Hidden;
+                            BOA3.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed5 != true)
+                        {
+                            FB2 = true;
+                            cpu_choosed5 = true;
+                            BB2.Visibility = Visibility.Hidden;
+                            BOB2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else
+                    {
+                        goto J1;
+                    }
+                }
+                else
+                {
+                    FC1 = true;
+                    cpu_choosed7 = true;
+                    BC1.Visibility = Visibility.Hidden;
+                    BOC1.Visibility = Visibility.Visible;
+                }
             }
-            else if (cpu_choice == 7 && cpu_choosed7 != true && player_choosed7 != true)
+            else if (cpu_choice == 8 && player_choosed8 != true)
             {
-                FC1 = true;
-                cpu_choosed7 = true;
-                BC1.Visibility = Visibility.Hidden;
-                BOC1.Visibility = Visibility.Visible;
+                if (cpu_choosed8 == true)
+                {
+                    if (player_choosed5 && player_choosed2 != true)
+                    {
+                        if (cpu_choosed2 != true)
+                        {
+                            FA2 = true;
+                            cpu_choosed2 = true;
+                            BA2.Visibility = Visibility.Hidden;
+                            BOA2.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed5 != true)
+                        {
+                            FB2 = true;
+                            cpu_choosed5 = true;
+                            BB2.Visibility = Visibility.Hidden;
+                            BOB2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed7 && player_choosed9 != true)
+                    {
+                        if (cpu_choosed7 != true)
+                        {
+                            FC1 = true;
+                            cpu_choosed7 = true;
+                            BC1.Visibility = Visibility.Hidden;
+                            BOC1.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed9 != true)
+                        {
+                            FC3 = true;
+                            cpu_choosed9 = true;
+                            BC3.Visibility = Visibility.Hidden;
+                            BOC3.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else
+                    {
+                        goto J1;
+                    }
+                }
+                else
+                {
+                    FC2 = true;
+                    cpu_choosed8 = true;
+                    BC2.Visibility = Visibility.Hidden;
+                    BOC2.Visibility = Visibility.Visible;
+                }
             }
-            else if (cpu_choice == 8 && cpu_choosed8 != true && player_choosed8 != true)
+            else if (cpu_choice == 9 && player_choosed9 != true)
             {
-                FC2 = true;
-                cpu_choosed8 = true;
-                BC2.Visibility = Visibility.Hidden;
-                BOC2.Visibility = Visibility.Visible;
-            }
-            else if (cpu_choice == 9 && cpu_choosed9 != true && player_choosed9 != true)
-            {
-                FC3 = true;
-                cpu_choosed9 = true;
-                BC3.Visibility = Visibility.Hidden;
-                BOC3.Visibility = Visibility.Visible;
+                if (cpu_choosed9 == true)
+                {
+                    if (player_choosed7 && player_choosed8 != true)
+                    {
+                        if (cpu_choosed7 != true)
+                        {
+                            FC1 = true;
+                            cpu_choosed7 = true;
+                            BC1.Visibility = Visibility.Hidden;
+                            BOC1.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed8 != true)
+                        {
+                            FC2 = true;
+                            cpu_choosed8 = true;
+                            BC2.Visibility = Visibility.Hidden;
+                            BOC2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed3 && player_choosed6 != true)
+                    {
+                        if (cpu_choosed3 != true)
+                        {
+                            FA3 = true;
+                            cpu_choosed3 = true;
+                            BA3.Visibility = Visibility.Hidden;
+                            BOA3.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed6 != true)
+                        {
+                            FB3 = true;
+                            cpu_choosed6 = true;
+                            BB3.Visibility = Visibility.Hidden;
+                            BOB3.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else
+                    {
+                        goto J1;
+                    }
+                }
+                else
+                {
+                    FC3 = true;
+                    cpu_choosed9 = true;
+                    BC3.Visibility = Visibility.Hidden;
+                    BOC3.Visibility = Visibility.Visible;
+                }
             }
             else
             {
@@ -1423,69 +2351,533 @@ namespace TicTacToeWPFspiel
 
             cpu_choice = rd_number_generated.Next(1, 10);
 
+            if (cpu_choice == 1 && player_choosed1 != true)
+            {
+                if (cpu_choosed1 == true)
+                {
+                    if (player_choosed2 && player_choosed3 != true)
+                    {
+                        if (cpu_choosed3 != true)
+                        {
+                            FA3 = true;
+                            cpu_choosed3 = true;
+                            BA3.Visibility = Visibility.Hidden;
+                            BOA3.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed2 != true)
+                        {
+                            FA2 = true;
+                            cpu_choosed2 = true;
+                            BA2.Visibility = Visibility.Hidden;
+                            BOA2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed4 && player_choosed7 != true)
+                    {
+                        if (cpu_choosed7 != true)
+                        {
+                            FC1 = true;
+                            cpu_choosed7 = true;
+                            BC1.Visibility = Visibility.Hidden;
+                            BOC1.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed4 != true)
+                        {
+                            FB1 = true;
+                            cpu_choosed4 = true;
+                            BB1.Visibility = Visibility.Hidden;
+                            BOB1.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed5 && player_choosed9 != true)
+                    {
+                        if (cpu_choosed9 != true)
+                        {
+                            FC3 = true;
+                            cpu_choosed9 = true;
+                            BC3.Visibility = Visibility.Hidden;
+                            BOC3.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed5 != true)
+                        {
+                            FB2 = true;
+                            cpu_choosed5 = true;
+                            BB2.Visibility = Visibility.Hidden;
+                            BOB2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else
+                    {
+                        goto J1;
+                    }
+                }
+                else
+                {
+                    FA1 = true;
+                    cpu_choosed1 = true;
+                    BA1.Visibility = Visibility.Hidden;
+                    BOA1.Visibility = Visibility.Visible;
+                }
+            }
+            else if (cpu_choice == 2 && player_choosed2 != true)
+            {
+                if (cpu_choosed2 == true)
+                {
+                    if (player_choosed3 && player_choosed1 != true)
+                    {
+                        if (cpu_choosed3 != true)
+                        {
+                            FA3 = true;
+                            cpu_choosed3 = true;
+                            BA3.Visibility = Visibility.Hidden;
+                            BOA3.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed1 != true)
+                        {
+                            FA1 = true;
+                            cpu_choosed1 = true;
+                            BA1.Visibility = Visibility.Hidden;
+                            BOA1.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed5 && player_choosed8 != true)
+                    {
+                        if (cpu_choosed8 != true)
+                        {
+                            FC2 = true;
+                            cpu_choosed8 = true;
+                            BC2.Visibility = Visibility.Hidden;
+                            BOC2.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed5 != true)
+                        {
+                            FB2 = true;
+                            cpu_choosed5 = true;
+                            BB2.Visibility = Visibility.Hidden;
+                            BOB2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else
+                    {
+                        goto J1;
+                    }
+                }
+                else
+                {
+                    FA2 = true;
+                    cpu_choosed2 = true;
+                    BA2.Visibility = Visibility.Hidden;
+                    BOA2.Visibility = Visibility.Visible;
+                }
 
-            if (cpu_choice == 1 && cpu_choosed1 != true && player_choosed1 != true)
-            {
-                FA1 = true;
-                cpu_choosed1 = true;
-                BA1.Visibility = Visibility.Hidden;
-                BOA1.Visibility = Visibility.Visible;
             }
-            else if (cpu_choice == 2 && cpu_choosed2 != true && player_choosed2 != true)
+            else if (cpu_choice == 3 && player_choosed3 != true)
             {
-                FA2 = true;
-                cpu_choosed2 = true;
-                BA2.Visibility = Visibility.Hidden;
-                BOA2.Visibility = Visibility.Visible;
+                if (cpu_choosed3 == true)
+                {
+                    if (player_choosed2 && player_choosed1 != true)
+                    {
+                        if (cpu_choosed1 != true)
+                        {
+                            FA1 = true;
+                            cpu_choosed1 = true;
+                            BA1.Visibility = Visibility.Hidden;
+                            BOA1.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed2 != true)
+                        {
+                            FA2 = true;
+                            cpu_choosed2 = true;
+                            BA2.Visibility = Visibility.Hidden;
+                            BOA2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed6 && player_choosed9 != true)
+                    {
+                        if (cpu_choosed9 != true)
+                        {
+                            FC3 = true;
+                            cpu_choosed9 = true;
+                            BC3.Visibility = Visibility.Hidden;
+                            BOC3.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed6 != true)
+                        {
+                            FB3 = true;
+                            cpu_choosed6 = true;
+                            BB3.Visibility = Visibility.Hidden;
+                            BOB3.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else
+                    {
+                        goto J1;
+                    }
+                }
+                else
+                {
+                    FA3 = true;
+                    cpu_choosed3 = true;
+                    BA3.Visibility = Visibility.Hidden;
+                    BOA3.Visibility = Visibility.Visible;
+                }
             }
-            else if (cpu_choice == 3 && cpu_choosed3 != true && player_choosed3 != true)
+            else if (cpu_choice == 4 && player_choosed4 != true)
             {
-                FA3 = true;
-                cpu_choosed3 = true;
-                BA3.Visibility = Visibility.Hidden;
-                BOA3.Visibility = Visibility.Visible;
+                if (cpu_choosed4 == true)
+                {
+                    if (player_choosed5 && player_choosed6 != true)
+                    {
+                        if (cpu_choosed6 != true)
+                        {
+                            FB3 = true;
+                            cpu_choosed6 = true;
+                            BB3.Visibility = Visibility.Hidden;
+                            BOB3.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed5 != true)
+                        {
+                            FB2 = true;
+                            cpu_choosed5 = true;
+                            BB2.Visibility = Visibility.Hidden;
+                            BOB2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed1 && player_choosed7 != true)
+                    {
+                        if (cpu_choosed7 != true)
+                        {
+                            FC1 = true;
+                            cpu_choosed7 = true;
+                            BC1.Visibility = Visibility.Hidden;
+                            BOC1.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed1 != true)
+                        {
+                            FA1 = true;
+                            cpu_choosed1 = true;
+                            BA1.Visibility = Visibility.Hidden;
+                            BOA1.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else
+                    {
+                        goto J1;
+                    }
+                }
+                else
+                {
+                    FB1 = true;
+                    cpu_choosed4 = true;
+                    BB1.Visibility = Visibility.Hidden;
+                    BOB1.Visibility = Visibility.Visible;
+                }
             }
-            else if (cpu_choice == 4 && cpu_choosed4 != true && player_choosed4 != true)
+            else if (cpu_choice == 5 && player_choosed5 != true)
             {
-                FB1 = true;
-                cpu_choosed4 = true;
-                BB1.Visibility = Visibility.Hidden;
-                BOB1.Visibility = Visibility.Visible;
+                if (cpu_choosed5 == true)
+                {
+                    if (player_choosed4 && player_choosed6 != true)
+                    {
+                        if (cpu_choosed4 != true)
+                        {
+                            FB1 = true;
+                            cpu_choosed4 = true;
+                            BB1.Visibility = Visibility.Hidden;
+                            BOB1.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed6 != true)
+                        {
+                            FB3 = true;
+                            cpu_choosed6 = true;
+                            BB3.Visibility = Visibility.Hidden;
+                            BOB3.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed2 && player_choosed8 != true)
+                    {
+                        if (cpu_choosed8 != true)
+                        {
+                            FC2 = true;
+                            cpu_choosed8 = true;
+                            BC2.Visibility = Visibility.Hidden;
+                            BOC2.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed2 != true)
+                        {
+                            FA2 = true;
+                            cpu_choosed2 = true;
+                            BA2.Visibility = Visibility.Hidden;
+                            BOA2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed1 && player_choosed9 != true)
+                    {
+                        if (cpu_choosed1 != true)
+                        {
+                            FA1 = true;
+                            cpu_choosed1 = true;
+                            BA1.Visibility = Visibility.Hidden;
+                            BOA2.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed9 != true)
+                        {
+                            FC3 = true;
+                            cpu_choosed9 = true;
+                            BC3.Visibility = Visibility.Hidden;
+                            BOC3.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed3 && player_choosed7 != true)
+                    {
+                        if (cpu_choosed7 != true)
+                        {
+                            FC1 = true;
+                            cpu_choosed7 = true;
+                            BC1.Visibility = Visibility.Hidden;
+                            BOC1.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed3 != true)
+                        {
+                            FA3 = true;
+                            cpu_choosed3 = true;
+                            BA3.Visibility = Visibility.Hidden;
+                            BOA3.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else
+                    {
+                        goto J1;
+                    }
+                }
+                else
+                {
+                    FB2 = true;
+                    cpu_choosed5 = true;
+                    BB2.Visibility = Visibility.Hidden;
+                    BOB2.Visibility = Visibility.Visible;
+                }
             }
-            else if (cpu_choice == 5 && cpu_choosed5 != true && player_choosed5 != true)
+            else if (cpu_choice == 6 && player_choosed6 != true)
             {
-                FB2 = true;
-                cpu_choosed5 = true;
-                BB2.Visibility = Visibility.Hidden;
-                BOB2.Visibility = Visibility.Visible;
+                if (cpu_choosed6 == true)
+                {
+                    if (player_choosed4 && player_choosed5 != true)
+                    {
+                        if (cpu_choosed4 != true)
+                        {
+                            FB1 = true;
+                            cpu_choosed4 = true;
+                            BB1.Visibility = Visibility.Hidden;
+                            BOB1.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed5 != true)
+                        {
+                            FB2 = true;
+                            cpu_choosed5 = true;
+                            BB2.Visibility = Visibility.Hidden;
+                            BOB2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed3 && player_choosed9 != true)
+                    {
+                        if (cpu_choosed9 != true)
+                        {
+                            FC3 = true;
+                            cpu_choosed9 = true;
+                            BC3.Visibility = Visibility.Hidden;
+                            BOC3.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed3 != true)
+                        {
+                            FA3 = true;
+                            cpu_choosed3 = true;
+                            BA3.Visibility = Visibility.Hidden;
+                            BOA3.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else
+                    {
+                        goto J1;
+                    }
+                }
+                else
+                {
+                    FB3 = true;
+                    cpu_choosed6 = true;
+                    BB3.Visibility = Visibility.Hidden;
+                    BOB3.Visibility = Visibility.Visible;
+                }
             }
-            else if (cpu_choice == 6 && cpu_choosed6 != true && player_choosed6 != true)
+            else if (cpu_choice == 7 && player_choosed7 != true)
             {
-                FB3 = true;
-                cpu_choosed6 = true;
-                BB3.Visibility = Visibility.Hidden;
-                BOB3.Visibility = Visibility.Visible;
+                if (cpu_choosed7 == true)
+                {
+                    if (player_choosed9 && player_choosed8 != true)
+                    {
+                        if (cpu_choosed9 != true)
+                        {
+                            FC3 = true;
+                            cpu_choosed9 = true;
+                            BC3.Visibility = Visibility.Hidden;
+                            BOC3.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed8 != true)
+                        {
+                            FC2 = true;
+                            cpu_choosed8 = true;
+                            BC2.Visibility = Visibility.Hidden;
+                            BOC2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed1 && player_choosed4 != true)
+                    {
+                        if (cpu_choosed1 != true)
+                        {
+                            FA1 = true;
+                            cpu_choosed1 = true;
+                            BA1.Visibility = Visibility.Hidden;
+                            BOA1.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed4 != true)
+                        {
+                            FB1 = true;
+                            cpu_choosed4 = true;
+                            BB1.Visibility = Visibility.Hidden;
+                            BOB1.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed5 && player_choosed3 != true)
+                    {
+                        if (cpu_choosed3 != true)
+                        {
+                            FA3 = true;
+                            cpu_choosed3 = true;
+                            BA3.Visibility = Visibility.Hidden;
+                            BOA3.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed5 != true)
+                        {
+                            FB2 = true;
+                            cpu_choosed5 = true;
+                            BB2.Visibility = Visibility.Hidden;
+                            BOB2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else
+                    {
+                        goto J1;
+                    }
+                }
+                else
+                {
+                    FC1 = true;
+                    cpu_choosed7 = true;
+                    BC1.Visibility = Visibility.Hidden;
+                    BOC1.Visibility = Visibility.Visible;
+                }
             }
-            else if (cpu_choice == 7 && cpu_choosed7 != true && player_choosed7 != true)
+            else if (cpu_choice == 8 && player_choosed8 != true)
             {
-                FC1 = true;
-                cpu_choosed7 = true;
-                BC1.Visibility = Visibility.Hidden;
-                BOC1.Visibility = Visibility.Visible;
+                if (cpu_choosed8 == true)
+                {
+                    if (player_choosed5 && player_choosed2 != true)
+                    {
+                        if (cpu_choosed2 != true)
+                        {
+                            FA2 = true;
+                            cpu_choosed2 = true;
+                            BA2.Visibility = Visibility.Hidden;
+                            BOA2.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed5 != true)
+                        {
+                            FB2 = true;
+                            cpu_choosed5 = true;
+                            BB2.Visibility = Visibility.Hidden;
+                            BOB2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed7 && player_choosed9 != true)
+                    {
+                        if (cpu_choosed7 != true)
+                        {
+                            FC1 = true;
+                            cpu_choosed7 = true;
+                            BC1.Visibility = Visibility.Hidden;
+                            BOC1.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed9 != true)
+                        {
+                            FC3 = true;
+                            cpu_choosed9 = true;
+                            BC3.Visibility = Visibility.Hidden;
+                            BOC3.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else
+                    {
+                        goto J1;
+                    }
+                }
+                else
+                {
+                    FC2 = true;
+                    cpu_choosed8 = true;
+                    BC2.Visibility = Visibility.Hidden;
+                    BOC2.Visibility = Visibility.Visible;
+                }
             }
-            else if (cpu_choice == 8 && cpu_choosed8 != true && player_choosed8 != true)
+            else if (cpu_choice == 9 && player_choosed9 != true)
             {
-                FC2 = true;
-                cpu_choosed8 = true;
-                BC2.Visibility = Visibility.Hidden;
-                BOC2.Visibility = Visibility.Visible;
-            }
-            else if (cpu_choice == 9 && cpu_choosed9 != true && player_choosed9 != true)
-            {
-                FC3 = true;
-                cpu_choosed9 = true;
-                BC3.Visibility = Visibility.Hidden;
-                BOC3.Visibility = Visibility.Visible;
+                if (cpu_choosed9 == true)
+                {
+                    if (player_choosed7 && player_choosed8 != true)
+                    {
+                        if (cpu_choosed7 != true)
+                        {
+                            FC1 = true;
+                            cpu_choosed7 = true;
+                            BC1.Visibility = Visibility.Hidden;
+                            BOC1.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed8 != true)
+                        {
+                            FC2 = true;
+                            cpu_choosed8 = true;
+                            BC2.Visibility = Visibility.Hidden;
+                            BOC2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed3 && player_choosed6 != true)
+                    {
+                        if (cpu_choosed3 != true)
+                        {
+                            FA3 = true;
+                            cpu_choosed3 = true;
+                            BA3.Visibility = Visibility.Hidden;
+                            BOA3.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed6 != true)
+                        {
+                            FB3 = true;
+                            cpu_choosed6 = true;
+                            BB3.Visibility = Visibility.Hidden;
+                            BOB3.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else
+                    {
+                        goto J1;
+                    }
+                }
+                else
+                {
+                    FC3 = true;
+                    cpu_choosed9 = true;
+                    BC3.Visibility = Visibility.Hidden;
+                    BOC3.Visibility = Visibility.Visible;
+                }
             }
             else
             {
@@ -1687,69 +3079,533 @@ namespace TicTacToeWPFspiel
 
             cpu_choice = rd_number_generated.Next(1, 10);
 
+            if (cpu_choice == 1 && player_choosed1 != true)
+            {
+                if (cpu_choosed1 == true)
+                {
+                    if (player_choosed2 && player_choosed3 != true)
+                    {
+                        if (cpu_choosed3 != true)
+                        {
+                            FA3 = true;
+                            cpu_choosed3 = true;
+                            BA3.Visibility = Visibility.Hidden;
+                            BOA3.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed2 != true)
+                        {
+                            FA2 = true;
+                            cpu_choosed2 = true;
+                            BA2.Visibility = Visibility.Hidden;
+                            BOA2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed4 && player_choosed7 != true)
+                    {
+                        if (cpu_choosed7 != true)
+                        {
+                            FC1 = true;
+                            cpu_choosed7 = true;
+                            BC1.Visibility = Visibility.Hidden;
+                            BOC1.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed4 != true)
+                        {
+                            FB1 = true;
+                            cpu_choosed4 = true;
+                            BB1.Visibility = Visibility.Hidden;
+                            BOB1.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed5 && player_choosed9 != true)
+                    {
+                        if (cpu_choosed9 != true)
+                        {
+                            FC3 = true;
+                            cpu_choosed9 = true;
+                            BC3.Visibility = Visibility.Hidden;
+                            BOC3.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed5 != true)
+                        {
+                            FB2 = true;
+                            cpu_choosed5 = true;
+                            BB2.Visibility = Visibility.Hidden;
+                            BOB2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else
+                    {
+                        goto J1;
+                    }
+                }
+                else
+                {
+                    FA1 = true;
+                    cpu_choosed1 = true;
+                    BA1.Visibility = Visibility.Hidden;
+                    BOA1.Visibility = Visibility.Visible;
+                }
+            }
+            else if (cpu_choice == 2 && player_choosed2 != true)
+            {
+                if (cpu_choosed2 == true)
+                {
+                    if (player_choosed3 && player_choosed1 != true)
+                    {
+                        if (cpu_choosed3 != true)
+                        {
+                            FA3 = true;
+                            cpu_choosed3 = true;
+                            BA3.Visibility = Visibility.Hidden;
+                            BOA3.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed1 != true)
+                        {
+                            FA1 = true;
+                            cpu_choosed1 = true;
+                            BA1.Visibility = Visibility.Hidden;
+                            BOA1.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed5 && player_choosed8 != true)
+                    {
+                        if (cpu_choosed8 != true)
+                        {
+                            FC2 = true;
+                            cpu_choosed8 = true;
+                            BC2.Visibility = Visibility.Hidden;
+                            BOC2.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed5 != true)
+                        {
+                            FB2 = true;
+                            cpu_choosed5 = true;
+                            BB2.Visibility = Visibility.Hidden;
+                            BOB2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else
+                    {
+                        goto J1;
+                    }
+                }
+                else
+                {
+                    FA2 = true;
+                    cpu_choosed2 = true;
+                    BA2.Visibility = Visibility.Hidden;
+                    BOA2.Visibility = Visibility.Visible;
+                }
 
-            if (cpu_choice == 1 && cpu_choosed1 != true && player_choosed1 != true)
-            {
-                FA1 = true;
-                cpu_choosed1 = true;
-                BA1.Visibility = Visibility.Hidden;
-                BOA1.Visibility = Visibility.Visible;
             }
-            else if (cpu_choice == 2 && cpu_choosed2 != true && player_choosed2 != true)
+            else if (cpu_choice == 3 && player_choosed3 != true)
             {
-                FA2 = true;
-                cpu_choosed2 = true;
-                BA2.Visibility = Visibility.Hidden;
-                BOA2.Visibility = Visibility.Visible;
+                if (cpu_choosed3 == true)
+                {
+                    if (player_choosed2 && player_choosed1 != true)
+                    {
+                        if (cpu_choosed1 != true)
+                        {
+                            FA1 = true;
+                            cpu_choosed1 = true;
+                            BA1.Visibility = Visibility.Hidden;
+                            BOA1.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed2 != true)
+                        {
+                            FA2 = true;
+                            cpu_choosed2 = true;
+                            BA2.Visibility = Visibility.Hidden;
+                            BOA2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed6 && player_choosed9 != true)
+                    {
+                        if (cpu_choosed9 != true)
+                        {
+                            FC3 = true;
+                            cpu_choosed9 = true;
+                            BC3.Visibility = Visibility.Hidden;
+                            BOC3.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed6 != true)
+                        {
+                            FB3 = true;
+                            cpu_choosed6 = true;
+                            BB3.Visibility = Visibility.Hidden;
+                            BOB3.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else
+                    {
+                        goto J1;
+                    }
+                }
+                else
+                {
+                    FA3 = true;
+                    cpu_choosed3 = true;
+                    BA3.Visibility = Visibility.Hidden;
+                    BOA3.Visibility = Visibility.Visible;
+                }
             }
-            else if (cpu_choice == 3 && cpu_choosed3 != true && player_choosed3 != true)
+            else if (cpu_choice == 4 && player_choosed4 != true)
             {
-                FA3 = true;
-                cpu_choosed3 = true;
-                BA3.Visibility = Visibility.Hidden;
-                BOA3.Visibility = Visibility.Visible;
+                if (cpu_choosed4 == true)
+                {
+                    if (player_choosed5 && player_choosed6 != true)
+                    {
+                        if (cpu_choosed6 != true)
+                        {
+                            FB3 = true;
+                            cpu_choosed6 = true;
+                            BB3.Visibility = Visibility.Hidden;
+                            BOB3.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed5 != true)
+                        {
+                            FB2 = true;
+                            cpu_choosed5 = true;
+                            BB2.Visibility = Visibility.Hidden;
+                            BOB2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed1 && player_choosed7 != true)
+                    {
+                        if (cpu_choosed7 != true)
+                        {
+                            FC1 = true;
+                            cpu_choosed7 = true;
+                            BC1.Visibility = Visibility.Hidden;
+                            BOC1.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed1 != true)
+                        {
+                            FA1 = true;
+                            cpu_choosed1 = true;
+                            BA1.Visibility = Visibility.Hidden;
+                            BOA1.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else
+                    {
+                        goto J1;
+                    }
+                }
+                else
+                {
+                    FB1 = true;
+                    cpu_choosed4 = true;
+                    BB1.Visibility = Visibility.Hidden;
+                    BOB1.Visibility = Visibility.Visible;
+                }
             }
-            else if (cpu_choice == 4 && cpu_choosed4 != true && player_choosed4 != true)
+            else if (cpu_choice == 5 && player_choosed5 != true)
             {
-                FB1 = true;
-                cpu_choosed4 = true;
-                BB1.Visibility = Visibility.Hidden;
-                BOB1.Visibility = Visibility.Visible;
+                if (cpu_choosed5 == true)
+                {
+                    if (player_choosed4 && player_choosed6 != true)
+                    {
+                        if (cpu_choosed4 != true)
+                        {
+                            FB1 = true;
+                            cpu_choosed4 = true;
+                            BB1.Visibility = Visibility.Hidden;
+                            BOB1.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed6 != true)
+                        {
+                            FB3 = true;
+                            cpu_choosed6 = true;
+                            BB3.Visibility = Visibility.Hidden;
+                            BOB3.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed2 && player_choosed8 != true)
+                    {
+                        if (cpu_choosed8 != true)
+                        {
+                            FC2 = true;
+                            cpu_choosed8 = true;
+                            BC2.Visibility = Visibility.Hidden;
+                            BOC2.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed2 != true)
+                        {
+                            FA2 = true;
+                            cpu_choosed2 = true;
+                            BA2.Visibility = Visibility.Hidden;
+                            BOA2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed1 && player_choosed9 != true)
+                    {
+                        if (cpu_choosed1 != true)
+                        {
+                            FA1 = true;
+                            cpu_choosed1 = true;
+                            BA1.Visibility = Visibility.Hidden;
+                            BOA2.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed9 != true)
+                        {
+                            FC3 = true;
+                            cpu_choosed9 = true;
+                            BC3.Visibility = Visibility.Hidden;
+                            BOC3.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed3 && player_choosed7 != true)
+                    {
+                        if (cpu_choosed7 != true)
+                        {
+                            FC1 = true;
+                            cpu_choosed7 = true;
+                            BC1.Visibility = Visibility.Hidden;
+                            BOC1.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed3 != true)
+                        {
+                            FA3 = true;
+                            cpu_choosed3 = true;
+                            BA3.Visibility = Visibility.Hidden;
+                            BOA3.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else
+                    {
+                        goto J1;
+                    }
+                }
+                else
+                {
+                    FB2 = true;
+                    cpu_choosed5 = true;
+                    BB2.Visibility = Visibility.Hidden;
+                    BOB2.Visibility = Visibility.Visible;
+                }
             }
-            else if (cpu_choice == 5 && cpu_choosed5 != true && player_choosed5 != true)
+            else if (cpu_choice == 6 && player_choosed6 != true)
             {
-                FB2 = true;
-                cpu_choosed5 = true;
-                BB2.Visibility = Visibility.Hidden;
-                BOB2.Visibility = Visibility.Visible;
+                if (cpu_choosed6 == true)
+                {
+                    if (player_choosed4 && player_choosed5 != true)
+                    {
+                        if (cpu_choosed4 != true)
+                        {
+                            FB1 = true;
+                            cpu_choosed4 = true;
+                            BB1.Visibility = Visibility.Hidden;
+                            BOB1.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed5 != true)
+                        {
+                            FB2 = true;
+                            cpu_choosed5 = true;
+                            BB2.Visibility = Visibility.Hidden;
+                            BOB2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed3 && player_choosed9 != true)
+                    {
+                        if (cpu_choosed9 != true)
+                        {
+                            FC3 = true;
+                            cpu_choosed9 = true;
+                            BC3.Visibility = Visibility.Hidden;
+                            BOC3.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed3 != true)
+                        {
+                            FA3 = true;
+                            cpu_choosed3 = true;
+                            BA3.Visibility = Visibility.Hidden;
+                            BOA3.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else
+                    {
+                        goto J1;
+                    }
+                }
+                else
+                {
+                    FB3 = true;
+                    cpu_choosed6 = true;
+                    BB3.Visibility = Visibility.Hidden;
+                    BOB3.Visibility = Visibility.Visible;
+                }
             }
-            else if (cpu_choice == 6 && cpu_choosed6 != true && player_choosed6 != true)
+            else if (cpu_choice == 7 && player_choosed7 != true)
             {
-                FB3 = true;
-                cpu_choosed6 = true;
-                BB3.Visibility = Visibility.Hidden;
-                BOB3.Visibility = Visibility.Visible;
+                if (cpu_choosed7 == true)
+                {
+                    if (player_choosed9 && player_choosed8 != true)
+                    {
+                        if (cpu_choosed9 != true)
+                        {
+                            FC3 = true;
+                            cpu_choosed9 = true;
+                            BC3.Visibility = Visibility.Hidden;
+                            BOC3.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed8 != true)
+                        {
+                            FC2 = true;
+                            cpu_choosed8 = true;
+                            BC2.Visibility = Visibility.Hidden;
+                            BOC2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed1 && player_choosed4 != true)
+                    {
+                        if (cpu_choosed1 != true)
+                        {
+                            FA1 = true;
+                            cpu_choosed1 = true;
+                            BA1.Visibility = Visibility.Hidden;
+                            BOA1.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed4 != true)
+                        {
+                            FB1 = true;
+                            cpu_choosed4 = true;
+                            BB1.Visibility = Visibility.Hidden;
+                            BOB1.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed5 && player_choosed3 != true)
+                    {
+                        if (cpu_choosed3 != true)
+                        {
+                            FA3 = true;
+                            cpu_choosed3 = true;
+                            BA3.Visibility = Visibility.Hidden;
+                            BOA3.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed5 != true)
+                        {
+                            FB2 = true;
+                            cpu_choosed5 = true;
+                            BB2.Visibility = Visibility.Hidden;
+                            BOB2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else
+                    {
+                        goto J1;
+                    }
+                }
+                else
+                {
+                    FC1 = true;
+                    cpu_choosed7 = true;
+                    BC1.Visibility = Visibility.Hidden;
+                    BOC1.Visibility = Visibility.Visible;
+                }
             }
-            else if (cpu_choice == 7 && cpu_choosed7 != true && player_choosed7 != true)
+            else if (cpu_choice == 8 && player_choosed8 != true)
             {
-                FC1 = true;
-                cpu_choosed7 = true;
-                BC1.Visibility = Visibility.Hidden;
-                BOC1.Visibility = Visibility.Visible;
+                if (cpu_choosed8 == true)
+                {
+                    if (player_choosed5 && player_choosed2 != true)
+                    {
+                        if (cpu_choosed2 != true)
+                        {
+                            FA2 = true;
+                            cpu_choosed2 = true;
+                            BA2.Visibility = Visibility.Hidden;
+                            BOA2.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed5 != true)
+                        {
+                            FB2 = true;
+                            cpu_choosed5 = true;
+                            BB2.Visibility = Visibility.Hidden;
+                            BOB2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed7 && player_choosed9 != true)
+                    {
+                        if (cpu_choosed7 != true)
+                        {
+                            FC1 = true;
+                            cpu_choosed7 = true;
+                            BC1.Visibility = Visibility.Hidden;
+                            BOC1.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed9 != true)
+                        {
+                            FC3 = true;
+                            cpu_choosed9 = true;
+                            BC3.Visibility = Visibility.Hidden;
+                            BOC3.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else
+                    {
+                        goto J1;
+                    }
+                }
+                else
+                {
+                    FC2 = true;
+                    cpu_choosed8 = true;
+                    BC2.Visibility = Visibility.Hidden;
+                    BOC2.Visibility = Visibility.Visible;
+                }
             }
-            else if (cpu_choice == 8 && cpu_choosed8 != true && player_choosed8 != true)
+            else if (cpu_choice == 9 && player_choosed9 != true)
             {
-                FC2 = true;
-                cpu_choosed8 = true;
-                BC2.Visibility = Visibility.Hidden;
-                BOC2.Visibility = Visibility.Visible;
-            }
-            else if (cpu_choice == 9 && cpu_choosed9 != true && player_choosed9 != true)
-            {
-                FC3 = true;
-                cpu_choosed9 = true;
-                BC3.Visibility = Visibility.Hidden;
-                BOC3.Visibility = Visibility.Visible;
+                if (cpu_choosed9 == true)
+                {
+                    if (player_choosed7 && player_choosed8 != true)
+                    {
+                        if (cpu_choosed7 != true)
+                        {
+                            FC1 = true;
+                            cpu_choosed7 = true;
+                            BC1.Visibility = Visibility.Hidden;
+                            BOC1.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed8 != true)
+                        {
+                            FC2 = true;
+                            cpu_choosed8 = true;
+                            BC2.Visibility = Visibility.Hidden;
+                            BOC2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed3 && player_choosed6 != true)
+                    {
+                        if (cpu_choosed3 != true)
+                        {
+                            FA3 = true;
+                            cpu_choosed3 = true;
+                            BA3.Visibility = Visibility.Hidden;
+                            BOA3.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed6 != true)
+                        {
+                            FB3 = true;
+                            cpu_choosed6 = true;
+                            BB3.Visibility = Visibility.Hidden;
+                            BOB3.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else
+                    {
+                        goto J1;
+                    }
+                }
+                else
+                {
+                    FC3 = true;
+                    cpu_choosed9 = true;
+                    BC3.Visibility = Visibility.Hidden;
+                    BOC3.Visibility = Visibility.Visible;
+                }
             }
             else
             {
@@ -1952,69 +3808,533 @@ namespace TicTacToeWPFspiel
 
             cpu_choice = rd_number_generated.Next(1, 10);
 
+            if (cpu_choice == 1 && player_choosed1 != true)
+            {
+                if (cpu_choosed1 == true)
+                {
+                    if (player_choosed2 && player_choosed3 != true)
+                    {
+                        if (cpu_choosed3 != true)
+                        {
+                            FA3 = true;
+                            cpu_choosed3 = true;
+                            BA3.Visibility = Visibility.Hidden;
+                            BOA3.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed2 != true)
+                        {
+                            FA2 = true;
+                            cpu_choosed2 = true;
+                            BA2.Visibility = Visibility.Hidden;
+                            BOA2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed4 && player_choosed7 != true)
+                    {
+                        if (cpu_choosed7 != true)
+                        {
+                            FC1 = true;
+                            cpu_choosed7 = true;
+                            BC1.Visibility = Visibility.Hidden;
+                            BOC1.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed4 != true)
+                        {
+                            FB1 = true;
+                            cpu_choosed4 = true;
+                            BB1.Visibility = Visibility.Hidden;
+                            BOB1.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed5 && player_choosed9 != true)
+                    {
+                        if (cpu_choosed9 != true)
+                        {
+                            FC3 = true;
+                            cpu_choosed9 = true;
+                            BC3.Visibility = Visibility.Hidden;
+                            BOC3.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed5 != true)
+                        {
+                            FB2 = true;
+                            cpu_choosed5 = true;
+                            BB2.Visibility = Visibility.Hidden;
+                            BOB2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else
+                    {
+                        goto J1;
+                    }
+                }
+                else
+                {
+                    FA1 = true;
+                    cpu_choosed1 = true;
+                    BA1.Visibility = Visibility.Hidden;
+                    BOA1.Visibility = Visibility.Visible;
+                }
+            }
+            else if (cpu_choice == 2 && player_choosed2 != true)
+            {
+                if (cpu_choosed2 == true)
+                {
+                    if (player_choosed3 && player_choosed1 != true)
+                    {
+                        if (cpu_choosed3 != true)
+                        {
+                            FA3 = true;
+                            cpu_choosed3 = true;
+                            BA3.Visibility = Visibility.Hidden;
+                            BOA3.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed1 != true)
+                        {
+                            FA1 = true;
+                            cpu_choosed1 = true;
+                            BA1.Visibility = Visibility.Hidden;
+                            BOA1.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed5 && player_choosed8 != true)
+                    {
+                        if (cpu_choosed8 != true)
+                        {
+                            FC2 = true;
+                            cpu_choosed8 = true;
+                            BC2.Visibility = Visibility.Hidden;
+                            BOC2.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed5 != true)
+                        {
+                            FB2 = true;
+                            cpu_choosed5 = true;
+                            BB2.Visibility = Visibility.Hidden;
+                            BOB2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else
+                    {
+                        goto J1;
+                    }
+                }
+                else
+                {
+                    FA2 = true;
+                    cpu_choosed2 = true;
+                    BA2.Visibility = Visibility.Hidden;
+                    BOA2.Visibility = Visibility.Visible;
+                }
 
-            if (cpu_choice == 1 && cpu_choosed1 != true && player_choosed1 != true)
-            {
-                FA1 = true;
-                cpu_choosed1 = true;
-                BA1.Visibility = Visibility.Hidden;
-                BOA1.Visibility = Visibility.Visible;
             }
-            else if (cpu_choice == 2 && cpu_choosed2 != true && player_choosed2 != true)
+            else if (cpu_choice == 3 && player_choosed3 != true)
             {
-                FA2 = true;
-                cpu_choosed2 = true;
-                BA2.Visibility = Visibility.Hidden;
-                BOA2.Visibility = Visibility.Visible;
+                if (cpu_choosed3 == true)
+                {
+                    if (player_choosed2 && player_choosed1 != true)
+                    {
+                        if (cpu_choosed1 != true)
+                        {
+                            FA1 = true;
+                            cpu_choosed1 = true;
+                            BA1.Visibility = Visibility.Hidden;
+                            BOA1.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed2 != true)
+                        {
+                            FA2 = true;
+                            cpu_choosed2 = true;
+                            BA2.Visibility = Visibility.Hidden;
+                            BOA2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed6 && player_choosed9 != true)
+                    {
+                        if (cpu_choosed9 != true)
+                        {
+                            FC3 = true;
+                            cpu_choosed9 = true;
+                            BC3.Visibility = Visibility.Hidden;
+                            BOC3.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed6 != true)
+                        {
+                            FB3 = true;
+                            cpu_choosed6 = true;
+                            BB3.Visibility = Visibility.Hidden;
+                            BOB3.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else
+                    {
+                        goto J1;
+                    }
+                }
+                else
+                {
+                    FA3 = true;
+                    cpu_choosed3 = true;
+                    BA3.Visibility = Visibility.Hidden;
+                    BOA3.Visibility = Visibility.Visible;
+                }
             }
-            else if (cpu_choice == 3 && cpu_choosed3 != true && player_choosed3 != true)
+            else if (cpu_choice == 4 && player_choosed4 != true)
             {
-                FA3 = true;
-                cpu_choosed3 = true;
-                BA3.Visibility = Visibility.Hidden;
-                BOA3.Visibility = Visibility.Visible;
+                if (cpu_choosed4 == true)
+                {
+                    if (player_choosed5 && player_choosed6 != true)
+                    {
+                        if (cpu_choosed6 != true)
+                        {
+                            FB3 = true;
+                            cpu_choosed6 = true;
+                            BB3.Visibility = Visibility.Hidden;
+                            BOB3.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed5 != true)
+                        {
+                            FB2 = true;
+                            cpu_choosed5 = true;
+                            BB2.Visibility = Visibility.Hidden;
+                            BOB2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed1 && player_choosed7 != true)
+                    {
+                        if (cpu_choosed7 != true)
+                        {
+                            FC1 = true;
+                            cpu_choosed7 = true;
+                            BC1.Visibility = Visibility.Hidden;
+                            BOC1.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed1 != true)
+                        {
+                            FA1 = true;
+                            cpu_choosed1 = true;
+                            BA1.Visibility = Visibility.Hidden;
+                            BOA1.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else
+                    {
+                        goto J1;
+                    }
+                }
+                else
+                {
+                    FB1 = true;
+                    cpu_choosed4 = true;
+                    BB1.Visibility = Visibility.Hidden;
+                    BOB1.Visibility = Visibility.Visible;
+                }
             }
-            else if (cpu_choice == 4 && cpu_choosed4 != true && player_choosed4 != true)
+            else if (cpu_choice == 5 && player_choosed5 != true)
             {
-                FB1 = true;
-                cpu_choosed4 = true;
-                BB1.Visibility = Visibility.Hidden;
-                BOB1.Visibility = Visibility.Visible;
+                if (cpu_choosed5 == true)
+                {
+                    if (player_choosed4 && player_choosed6 != true)
+                    {
+                        if (cpu_choosed4 != true)
+                        {
+                            FB1 = true;
+                            cpu_choosed4 = true;
+                            BB1.Visibility = Visibility.Hidden;
+                            BOB1.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed6 != true)
+                        {
+                            FB3 = true;
+                            cpu_choosed6 = true;
+                            BB3.Visibility = Visibility.Hidden;
+                            BOB3.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed2 && player_choosed8 != true)
+                    {
+                        if (cpu_choosed8 != true)
+                        {
+                            FC2 = true;
+                            cpu_choosed8 = true;
+                            BC2.Visibility = Visibility.Hidden;
+                            BOC2.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed2 != true)
+                        {
+                            FA2 = true;
+                            cpu_choosed2 = true;
+                            BA2.Visibility = Visibility.Hidden;
+                            BOA2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed1 && player_choosed9 != true)
+                    {
+                        if (cpu_choosed1 != true)
+                        {
+                            FA1 = true;
+                            cpu_choosed1 = true;
+                            BA1.Visibility = Visibility.Hidden;
+                            BOA2.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed9 != true)
+                        {
+                            FC3 = true;
+                            cpu_choosed9 = true;
+                            BC3.Visibility = Visibility.Hidden;
+                            BOC3.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed3 && player_choosed7 != true)
+                    {
+                        if (cpu_choosed7 != true)
+                        {
+                            FC1 = true;
+                            cpu_choosed7 = true;
+                            BC1.Visibility = Visibility.Hidden;
+                            BOC1.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed3 != true)
+                        {
+                            FA3 = true;
+                            cpu_choosed3 = true;
+                            BA3.Visibility = Visibility.Hidden;
+                            BOA3.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else
+                    {
+                        goto J1;
+                    }
+                }
+                else
+                {
+                    FB2 = true;
+                    cpu_choosed5 = true;
+                    BB2.Visibility = Visibility.Hidden;
+                    BOB2.Visibility = Visibility.Visible;
+                }
             }
-            else if (cpu_choice == 5 && cpu_choosed5 != true && player_choosed5 != true)
+            else if (cpu_choice == 6 && player_choosed6 != true)
             {
-                FB2 = true;
-                cpu_choosed5 = true;
-                BB2.Visibility = Visibility.Hidden;
-                BOB2.Visibility = Visibility.Visible;
+                if (cpu_choosed6 == true)
+                {
+                    if (player_choosed4 && player_choosed5 != true)
+                    {
+                        if (cpu_choosed4 != true)
+                        {
+                            FB1 = true;
+                            cpu_choosed4 = true;
+                            BB1.Visibility = Visibility.Hidden;
+                            BOB1.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed5 != true)
+                        {
+                            FB2 = true;
+                            cpu_choosed5 = true;
+                            BB2.Visibility = Visibility.Hidden;
+                            BOB2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed3 && player_choosed9 != true)
+                    {
+                        if (cpu_choosed9 != true)
+                        {
+                            FC3 = true;
+                            cpu_choosed9 = true;
+                            BC3.Visibility = Visibility.Hidden;
+                            BOC3.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed3 != true)
+                        {
+                            FA3 = true;
+                            cpu_choosed3 = true;
+                            BA3.Visibility = Visibility.Hidden;
+                            BOA3.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else
+                    {
+                        goto J1;
+                    }
+                }
+                else
+                {
+                    FB3 = true;
+                    cpu_choosed6 = true;
+                    BB3.Visibility = Visibility.Hidden;
+                    BOB3.Visibility = Visibility.Visible;
+                }
             }
-            else if (cpu_choice == 6 && cpu_choosed6 != true && player_choosed6 != true)
+            else if (cpu_choice == 7 && player_choosed7 != true)
             {
-                FB3 = true;
-                cpu_choosed6 = true;
-                BB3.Visibility = Visibility.Hidden;
-                BOB3.Visibility = Visibility.Visible;
+                if (cpu_choosed7 == true)
+                {
+                    if (player_choosed9 && player_choosed8 != true)
+                    {
+                        if (cpu_choosed9 != true)
+                        {
+                            FC3 = true;
+                            cpu_choosed9 = true;
+                            BC3.Visibility = Visibility.Hidden;
+                            BOC3.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed8 != true)
+                        {
+                            FC2 = true;
+                            cpu_choosed8 = true;
+                            BC2.Visibility = Visibility.Hidden;
+                            BOC2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed1 && player_choosed4 != true)
+                    {
+                        if (cpu_choosed1 != true)
+                        {
+                            FA1 = true;
+                            cpu_choosed1 = true;
+                            BA1.Visibility = Visibility.Hidden;
+                            BOA1.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed4 != true)
+                        {
+                            FB1 = true;
+                            cpu_choosed4 = true;
+                            BB1.Visibility = Visibility.Hidden;
+                            BOB1.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed5 && player_choosed3 != true)
+                    {
+                        if (cpu_choosed3 != true)
+                        {
+                            FA3 = true;
+                            cpu_choosed3 = true;
+                            BA3.Visibility = Visibility.Hidden;
+                            BOA3.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed5 != true)
+                        {
+                            FB2 = true;
+                            cpu_choosed5 = true;
+                            BB2.Visibility = Visibility.Hidden;
+                            BOB2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else
+                    {
+                        goto J1;
+                    }
+                }
+                else
+                {
+                    FC1 = true;
+                    cpu_choosed7 = true;
+                    BC1.Visibility = Visibility.Hidden;
+                    BOC1.Visibility = Visibility.Visible;
+                }
             }
-            else if (cpu_choice == 7 && cpu_choosed7 != true && player_choosed7 != true)
+            else if (cpu_choice == 8 && player_choosed8 != true)
             {
-                FC1 = true;
-                cpu_choosed7 = true;
-                BC1.Visibility = Visibility.Hidden;
-                BOC1.Visibility = Visibility.Visible;
+                if (cpu_choosed8 == true)
+                {
+                    if (player_choosed5 && player_choosed2 != true)
+                    {
+                        if (cpu_choosed2 != true)
+                        {
+                            FA2 = true;
+                            cpu_choosed2 = true;
+                            BA2.Visibility = Visibility.Hidden;
+                            BOA2.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed5 != true)
+                        {
+                            FB2 = true;
+                            cpu_choosed5 = true;
+                            BB2.Visibility = Visibility.Hidden;
+                            BOB2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed7 && player_choosed9 != true)
+                    {
+                        if (cpu_choosed7 != true)
+                        {
+                            FC1 = true;
+                            cpu_choosed7 = true;
+                            BC1.Visibility = Visibility.Hidden;
+                            BOC1.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed9 != true)
+                        {
+                            FC3 = true;
+                            cpu_choosed9 = true;
+                            BC3.Visibility = Visibility.Hidden;
+                            BOC3.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else
+                    {
+                        goto J1;
+                    }
+                }
+                else
+                {
+                    FC2 = true;
+                    cpu_choosed8 = true;
+                    BC2.Visibility = Visibility.Hidden;
+                    BOC2.Visibility = Visibility.Visible;
+                }
             }
-            else if (cpu_choice == 8 && cpu_choosed8 != true && player_choosed8 != true)
+            else if (cpu_choice == 9 && player_choosed9 != true)
             {
-                FC2 = true;
-                cpu_choosed8 = true;
-                BC2.Visibility = Visibility.Hidden;
-                BOC2.Visibility = Visibility.Visible;
-            }
-            else if (cpu_choice == 9 && cpu_choosed9 != true && player_choosed9 != true)
-            {
-                FC3 = true;
-                cpu_choosed9 = true;
-                BC3.Visibility = Visibility.Hidden;
-                BOC3.Visibility = Visibility.Visible;
+                if (cpu_choosed9 == true)
+                {
+                    if (player_choosed7 && player_choosed8 != true)
+                    {
+                        if (cpu_choosed7 != true)
+                        {
+                            FC1 = true;
+                            cpu_choosed7 = true;
+                            BC1.Visibility = Visibility.Hidden;
+                            BOC1.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed8 != true)
+                        {
+                            FC2 = true;
+                            cpu_choosed8 = true;
+                            BC2.Visibility = Visibility.Hidden;
+                            BOC2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed3 && player_choosed6 != true)
+                    {
+                        if (cpu_choosed3 != true)
+                        {
+                            FA3 = true;
+                            cpu_choosed3 = true;
+                            BA3.Visibility = Visibility.Hidden;
+                            BOA3.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed6 != true)
+                        {
+                            FB3 = true;
+                            cpu_choosed6 = true;
+                            BB3.Visibility = Visibility.Hidden;
+                            BOB3.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else
+                    {
+                        goto J1;
+                    }
+                }
+                else
+                {
+                    FC3 = true;
+                    cpu_choosed9 = true;
+                    BC3.Visibility = Visibility.Hidden;
+                    BOC3.Visibility = Visibility.Visible;
+                }
             }
             else
             {
@@ -2217,69 +4537,533 @@ namespace TicTacToeWPFspiel
 
             cpu_choice = rd_number_generated.Next(1, 10);
 
+            if (cpu_choice == 1 && player_choosed1 != true)
+            {
+                if (cpu_choosed1 == true)
+                {
+                    if (player_choosed2 && player_choosed3 != true)
+                    {
+                        if (cpu_choosed3 != true)
+                        {
+                            FA3 = true;
+                            cpu_choosed3 = true;
+                            BA3.Visibility = Visibility.Hidden;
+                            BOA3.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed2 != true)
+                        {
+                            FA2 = true;
+                            cpu_choosed2 = true;
+                            BA2.Visibility = Visibility.Hidden;
+                            BOA2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed4 && player_choosed7 != true)
+                    {
+                        if (cpu_choosed7 != true)
+                        {
+                            FC1 = true;
+                            cpu_choosed7 = true;
+                            BC1.Visibility = Visibility.Hidden;
+                            BOC1.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed4 != true)
+                        {
+                            FB1 = true;
+                            cpu_choosed4 = true;
+                            BB1.Visibility = Visibility.Hidden;
+                            BOB1.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed5 && player_choosed9 != true)
+                    {
+                        if (cpu_choosed9 != true)
+                        {
+                            FC3 = true;
+                            cpu_choosed9 = true;
+                            BC3.Visibility = Visibility.Hidden;
+                            BOC3.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed5 != true)
+                        {
+                            FB2 = true;
+                            cpu_choosed5 = true;
+                            BB2.Visibility = Visibility.Hidden;
+                            BOB2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else
+                    {
+                        goto J1;
+                    }
+                }
+                else
+                {
+                    FA1 = true;
+                    cpu_choosed1 = true;
+                    BA1.Visibility = Visibility.Hidden;
+                    BOA1.Visibility = Visibility.Visible;
+                }
+            }
+            else if (cpu_choice == 2 && player_choosed2 != true)
+            {
+                if (cpu_choosed2 == true)
+                {
+                    if (player_choosed3 && player_choosed1 != true)
+                    {
+                        if (cpu_choosed3 != true)
+                        {
+                            FA3 = true;
+                            cpu_choosed3 = true;
+                            BA3.Visibility = Visibility.Hidden;
+                            BOA3.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed1 != true)
+                        {
+                            FA1 = true;
+                            cpu_choosed1 = true;
+                            BA1.Visibility = Visibility.Hidden;
+                            BOA1.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed5 && player_choosed8 != true)
+                    {
+                        if (cpu_choosed8 != true)
+                        {
+                            FC2 = true;
+                            cpu_choosed8 = true;
+                            BC2.Visibility = Visibility.Hidden;
+                            BOC2.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed5 != true)
+                        {
+                            FB2 = true;
+                            cpu_choosed5 = true;
+                            BB2.Visibility = Visibility.Hidden;
+                            BOB2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else
+                    {
+                        goto J1;
+                    }
+                }
+                else
+                {
+                    FA2 = true;
+                    cpu_choosed2 = true;
+                    BA2.Visibility = Visibility.Hidden;
+                    BOA2.Visibility = Visibility.Visible;
+                }
 
-            if (cpu_choice == 1 && cpu_choosed1 != true && player_choosed1 != true)
-            {
-                FA1 = true;
-                cpu_choosed1 = true;
-                BA1.Visibility = Visibility.Hidden;
-                BOA1.Visibility = Visibility.Visible;
             }
-            else if (cpu_choice == 2 && cpu_choosed2 != true && player_choosed2 != true)
+            else if (cpu_choice == 3 && player_choosed3 != true)
             {
-                FA2 = true;
-                cpu_choosed2 = true;
-                BA2.Visibility = Visibility.Hidden;
-                BOA2.Visibility = Visibility.Visible;
+                if (cpu_choosed3 == true)
+                {
+                    if (player_choosed2 && player_choosed1 != true)
+                    {
+                        if (cpu_choosed1 != true)
+                        {
+                            FA1 = true;
+                            cpu_choosed1 = true;
+                            BA1.Visibility = Visibility.Hidden;
+                            BOA1.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed2 != true)
+                        {
+                            FA2 = true;
+                            cpu_choosed2 = true;
+                            BA2.Visibility = Visibility.Hidden;
+                            BOA2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed6 && player_choosed9 != true)
+                    {
+                        if (cpu_choosed9 != true)
+                        {
+                            FC3 = true;
+                            cpu_choosed9 = true;
+                            BC3.Visibility = Visibility.Hidden;
+                            BOC3.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed6 != true)
+                        {
+                            FB3 = true;
+                            cpu_choosed6 = true;
+                            BB3.Visibility = Visibility.Hidden;
+                            BOB3.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else
+                    {
+                        goto J1;
+                    }
+                }
+                else
+                {
+                    FA3 = true;
+                    cpu_choosed3 = true;
+                    BA3.Visibility = Visibility.Hidden;
+                    BOA3.Visibility = Visibility.Visible;
+                }
             }
-            else if (cpu_choice == 3 && cpu_choosed3 != true && player_choosed3 != true)
+            else if (cpu_choice == 4 && player_choosed4 != true)
             {
-                FA3 = true;
-                cpu_choosed3 = true;
-                BA3.Visibility = Visibility.Hidden;
-                BOA3.Visibility = Visibility.Visible;
+                if (cpu_choosed4 == true)
+                {
+                    if (player_choosed5 && player_choosed6 != true)
+                    {
+                        if (cpu_choosed6 != true)
+                        {
+                            FB3 = true;
+                            cpu_choosed6 = true;
+                            BB3.Visibility = Visibility.Hidden;
+                            BOB3.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed5 != true)
+                        {
+                            FB2 = true;
+                            cpu_choosed5 = true;
+                            BB2.Visibility = Visibility.Hidden;
+                            BOB2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed1 && player_choosed7 != true)
+                    {
+                        if (cpu_choosed7 != true)
+                        {
+                            FC1 = true;
+                            cpu_choosed7 = true;
+                            BC1.Visibility = Visibility.Hidden;
+                            BOC1.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed1 != true)
+                        {
+                            FA1 = true;
+                            cpu_choosed1 = true;
+                            BA1.Visibility = Visibility.Hidden;
+                            BOA1.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else
+                    {
+                        goto J1;
+                    }
+                }
+                else
+                {
+                    FB1 = true;
+                    cpu_choosed4 = true;
+                    BB1.Visibility = Visibility.Hidden;
+                    BOB1.Visibility = Visibility.Visible;
+                }
             }
-            else if (cpu_choice == 4 && cpu_choosed4 != true && player_choosed4 != true)
+            else if (cpu_choice == 5 && player_choosed5 != true)
             {
-                FB1 = true;
-                cpu_choosed4 = true;
-                BB1.Visibility = Visibility.Hidden;
-                BOB1.Visibility = Visibility.Visible;
+                if (cpu_choosed5 == true)
+                {
+                    if (player_choosed4 && player_choosed6 != true)
+                    {
+                        if (cpu_choosed4 != true)
+                        {
+                            FB1 = true;
+                            cpu_choosed4 = true;
+                            BB1.Visibility = Visibility.Hidden;
+                            BOB1.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed6 != true)
+                        {
+                            FB3 = true;
+                            cpu_choosed6 = true;
+                            BB3.Visibility = Visibility.Hidden;
+                            BOB3.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed2 && player_choosed8 != true)
+                    {
+                        if (cpu_choosed8 != true)
+                        {
+                            FC2 = true;
+                            cpu_choosed8 = true;
+                            BC2.Visibility = Visibility.Hidden;
+                            BOC2.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed2 != true)
+                        {
+                            FA2 = true;
+                            cpu_choosed2 = true;
+                            BA2.Visibility = Visibility.Hidden;
+                            BOA2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed1 && player_choosed9 != true)
+                    {
+                        if (cpu_choosed1 != true)
+                        {
+                            FA1 = true;
+                            cpu_choosed1 = true;
+                            BA1.Visibility = Visibility.Hidden;
+                            BOA2.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed9 != true)
+                        {
+                            FC3 = true;
+                            cpu_choosed9 = true;
+                            BC3.Visibility = Visibility.Hidden;
+                            BOC3.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed3 && player_choosed7 != true)
+                    {
+                        if (cpu_choosed7 != true)
+                        {
+                            FC1 = true;
+                            cpu_choosed7 = true;
+                            BC1.Visibility = Visibility.Hidden;
+                            BOC1.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed3 != true)
+                        {
+                            FA3 = true;
+                            cpu_choosed3 = true;
+                            BA3.Visibility = Visibility.Hidden;
+                            BOA3.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else
+                    {
+                        goto J1;
+                    }
+                }
+                else
+                {
+                    FB2 = true;
+                    cpu_choosed5 = true;
+                    BB2.Visibility = Visibility.Hidden;
+                    BOB2.Visibility = Visibility.Visible;
+                }
             }
-            else if (cpu_choice == 5 && cpu_choosed5 != true && player_choosed5 != true)
+            else if (cpu_choice == 6 && player_choosed6 != true)
             {
-                FB2 = true;
-                cpu_choosed5 = true;
-                BB2.Visibility = Visibility.Hidden;
-                BOB2.Visibility = Visibility.Visible;
+                if (cpu_choosed6 == true)
+                {
+                    if (player_choosed4 && player_choosed5 != true)
+                    {
+                        if (cpu_choosed4 != true)
+                        {
+                            FB1 = true;
+                            cpu_choosed4 = true;
+                            BB1.Visibility = Visibility.Hidden;
+                            BOB1.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed5 != true)
+                        {
+                            FB2 = true;
+                            cpu_choosed5 = true;
+                            BB2.Visibility = Visibility.Hidden;
+                            BOB2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed3 && player_choosed9 != true)
+                    {
+                        if (cpu_choosed9 != true)
+                        {
+                            FC3 = true;
+                            cpu_choosed9 = true;
+                            BC3.Visibility = Visibility.Hidden;
+                            BOC3.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed3 != true)
+                        {
+                            FA3 = true;
+                            cpu_choosed3 = true;
+                            BA3.Visibility = Visibility.Hidden;
+                            BOA3.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else
+                    {
+                        goto J1;
+                    }
+                }
+                else
+                {
+                    FB3 = true;
+                    cpu_choosed6 = true;
+                    BB3.Visibility = Visibility.Hidden;
+                    BOB3.Visibility = Visibility.Visible;
+                }
             }
-            else if (cpu_choice == 6 && cpu_choosed6 != true && player_choosed6 != true)
+            else if (cpu_choice == 7 && player_choosed7 != true)
             {
-                FB3 = true;
-                cpu_choosed6 = true;
-                BB3.Visibility = Visibility.Hidden;
-                BOB3.Visibility = Visibility.Visible;
+                if (cpu_choosed7 == true)
+                {
+                    if (player_choosed9 && player_choosed8 != true)
+                    {
+                        if (cpu_choosed9 != true)
+                        {
+                            FC3 = true;
+                            cpu_choosed9 = true;
+                            BC3.Visibility = Visibility.Hidden;
+                            BOC3.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed8 != true)
+                        {
+                            FC2 = true;
+                            cpu_choosed8 = true;
+                            BC2.Visibility = Visibility.Hidden;
+                            BOC2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed1 && player_choosed4 != true)
+                    {
+                        if (cpu_choosed1 != true)
+                        {
+                            FA1 = true;
+                            cpu_choosed1 = true;
+                            BA1.Visibility = Visibility.Hidden;
+                            BOA1.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed4 != true)
+                        {
+                            FB1 = true;
+                            cpu_choosed4 = true;
+                            BB1.Visibility = Visibility.Hidden;
+                            BOB1.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed5 && player_choosed3 != true)
+                    {
+                        if (cpu_choosed3 != true)
+                        {
+                            FA3 = true;
+                            cpu_choosed3 = true;
+                            BA3.Visibility = Visibility.Hidden;
+                            BOA3.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed5 != true)
+                        {
+                            FB2 = true;
+                            cpu_choosed5 = true;
+                            BB2.Visibility = Visibility.Hidden;
+                            BOB2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else
+                    {
+                        goto J1;
+                    }
+                }
+                else
+                {
+                    FC1 = true;
+                    cpu_choosed7 = true;
+                    BC1.Visibility = Visibility.Hidden;
+                    BOC1.Visibility = Visibility.Visible;
+                }
             }
-            else if (cpu_choice == 7 && cpu_choosed7 != true && player_choosed7 != true)
+            else if (cpu_choice == 8 && player_choosed8 != true)
             {
-                FC1 = true;
-                cpu_choosed7 = true;
-                BC1.Visibility = Visibility.Hidden;
-                BOC1.Visibility = Visibility.Visible;
+                if (cpu_choosed8 == true)
+                {
+                    if (player_choosed5 && player_choosed2 != true)
+                    {
+                        if (cpu_choosed2 != true)
+                        {
+                            FA2 = true;
+                            cpu_choosed2 = true;
+                            BA2.Visibility = Visibility.Hidden;
+                            BOA2.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed5 != true)
+                        {
+                            FB2 = true;
+                            cpu_choosed5 = true;
+                            BB2.Visibility = Visibility.Hidden;
+                            BOB2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed7 && player_choosed9 != true)
+                    {
+                        if (cpu_choosed7 != true)
+                        {
+                            FC1 = true;
+                            cpu_choosed7 = true;
+                            BC1.Visibility = Visibility.Hidden;
+                            BOC1.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed9 != true)
+                        {
+                            FC3 = true;
+                            cpu_choosed9 = true;
+                            BC3.Visibility = Visibility.Hidden;
+                            BOC3.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else
+                    {
+                        goto J1;
+                    }
+                }
+                else
+                {
+                    FC2 = true;
+                    cpu_choosed8 = true;
+                    BC2.Visibility = Visibility.Hidden;
+                    BOC2.Visibility = Visibility.Visible;
+                }
             }
-            else if (cpu_choice == 8 && cpu_choosed8 != true && player_choosed8 != true)
+            else if (cpu_choice == 9 && player_choosed9 != true)
             {
-                FC2 = true;
-                cpu_choosed8 = true;
-                BC2.Visibility = Visibility.Hidden;
-                BOC2.Visibility = Visibility.Visible;
-            }
-            else if (cpu_choice == 9 && cpu_choosed9 != true && player_choosed9 != true)
-            {
-                FC3 = true;
-                cpu_choosed9 = true;
-                BC3.Visibility = Visibility.Hidden;
-                BOC3.Visibility = Visibility.Visible;
+                if (cpu_choosed9 == true)
+                {
+                    if (player_choosed7 && player_choosed8 != true)
+                    {
+                        if (cpu_choosed7 != true)
+                        {
+                            FC1 = true;
+                            cpu_choosed7 = true;
+                            BC1.Visibility = Visibility.Hidden;
+                            BOC1.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed8 != true)
+                        {
+                            FC2 = true;
+                            cpu_choosed8 = true;
+                            BC2.Visibility = Visibility.Hidden;
+                            BOC2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed3 && player_choosed6 != true)
+                    {
+                        if (cpu_choosed3 != true)
+                        {
+                            FA3 = true;
+                            cpu_choosed3 = true;
+                            BA3.Visibility = Visibility.Hidden;
+                            BOA3.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed6 != true)
+                        {
+                            FB3 = true;
+                            cpu_choosed6 = true;
+                            BB3.Visibility = Visibility.Hidden;
+                            BOB3.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else
+                    {
+                        goto J1;
+                    }
+                }
+                else
+                {
+                    FC3 = true;
+                    cpu_choosed9 = true;
+                    BC3.Visibility = Visibility.Hidden;
+                    BOC3.Visibility = Visibility.Visible;
+                }
             }
             else
             {
@@ -2482,69 +5266,533 @@ namespace TicTacToeWPFspiel
 
             cpu_choice = rd_number_generated.Next(1, 10);
 
+            if (cpu_choice == 1 && player_choosed1 != true)
+            {
+                if (cpu_choosed1 == true)
+                {
+                    if (player_choosed2 && player_choosed3 != true)
+                    {
+                        if (cpu_choosed3 != true)
+                        {
+                            FA3 = true;
+                            cpu_choosed3 = true;
+                            BA3.Visibility = Visibility.Hidden;
+                            BOA3.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed2 != true)
+                        {
+                            FA2 = true;
+                            cpu_choosed2 = true;
+                            BA2.Visibility = Visibility.Hidden;
+                            BOA2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed4 && player_choosed7 != true)
+                    {
+                        if (cpu_choosed7 != true)
+                        {
+                            FC1 = true;
+                            cpu_choosed7 = true;
+                            BC1.Visibility = Visibility.Hidden;
+                            BOC1.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed4 != true)
+                        {
+                            FB1 = true;
+                            cpu_choosed4 = true;
+                            BB1.Visibility = Visibility.Hidden;
+                            BOB1.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed5 && player_choosed9 != true)
+                    {
+                        if (cpu_choosed9 != true)
+                        {
+                            FC3 = true;
+                            cpu_choosed9 = true;
+                            BC3.Visibility = Visibility.Hidden;
+                            BOC3.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed5 != true)
+                        {
+                            FB2 = true;
+                            cpu_choosed5 = true;
+                            BB2.Visibility = Visibility.Hidden;
+                            BOB2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else
+                    {
+                        goto J1;
+                    }
+                }
+                else
+                {
+                    FA1 = true;
+                    cpu_choosed1 = true;
+                    BA1.Visibility = Visibility.Hidden;
+                    BOA1.Visibility = Visibility.Visible;
+                }
+            }
+            else if (cpu_choice == 2 && player_choosed2 != true)
+            {
+                if (cpu_choosed2 == true)
+                {
+                    if (player_choosed3 && player_choosed1 != true)
+                    {
+                        if (cpu_choosed3 != true)
+                        {
+                            FA3 = true;
+                            cpu_choosed3 = true;
+                            BA3.Visibility = Visibility.Hidden;
+                            BOA3.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed1 != true)
+                        {
+                            FA1 = true;
+                            cpu_choosed1 = true;
+                            BA1.Visibility = Visibility.Hidden;
+                            BOA1.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed5 && player_choosed8 != true)
+                    {
+                        if (cpu_choosed8 != true)
+                        {
+                            FC2 = true;
+                            cpu_choosed8 = true;
+                            BC2.Visibility = Visibility.Hidden;
+                            BOC2.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed5 != true)
+                        {
+                            FB2 = true;
+                            cpu_choosed5 = true;
+                            BB2.Visibility = Visibility.Hidden;
+                            BOB2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else
+                    {
+                        goto J1;
+                    }
+                }
+                else
+                {
+                    FA2 = true;
+                    cpu_choosed2 = true;
+                    BA2.Visibility = Visibility.Hidden;
+                    BOA2.Visibility = Visibility.Visible;
+                }
 
-            if (cpu_choice == 1 && cpu_choosed1 != true && player_choosed1 != true)
-            {
-                FA1 = true;
-                cpu_choosed1 = true;
-                BA1.Visibility = Visibility.Hidden;
-                BOA1.Visibility = Visibility.Visible;
             }
-            else if (cpu_choice == 2 && cpu_choosed2 != true && player_choosed2 != true)
+            else if (cpu_choice == 3 && player_choosed3 != true)
             {
-                FA2 = true;
-                cpu_choosed2 = true;
-                BA2.Visibility = Visibility.Hidden;
-                BOA2.Visibility = Visibility.Visible;
+                if (cpu_choosed3 == true)
+                {
+                    if (player_choosed2 && player_choosed1 != true)
+                    {
+                        if (cpu_choosed1 != true)
+                        {
+                            FA1 = true;
+                            cpu_choosed1 = true;
+                            BA1.Visibility = Visibility.Hidden;
+                            BOA1.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed2 != true)
+                        {
+                            FA2 = true;
+                            cpu_choosed2 = true;
+                            BA2.Visibility = Visibility.Hidden;
+                            BOA2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed6 && player_choosed9 != true)
+                    {
+                        if (cpu_choosed9 != true)
+                        {
+                            FC3 = true;
+                            cpu_choosed9 = true;
+                            BC3.Visibility = Visibility.Hidden;
+                            BOC3.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed6 != true)
+                        {
+                            FB3 = true;
+                            cpu_choosed6 = true;
+                            BB3.Visibility = Visibility.Hidden;
+                            BOB3.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else
+                    {
+                        goto J1;
+                    }
+                }
+                else
+                {
+                    FA3 = true;
+                    cpu_choosed3 = true;
+                    BA3.Visibility = Visibility.Hidden;
+                    BOA3.Visibility = Visibility.Visible;
+                }
             }
-            else if (cpu_choice == 3 && cpu_choosed3 != true && player_choosed3 != true)
+            else if (cpu_choice == 4 && player_choosed4 != true)
             {
-                FA3 = true;
-                cpu_choosed3 = true;
-                BA3.Visibility = Visibility.Hidden;
-                BOA3.Visibility = Visibility.Visible;
+                if (cpu_choosed4 == true)
+                {
+                    if (player_choosed5 && player_choosed6 != true)
+                    {
+                        if (cpu_choosed6 != true)
+                        {
+                            FB3 = true;
+                            cpu_choosed6 = true;
+                            BB3.Visibility = Visibility.Hidden;
+                            BOB3.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed5 != true)
+                        {
+                            FB2 = true;
+                            cpu_choosed5 = true;
+                            BB2.Visibility = Visibility.Hidden;
+                            BOB2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed1 && player_choosed7 != true)
+                    {
+                        if (cpu_choosed7 != true)
+                        {
+                            FC1 = true;
+                            cpu_choosed7 = true;
+                            BC1.Visibility = Visibility.Hidden;
+                            BOC1.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed1 != true)
+                        {
+                            FA1 = true;
+                            cpu_choosed1 = true;
+                            BA1.Visibility = Visibility.Hidden;
+                            BOA1.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else
+                    {
+                        goto J1;
+                    }
+                }
+                else
+                {
+                    FB1 = true;
+                    cpu_choosed4 = true;
+                    BB1.Visibility = Visibility.Hidden;
+                    BOB1.Visibility = Visibility.Visible;
+                }
             }
-            else if (cpu_choice == 4 && cpu_choosed4 != true && player_choosed4 != true)
+            else if (cpu_choice == 5 && player_choosed5 != true)
             {
-                FB1 = true;
-                cpu_choosed4 = true;
-                BB1.Visibility = Visibility.Hidden;
-                BOB1.Visibility = Visibility.Visible;
+                if (cpu_choosed5 == true)
+                {
+                    if (player_choosed4 && player_choosed6 != true)
+                    {
+                        if (cpu_choosed4 != true)
+                        {
+                            FB1 = true;
+                            cpu_choosed4 = true;
+                            BB1.Visibility = Visibility.Hidden;
+                            BOB1.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed6 != true)
+                        {
+                            FB3 = true;
+                            cpu_choosed6 = true;
+                            BB3.Visibility = Visibility.Hidden;
+                            BOB3.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed2 && player_choosed8 != true)
+                    {
+                        if (cpu_choosed8 != true)
+                        {
+                            FC2 = true;
+                            cpu_choosed8 = true;
+                            BC2.Visibility = Visibility.Hidden;
+                            BOC2.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed2 != true)
+                        {
+                            FA2 = true;
+                            cpu_choosed2 = true;
+                            BA2.Visibility = Visibility.Hidden;
+                            BOA2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed1 && player_choosed9 != true)
+                    {
+                        if (cpu_choosed1 != true)
+                        {
+                            FA1 = true;
+                            cpu_choosed1 = true;
+                            BA1.Visibility = Visibility.Hidden;
+                            BOA2.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed9 != true)
+                        {
+                            FC3 = true;
+                            cpu_choosed9 = true;
+                            BC3.Visibility = Visibility.Hidden;
+                            BOC3.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed3 && player_choosed7 != true)
+                    {
+                        if (cpu_choosed7 != true)
+                        {
+                            FC1 = true;
+                            cpu_choosed7 = true;
+                            BC1.Visibility = Visibility.Hidden;
+                            BOC1.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed3 != true)
+                        {
+                            FA3 = true;
+                            cpu_choosed3 = true;
+                            BA3.Visibility = Visibility.Hidden;
+                            BOA3.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else
+                    {
+                        goto J1;
+                    }
+                }
+                else
+                {
+                    FB2 = true;
+                    cpu_choosed5 = true;
+                    BB2.Visibility = Visibility.Hidden;
+                    BOB2.Visibility = Visibility.Visible;
+                }
             }
-            else if (cpu_choice == 5 && cpu_choosed5 != true && player_choosed5 != true)
+            else if (cpu_choice == 6 && player_choosed6 != true)
             {
-                FB2 = true;
-                cpu_choosed5 = true;
-                BB2.Visibility = Visibility.Hidden;
-                BOB2.Visibility = Visibility.Visible;
+                if (cpu_choosed6 == true)
+                {
+                    if (player_choosed4 && player_choosed5 != true)
+                    {
+                        if (cpu_choosed4 != true)
+                        {
+                            FB1 = true;
+                            cpu_choosed4 = true;
+                            BB1.Visibility = Visibility.Hidden;
+                            BOB1.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed5 != true)
+                        {
+                            FB2 = true;
+                            cpu_choosed5 = true;
+                            BB2.Visibility = Visibility.Hidden;
+                            BOB2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed3 && player_choosed9 != true)
+                    {
+                        if (cpu_choosed9 != true)
+                        {
+                            FC3 = true;
+                            cpu_choosed9 = true;
+                            BC3.Visibility = Visibility.Hidden;
+                            BOC3.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed3 != true)
+                        {
+                            FA3 = true;
+                            cpu_choosed3 = true;
+                            BA3.Visibility = Visibility.Hidden;
+                            BOA3.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else
+                    {
+                        goto J1;
+                    }
+                }
+                else
+                {
+                    FB3 = true;
+                    cpu_choosed6 = true;
+                    BB3.Visibility = Visibility.Hidden;
+                    BOB3.Visibility = Visibility.Visible;
+                }
             }
-            else if (cpu_choice == 6 && cpu_choosed6 != true && player_choosed6 != true)
+            else if (cpu_choice == 7 && player_choosed7 != true)
             {
-                FB3 = true;
-                cpu_choosed6 = true;
-                BB3.Visibility = Visibility.Hidden;
-                BOB3.Visibility = Visibility.Visible;
+                if (cpu_choosed7 == true)
+                {
+                    if (player_choosed9 && player_choosed8 != true)
+                    {
+                        if (cpu_choosed9 != true)
+                        {
+                            FC3 = true;
+                            cpu_choosed9 = true;
+                            BC3.Visibility = Visibility.Hidden;
+                            BOC3.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed8 != true)
+                        {
+                            FC2 = true;
+                            cpu_choosed8 = true;
+                            BC2.Visibility = Visibility.Hidden;
+                            BOC2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed1 && player_choosed4 != true)
+                    {
+                        if (cpu_choosed1 != true)
+                        {
+                            FA1 = true;
+                            cpu_choosed1 = true;
+                            BA1.Visibility = Visibility.Hidden;
+                            BOA1.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed4 != true)
+                        {
+                            FB1 = true;
+                            cpu_choosed4 = true;
+                            BB1.Visibility = Visibility.Hidden;
+                            BOB1.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed5 && player_choosed3 != true)
+                    {
+                        if (cpu_choosed3 != true)
+                        {
+                            FA3 = true;
+                            cpu_choosed3 = true;
+                            BA3.Visibility = Visibility.Hidden;
+                            BOA3.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed5 != true)
+                        {
+                            FB2 = true;
+                            cpu_choosed5 = true;
+                            BB2.Visibility = Visibility.Hidden;
+                            BOB2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else
+                    {
+                        goto J1;
+                    }
+                }
+                else
+                {
+                    FC1 = true;
+                    cpu_choosed7 = true;
+                    BC1.Visibility = Visibility.Hidden;
+                    BOC1.Visibility = Visibility.Visible;
+                }
             }
-            else if (cpu_choice == 7 && cpu_choosed7 != true && player_choosed7 != true)
+            else if (cpu_choice == 8 && player_choosed8 != true)
             {
-                FC1 = true;
-                cpu_choosed7 = true;
-                BC1.Visibility = Visibility.Hidden;
-                BOC1.Visibility = Visibility.Visible;
+                if (cpu_choosed8 == true)
+                {
+                    if (player_choosed5 && player_choosed2 != true)
+                    {
+                        if (cpu_choosed2 != true)
+                        {
+                            FA2 = true;
+                            cpu_choosed2 = true;
+                            BA2.Visibility = Visibility.Hidden;
+                            BOA2.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed5 != true)
+                        {
+                            FB2 = true;
+                            cpu_choosed5 = true;
+                            BB2.Visibility = Visibility.Hidden;
+                            BOB2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed7 && player_choosed9 != true)
+                    {
+                        if (cpu_choosed7 != true)
+                        {
+                            FC1 = true;
+                            cpu_choosed7 = true;
+                            BC1.Visibility = Visibility.Hidden;
+                            BOC1.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed9 != true)
+                        {
+                            FC3 = true;
+                            cpu_choosed9 = true;
+                            BC3.Visibility = Visibility.Hidden;
+                            BOC3.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else
+                    {
+                        goto J1;
+                    }
+                }
+                else
+                {
+                    FC2 = true;
+                    cpu_choosed8 = true;
+                    BC2.Visibility = Visibility.Hidden;
+                    BOC2.Visibility = Visibility.Visible;
+                }
             }
-            else if (cpu_choice == 8 && cpu_choosed8 != true && player_choosed8 != true)
+            else if (cpu_choice == 9 && player_choosed9 != true)
             {
-                FC2 = true;
-                cpu_choosed8 = true;
-                BC2.Visibility = Visibility.Hidden;
-                BOC2.Visibility = Visibility.Visible;
-            }
-            else if (cpu_choice == 9 && cpu_choosed9 != true && player_choosed9 != true)
-            {
-                FC3 = true;
-                cpu_choosed9 = true;
-                BC3.Visibility = Visibility.Hidden;
-                BOC3.Visibility = Visibility.Visible;
+                if (cpu_choosed9 == true)
+                {
+                    if (player_choosed7 && player_choosed8 != true)
+                    {
+                        if (cpu_choosed7 != true)
+                        {
+                            FC1 = true;
+                            cpu_choosed7 = true;
+                            BC1.Visibility = Visibility.Hidden;
+                            BOC1.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed8 != true)
+                        {
+                            FC2 = true;
+                            cpu_choosed8 = true;
+                            BC2.Visibility = Visibility.Hidden;
+                            BOC2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed3 && player_choosed6 != true)
+                    {
+                        if (cpu_choosed3 != true)
+                        {
+                            FA3 = true;
+                            cpu_choosed3 = true;
+                            BA3.Visibility = Visibility.Hidden;
+                            BOA3.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed6 != true)
+                        {
+                            FB3 = true;
+                            cpu_choosed6 = true;
+                            BB3.Visibility = Visibility.Hidden;
+                            BOB3.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else
+                    {
+                        goto J1;
+                    }
+                }
+                else
+                {
+                    FC3 = true;
+                    cpu_choosed9 = true;
+                    BC3.Visibility = Visibility.Hidden;
+                    BOC3.Visibility = Visibility.Visible;
+                }
             }
             else
             {
@@ -2746,69 +5994,533 @@ namespace TicTacToeWPFspiel
 
             cpu_choice = rd_number_generated.Next(1, 10);
 
+            if (cpu_choice == 1 && player_choosed1 != true)
+            {
+                if (cpu_choosed1 == true)
+                {
+                    if (player_choosed2 && player_choosed3 != true)
+                    {
+                        if (cpu_choosed3 != true)
+                        {
+                            FA3 = true;
+                            cpu_choosed3 = true;
+                            BA3.Visibility = Visibility.Hidden;
+                            BOA3.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed2 != true)
+                        {
+                            FA2 = true;
+                            cpu_choosed2 = true;
+                            BA2.Visibility = Visibility.Hidden;
+                            BOA2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed4 && player_choosed7 != true)
+                    {
+                        if (cpu_choosed7 != true)
+                        {
+                            FC1 = true;
+                            cpu_choosed7 = true;
+                            BC1.Visibility = Visibility.Hidden;
+                            BOC1.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed4 != true)
+                        {
+                            FB1 = true;
+                            cpu_choosed4 = true;
+                            BB1.Visibility = Visibility.Hidden;
+                            BOB1.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed5 && player_choosed9 != true)
+                    {
+                        if (cpu_choosed9 != true)
+                        {
+                            FC3 = true;
+                            cpu_choosed9 = true;
+                            BC3.Visibility = Visibility.Hidden;
+                            BOC3.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed5 != true)
+                        {
+                            FB2 = true;
+                            cpu_choosed5 = true;
+                            BB2.Visibility = Visibility.Hidden;
+                            BOB2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else
+                    {
+                        goto J1;
+                    }
+                }
+                else
+                {
+                    FA1 = true;
+                    cpu_choosed1 = true;
+                    BA1.Visibility = Visibility.Hidden;
+                    BOA1.Visibility = Visibility.Visible;
+                }
+            }
+            else if (cpu_choice == 2 && player_choosed2 != true)
+            {
+                if (cpu_choosed2 == true)
+                {
+                    if (player_choosed3 && player_choosed1 != true)
+                    {
+                        if (cpu_choosed3 != true)
+                        {
+                            FA3 = true;
+                            cpu_choosed3 = true;
+                            BA3.Visibility = Visibility.Hidden;
+                            BOA3.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed1 != true)
+                        {
+                            FA1 = true;
+                            cpu_choosed1 = true;
+                            BA1.Visibility = Visibility.Hidden;
+                            BOA1.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed5 && player_choosed8 != true)
+                    {
+                        if (cpu_choosed8 != true)
+                        {
+                            FC2 = true;
+                            cpu_choosed8 = true;
+                            BC2.Visibility = Visibility.Hidden;
+                            BOC2.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed5 != true)
+                        {
+                            FB2 = true;
+                            cpu_choosed5 = true;
+                            BB2.Visibility = Visibility.Hidden;
+                            BOB2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else
+                    {
+                        goto J1;
+                    }
+                }
+                else
+                {
+                    FA2 = true;
+                    cpu_choosed2 = true;
+                    BA2.Visibility = Visibility.Hidden;
+                    BOA2.Visibility = Visibility.Visible;
+                }
 
-            if (cpu_choice == 1 && cpu_choosed1 != true && player_choosed1 != true)
-            {
-                FA1 = true;
-                cpu_choosed1 = true;
-                BA1.Visibility = Visibility.Hidden;
-                BOA1.Visibility = Visibility.Visible;
             }
-            else if (cpu_choice == 2 && cpu_choosed2 != true && player_choosed2 != true)
+            else if (cpu_choice == 3 && player_choosed3 != true)
             {
-                FA2 = true;
-                cpu_choosed2 = true;
-                BA2.Visibility = Visibility.Hidden;
-                BOA2.Visibility = Visibility.Visible;
+                if (cpu_choosed3 == true)
+                {
+                    if (player_choosed2 && player_choosed1 != true)
+                    {
+                        if (cpu_choosed1 != true)
+                        {
+                            FA1 = true;
+                            cpu_choosed1 = true;
+                            BA1.Visibility = Visibility.Hidden;
+                            BOA1.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed2 != true)
+                        {
+                            FA2 = true;
+                            cpu_choosed2 = true;
+                            BA2.Visibility = Visibility.Hidden;
+                            BOA2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed6 && player_choosed9 != true)
+                    {
+                        if (cpu_choosed9 != true)
+                        {
+                            FC3 = true;
+                            cpu_choosed9 = true;
+                            BC3.Visibility = Visibility.Hidden;
+                            BOC3.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed6 != true)
+                        {
+                            FB3 = true;
+                            cpu_choosed6 = true;
+                            BB3.Visibility = Visibility.Hidden;
+                            BOB3.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else
+                    {
+                        goto J1;
+                    }
+                }
+                else
+                {
+                    FA3 = true;
+                    cpu_choosed3 = true;
+                    BA3.Visibility = Visibility.Hidden;
+                    BOA3.Visibility = Visibility.Visible;
+                }
             }
-            else if (cpu_choice == 3 && cpu_choosed3 != true && player_choosed3 != true)
+            else if (cpu_choice == 4 && player_choosed4 != true)
             {
-                FA3 = true;
-                cpu_choosed3 = true;
-                BA3.Visibility = Visibility.Hidden;
-                BOA3.Visibility = Visibility.Visible;
+                if (cpu_choosed4 == true)
+                {
+                    if (player_choosed5 && player_choosed6 != true)
+                    {
+                        if (cpu_choosed6 != true)
+                        {
+                            FB3 = true;
+                            cpu_choosed6 = true;
+                            BB3.Visibility = Visibility.Hidden;
+                            BOB3.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed5 != true)
+                        {
+                            FB2 = true;
+                            cpu_choosed5 = true;
+                            BB2.Visibility = Visibility.Hidden;
+                            BOB2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed1 && player_choosed7 != true)
+                    {
+                        if (cpu_choosed7 != true)
+                        {
+                            FC1 = true;
+                            cpu_choosed7 = true;
+                            BC1.Visibility = Visibility.Hidden;
+                            BOC1.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed1 != true)
+                        {
+                            FA1 = true;
+                            cpu_choosed1 = true;
+                            BA1.Visibility = Visibility.Hidden;
+                            BOA1.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else
+                    {
+                        goto J1;
+                    }
+                }
+                else
+                {
+                    FB1 = true;
+                    cpu_choosed4 = true;
+                    BB1.Visibility = Visibility.Hidden;
+                    BOB1.Visibility = Visibility.Visible;
+                }
             }
-            else if (cpu_choice == 4 && cpu_choosed4 != true && player_choosed4 != true)
+            else if (cpu_choice == 5 && player_choosed5 != true)
             {
-                FB1 = true;
-                cpu_choosed4 = true;
-                BB1.Visibility = Visibility.Hidden;
-                BOB1.Visibility = Visibility.Visible;
+                if (cpu_choosed5 == true)
+                {
+                    if (player_choosed4 && player_choosed6 != true)
+                    {
+                        if (cpu_choosed4 != true)
+                        {
+                            FB1 = true;
+                            cpu_choosed4 = true;
+                            BB1.Visibility = Visibility.Hidden;
+                            BOB1.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed6 != true)
+                        {
+                            FB3 = true;
+                            cpu_choosed6 = true;
+                            BB3.Visibility = Visibility.Hidden;
+                            BOB3.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed2 && player_choosed8 != true)
+                    {
+                        if (cpu_choosed8 != true)
+                        {
+                            FC2 = true;
+                            cpu_choosed8 = true;
+                            BC2.Visibility = Visibility.Hidden;
+                            BOC2.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed2 != true)
+                        {
+                            FA2 = true;
+                            cpu_choosed2 = true;
+                            BA2.Visibility = Visibility.Hidden;
+                            BOA2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed1 && player_choosed9 != true)
+                    {
+                        if (cpu_choosed1 != true)
+                        {
+                            FA1 = true;
+                            cpu_choosed1 = true;
+                            BA1.Visibility = Visibility.Hidden;
+                            BOA2.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed9 != true)
+                        {
+                            FC3 = true;
+                            cpu_choosed9 = true;
+                            BC3.Visibility = Visibility.Hidden;
+                            BOC3.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed3 && player_choosed7 != true)
+                    {
+                        if (cpu_choosed7 != true)
+                        {
+                            FC1 = true;
+                            cpu_choosed7 = true;
+                            BC1.Visibility = Visibility.Hidden;
+                            BOC1.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed3 != true)
+                        {
+                            FA3 = true;
+                            cpu_choosed3 = true;
+                            BA3.Visibility = Visibility.Hidden;
+                            BOA3.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else
+                    {
+                        goto J1;
+                    }
+                }
+                else
+                {
+                    FB2 = true;
+                    cpu_choosed5 = true;
+                    BB2.Visibility = Visibility.Hidden;
+                    BOB2.Visibility = Visibility.Visible;
+                }
             }
-            else if (cpu_choice == 5 && cpu_choosed5 != true && player_choosed5 != true)
+            else if (cpu_choice == 6 && player_choosed6 != true)
             {
-                FB2 = true;
-                cpu_choosed5 = true;
-                BB2.Visibility = Visibility.Hidden;
-                BOB2.Visibility = Visibility.Visible;
+                if (cpu_choosed6 == true)
+                {
+                    if (player_choosed4 && player_choosed5 != true)
+                    {
+                        if (cpu_choosed4 != true)
+                        {
+                            FB1 = true;
+                            cpu_choosed4 = true;
+                            BB1.Visibility = Visibility.Hidden;
+                            BOB1.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed5 != true)
+                        {
+                            FB2 = true;
+                            cpu_choosed5 = true;
+                            BB2.Visibility = Visibility.Hidden;
+                            BOB2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed3 && player_choosed9 != true)
+                    {
+                        if (cpu_choosed9 != true)
+                        {
+                            FC3 = true;
+                            cpu_choosed9 = true;
+                            BC3.Visibility = Visibility.Hidden;
+                            BOC3.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed3 != true)
+                        {
+                            FA3 = true;
+                            cpu_choosed3 = true;
+                            BA3.Visibility = Visibility.Hidden;
+                            BOA3.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else
+                    {
+                        goto J1;
+                    }
+                }
+                else
+                {
+                    FB3 = true;
+                    cpu_choosed6 = true;
+                    BB3.Visibility = Visibility.Hidden;
+                    BOB3.Visibility = Visibility.Visible;
+                }
             }
-            else if (cpu_choice == 6 && cpu_choosed6 != true && player_choosed6 != true)
+            else if (cpu_choice == 7 && player_choosed7 != true)
             {
-                FB3 = true;
-                cpu_choosed6 = true;
-                BB3.Visibility = Visibility.Hidden;
-                BOB3.Visibility = Visibility.Visible;
+                if (cpu_choosed7 == true)
+                {
+                    if (player_choosed9 && player_choosed8 != true)
+                    {
+                        if (cpu_choosed9 != true)
+                        {
+                            FC3 = true;
+                            cpu_choosed9 = true;
+                            BC3.Visibility = Visibility.Hidden;
+                            BOC3.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed8 != true)
+                        {
+                            FC2 = true;
+                            cpu_choosed8 = true;
+                            BC2.Visibility = Visibility.Hidden;
+                            BOC2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed1 && player_choosed4 != true)
+                    {
+                        if (cpu_choosed1 != true)
+                        {
+                            FA1 = true;
+                            cpu_choosed1 = true;
+                            BA1.Visibility = Visibility.Hidden;
+                            BOA1.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed4 != true)
+                        {
+                            FB1 = true;
+                            cpu_choosed4 = true;
+                            BB1.Visibility = Visibility.Hidden;
+                            BOB1.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed5 && player_choosed3 != true)
+                    {
+                        if (cpu_choosed3 != true)
+                        {
+                            FA3 = true;
+                            cpu_choosed3 = true;
+                            BA3.Visibility = Visibility.Hidden;
+                            BOA3.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed5 != true)
+                        {
+                            FB2 = true;
+                            cpu_choosed5 = true;
+                            BB2.Visibility = Visibility.Hidden;
+                            BOB2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else
+                    {
+                        goto J1;
+                    }
+                }
+                else
+                {
+                    FC1 = true;
+                    cpu_choosed7 = true;
+                    BC1.Visibility = Visibility.Hidden;
+                    BOC1.Visibility = Visibility.Visible;
+                }
             }
-            else if (cpu_choice == 7 && cpu_choosed7 != true && player_choosed7 != true)
+            else if (cpu_choice == 8 && player_choosed8 != true)
             {
-                FC1 = true;
-                cpu_choosed7 = true;
-                BC1.Visibility = Visibility.Hidden;
-                BOC1.Visibility = Visibility.Visible;
+                if (cpu_choosed8 == true)
+                {
+                    if (player_choosed5 && player_choosed2 != true)
+                    {
+                        if (cpu_choosed2 != true)
+                        {
+                            FA2 = true;
+                            cpu_choosed2 = true;
+                            BA2.Visibility = Visibility.Hidden;
+                            BOA2.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed5 != true)
+                        {
+                            FB2 = true;
+                            cpu_choosed5 = true;
+                            BB2.Visibility = Visibility.Hidden;
+                            BOB2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed7 && player_choosed9 != true)
+                    {
+                        if (cpu_choosed7 != true)
+                        {
+                            FC1 = true;
+                            cpu_choosed7 = true;
+                            BC1.Visibility = Visibility.Hidden;
+                            BOC1.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed9 != true)
+                        {
+                            FC3 = true;
+                            cpu_choosed9 = true;
+                            BC3.Visibility = Visibility.Hidden;
+                            BOC3.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else
+                    {
+                        goto J1;
+                    }
+                }
+                else
+                {
+                    FC2 = true;
+                    cpu_choosed8 = true;
+                    BC2.Visibility = Visibility.Hidden;
+                    BOC2.Visibility = Visibility.Visible;
+                }
             }
-            else if (cpu_choice == 8 && cpu_choosed8 != true && player_choosed8 != true)
+            else if (cpu_choice == 9 && player_choosed9 != true)
             {
-                FC2 = true;
-                cpu_choosed8 = true;
-                BC2.Visibility = Visibility.Hidden;
-                BOC2.Visibility = Visibility.Visible;
-            }
-            else if (cpu_choice == 9 && cpu_choosed9 != true && player_choosed9 != true)
-            {
-                FC3 = true;
-                cpu_choosed9 = true;
-                BC3.Visibility = Visibility.Hidden;
-                BOC3.Visibility = Visibility.Visible;
+                if (cpu_choosed9 == true)
+                {
+                    if (player_choosed7 && player_choosed8 != true)
+                    {
+                        if (cpu_choosed7 != true)
+                        {
+                            FC1 = true;
+                            cpu_choosed7 = true;
+                            BC1.Visibility = Visibility.Hidden;
+                            BOC1.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed8 != true)
+                        {
+                            FC2 = true;
+                            cpu_choosed8 = true;
+                            BC2.Visibility = Visibility.Hidden;
+                            BOC2.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else if (player_choosed3 && player_choosed6 != true)
+                    {
+                        if (cpu_choosed3 != true)
+                        {
+                            FA3 = true;
+                            cpu_choosed3 = true;
+                            BA3.Visibility = Visibility.Hidden;
+                            BOA3.Visibility = Visibility.Visible;
+                        }
+                        else if (cpu_choosed6 != true)
+                        {
+                            FB3 = true;
+                            cpu_choosed6 = true;
+                            BB3.Visibility = Visibility.Hidden;
+                            BOB3.Visibility = Visibility.Visible;
+                        }
+                    }
+                    else
+                    {
+                        goto J1;
+                    }
+                }
+                else
+                {
+                    FC3 = true;
+                    cpu_choosed9 = true;
+                    BC3.Visibility = Visibility.Hidden;
+                    BOC3.Visibility = Visibility.Visible;
+                }
             }
             else
             {
