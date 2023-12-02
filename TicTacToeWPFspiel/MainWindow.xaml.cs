@@ -79,7 +79,7 @@ namespace TicTacToeWPFspiel
 
             INFO.Visibility = Visibility.Visible;
             
-            if (player_choosed1 && player_choosed2 && player_choosed3 == true)
+            if (player_choosed1 && player_choosed2 && player_choosed3)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
@@ -88,7 +88,7 @@ namespace TicTacToeWPFspiel
                 exit.Visibility = Visibility.Visible;
                 return;
             }
-            else if (player_choosed4 && player_choosed5 && player_choosed6 == true)
+            else if (player_choosed4 && player_choosed5 && player_choosed6)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
@@ -97,7 +97,7 @@ namespace TicTacToeWPFspiel
                 exit.Visibility = Visibility.Visible;
                 return;
             }
-            else if (player_choosed7 && player_choosed8 && player_choosed9 == true)
+            else if (player_choosed7 && player_choosed8 && player_choosed9)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
@@ -106,7 +106,7 @@ namespace TicTacToeWPFspiel
                 exit.Visibility = Visibility.Visible;
                 return;
             }
-            else if (player_choosed1 && player_choosed4 && player_choosed7 == true)
+            else if (player_choosed1 && player_choosed4 && player_choosed7)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
@@ -115,7 +115,7 @@ namespace TicTacToeWPFspiel
                 exit.Visibility = Visibility.Visible;
                 return;
             }
-            else if (player_choosed2 && player_choosed5 && player_choosed8 == true)
+            else if (player_choosed2 && player_choosed5 && player_choosed8)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
@@ -124,7 +124,7 @@ namespace TicTacToeWPFspiel
                 exit.Visibility = Visibility.Visible;
                 return;
             }
-            else if (player_choosed3 && player_choosed6 && player_choosed9 == true)
+            else if (player_choosed3 && player_choosed6 && player_choosed9)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
@@ -133,7 +133,7 @@ namespace TicTacToeWPFspiel
                 exit.Visibility = Visibility.Visible;
                 return;
             }
-            else if (player_choosed1 && player_choosed5 && player_choosed9 == true)
+            else if (player_choosed1 && player_choosed5 && player_choosed9)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
@@ -142,7 +142,7 @@ namespace TicTacToeWPFspiel
                 exit.Visibility = Visibility.Visible;
                 return;
             }
-            else if (player_choosed3 && player_choosed5 && player_choosed7 == true)
+            else if (player_choosed3 && player_choosed5 && player_choosed7)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
@@ -152,7 +152,7 @@ namespace TicTacToeWPFspiel
                 return;
             }
 
-            if (FA1 && FA2 && FA3 && FB1 && FB2 && FB3 && FC1 && FC2 && FC3 == true)
+            if (FA1 && FA2 && FA3 && FB1 && FB2 && FB3 && FC1 && FC2 && FC3)
             {
                 INFO.Content = "SPIEL BEENDET...KEINER HAT GEWONNEN !";
                 INFO.Visibility = Visibility.Visible;
@@ -173,7 +173,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed1 == true)
                 {
-                    if (player_choosed2 && player_choosed3 != true)
+                    if (!player_choosed2 && !player_choosed3)
                     {
                         if (cpu_choosed3 != true)
                         {
@@ -190,7 +190,7 @@ namespace TicTacToeWPFspiel
                             BOA2.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed4 && player_choosed7 != true)
+                    else if (!player_choosed4 && !player_choosed7)
                     {
                         if (cpu_choosed7 != true)
                         {
@@ -207,7 +207,7 @@ namespace TicTacToeWPFspiel
                             BOB1.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed5 && player_choosed9 != true)
+                    else if (!player_choosed5 && !player_choosed9)
                     {
                         if (cpu_choosed9 != true)
                         {
@@ -241,7 +241,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed2 == true)
                 {
-                    if (player_choosed3 && player_choosed1 != true)
+                    if (!player_choosed3 && !player_choosed1)
                     {
                         if (cpu_choosed3 != true)
                         {
@@ -258,7 +258,7 @@ namespace TicTacToeWPFspiel
                             BOA1.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed5 && player_choosed8 != true)
+                    else if (!player_choosed5 && !player_choosed8)
                     {
                         if (cpu_choosed8 != true)
                         {
@@ -293,7 +293,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed3 == true)
                 {
-                    if (player_choosed2 && player_choosed1 != true)
+                    if (!player_choosed2 && !player_choosed1)
                     {
                         if (cpu_choosed1 != true)
                         {
@@ -310,7 +310,7 @@ namespace TicTacToeWPFspiel
                             BOA2.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed6 && player_choosed9 != true)
+                    else if (!player_choosed6 && !player_choosed9)
                     {
                         if (cpu_choosed9 != true)
                         {
@@ -344,7 +344,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed4 == true)
                 {
-                    if (player_choosed5 && player_choosed6 != true)
+                    if (!player_choosed5 && !player_choosed6)
                     {
                         if (cpu_choosed6 != true)
                         {
@@ -361,7 +361,7 @@ namespace TicTacToeWPFspiel
                             BOB2.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed1 && player_choosed7 != true)
+                    else if (!player_choosed1 && !player_choosed7)
                     {
                         if (cpu_choosed7 != true)
                         {
@@ -395,7 +395,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed5 == true)
                 {
-                    if (player_choosed4 && player_choosed6 != true)
+                    if (!player_choosed4 && !player_choosed6)
                     {
                         if (cpu_choosed4 != true)
                         {
@@ -412,7 +412,7 @@ namespace TicTacToeWPFspiel
                             BOB3.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed2 && player_choosed8 != true)
+                    else if (!player_choosed2 && !player_choosed8)
                     {
                         if (cpu_choosed8 != true)
                         {
@@ -429,7 +429,7 @@ namespace TicTacToeWPFspiel
                             BOA2.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed1 && player_choosed9 != true)
+                    else if (!player_choosed1 && !player_choosed9)
                     {
                         if (cpu_choosed1 != true)
                         {
@@ -446,7 +446,7 @@ namespace TicTacToeWPFspiel
                             BOC3.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed3 && player_choosed7 != true)
+                    else if (!player_choosed3 && !player_choosed7)
                     {
                         if (cpu_choosed7 != true)
                         {
@@ -480,7 +480,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed6 == true)
                 {
-                    if (player_choosed4 && player_choosed5 != true)
+                    if (!player_choosed4 && !player_choosed5)
                     {
                         if (cpu_choosed4 != true)
                         {
@@ -497,7 +497,7 @@ namespace TicTacToeWPFspiel
                             BOB2.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed3 && player_choosed9 != true)
+                    else if (!player_choosed3 && !player_choosed9)
                     {
                         if (cpu_choosed9 != true)
                         {
@@ -531,7 +531,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed7 == true)
                 {
-                    if (player_choosed9 && player_choosed8 != true)
+                    if (!player_choosed9 && !player_choosed8)
                     {
                         if (cpu_choosed9 != true)
                         {
@@ -548,7 +548,7 @@ namespace TicTacToeWPFspiel
                             BOC2.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed1 && player_choosed4 != true)
+                    else if (!player_choosed1 && !player_choosed4)
                     {
                         if (cpu_choosed1 != true)
                         {
@@ -565,7 +565,7 @@ namespace TicTacToeWPFspiel
                             BOB1.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed5 && player_choosed3 != true)
+                    else if (!player_choosed5 && !player_choosed3)
                     {
                         if (cpu_choosed3 != true)
                         {
@@ -599,7 +599,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed8 == true)
                 {
-                    if (player_choosed5 && player_choosed2 != true)
+                    if (!player_choosed5 && !player_choosed2)
                     {
                         if (cpu_choosed2 != true)
                         {
@@ -616,7 +616,7 @@ namespace TicTacToeWPFspiel
                             BOB2.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed7 && player_choosed9 != true)
+                    else if (!player_choosed7 && !player_choosed9)
                     {
                         if (cpu_choosed7 != true)
                         {
@@ -650,7 +650,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed9 == true)
                 {
-                    if (player_choosed7 && player_choosed8 != true)
+                    if (!player_choosed7 && !player_choosed8)
                     {
                         if (cpu_choosed7 != true)
                         {
@@ -667,7 +667,7 @@ namespace TicTacToeWPFspiel
                             BOC2.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed3 && player_choosed6 != true)
+                    else if (!player_choosed3 && !player_choosed6)
                     {
                         if (cpu_choosed3 != true)
                         {
@@ -699,7 +699,7 @@ namespace TicTacToeWPFspiel
             }
             else
             {
-                if (FA1 && FA2 && FA3 && FB1 && FB2 && FB3 && FC1 && FC2 && FC3 == true)
+                if (FA1 && FA2 && FA3 && FB1 && FB2 && FB3 && FC1 && FC2 && FC3)
                 {
                     INFO.Content = "SPIEL BEENDET...KEINER HAT GEWONNEN !";
                     INFO.Visibility = Visibility.Visible;
@@ -806,7 +806,7 @@ namespace TicTacToeWPFspiel
 
             INFO.Visibility = Visibility.Visible;
 
-            if (player_choosed1 && player_choosed2 && player_choosed3 == true)
+            if (player_choosed1 && player_choosed2 && player_choosed3)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
@@ -815,7 +815,7 @@ namespace TicTacToeWPFspiel
                 exit.Visibility = Visibility.Visible;
                 return;
             }
-            else if (player_choosed4 && player_choosed5 && player_choosed6 == true)
+            else if (player_choosed4 && player_choosed5 && player_choosed6)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
@@ -824,7 +824,7 @@ namespace TicTacToeWPFspiel
                 exit.Visibility = Visibility.Visible;
                 return;
             }
-            else if (player_choosed7 && player_choosed8 && player_choosed9 == true)
+            else if (player_choosed7 && player_choosed8 && player_choosed9)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
@@ -833,7 +833,7 @@ namespace TicTacToeWPFspiel
                 exit.Visibility = Visibility.Visible;
                 return;
             }
-            else if (player_choosed1 && player_choosed4 && player_choosed7 == true)
+            else if (player_choosed1 && player_choosed4 && player_choosed7)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
@@ -842,7 +842,7 @@ namespace TicTacToeWPFspiel
                 exit.Visibility = Visibility.Visible;
                 return;
             }
-            else if (player_choosed2 && player_choosed5 && player_choosed8 == true)
+            else if (player_choosed2 && player_choosed5 && player_choosed8)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
@@ -851,7 +851,7 @@ namespace TicTacToeWPFspiel
                 exit.Visibility = Visibility.Visible;
                 return;
             }
-            else if (player_choosed3 && player_choosed6 && player_choosed9 == true)
+            else if (player_choosed3 && player_choosed6 && player_choosed9)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
@@ -860,7 +860,7 @@ namespace TicTacToeWPFspiel
                 exit.Visibility = Visibility.Visible;
                 return;
             }
-            else if (player_choosed1 && player_choosed5 && player_choosed9 == true)
+            else if (player_choosed1 && player_choosed5 && player_choosed9)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
@@ -869,7 +869,7 @@ namespace TicTacToeWPFspiel
                 exit.Visibility = Visibility.Visible;
                 return;
             }
-            else if (player_choosed3 && player_choosed5 && player_choosed7 == true)
+            else if (player_choosed3 && player_choosed5 && player_choosed7)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
@@ -879,7 +879,7 @@ namespace TicTacToeWPFspiel
                 return;
             }
 
-            if (FA1 && FA2 && FA3 && FB1 && FB2 && FB3 && FC1 && FC2 && FC3 == true)
+            if (FA1 && FA2 && FA3 && FB1 && FB2 && FB3 && FC1 && FC2 && FC3)
             {
                 INFO.Content = "SPIEL BEENDET...KEINER HAT GEWONNEN !";
                 INFO.Visibility = Visibility.Visible;
@@ -899,7 +899,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed1 == true)
                 {
-                    if (player_choosed2 && player_choosed3 != true)
+                    if (!player_choosed2 && !player_choosed3)
                     {
                         if (cpu_choosed3 != true)
                         {
@@ -916,7 +916,7 @@ namespace TicTacToeWPFspiel
                             BOA2.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed4 && player_choosed7 != true)
+                    else if (!player_choosed4 && !player_choosed7)
                     {
                         if (cpu_choosed7 != true)
                         {
@@ -933,7 +933,7 @@ namespace TicTacToeWPFspiel
                             BOB1.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed5 && player_choosed9 != true)
+                    else if (!player_choosed5 && !player_choosed9)
                     {
                         if (cpu_choosed9 != true)
                         {
@@ -967,7 +967,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed2 == true)
                 {
-                    if (player_choosed3 && player_choosed1 != true)
+                    if (!player_choosed3 && !player_choosed1)
                     {
                         if (cpu_choosed3 != true)
                         {
@@ -984,7 +984,7 @@ namespace TicTacToeWPFspiel
                             BOA1.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed5 && player_choosed8 != true)
+                    else if (!player_choosed5 && !player_choosed8)
                     {
                         if (cpu_choosed8 != true)
                         {
@@ -1019,7 +1019,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed3 == true)
                 {
-                    if (player_choosed2 && player_choosed1 != true)
+                    if (!player_choosed2 && !player_choosed1)
                     {
                         if (cpu_choosed1 != true)
                         {
@@ -1036,7 +1036,7 @@ namespace TicTacToeWPFspiel
                             BOA2.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed6 && player_choosed9 != true)
+                    else if (!player_choosed6 && !player_choosed9)
                     {
                         if (cpu_choosed9 != true)
                         {
@@ -1070,7 +1070,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed4 == true)
                 {
-                    if (player_choosed5 && player_choosed6 != true)
+                    if (!player_choosed5 && !player_choosed6)
                     {
                         if (cpu_choosed6 != true)
                         {
@@ -1087,7 +1087,7 @@ namespace TicTacToeWPFspiel
                             BOB2.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed1 && player_choosed7 != true)
+                    else if (!player_choosed1 && !player_choosed7)
                     {
                         if (cpu_choosed7 != true)
                         {
@@ -1121,7 +1121,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed5 == true)
                 {
-                    if (player_choosed4 && player_choosed6 != true)
+                    if (!player_choosed4 && !player_choosed6)
                     {
                         if (cpu_choosed4 != true)
                         {
@@ -1138,7 +1138,7 @@ namespace TicTacToeWPFspiel
                             BOB3.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed2 && player_choosed8 != true)
+                    else if (!player_choosed2 && !player_choosed8)
                     {
                         if (cpu_choosed8 != true)
                         {
@@ -1155,7 +1155,7 @@ namespace TicTacToeWPFspiel
                             BOA2.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed1 && player_choosed9 != true)
+                    else if (!player_choosed1 && !player_choosed9)
                     {
                         if (cpu_choosed1 != true)
                         {
@@ -1172,7 +1172,7 @@ namespace TicTacToeWPFspiel
                             BOC3.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed3 && player_choosed7 != true)
+                    else if (!player_choosed3 && !player_choosed7)
                     {
                         if (cpu_choosed7 != true)
                         {
@@ -1206,7 +1206,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed6 == true)
                 {
-                    if (player_choosed4 && player_choosed5 != true)
+                    if (!player_choosed4 && !player_choosed5)
                     {
                         if (cpu_choosed4 != true)
                         {
@@ -1223,7 +1223,7 @@ namespace TicTacToeWPFspiel
                             BOB2.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed3 && player_choosed9 != true)
+                    else if (!player_choosed3 && !player_choosed9)
                     {
                         if (cpu_choosed9 != true)
                         {
@@ -1257,7 +1257,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed7 == true)
                 {
-                    if (player_choosed9 && player_choosed8 != true)
+                    if (!player_choosed9 && !player_choosed8)
                     {
                         if (cpu_choosed9 != true)
                         {
@@ -1274,7 +1274,7 @@ namespace TicTacToeWPFspiel
                             BOC2.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed1 && player_choosed4 != true)
+                    else if (!player_choosed1 && !player_choosed4)
                     {
                         if (cpu_choosed1 != true)
                         {
@@ -1291,7 +1291,7 @@ namespace TicTacToeWPFspiel
                             BOB1.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed5 && player_choosed3 != true)
+                    else if (!player_choosed5 && !player_choosed3)
                     {
                         if (cpu_choosed3 != true)
                         {
@@ -1325,7 +1325,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed8 == true)
                 {
-                    if (player_choosed5 && player_choosed2 != true)
+                    if (!player_choosed5 && !player_choosed2)
                     {
                         if (cpu_choosed2 != true)
                         {
@@ -1342,7 +1342,7 @@ namespace TicTacToeWPFspiel
                             BOB2.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed7 && player_choosed9 != true)
+                    else if (!player_choosed7 && !player_choosed9)
                     {
                         if (cpu_choosed7 != true)
                         {
@@ -1376,7 +1376,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed9 == true)
                 {
-                    if (player_choosed7 && player_choosed8 != true)
+                    if (!player_choosed7 && !player_choosed8)
                     {
                         if (cpu_choosed7 != true)
                         {
@@ -1393,7 +1393,7 @@ namespace TicTacToeWPFspiel
                             BOC2.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed3 && player_choosed6 != true)
+                    else if (!player_choosed3 && !player_choosed6)
                     {
                         if (cpu_choosed3 != true)
                         {
@@ -1425,7 +1425,7 @@ namespace TicTacToeWPFspiel
             }
             else
             {
-                if (FA1 && FA2 && FA3 && FB1 && FB2 && FB3 && FC1 && FC2 && FC3 == true)
+                if (FA1 && FA2 && FA3 && FB1 && FB2 && FB3 && FC1 && FC2 && FC3)
                 {
                     INFO.Content = "SPIEL BEENDET...KEINER HAT GEWONNEN !";
                     INFO.Visibility = Visibility.Visible;
@@ -1534,7 +1534,7 @@ namespace TicTacToeWPFspiel
 
             INFO.Visibility = Visibility.Visible;
 
-            if (player_choosed1 && player_choosed2 && player_choosed3 == true)
+            if (player_choosed1 && player_choosed2 && player_choosed3)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
@@ -1543,7 +1543,7 @@ namespace TicTacToeWPFspiel
                 exit.Visibility = Visibility.Visible;
                 return;
             }
-            else if (player_choosed4 && player_choosed5 && player_choosed6 == true)
+            else if (player_choosed4 && player_choosed5 && player_choosed6)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
@@ -1552,7 +1552,7 @@ namespace TicTacToeWPFspiel
                 exit.Visibility = Visibility.Visible;
                 return;
             }
-            else if (player_choosed7 && player_choosed8 && player_choosed9 == true)
+            else if (player_choosed7 && player_choosed8 && player_choosed9)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
@@ -1561,7 +1561,7 @@ namespace TicTacToeWPFspiel
                 exit.Visibility = Visibility.Visible;
                 return;
             }
-            else if (player_choosed1 && player_choosed4 && player_choosed7 == true)
+            else if (player_choosed1 && player_choosed4 && player_choosed7)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
@@ -1570,7 +1570,7 @@ namespace TicTacToeWPFspiel
                 exit.Visibility = Visibility.Visible;
                 return;
             }
-            else if (player_choosed2 && player_choosed5 && player_choosed8 == true)
+            else if (player_choosed2 && player_choosed5 && player_choosed8)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
@@ -1579,7 +1579,7 @@ namespace TicTacToeWPFspiel
                 exit.Visibility = Visibility.Visible;
                 return;
             }
-            else if (player_choosed3 && player_choosed6 && player_choosed9 == true)
+            else if (player_choosed3 && player_choosed6 && player_choosed9)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
@@ -1588,7 +1588,7 @@ namespace TicTacToeWPFspiel
                 exit.Visibility = Visibility.Visible;
                 return;
             }
-            else if (player_choosed1 && player_choosed5 && player_choosed9 == true)
+            else if (player_choosed1 && player_choosed5 && player_choosed9)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
@@ -1597,7 +1597,7 @@ namespace TicTacToeWPFspiel
                 exit.Visibility = Visibility.Visible;
                 return;
             }
-            else if (player_choosed3 && player_choosed5 && player_choosed7 == true)
+            else if (player_choosed3 && player_choosed5 && player_choosed7)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
@@ -1607,7 +1607,7 @@ namespace TicTacToeWPFspiel
                 return;
             }
 
-            if (FA1 && FA2 && FA3 && FB1 && FB2 && FB3 && FC1 && FC2 && FC3 == true)
+            if (FA1 && FA2 && FA3 && FB1 && FB2 && FB3 && FC1 && FC2 && FC3)
             {
                 INFO.Content = "SPIEL BEENDET...KEINER HAT GEWONNEN !";
                 INFO.Visibility = Visibility.Visible;
@@ -1627,7 +1627,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed1 == true)
                 {
-                    if (player_choosed2 && player_choosed3 != true)
+                    if (!player_choosed2 && !player_choosed3)
                     {
                         if (cpu_choosed3 != true)
                         {
@@ -1644,7 +1644,7 @@ namespace TicTacToeWPFspiel
                             BOA2.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed4 && player_choosed7 != true)
+                    else if (!player_choosed4 && !player_choosed7)
                     {
                         if (cpu_choosed7 != true)
                         {
@@ -1661,7 +1661,7 @@ namespace TicTacToeWPFspiel
                             BOB1.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed5 && player_choosed9 != true)
+                    else if (!player_choosed5 && !player_choosed9)
                     {
                         if (cpu_choosed9 != true)
                         {
@@ -1695,7 +1695,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed2 == true)
                 {
-                    if (player_choosed3 && player_choosed1 != true)
+                    if (!player_choosed3 && !player_choosed1)
                     {
                         if (cpu_choosed3 != true)
                         {
@@ -1712,7 +1712,7 @@ namespace TicTacToeWPFspiel
                             BOA1.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed5 && player_choosed8 != true)
+                    else if (!player_choosed5 && !player_choosed8)
                     {
                         if (cpu_choosed8 != true)
                         {
@@ -1747,7 +1747,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed3 == true)
                 {
-                    if (player_choosed2 && player_choosed1 != true)
+                    if (!player_choosed2 && !player_choosed1)
                     {
                         if (cpu_choosed1 != true)
                         {
@@ -1764,7 +1764,7 @@ namespace TicTacToeWPFspiel
                             BOA2.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed6 && player_choosed9 != true)
+                    else if (!player_choosed6 && !player_choosed9)
                     {
                         if (cpu_choosed9 != true)
                         {
@@ -1798,7 +1798,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed4 == true)
                 {
-                    if (player_choosed5 && player_choosed6 != true)
+                    if (!player_choosed5 && !player_choosed6)
                     {
                         if (cpu_choosed6 != true)
                         {
@@ -1815,7 +1815,7 @@ namespace TicTacToeWPFspiel
                             BOB2.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed1 && player_choosed7 != true)
+                    else if (!player_choosed1 && !player_choosed7)
                     {
                         if (cpu_choosed7 != true)
                         {
@@ -1849,7 +1849,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed5 == true)
                 {
-                    if (player_choosed4 && player_choosed6 != true)
+                    if (!player_choosed4 && !player_choosed6)
                     {
                         if (cpu_choosed4 != true)
                         {
@@ -1866,7 +1866,7 @@ namespace TicTacToeWPFspiel
                             BOB3.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed2 && player_choosed8 != true)
+                    else if (!player_choosed2 && !player_choosed8)
                     {
                         if (cpu_choosed8 != true)
                         {
@@ -1883,7 +1883,7 @@ namespace TicTacToeWPFspiel
                             BOA2.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed1 && player_choosed9 != true)
+                    else if (!player_choosed1 && !player_choosed9)
                     {
                         if (cpu_choosed1 != true)
                         {
@@ -1900,7 +1900,7 @@ namespace TicTacToeWPFspiel
                             BOC3.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed3 && player_choosed7 != true)
+                    else if (!player_choosed3 && !player_choosed7)
                     {
                         if (cpu_choosed7 != true)
                         {
@@ -1934,7 +1934,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed6 == true)
                 {
-                    if (player_choosed4 && player_choosed5 != true)
+                    if (!player_choosed4 && !player_choosed5)
                     {
                         if (cpu_choosed4 != true)
                         {
@@ -1951,7 +1951,7 @@ namespace TicTacToeWPFspiel
                             BOB2.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed3 && player_choosed9 != true)
+                    else if (!player_choosed3 && !player_choosed9)
                     {
                         if (cpu_choosed9 != true)
                         {
@@ -1985,7 +1985,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed7 == true)
                 {
-                    if (player_choosed9 && player_choosed8 != true)
+                    if (!player_choosed9 && !player_choosed8)
                     {
                         if (cpu_choosed9 != true)
                         {
@@ -2002,7 +2002,7 @@ namespace TicTacToeWPFspiel
                             BOC2.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed1 && player_choosed4 != true)
+                    else if (!player_choosed1 && !player_choosed4)
                     {
                         if (cpu_choosed1 != true)
                         {
@@ -2019,7 +2019,7 @@ namespace TicTacToeWPFspiel
                             BOB1.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed5 && player_choosed3 != true)
+                    else if (!player_choosed5 && !player_choosed3)
                     {
                         if (cpu_choosed3 != true)
                         {
@@ -2053,7 +2053,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed8 == true)
                 {
-                    if (player_choosed5 && player_choosed2 != true)
+                    if (!player_choosed5 && !player_choosed2)
                     {
                         if (cpu_choosed2 != true)
                         {
@@ -2070,7 +2070,7 @@ namespace TicTacToeWPFspiel
                             BOB2.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed7 && player_choosed9 != true)
+                    else if (!player_choosed7 && !player_choosed9)
                     {
                         if (cpu_choosed7 != true)
                         {
@@ -2104,7 +2104,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed9 == true)
                 {
-                    if (player_choosed7 && player_choosed8 != true)
+                    if (!player_choosed7 && !player_choosed8)
                     {
                         if (cpu_choosed7 != true)
                         {
@@ -2121,7 +2121,7 @@ namespace TicTacToeWPFspiel
                             BOC2.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed3 && player_choosed6 != true)
+                    else if (!player_choosed3 && !player_choosed6)
                     {
                         if (cpu_choosed3 != true)
                         {
@@ -2153,7 +2153,7 @@ namespace TicTacToeWPFspiel
             }
             else
             {
-                if (FA1 && FA2 && FA3 && FB1 && FB2 && FB3 && FC1 && FC2 && FC3 == true)
+                if (FA1 && FA2 && FA3 && FB1 && FB2 && FB3 && FC1 && FC2 && FC3)
                 {
                     INFO.Content = "SPIEL BEENDET...KEINER HAT GEWONNEN !";
                     INFO.Visibility = Visibility.Visible;
@@ -2262,7 +2262,7 @@ namespace TicTacToeWPFspiel
 
             INFO.Visibility = Visibility.Visible;
 
-            if (player_choosed1 && player_choosed2 && player_choosed3 == true)
+            if (player_choosed1 && player_choosed2 && player_choosed3)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
@@ -2271,7 +2271,7 @@ namespace TicTacToeWPFspiel
                 exit.Visibility = Visibility.Visible;
                 return;
             }
-            else if (player_choosed4 && player_choosed5 && player_choosed6 == true)
+            else if (player_choosed4 && player_choosed5 && player_choosed6)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
@@ -2280,7 +2280,7 @@ namespace TicTacToeWPFspiel
                 exit.Visibility = Visibility.Visible;
                 return;
             }
-            else if (player_choosed7 && player_choosed8 && player_choosed9 == true)
+            else if (player_choosed7 && player_choosed8 && player_choosed9)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
@@ -2289,7 +2289,7 @@ namespace TicTacToeWPFspiel
                 exit.Visibility = Visibility.Visible;
                 return;
             }
-            else if (player_choosed1 && player_choosed4 && player_choosed7 == true)
+            else if (player_choosed1 && player_choosed4 && player_choosed7)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
@@ -2298,7 +2298,7 @@ namespace TicTacToeWPFspiel
                 exit.Visibility = Visibility.Visible;
                 return;
             }
-            else if (player_choosed2 && player_choosed5 && player_choosed8 == true)
+            else if (player_choosed2 && player_choosed5 && player_choosed8)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
@@ -2307,7 +2307,7 @@ namespace TicTacToeWPFspiel
                 exit.Visibility = Visibility.Visible;
                 return;
             }
-            else if (player_choosed3 && player_choosed6 && player_choosed9 == true)
+            else if (player_choosed3 && player_choosed6 && player_choosed9)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
@@ -2316,7 +2316,7 @@ namespace TicTacToeWPFspiel
                 exit.Visibility = Visibility.Visible;
                 return;
             }
-            else if (player_choosed1 && player_choosed5 && player_choosed9 == true)
+            else if (player_choosed1 && player_choosed5 && player_choosed9)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
@@ -2325,7 +2325,7 @@ namespace TicTacToeWPFspiel
                 exit.Visibility = Visibility.Visible;
                 return;
             }
-            else if (player_choosed3 && player_choosed5 && player_choosed7 == true)
+            else if (player_choosed3 && player_choosed5 && player_choosed7)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
@@ -2335,7 +2335,7 @@ namespace TicTacToeWPFspiel
                 return;
             }
 
-            if (FA1 && FA2 && FA3 && FB1 && FB2 && FB3 && FC1 && FC2 && FC3 == true)
+            if (FA1 && FA2 && FA3 && FB1 && FB2 && FB3 && FC1 && FC2 && FC3)
             {
                 INFO.Content = "SPIEL BEENDET...KEINER HAT GEWONNEN !";
                 INFO.Visibility = Visibility.Visible;
@@ -2355,7 +2355,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed1 == true)
                 {
-                    if (player_choosed2 && player_choosed3 != true)
+                    if (!player_choosed2 && !player_choosed3)
                     {
                         if (cpu_choosed3 != true)
                         {
@@ -2372,7 +2372,7 @@ namespace TicTacToeWPFspiel
                             BOA2.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed4 && player_choosed7 != true)
+                    else if (!player_choosed4 && !player_choosed7)
                     {
                         if (cpu_choosed7 != true)
                         {
@@ -2389,7 +2389,7 @@ namespace TicTacToeWPFspiel
                             BOB1.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed5 && player_choosed9 != true)
+                    else if (!player_choosed5 && !player_choosed9)
                     {
                         if (cpu_choosed9 != true)
                         {
@@ -2423,7 +2423,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed2 == true)
                 {
-                    if (player_choosed3 && player_choosed1 != true)
+                    if (!player_choosed3 && !player_choosed1)
                     {
                         if (cpu_choosed3 != true)
                         {
@@ -2440,7 +2440,7 @@ namespace TicTacToeWPFspiel
                             BOA1.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed5 && player_choosed8 != true)
+                    else if (!player_choosed5 && !player_choosed8)
                     {
                         if (cpu_choosed8 != true)
                         {
@@ -2475,7 +2475,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed3 == true)
                 {
-                    if (player_choosed2 && player_choosed1 != true)
+                    if (!player_choosed2 && !player_choosed1)
                     {
                         if (cpu_choosed1 != true)
                         {
@@ -2492,7 +2492,7 @@ namespace TicTacToeWPFspiel
                             BOA2.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed6 && player_choosed9 != true)
+                    else if (!player_choosed6 && !player_choosed9)
                     {
                         if (cpu_choosed9 != true)
                         {
@@ -2526,7 +2526,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed4 == true)
                 {
-                    if (player_choosed5 && player_choosed6 != true)
+                    if (!player_choosed5 && !player_choosed6)
                     {
                         if (cpu_choosed6 != true)
                         {
@@ -2543,7 +2543,7 @@ namespace TicTacToeWPFspiel
                             BOB2.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed1 && player_choosed7 != true)
+                    else if (!player_choosed1 && !player_choosed7)
                     {
                         if (cpu_choosed7 != true)
                         {
@@ -2577,7 +2577,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed5 == true)
                 {
-                    if (player_choosed4 && player_choosed6 != true)
+                    if (!player_choosed4 && !player_choosed6)
                     {
                         if (cpu_choosed4 != true)
                         {
@@ -2594,7 +2594,7 @@ namespace TicTacToeWPFspiel
                             BOB3.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed2 && player_choosed8 != true)
+                    else if (!player_choosed2 && !player_choosed8)
                     {
                         if (cpu_choosed8 != true)
                         {
@@ -2611,7 +2611,7 @@ namespace TicTacToeWPFspiel
                             BOA2.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed1 && player_choosed9 != true)
+                    else if (!player_choosed1 && !player_choosed9)
                     {
                         if (cpu_choosed1 != true)
                         {
@@ -2628,7 +2628,7 @@ namespace TicTacToeWPFspiel
                             BOC3.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed3 && player_choosed7 != true)
+                    else if (!player_choosed3 && !player_choosed7)
                     {
                         if (cpu_choosed7 != true)
                         {
@@ -2662,7 +2662,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed6 == true)
                 {
-                    if (player_choosed4 && player_choosed5 != true)
+                    if (!player_choosed4 && !player_choosed5)
                     {
                         if (cpu_choosed4 != true)
                         {
@@ -2679,7 +2679,7 @@ namespace TicTacToeWPFspiel
                             BOB2.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed3 && player_choosed9 != true)
+                    else if (!player_choosed3 && !player_choosed9)
                     {
                         if (cpu_choosed9 != true)
                         {
@@ -2713,7 +2713,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed7 == true)
                 {
-                    if (player_choosed9 && player_choosed8 != true)
+                    if (!player_choosed9 && !player_choosed8)
                     {
                         if (cpu_choosed9 != true)
                         {
@@ -2730,7 +2730,7 @@ namespace TicTacToeWPFspiel
                             BOC2.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed1 && player_choosed4 != true)
+                    else if (!player_choosed1 && !player_choosed4)
                     {
                         if (cpu_choosed1 != true)
                         {
@@ -2747,7 +2747,7 @@ namespace TicTacToeWPFspiel
                             BOB1.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed5 && player_choosed3 != true)
+                    else if (!player_choosed5 && !player_choosed3)
                     {
                         if (cpu_choosed3 != true)
                         {
@@ -2781,7 +2781,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed8 == true)
                 {
-                    if (player_choosed5 && player_choosed2 != true)
+                    if (!player_choosed5 && !player_choosed2)
                     {
                         if (cpu_choosed2 != true)
                         {
@@ -2798,7 +2798,7 @@ namespace TicTacToeWPFspiel
                             BOB2.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed7 && player_choosed9 != true)
+                    else if (!player_choosed7 && !player_choosed9)
                     {
                         if (cpu_choosed7 != true)
                         {
@@ -2832,7 +2832,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed9 == true)
                 {
-                    if (player_choosed7 && player_choosed8 != true)
+                    if (!player_choosed7 && !player_choosed8)
                     {
                         if (cpu_choosed7 != true)
                         {
@@ -2849,7 +2849,7 @@ namespace TicTacToeWPFspiel
                             BOC2.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed3 && player_choosed6 != true)
+                    else if (!player_choosed3 && !player_choosed6)
                     {
                         if (cpu_choosed3 != true)
                         {
@@ -2881,7 +2881,7 @@ namespace TicTacToeWPFspiel
             }
             else
             {
-                if (FA1 && FA2 && FA3 && FB1 && FB2 && FB3 && FC1 && FC2 && FC3 == true)
+                if (FA1 && FA2 && FA3 && FB1 && FB2 && FB3 && FC1 && FC2 && FC3)
                 {
                     INFO.Content = "SPIEL BEENDET...KEINER HAT GEWONNEN !";
                     INFO.Visibility = Visibility.Visible;
@@ -2990,7 +2990,7 @@ namespace TicTacToeWPFspiel
 
             INFO.Visibility = Visibility.Visible;
 
-            if (player_choosed1 && player_choosed2 && player_choosed3 == true)
+            if (player_choosed1 && player_choosed2 && player_choosed3)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
@@ -2999,7 +2999,7 @@ namespace TicTacToeWPFspiel
                 exit.Visibility = Visibility.Visible;
                 return;
             }
-            else if (player_choosed4 && player_choosed5 && player_choosed6 == true)
+            else if (player_choosed4 && player_choosed5 && player_choosed6)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
@@ -3008,7 +3008,7 @@ namespace TicTacToeWPFspiel
                 exit.Visibility = Visibility.Visible;
                 return;
             }
-            else if (player_choosed7 && player_choosed8 && player_choosed9 == true)
+            else if (player_choosed7 && player_choosed8 && player_choosed9)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
@@ -3017,7 +3017,7 @@ namespace TicTacToeWPFspiel
                 exit.Visibility = Visibility.Visible;
                 return;
             }
-            else if (player_choosed1 && player_choosed4 && player_choosed7 == true)
+            else if (player_choosed1 && player_choosed4 && player_choosed7)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
@@ -3026,7 +3026,7 @@ namespace TicTacToeWPFspiel
                 exit.Visibility = Visibility.Visible;
                 return;
             }
-            else if (player_choosed2 && player_choosed5 && player_choosed8 == true)
+            else if (player_choosed2 && player_choosed5 && player_choosed8)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
@@ -3035,7 +3035,7 @@ namespace TicTacToeWPFspiel
                 exit.Visibility = Visibility.Visible;
                 return;
             }
-            else if (player_choosed3 && player_choosed6 && player_choosed9 == true)
+            else if (player_choosed3 && player_choosed6 && player_choosed9)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
@@ -3044,7 +3044,7 @@ namespace TicTacToeWPFspiel
                 exit.Visibility = Visibility.Visible;
                 return;
             }
-            else if (player_choosed1 && player_choosed5 && player_choosed9 == true)
+            else if (player_choosed1 && player_choosed5 && player_choosed9)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
@@ -3053,7 +3053,7 @@ namespace TicTacToeWPFspiel
                 exit.Visibility = Visibility.Visible;
                 return;
             }
-            else if (player_choosed3 && player_choosed5 && player_choosed7 == true)
+            else if (player_choosed3 && player_choosed5 && player_choosed7)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
@@ -3063,7 +3063,7 @@ namespace TicTacToeWPFspiel
                 return;
             }
 
-            if (FA1 && FA2 && FA3 && FB1 && FB2 && FB3 && FC1 && FC2 && FC3 == true)
+            if (FA1 && FA2 && FA3 && FB1 && FB2 && FB3 && FC1 && FC2 && FC3)
             {
                 INFO.Content = "SPIEL BEENDET...KEINER HAT GEWONNEN !";
                 INFO.Visibility = Visibility.Visible;
@@ -3083,7 +3083,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed1 == true)
                 {
-                    if (player_choosed2 && player_choosed3 != true)
+                    if (!player_choosed2 && !player_choosed3)
                     {
                         if (cpu_choosed3 != true)
                         {
@@ -3100,7 +3100,7 @@ namespace TicTacToeWPFspiel
                             BOA2.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed4 && player_choosed7 != true)
+                    else if (!player_choosed4 && !player_choosed7)
                     {
                         if (cpu_choosed7 != true)
                         {
@@ -3117,7 +3117,7 @@ namespace TicTacToeWPFspiel
                             BOB1.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed5 && player_choosed9 != true)
+                    else if (!player_choosed5 && !player_choosed9)
                     {
                         if (cpu_choosed9 != true)
                         {
@@ -3151,7 +3151,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed2 == true)
                 {
-                    if (player_choosed3 && player_choosed1 != true)
+                    if (!player_choosed3 && !player_choosed1)
                     {
                         if (cpu_choosed3 != true)
                         {
@@ -3168,7 +3168,7 @@ namespace TicTacToeWPFspiel
                             BOA1.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed5 && player_choosed8 != true)
+                    else if (!player_choosed5 && !player_choosed8)
                     {
                         if (cpu_choosed8 != true)
                         {
@@ -3203,7 +3203,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed3 == true)
                 {
-                    if (player_choosed2 && player_choosed1 != true)
+                    if (!player_choosed2 && !player_choosed1)
                     {
                         if (cpu_choosed1 != true)
                         {
@@ -3220,7 +3220,7 @@ namespace TicTacToeWPFspiel
                             BOA2.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed6 && player_choosed9 != true)
+                    else if (!player_choosed6 && !player_choosed9)
                     {
                         if (cpu_choosed9 != true)
                         {
@@ -3254,7 +3254,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed4 == true)
                 {
-                    if (player_choosed5 && player_choosed6 != true)
+                    if (!player_choosed5 && !player_choosed6)
                     {
                         if (cpu_choosed6 != true)
                         {
@@ -3271,7 +3271,7 @@ namespace TicTacToeWPFspiel
                             BOB2.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed1 && player_choosed7 != true)
+                    else if (!player_choosed1 && !player_choosed7)
                     {
                         if (cpu_choosed7 != true)
                         {
@@ -3305,7 +3305,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed5 == true)
                 {
-                    if (player_choosed4 && player_choosed6 != true)
+                    if (!player_choosed4 && !player_choosed6)
                     {
                         if (cpu_choosed4 != true)
                         {
@@ -3322,7 +3322,7 @@ namespace TicTacToeWPFspiel
                             BOB3.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed2 && player_choosed8 != true)
+                    else if (!player_choosed2 && !player_choosed8)
                     {
                         if (cpu_choosed8 != true)
                         {
@@ -3339,7 +3339,7 @@ namespace TicTacToeWPFspiel
                             BOA2.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed1 && player_choosed9 != true)
+                    else if (!player_choosed1 && !player_choosed9)
                     {
                         if (cpu_choosed1 != true)
                         {
@@ -3356,7 +3356,7 @@ namespace TicTacToeWPFspiel
                             BOC3.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed3 && player_choosed7 != true)
+                    else if (!player_choosed3 && !player_choosed7)
                     {
                         if (cpu_choosed7 != true)
                         {
@@ -3390,7 +3390,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed6 == true)
                 {
-                    if (player_choosed4 && player_choosed5 != true)
+                    if (!player_choosed4 && !player_choosed5)
                     {
                         if (cpu_choosed4 != true)
                         {
@@ -3407,7 +3407,7 @@ namespace TicTacToeWPFspiel
                             BOB2.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed3 && player_choosed9 != true)
+                    else if (!player_choosed3 && !player_choosed9)
                     {
                         if (cpu_choosed9 != true)
                         {
@@ -3441,7 +3441,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed7 == true)
                 {
-                    if (player_choosed9 && player_choosed8 != true)
+                    if (!player_choosed9 && !player_choosed8)
                     {
                         if (cpu_choosed9 != true)
                         {
@@ -3458,7 +3458,7 @@ namespace TicTacToeWPFspiel
                             BOC2.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed1 && player_choosed4 != true)
+                    else if (!player_choosed1 && !player_choosed4)
                     {
                         if (cpu_choosed1 != true)
                         {
@@ -3475,7 +3475,7 @@ namespace TicTacToeWPFspiel
                             BOB1.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed5 && player_choosed3 != true)
+                    else if (!player_choosed5 && !player_choosed3)
                     {
                         if (cpu_choosed3 != true)
                         {
@@ -3509,7 +3509,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed8 == true)
                 {
-                    if (player_choosed5 && player_choosed2 != true)
+                    if (!player_choosed5 && !player_choosed2)
                     {
                         if (cpu_choosed2 != true)
                         {
@@ -3526,7 +3526,7 @@ namespace TicTacToeWPFspiel
                             BOB2.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed7 && player_choosed9 != true)
+                    else if (!player_choosed7 && !player_choosed9)
                     {
                         if (cpu_choosed7 != true)
                         {
@@ -3560,7 +3560,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed9 == true)
                 {
-                    if (player_choosed7 && player_choosed8 != true)
+                    if (!player_choosed7 && !player_choosed8)
                     {
                         if (cpu_choosed7 != true)
                         {
@@ -3577,7 +3577,7 @@ namespace TicTacToeWPFspiel
                             BOC2.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed3 && player_choosed6 != true)
+                    else if (!player_choosed3 && !player_choosed6)
                     {
                         if (cpu_choosed3 != true)
                         {
@@ -3609,7 +3609,7 @@ namespace TicTacToeWPFspiel
             }
             else
             {
-                if (FA1 && FA2 && FA3 && FB1 && FB2 && FB3 && FC1 && FC2 && FC3 == true)
+                if (FA1 && FA2 && FA3 && FB1 && FB2 && FB3 && FC1 && FC2 && FC3)
                 {
                     INFO.Content = "SPIEL BEENDET...KEINER HAT GEWONNEN !";
                     INFO.Visibility = Visibility.Visible;
@@ -3718,7 +3718,7 @@ namespace TicTacToeWPFspiel
 
             INFO.Visibility = Visibility.Visible;
 
-            if (player_choosed1 && player_choosed2 && player_choosed3 == true)
+            if (player_choosed1 && player_choosed2 && player_choosed3)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
@@ -3727,7 +3727,7 @@ namespace TicTacToeWPFspiel
                 exit.Visibility = Visibility.Visible;
                 return;
             }
-            else if (player_choosed4 && player_choosed5 && player_choosed6 == true)
+            else if (player_choosed4 && player_choosed5 && player_choosed6)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
@@ -3736,7 +3736,7 @@ namespace TicTacToeWPFspiel
                 exit.Visibility = Visibility.Visible;
                 return;
             }
-            else if (player_choosed7 && player_choosed8 && player_choosed9 == true)
+            else if (player_choosed7 && player_choosed8 && player_choosed9)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
@@ -3745,7 +3745,7 @@ namespace TicTacToeWPFspiel
                 exit.Visibility = Visibility.Visible;
                 return;
             }
-            else if (player_choosed1 && player_choosed4 && player_choosed7 == true)
+            else if (player_choosed1 && player_choosed4 && player_choosed7)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
@@ -3754,7 +3754,7 @@ namespace TicTacToeWPFspiel
                 exit.Visibility = Visibility.Visible;
                 return;
             }
-            else if (player_choosed2 && player_choosed5 && player_choosed8 == true)
+            else if (player_choosed2 && player_choosed5 && player_choosed8)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
@@ -3763,7 +3763,7 @@ namespace TicTacToeWPFspiel
                 exit.Visibility = Visibility.Visible;
                 return;
             }
-            else if (player_choosed3 && player_choosed6 && player_choosed9 == true)
+            else if (player_choosed3 && player_choosed6 && player_choosed9)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
@@ -3772,7 +3772,7 @@ namespace TicTacToeWPFspiel
                 exit.Visibility = Visibility.Visible;
                 return;
             }
-            else if (player_choosed1 && player_choosed5 && player_choosed9 == true)
+            else if (player_choosed1 && player_choosed5 && player_choosed9)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
@@ -3781,7 +3781,7 @@ namespace TicTacToeWPFspiel
                 exit.Visibility = Visibility.Visible;
                 return;
             }
-            else if (player_choosed3 && player_choosed5 && player_choosed7 == true)
+            else if (player_choosed3 && player_choosed5 && player_choosed7)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
@@ -3791,7 +3791,7 @@ namespace TicTacToeWPFspiel
                 return;
             }
 
-            if (FA1 && FA2 && FA3 && FB1 && FB2 && FB3 && FC1 && FC2 && FC3 == true)
+            if (FA1 && FA2 && FA3 && FB1 && FB2 && FB3 && FC1 && FC2 && FC3)
             {
                 INFO.Content = "SPIEL BEENDET...KEINER HAT GEWONNEN !";
                 INFO.Visibility = Visibility.Visible;
@@ -3812,7 +3812,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed1 == true)
                 {
-                    if (player_choosed2 && player_choosed3 != true)
+                    if (!player_choosed2 && !player_choosed3)
                     {
                         if (cpu_choosed3 != true)
                         {
@@ -3829,7 +3829,7 @@ namespace TicTacToeWPFspiel
                             BOA2.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed4 && player_choosed7 != true)
+                    else if (!player_choosed4 && !player_choosed7)
                     {
                         if (cpu_choosed7 != true)
                         {
@@ -3846,7 +3846,7 @@ namespace TicTacToeWPFspiel
                             BOB1.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed5 && player_choosed9 != true)
+                    else if (!player_choosed5 && !player_choosed9)
                     {
                         if (cpu_choosed9 != true)
                         {
@@ -3880,7 +3880,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed2 == true)
                 {
-                    if (player_choosed3 && player_choosed1 != true)
+                    if (!player_choosed3 && !player_choosed1)
                     {
                         if (cpu_choosed3 != true)
                         {
@@ -3897,7 +3897,7 @@ namespace TicTacToeWPFspiel
                             BOA1.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed5 && player_choosed8 != true)
+                    else if (!player_choosed5 && !player_choosed8)
                     {
                         if (cpu_choosed8 != true)
                         {
@@ -3932,7 +3932,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed3 == true)
                 {
-                    if (player_choosed2 && player_choosed1 != true)
+                    if (!player_choosed2 && !player_choosed1)
                     {
                         if (cpu_choosed1 != true)
                         {
@@ -3949,7 +3949,7 @@ namespace TicTacToeWPFspiel
                             BOA2.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed6 && player_choosed9 != true)
+                    else if (!player_choosed6 && !player_choosed9)
                     {
                         if (cpu_choosed9 != true)
                         {
@@ -3983,7 +3983,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed4 == true)
                 {
-                    if (player_choosed5 && player_choosed6 != true)
+                    if (!player_choosed5 && !player_choosed6)
                     {
                         if (cpu_choosed6 != true)
                         {
@@ -4000,7 +4000,7 @@ namespace TicTacToeWPFspiel
                             BOB2.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed1 && player_choosed7 != true)
+                    else if (!player_choosed1 && !player_choosed7)
                     {
                         if (cpu_choosed7 != true)
                         {
@@ -4034,7 +4034,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed5 == true)
                 {
-                    if (player_choosed4 && player_choosed6 != true)
+                    if (!player_choosed4 && !player_choosed6)
                     {
                         if (cpu_choosed4 != true)
                         {
@@ -4051,7 +4051,7 @@ namespace TicTacToeWPFspiel
                             BOB3.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed2 && player_choosed8 != true)
+                    else if (!player_choosed2 && !player_choosed8)
                     {
                         if (cpu_choosed8 != true)
                         {
@@ -4068,7 +4068,7 @@ namespace TicTacToeWPFspiel
                             BOA2.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed1 && player_choosed9 != true)
+                    else if (!player_choosed1 && !player_choosed9)
                     {
                         if (cpu_choosed1 != true)
                         {
@@ -4085,7 +4085,7 @@ namespace TicTacToeWPFspiel
                             BOC3.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed3 && player_choosed7 != true)
+                    else if (!player_choosed3 && !player_choosed7)
                     {
                         if (cpu_choosed7 != true)
                         {
@@ -4119,7 +4119,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed6 == true)
                 {
-                    if (player_choosed4 && player_choosed5 != true)
+                    if (!player_choosed4 && !player_choosed5)
                     {
                         if (cpu_choosed4 != true)
                         {
@@ -4136,7 +4136,7 @@ namespace TicTacToeWPFspiel
                             BOB2.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed3 && player_choosed9 != true)
+                    else if (!player_choosed3 && !player_choosed9)
                     {
                         if (cpu_choosed9 != true)
                         {
@@ -4170,7 +4170,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed7 == true)
                 {
-                    if (player_choosed9 && player_choosed8 != true)
+                    if (!player_choosed9 && !player_choosed8)
                     {
                         if (cpu_choosed9 != true)
                         {
@@ -4187,7 +4187,7 @@ namespace TicTacToeWPFspiel
                             BOC2.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed1 && player_choosed4 != true)
+                    else if (!player_choosed1 && !player_choosed4)
                     {
                         if (cpu_choosed1 != true)
                         {
@@ -4204,7 +4204,7 @@ namespace TicTacToeWPFspiel
                             BOB1.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed5 && player_choosed3 != true)
+                    else if (!player_choosed5 && !player_choosed3)
                     {
                         if (cpu_choosed3 != true)
                         {
@@ -4238,7 +4238,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed8 == true)
                 {
-                    if (player_choosed5 && player_choosed2 != true)
+                    if (!player_choosed5 && !player_choosed2)
                     {
                         if (cpu_choosed2 != true)
                         {
@@ -4255,7 +4255,7 @@ namespace TicTacToeWPFspiel
                             BOB2.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed7 && player_choosed9 != true)
+                    else if (!player_choosed7 && !player_choosed9)
                     {
                         if (cpu_choosed7 != true)
                         {
@@ -4289,7 +4289,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed9 == true)
                 {
-                    if (player_choosed7 && player_choosed8 != true)
+                    if (!player_choosed7 && !player_choosed8)
                     {
                         if (cpu_choosed7 != true)
                         {
@@ -4306,7 +4306,7 @@ namespace TicTacToeWPFspiel
                             BOC2.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed3 && player_choosed6 != true)
+                    else if (!player_choosed3 && !player_choosed6)
                     {
                         if (cpu_choosed3 != true)
                         {
@@ -4338,7 +4338,7 @@ namespace TicTacToeWPFspiel
             }
             else
             {
-                if (FA1 && FA2 && FA3 && FB1 && FB2 && FB3 && FC1 && FC2 && FC3 == true)
+                if (FA1 && FA2 && FA3 && FB1 && FB2 && FB3 && FC1 && FC2 && FC3)
                 {
                     INFO.Content = "SPIEL BEENDET...KEINER HAT GEWONNEN !";
                     INFO.Visibility = Visibility.Visible;
@@ -4447,7 +4447,7 @@ namespace TicTacToeWPFspiel
 
             INFO.Visibility = Visibility.Visible;
 
-            if (player_choosed1 && player_choosed2 && player_choosed3 == true)
+            if (player_choosed1 && player_choosed2 && player_choosed3)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
@@ -4456,7 +4456,7 @@ namespace TicTacToeWPFspiel
                 exit.Visibility = Visibility.Visible;
                 return;
             }
-            else if (player_choosed4 && player_choosed5 && player_choosed6 == true)
+            else if (player_choosed4 && player_choosed5 && player_choosed6)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
@@ -4465,7 +4465,7 @@ namespace TicTacToeWPFspiel
                 exit.Visibility = Visibility.Visible;
                 return;
             }
-            else if (player_choosed7 && player_choosed8 && player_choosed9 == true)
+            else if (player_choosed7 && player_choosed8 && player_choosed9)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
@@ -4474,7 +4474,7 @@ namespace TicTacToeWPFspiel
                 exit.Visibility = Visibility.Visible;
                 return;
             }
-            else if (player_choosed1 && player_choosed4 && player_choosed7 == true)
+            else if (player_choosed1 && player_choosed4 && player_choosed7)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
@@ -4483,7 +4483,7 @@ namespace TicTacToeWPFspiel
                 exit.Visibility = Visibility.Visible;
                 return;
             }
-            else if (player_choosed2 && player_choosed5 && player_choosed8 == true)
+            else if (player_choosed2 && player_choosed5 && player_choosed8)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
@@ -4492,7 +4492,7 @@ namespace TicTacToeWPFspiel
                 exit.Visibility = Visibility.Visible;
                 return;
             }
-            else if (player_choosed3 && player_choosed6 && player_choosed9 == true)
+            else if (player_choosed3 && player_choosed6 && player_choosed9)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
@@ -4501,7 +4501,7 @@ namespace TicTacToeWPFspiel
                 exit.Visibility = Visibility.Visible;
                 return;
             }
-            else if (player_choosed1 && player_choosed5 && player_choosed9 == true)
+            else if (player_choosed1 && player_choosed5 && player_choosed9)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
@@ -4510,7 +4510,7 @@ namespace TicTacToeWPFspiel
                 exit.Visibility = Visibility.Visible;
                 return;
             }
-            else if (player_choosed3 && player_choosed5 && player_choosed7 == true)
+            else if (player_choosed3 && player_choosed5 && player_choosed7)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
@@ -4520,7 +4520,7 @@ namespace TicTacToeWPFspiel
                 return;
             }
 
-            if (FA1 && FA2 && FA3 && FB1 && FB2 && FB3 && FC1 && FC2 && FC3 == true)
+            if (FA1 && FA2 && FA3 && FB1 && FB2 && FB3 && FC1 && FC2 && FC3)
             {
                 INFO.Content = "SPIEL BEENDET...KEINER HAT GEWONNEN !";
                 INFO.Visibility = Visibility.Visible;
@@ -4541,7 +4541,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed1 == true)
                 {
-                    if (player_choosed2 && player_choosed3 != true)
+                    if (!player_choosed2 && !player_choosed3)
                     {
                         if (cpu_choosed3 != true)
                         {
@@ -4558,7 +4558,7 @@ namespace TicTacToeWPFspiel
                             BOA2.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed4 && player_choosed7 != true)
+                    else if (!player_choosed4 && !player_choosed7)
                     {
                         if (cpu_choosed7 != true)
                         {
@@ -4575,7 +4575,7 @@ namespace TicTacToeWPFspiel
                             BOB1.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed5 && player_choosed9 != true)
+                    else if (!player_choosed5 && !player_choosed9)
                     {
                         if (cpu_choosed9 != true)
                         {
@@ -4609,7 +4609,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed2 == true)
                 {
-                    if (player_choosed3 && player_choosed1 != true)
+                    if (!player_choosed3 && !player_choosed1)
                     {
                         if (cpu_choosed3 != true)
                         {
@@ -4626,7 +4626,7 @@ namespace TicTacToeWPFspiel
                             BOA1.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed5 && player_choosed8 != true)
+                    else if (!player_choosed5 && !player_choosed8)
                     {
                         if (cpu_choosed8 != true)
                         {
@@ -4661,7 +4661,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed3 == true)
                 {
-                    if (player_choosed2 && player_choosed1 != true)
+                    if (!player_choosed2 && !player_choosed1)
                     {
                         if (cpu_choosed1 != true)
                         {
@@ -4678,7 +4678,7 @@ namespace TicTacToeWPFspiel
                             BOA2.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed6 && player_choosed9 != true)
+                    else if (!player_choosed6 && !player_choosed9)
                     {
                         if (cpu_choosed9 != true)
                         {
@@ -4712,7 +4712,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed4 == true)
                 {
-                    if (player_choosed5 && player_choosed6 != true)
+                    if (!player_choosed5 && !player_choosed6)
                     {
                         if (cpu_choosed6 != true)
                         {
@@ -4729,7 +4729,7 @@ namespace TicTacToeWPFspiel
                             BOB2.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed1 && player_choosed7 != true)
+                    else if (!player_choosed1 && !player_choosed7)
                     {
                         if (cpu_choosed7 != true)
                         {
@@ -4763,7 +4763,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed5 == true)
                 {
-                    if (player_choosed4 && player_choosed6 != true)
+                    if (!player_choosed4 && !player_choosed6)
                     {
                         if (cpu_choosed4 != true)
                         {
@@ -4780,7 +4780,7 @@ namespace TicTacToeWPFspiel
                             BOB3.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed2 && player_choosed8 != true)
+                    else if (!player_choosed2 && !player_choosed8)
                     {
                         if (cpu_choosed8 != true)
                         {
@@ -4797,7 +4797,7 @@ namespace TicTacToeWPFspiel
                             BOA2.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed1 && player_choosed9 != true)
+                    else if (!player_choosed1 && !player_choosed9)
                     {
                         if (cpu_choosed1 != true)
                         {
@@ -4814,7 +4814,7 @@ namespace TicTacToeWPFspiel
                             BOC3.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed3 && player_choosed7 != true)
+                    else if (!player_choosed3 && !player_choosed7)
                     {
                         if (cpu_choosed7 != true)
                         {
@@ -4848,7 +4848,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed6 == true)
                 {
-                    if (player_choosed4 && player_choosed5 != true)
+                    if (!player_choosed4 && !player_choosed5)
                     {
                         if (cpu_choosed4 != true)
                         {
@@ -4865,7 +4865,7 @@ namespace TicTacToeWPFspiel
                             BOB2.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed3 && player_choosed9 != true)
+                    else if (!player_choosed3 && !player_choosed9)
                     {
                         if (cpu_choosed9 != true)
                         {
@@ -4899,7 +4899,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed7 == true)
                 {
-                    if (player_choosed9 && player_choosed8 != true)
+                    if (!player_choosed9 && !player_choosed8)
                     {
                         if (cpu_choosed9 != true)
                         {
@@ -4916,7 +4916,7 @@ namespace TicTacToeWPFspiel
                             BOC2.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed1 && player_choosed4 != true)
+                    else if (!player_choosed1 && !player_choosed4)
                     {
                         if (cpu_choosed1 != true)
                         {
@@ -4933,7 +4933,7 @@ namespace TicTacToeWPFspiel
                             BOB1.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed5 && player_choosed3 != true)
+                    else if (!player_choosed5 && !player_choosed3)
                     {
                         if (cpu_choosed3 != true)
                         {
@@ -4967,7 +4967,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed8 == true)
                 {
-                    if (player_choosed5 && player_choosed2 != true)
+                    if (!player_choosed5 && !player_choosed2)
                     {
                         if (cpu_choosed2 != true)
                         {
@@ -4984,7 +4984,7 @@ namespace TicTacToeWPFspiel
                             BOB2.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed7 && player_choosed9 != true)
+                    else if (!player_choosed7 && !player_choosed9)
                     {
                         if (cpu_choosed7 != true)
                         {
@@ -5018,7 +5018,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed9 == true)
                 {
-                    if (player_choosed7 && player_choosed8 != true)
+                    if (!player_choosed7 && !player_choosed8)
                     {
                         if (cpu_choosed7 != true)
                         {
@@ -5035,7 +5035,7 @@ namespace TicTacToeWPFspiel
                             BOC2.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed3 && player_choosed6 != true)
+                    else if (!player_choosed3 && !player_choosed6)
                     {
                         if (cpu_choosed3 != true)
                         {
@@ -5067,7 +5067,7 @@ namespace TicTacToeWPFspiel
             }
             else
             {
-                if (FA1 && FA2 && FA3 && FB1 && FB2 && FB3 && FC1 && FC2 && FC3 == true)
+                if (FA1 && FA2 && FA3 && FB1 && FB2 && FB3 && FC1 && FC2 && FC3)
                 {
                     INFO.Content = "SPIEL BEENDET...KEINER HAT GEWONNEN !";
                     INFO.Visibility = Visibility.Visible;
@@ -5176,7 +5176,7 @@ namespace TicTacToeWPFspiel
 
             INFO.Visibility = Visibility.Visible;
 
-            if (player_choosed1 && player_choosed2 && player_choosed3 == true)
+            if (player_choosed1 && player_choosed2 && player_choosed3)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
@@ -5185,7 +5185,7 @@ namespace TicTacToeWPFspiel
                 exit.Visibility = Visibility.Visible;
                 return;
             }
-            else if (player_choosed4 && player_choosed5 && player_choosed6 == true)
+            else if (player_choosed4 && player_choosed5 && player_choosed6)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
@@ -5194,7 +5194,7 @@ namespace TicTacToeWPFspiel
                 exit.Visibility = Visibility.Visible;
                 return;
             }
-            else if (player_choosed7 && player_choosed8 && player_choosed9 == true)
+            else if (player_choosed7 && player_choosed8 && player_choosed9)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
@@ -5203,7 +5203,7 @@ namespace TicTacToeWPFspiel
                 exit.Visibility = Visibility.Visible;
                 return;
             }
-            else if (player_choosed1 && player_choosed4 && player_choosed7 == true)
+            else if (player_choosed1 && player_choosed4 && player_choosed7)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
@@ -5212,7 +5212,7 @@ namespace TicTacToeWPFspiel
                 exit.Visibility = Visibility.Visible;
                 return;
             }
-            else if (player_choosed2 && player_choosed5 && player_choosed8 == true)
+            else if (player_choosed2 && player_choosed5 && player_choosed8)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
@@ -5221,7 +5221,7 @@ namespace TicTacToeWPFspiel
                 exit.Visibility = Visibility.Visible;
                 return;
             }
-            else if (player_choosed3 && player_choosed6 && player_choosed9 == true)
+            else if (player_choosed3 && player_choosed6 && player_choosed9)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
@@ -5230,7 +5230,7 @@ namespace TicTacToeWPFspiel
                 exit.Visibility = Visibility.Visible;
                 return;
             }
-            else if (player_choosed1 && player_choosed5 && player_choosed9 == true)
+            else if (player_choosed1 && player_choosed5 && player_choosed9)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
@@ -5239,7 +5239,7 @@ namespace TicTacToeWPFspiel
                 exit.Visibility = Visibility.Visible;
                 return;
             }
-            else if (player_choosed3 && player_choosed5 && player_choosed7 == true)
+            else if (player_choosed3 && player_choosed5 && player_choosed7)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
@@ -5249,7 +5249,7 @@ namespace TicTacToeWPFspiel
                 return;
             }
 
-            if (FA1 && FA2 && FA3 && FB1 && FB2 && FB3 && FC1 && FC2 && FC3 == true)
+            if (FA1 && FA2 && FA3 && FB1 && FB2 && FB3 && FC1 && FC2 && FC3)
             {
                 INFO.Content = "SPIEL BEENDET...KEINER HAT GEWONNEN !";
                 INFO.Visibility = Visibility.Visible;
@@ -5270,7 +5270,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed1 == true)
                 {
-                    if (player_choosed2 && player_choosed3 != true)
+                    if (!player_choosed2 && !player_choosed3)
                     {
                         if (cpu_choosed3 != true)
                         {
@@ -5287,7 +5287,7 @@ namespace TicTacToeWPFspiel
                             BOA2.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed4 && player_choosed7 != true)
+                    else if (!player_choosed4 && !player_choosed7)
                     {
                         if (cpu_choosed7 != true)
                         {
@@ -5304,7 +5304,7 @@ namespace TicTacToeWPFspiel
                             BOB1.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed5 && player_choosed9 != true)
+                    else if (!player_choosed5 && !player_choosed9)
                     {
                         if (cpu_choosed9 != true)
                         {
@@ -5338,7 +5338,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed2 == true)
                 {
-                    if (player_choosed3 && player_choosed1 != true)
+                    if (!player_choosed3 && !player_choosed1)
                     {
                         if (cpu_choosed3 != true)
                         {
@@ -5355,7 +5355,7 @@ namespace TicTacToeWPFspiel
                             BOA1.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed5 && player_choosed8 != true)
+                    else if (!player_choosed5 && !player_choosed8)
                     {
                         if (cpu_choosed8 != true)
                         {
@@ -5390,7 +5390,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed3 == true)
                 {
-                    if (player_choosed2 && player_choosed1 != true)
+                    if (!player_choosed2 && !player_choosed1)
                     {
                         if (cpu_choosed1 != true)
                         {
@@ -5407,7 +5407,7 @@ namespace TicTacToeWPFspiel
                             BOA2.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed6 && player_choosed9 != true)
+                    else if (!player_choosed6 && !player_choosed9)
                     {
                         if (cpu_choosed9 != true)
                         {
@@ -5441,7 +5441,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed4 == true)
                 {
-                    if (player_choosed5 && player_choosed6 != true)
+                    if (!player_choosed5 && !player_choosed6)
                     {
                         if (cpu_choosed6 != true)
                         {
@@ -5458,7 +5458,7 @@ namespace TicTacToeWPFspiel
                             BOB2.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed1 && player_choosed7 != true)
+                    else if (!player_choosed1 && !player_choosed7)
                     {
                         if (cpu_choosed7 != true)
                         {
@@ -5492,7 +5492,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed5 == true)
                 {
-                    if (player_choosed4 && player_choosed6 != true)
+                    if (!player_choosed4 && !player_choosed6)
                     {
                         if (cpu_choosed4 != true)
                         {
@@ -5509,7 +5509,7 @@ namespace TicTacToeWPFspiel
                             BOB3.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed2 && player_choosed8 != true)
+                    else if (!player_choosed2 && !player_choosed8)
                     {
                         if (cpu_choosed8 != true)
                         {
@@ -5526,7 +5526,7 @@ namespace TicTacToeWPFspiel
                             BOA2.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed1 && player_choosed9 != true)
+                    else if (!player_choosed1 && !player_choosed9)
                     {
                         if (cpu_choosed1 != true)
                         {
@@ -5543,7 +5543,7 @@ namespace TicTacToeWPFspiel
                             BOC3.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed3 && player_choosed7 != true)
+                    else if (!player_choosed3 && !player_choosed7)
                     {
                         if (cpu_choosed7 != true)
                         {
@@ -5577,7 +5577,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed6 == true)
                 {
-                    if (player_choosed4 && player_choosed5 != true)
+                    if (!player_choosed4 && !player_choosed5)
                     {
                         if (cpu_choosed4 != true)
                         {
@@ -5594,7 +5594,7 @@ namespace TicTacToeWPFspiel
                             BOB2.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed3 && player_choosed9 != true)
+                    else if (!player_choosed3 && !player_choosed9)
                     {
                         if (cpu_choosed9 != true)
                         {
@@ -5628,7 +5628,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed7 == true)
                 {
-                    if (player_choosed9 && player_choosed8 != true)
+                    if (!player_choosed9 && !player_choosed8)
                     {
                         if (cpu_choosed9 != true)
                         {
@@ -5645,7 +5645,7 @@ namespace TicTacToeWPFspiel
                             BOC2.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed1 && player_choosed4 != true)
+                    else if (!player_choosed1 && !player_choosed4)
                     {
                         if (cpu_choosed1 != true)
                         {
@@ -5662,7 +5662,7 @@ namespace TicTacToeWPFspiel
                             BOB1.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed5 && player_choosed3 != true)
+                    else if (!player_choosed5 && !player_choosed3)
                     {
                         if (cpu_choosed3 != true)
                         {
@@ -5696,7 +5696,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed8 == true)
                 {
-                    if (player_choosed5 && player_choosed2 != true)
+                    if (!player_choosed5 && !player_choosed2)
                     {
                         if (cpu_choosed2 != true)
                         {
@@ -5713,7 +5713,7 @@ namespace TicTacToeWPFspiel
                             BOB2.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed7 && player_choosed9 != true)
+                    else if (!player_choosed7 && !player_choosed9)
                     {
                         if (cpu_choosed7 != true)
                         {
@@ -5747,7 +5747,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed9 == true)
                 {
-                    if (player_choosed7 && player_choosed8 != true)
+                    if (!player_choosed7 && !player_choosed8)
                     {
                         if (cpu_choosed7 != true)
                         {
@@ -5764,7 +5764,7 @@ namespace TicTacToeWPFspiel
                             BOC2.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed3 && player_choosed6 != true)
+                    else if (!player_choosed3 && !player_choosed6)
                     {
                         if (cpu_choosed3 != true)
                         {
@@ -5796,7 +5796,7 @@ namespace TicTacToeWPFspiel
             }
             else
             {
-                if (FA1 && FA2 && FA3 && FB1 && FB2 && FB3 && FC1 && FC2 && FC3 == true)
+                if (FA1 && FA2 && FA3 && FB1 && FB2 && FB3 && FC1 && FC2 && FC3)
                 {
                     INFO.Content = "SPIEL BEENDET...KEINER HAT GEWONNEN !";
                     INFO.Visibility = Visibility.Visible;
@@ -5905,7 +5905,7 @@ namespace TicTacToeWPFspiel
 
             INFO.Visibility = Visibility.Visible;
 
-            if (player_choosed1 && player_choosed2 && player_choosed3 == true)
+            if (player_choosed1 && player_choosed2 && player_choosed3)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
@@ -5914,7 +5914,7 @@ namespace TicTacToeWPFspiel
                 exit.Visibility = Visibility.Visible;
                 return;
             }
-            else if (player_choosed4 && player_choosed5 && player_choosed6 == true)
+            else if (player_choosed4 && player_choosed5 && player_choosed6)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
@@ -5923,7 +5923,7 @@ namespace TicTacToeWPFspiel
                 exit.Visibility = Visibility.Visible;
                 return;
             }
-            else if (player_choosed7 && player_choosed8 && player_choosed9 == true)
+            else if (player_choosed7 && player_choosed8 && player_choosed9)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
@@ -5932,7 +5932,7 @@ namespace TicTacToeWPFspiel
                 exit.Visibility = Visibility.Visible;
                 return;
             }
-            else if (player_choosed1 && player_choosed4 && player_choosed7 == true)
+            else if (player_choosed1 && player_choosed4 && player_choosed7)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
@@ -5941,7 +5941,7 @@ namespace TicTacToeWPFspiel
                 exit.Visibility = Visibility.Visible;
                 return;
             }
-            else if (player_choosed2 && player_choosed5 && player_choosed8 == true)
+            else if (player_choosed2 && player_choosed5 && player_choosed8)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
@@ -5950,7 +5950,7 @@ namespace TicTacToeWPFspiel
                 exit.Visibility = Visibility.Visible;
                 return;
             }
-            else if (player_choosed3 && player_choosed6 && player_choosed9 == true)
+            else if (player_choosed3 && player_choosed6 && player_choosed9)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
@@ -5959,7 +5959,7 @@ namespace TicTacToeWPFspiel
                 exit.Visibility = Visibility.Visible;
                 return;
             }
-            else if (player_choosed1 && player_choosed5 && player_choosed9 == true)
+            else if (player_choosed1 && player_choosed5 && player_choosed9)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
@@ -5968,7 +5968,7 @@ namespace TicTacToeWPFspiel
                 exit.Visibility = Visibility.Visible;
                 return;
             }
-            else if (player_choosed3 && player_choosed5 && player_choosed7 == true)
+            else if (player_choosed3 && player_choosed5 && player_choosed7)
             {
                 INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
                 INFO.Visibility = Visibility.Visible;
@@ -5978,7 +5978,7 @@ namespace TicTacToeWPFspiel
                 return;
             }
 
-            if (FA1 && FA2 && FA3 && FB1 && FB2 && FB3 && FC1 && FC2 && FC3 == true)
+            if (FA1 && FA2 && FA3 && FB1 && FB2 && FB3 && FC1 && FC2 && FC3)
             {
                 INFO.Content = "SPIEL BEENDET...KEINER HAT GEWONNEN !";
                 INFO.Visibility = Visibility.Visible;
@@ -5998,7 +5998,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed1 == true)
                 {
-                    if (player_choosed2 && player_choosed3 != true)
+                    if (!player_choosed2 && !player_choosed3)
                     {
                         if (cpu_choosed3 != true)
                         {
@@ -6015,7 +6015,7 @@ namespace TicTacToeWPFspiel
                             BOA2.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed4 && player_choosed7 != true)
+                    else if (!player_choosed4 && !player_choosed7)
                     {
                         if (cpu_choosed7 != true)
                         {
@@ -6032,7 +6032,7 @@ namespace TicTacToeWPFspiel
                             BOB1.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed5 && player_choosed9 != true)
+                    else if (!player_choosed5 && !player_choosed9)
                     {
                         if (cpu_choosed9 != true)
                         {
@@ -6066,7 +6066,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed2 == true)
                 {
-                    if (player_choosed3 && player_choosed1 != true)
+                    if (!player_choosed3 && !player_choosed1)
                     {
                         if (cpu_choosed3 != true)
                         {
@@ -6083,7 +6083,7 @@ namespace TicTacToeWPFspiel
                             BOA1.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed5 && player_choosed8 != true)
+                    else if (!player_choosed5 && !player_choosed8)
                     {
                         if (cpu_choosed8 != true)
                         {
@@ -6118,7 +6118,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed3 == true)
                 {
-                    if (player_choosed2 && player_choosed1 != true)
+                    if (!player_choosed2 && !player_choosed1)
                     {
                         if (cpu_choosed1 != true)
                         {
@@ -6135,7 +6135,7 @@ namespace TicTacToeWPFspiel
                             BOA2.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed6 && player_choosed9 != true)
+                    else if (!player_choosed6 && !player_choosed9)
                     {
                         if (cpu_choosed9 != true)
                         {
@@ -6169,7 +6169,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed4 == true)
                 {
-                    if (player_choosed5 && player_choosed6 != true)
+                    if (!player_choosed5 && !player_choosed6)
                     {
                         if (cpu_choosed6 != true)
                         {
@@ -6186,7 +6186,7 @@ namespace TicTacToeWPFspiel
                             BOB2.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed1 && player_choosed7 != true)
+                    else if (!player_choosed1 && !player_choosed7)
                     {
                         if (cpu_choosed7 != true)
                         {
@@ -6220,7 +6220,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed5 == true)
                 {
-                    if (player_choosed4 && player_choosed6 != true)
+                    if (!player_choosed4 && !player_choosed6)
                     {
                         if (cpu_choosed4 != true)
                         {
@@ -6237,7 +6237,7 @@ namespace TicTacToeWPFspiel
                             BOB3.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed2 && player_choosed8 != true)
+                    else if (!player_choosed2 && !player_choosed8)
                     {
                         if (cpu_choosed8 != true)
                         {
@@ -6254,7 +6254,7 @@ namespace TicTacToeWPFspiel
                             BOA2.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed1 && player_choosed9 != true)
+                    else if (!player_choosed1 && !player_choosed9)
                     {
                         if (cpu_choosed1 != true)
                         {
@@ -6271,7 +6271,7 @@ namespace TicTacToeWPFspiel
                             BOC3.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed3 && player_choosed7 != true)
+                    else if (!player_choosed3 && !player_choosed7)
                     {
                         if (cpu_choosed7 != true)
                         {
@@ -6305,7 +6305,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed6 == true)
                 {
-                    if (player_choosed4 && player_choosed5 != true)
+                    if (!player_choosed4 && !player_choosed5)
                     {
                         if (cpu_choosed4 != true)
                         {
@@ -6322,7 +6322,7 @@ namespace TicTacToeWPFspiel
                             BOB2.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed3 && player_choosed9 != true)
+                    else if (!player_choosed3 && !player_choosed9)
                     {
                         if (cpu_choosed9 != true)
                         {
@@ -6356,7 +6356,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed7 == true)
                 {
-                    if (player_choosed9 && player_choosed8 != true)
+                    if (!player_choosed9 && !player_choosed8)
                     {
                         if (cpu_choosed9 != true)
                         {
@@ -6373,7 +6373,7 @@ namespace TicTacToeWPFspiel
                             BOC2.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed1 && player_choosed4 != true)
+                    else if (!player_choosed1 && !player_choosed4)
                     {
                         if (cpu_choosed1 != true)
                         {
@@ -6390,7 +6390,7 @@ namespace TicTacToeWPFspiel
                             BOB1.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed5 && player_choosed3 != true)
+                    else if (!player_choosed5 && !player_choosed3)
                     {
                         if (cpu_choosed3 != true)
                         {
@@ -6424,7 +6424,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed8 == true)
                 {
-                    if (player_choosed5 && player_choosed2 != true)
+                    if (!player_choosed5 && !player_choosed2)
                     {
                         if (cpu_choosed2 != true)
                         {
@@ -6441,7 +6441,7 @@ namespace TicTacToeWPFspiel
                             BOB2.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed7 && player_choosed9 != true)
+                    else if (!player_choosed7 && !player_choosed9)
                     {
                         if (cpu_choosed7 != true)
                         {
@@ -6475,7 +6475,7 @@ namespace TicTacToeWPFspiel
             {
                 if (cpu_choosed9 == true)
                 {
-                    if (player_choosed7 && player_choosed8 != true)
+                    if (!player_choosed7 && !player_choosed8)
                     {
                         if (cpu_choosed7 != true)
                         {
@@ -6492,7 +6492,7 @@ namespace TicTacToeWPFspiel
                             BOC2.Visibility = Visibility.Visible;
                         }
                     }
-                    else if (player_choosed3 && player_choosed6 != true)
+                    else if (!player_choosed3 && !player_choosed6)
                     {
                         if (cpu_choosed3 != true)
                         {
@@ -6524,7 +6524,7 @@ namespace TicTacToeWPFspiel
             }
             else
             {
-                if (FA1 && FA2 && FA3 && FB1 && FB2 && FB3 && FC1 && FC2 && FC3 == true)
+                if (FA1 && FA2 && FA3 && FB1 && FB2 && FB3 && FC1 && FC2 && FC3)
                 {
                     INFO.Content = "SPIEL BEENDET...KEINER HAT GEWONNEN !";
                     INFO.Visibility = Visibility.Visible;
@@ -6615,7 +6615,7 @@ namespace TicTacToeWPFspiel
             INFO.Visibility = Visibility.Hidden;
         }
 
-        private void restart_Click(object sender, RoutedEventArgs e)
+        private void Restart_Click(object sender, RoutedEventArgs e)
         {
             cpu_choice = 0;
             cpu_choosed1 = false;
@@ -6682,7 +6682,7 @@ namespace TicTacToeWPFspiel
             game_ended = false;
         }
 
-        private void exit_Click(object sender, RoutedEventArgs e)
+        private void Exit_Click(object sender, RoutedEventArgs e)
         {
             Close();
         }

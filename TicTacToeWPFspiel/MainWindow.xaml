@@ -29,8 +29,8 @@
 
         </Grid.RowDefinitions>
 
-        <Button x:Name="restart" Content="Restart Game" MaxWidth="190" MaxHeight="90" BorderThickness="3" BorderBrush="Black" Grid.Column="5" Grid.Row="5" Grid.ColumnSpan="2" Background="Gold" FontWeight="Bold" FontFamily="chiller" FontSize="40" Foreground="Black" Click="restart_Click" Visibility="Hidden"/>
-        <Button x:Name="exit" Content="Quit Game" MaxWidth="190" MaxHeight="90" BorderThickness="3" BorderBrush="Black" Grid.Column="5" Grid.Row="7" Grid.ColumnSpan="2" Background="OrangeRed" Foreground="Black" FontWeight="Bold" FontFamily="chiller" FontSize="50" Click="exit_Click" Visibility="Visible"/>
+        <Button x:Name="restart" Content="Restart Game" MaxWidth="190" MaxHeight="90" BorderThickness="3" BorderBrush="Black" Grid.Column="5" Grid.Row="5" Grid.ColumnSpan="2" Background="Gold" FontWeight="Bold" FontFamily="chiller" FontSize="40" Foreground="Black" Click="Restart_Click" Visibility="Hidden"/>
+        <Button x:Name="exit" Content="Quit Game" MaxWidth="190" MaxHeight="90" BorderThickness="3" BorderBrush="Black" Grid.Column="5" Grid.Row="7" Grid.ColumnSpan="2" Background="OrangeRed" Foreground="Black" FontWeight="Bold" FontFamily="chiller" FontSize="50" Click="Exit_Click" Visibility="Visible"/>
 
         <Label Height="160" Width="500" Grid.Column="1" Grid.Row="0" Grid.RowSpan="5" Grid.ColumnSpan="5" Margin="0,40,0,0" VerticalAlignment="Top" HorizontalAlignment="center" HorizontalContentAlignment="center" VerticalContentAlignment="center" FontFamily="chiller" FontSize="120" Foreground="DarkOrange" FontWeight="Bold" Content="TicTacToe"/>
         <Image x:Name="TicTacToeRaster" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="5" Grid.RowSpan="5" Height="300" Width="300" Margin="0,100,0,0" VerticalAlignment="center" HorizontalAlignment="Center" Cursor="Hand" Source="/e797539a1376987930021d2cf4ef74dd5e2ea131.png"/>
