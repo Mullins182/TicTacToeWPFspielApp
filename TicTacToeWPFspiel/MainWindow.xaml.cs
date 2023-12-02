@@ -168,6 +168,234 @@ namespace TicTacToeWPFspiel
 
             cpu_choice = rd_number_generated.Next(1, 10);
 
+            INFO.Visibility = Visibility.Hidden;
+
+            if (cpu_choosed1 && cpu_choosed3 && !player_choosed2)
+            {
+                FA2 = true;
+                cpu_choosed2 = true;
+                BA2.Visibility = Visibility.Hidden;
+                BOA2.Visibility = Visibility.Visible;
+                goto J2;
+
+            }
+            else if (cpu_choosed4 && cpu_choosed6 && !player_choosed5)
+            {
+                FB2 = true;
+                cpu_choosed5 = true;
+                BB2.Visibility = Visibility.Hidden;
+                BOB2.Visibility = Visibility.Visible;
+                goto J2;
+
+            }
+            else if (cpu_choosed7 && cpu_choosed9 && !player_choosed8)
+            {
+                FC2 = true;
+                cpu_choosed8 = true;
+                BC2.Visibility = Visibility.Hidden;
+                BOC2.Visibility = Visibility.Visible;
+                goto J2;
+
+            }
+            else if (cpu_choosed2 && cpu_choosed1 && !player_choosed3)
+            {
+                FA3 = true;
+                cpu_choosed3 = true;
+                BA3.Visibility = Visibility.Hidden;
+                BOA3.Visibility = Visibility.Visible;
+                goto J2;
+
+            }
+            else if (cpu_choosed2 && cpu_choosed3 && !player_choosed1)
+            {
+                FA1 = true;
+                cpu_choosed1 = true;
+                BA1.Visibility = Visibility.Hidden;
+                BOA1.Visibility = Visibility.Visible;
+                goto J2;
+
+            }
+            else if (cpu_choosed3 && cpu_choosed2 && !player_choosed1)
+            {
+                FA1 = true;
+                cpu_choosed1 = true;
+                BA1.Visibility = Visibility.Hidden;
+                BOA1.Visibility = Visibility.Visible;
+                goto J2;
+
+            }
+            else if (cpu_choosed3 && cpu_choosed1 && !player_choosed2)
+            {
+                FA2 = true;
+                cpu_choosed2 = true;
+                BA2.Visibility = Visibility.Hidden;
+                BOA2.Visibility = Visibility.Visible;
+                goto J2;
+
+            }
+            else if (cpu_choosed1 && cpu_choosed5 && !player_choosed9)
+            {
+                FC3 = true;
+                cpu_choosed9 = true;
+                BC3.Visibility = Visibility.Hidden;
+                BOC3.Visibility = Visibility.Visible;
+                goto J2;
+
+            }
+            else if (cpu_choosed1 && cpu_choosed9 && !player_choosed5)
+            {
+                FB2 = true;
+                cpu_choosed5 = true;
+                BB2.Visibility = Visibility.Hidden;
+                BOB2.Visibility = Visibility.Visible;
+                goto J2;
+
+            }
+            else if (cpu_choosed3 && cpu_choosed5 && !player_choosed7)
+            {
+                FC1 = true;
+                cpu_choosed7 = true;
+                BC1.Visibility = Visibility.Hidden;
+                BOC1.Visibility = Visibility.Visible;
+                goto J2;
+
+            }
+            else if (cpu_choosed3 && cpu_choosed7 && !player_choosed5)
+            {
+                FB2 = true;
+                cpu_choosed5 = true;
+                BB2.Visibility = Visibility.Hidden;
+                BOB2.Visibility = Visibility.Visible;
+                goto J2;
+
+            }
+            else if (cpu_choosed4 && cpu_choosed5 && !player_choosed6)
+            {
+                FB3 = true;
+                cpu_choosed6 = true;
+                BB3.Visibility = Visibility.Hidden;
+                BOB3.Visibility = Visibility.Visible;
+                goto J2;
+
+            }
+            else if (cpu_choosed5 && cpu_choosed4 && !player_choosed6)
+            {
+                FB3 = true;
+                cpu_choosed6 = true;
+                BB3.Visibility = Visibility.Hidden;
+                BOB3.Visibility = Visibility.Visible;
+                goto J2;
+
+            }
+            else if (cpu_choosed5 && cpu_choosed6 && !player_choosed5)
+            {
+                FB2 = true;
+                cpu_choosed5 = true;
+                BB2.Visibility = Visibility.Hidden;
+                BOB2.Visibility = Visibility.Visible;
+                goto J2;
+
+            }
+            else if (cpu_choosed5 && cpu_choosed2 && !player_choosed8)
+            {
+                FC2 = true;
+                cpu_choosed8 = true;
+                BC2.Visibility = Visibility.Hidden;
+                BOC2.Visibility = Visibility.Visible;
+                goto J2;
+
+            }
+            else if (cpu_choosed5 && cpu_choosed8 && !player_choosed2)
+            {
+                FA2 = true;
+                cpu_choosed2 = true;
+                BA2.Visibility = Visibility.Hidden;
+                BOA2.Visibility = Visibility.Visible;
+                goto J2;
+
+            }
+            else if (cpu_choosed7 && cpu_choosed8 && !player_choosed9)
+            {
+                FC3 = true;
+                cpu_choosed9 = true;
+                BC3.Visibility = Visibility.Hidden;
+                BOC3.Visibility = Visibility.Visible;
+                goto J2;
+
+            }
+            else if (cpu_choosed9 && cpu_choosed1 && !player_choosed5)
+            {
+                FB2 = true;
+                cpu_choosed5 = true;
+                BB2.Visibility = Visibility.Hidden;
+                BOB2.Visibility = Visibility.Visible;
+                goto J2;
+
+            }
+            else if (cpu_choosed9 && cpu_choosed5 && !player_choosed1)
+            {
+                FA1 = true;
+                cpu_choosed1 = true;
+                BA1.Visibility = Visibility.Hidden;
+                BOA1.Visibility = Visibility.Visible;
+                goto J2;
+
+            }
+            else if (cpu_choosed1 && cpu_choosed4 && !player_choosed7)
+            {
+                FC1 = true;
+                cpu_choosed7 = true;
+                BC1.Visibility = Visibility.Hidden;
+                BOC1.Visibility = Visibility.Visible;
+                goto J2;
+
+            }
+            else if (cpu_choosed1 && cpu_choosed7 && !player_choosed4)
+            {
+                FB1 = true;
+                cpu_choosed4 = true;
+                BB1.Visibility = Visibility.Hidden;
+                BOB1.Visibility = Visibility.Visible;
+                goto J2;
+
+            }
+            else if (cpu_choosed2 && cpu_choosed5 && !player_choosed8)
+            {
+                FC2 = true;
+                cpu_choosed8 = true;
+                BC2.Visibility = Visibility.Hidden;
+                BOC2.Visibility = Visibility.Visible;
+                goto J2;
+
+            }
+            else if (cpu_choosed2 && cpu_choosed8 && !player_choosed5)
+            {
+                FB2 = true;
+                cpu_choosed5 = true;
+                BB2.Visibility = Visibility.Hidden;
+                BOB2.Visibility = Visibility.Visible;
+                goto J2;
+
+            }
+            else if (cpu_choosed3 && cpu_choosed6 && !player_choosed9)
+            {
+                FC3 = true;
+                cpu_choosed9 = true;
+                BC3.Visibility = Visibility.Hidden;
+                BOC3.Visibility = Visibility.Visible;
+                goto J2;
+
+            }
+            else if (cpu_choosed3 && cpu_choosed9 && !player_choosed6)
+            {
+                FB3 = true;
+                cpu_choosed6 = true;
+                BB3.Visibility = Visibility.Hidden;
+                BOB3.Visibility = Visibility.Visible;
+                goto J2;
+
+            }
+
 
             if (cpu_choice == 1 && player_choosed1 != true)
             {
@@ -231,10 +459,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
+                    if (!player_choosed2 && !player_choosed3 || !player_choosed4 && !player_choosed7 || !player_choosed5 && !player_choosed9)
+                    {
                     FA1 = true;
                     cpu_choosed1 = true;
                     BA1.Visibility = Visibility.Hidden;
                     BOA1.Visibility = Visibility.Visible;
+                    }
                 }
             }
             else if (cpu_choice == 2 && player_choosed2 != true)
@@ -282,10 +513,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
+                    if (!player_choosed1 && !player_choosed3 || !player_choosed5 && !player_choosed8)
+                    {
                     FA2 = true;
                     cpu_choosed2 = true;
                     BA2.Visibility = Visibility.Hidden;
                     BOA2.Visibility = Visibility.Visible;
+                    }
                 }
 
             }
@@ -334,10 +568,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
+                    if (!player_choosed2 && !player_choosed1 || !player_choosed5 && !player_choosed7 || !player_choosed6 && !player_choosed9)
+                    {
                     FA3 = true;
                     cpu_choosed3 = true;
                     BA3.Visibility = Visibility.Hidden;
                     BOA3.Visibility = Visibility.Visible;
+                    }
                 }
             }
             else if (cpu_choice == 4 && player_choosed4 != true)
@@ -385,10 +622,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
+                    if (!player_choosed5 && !player_choosed6 || !player_choosed1 && !player_choosed7)
+                    {
                     FB1 = true;
                     cpu_choosed4 = true;
                     BB1.Visibility = Visibility.Hidden;
                     BOB1.Visibility = Visibility.Visible;
+                    }
                 }
             }
             else if (cpu_choice == 5 && player_choosed5 != true)
@@ -470,10 +710,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                FB2 = true;
-                cpu_choosed5 = true;
-                BB2.Visibility = Visibility.Hidden;
-                BOB2.Visibility = Visibility.Visible;
+                    if (!player_choosed4 && !player_choosed6 || !player_choosed2 && !player_choosed8 || !player_choosed1 && !player_choosed9 || !player_choosed3 && !player_choosed7)
+                    {
+                    FB2 = true;
+                    cpu_choosed5 = true;
+                    BB2.Visibility = Visibility.Hidden;
+                    BOB2.Visibility = Visibility.Visible;
+                    }
                 }
             }
             else if (cpu_choice == 6 && player_choosed6 != true)
@@ -521,10 +764,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                FB3 = true;
-                cpu_choosed6 = true;
-                BB3.Visibility = Visibility.Hidden;
-                BOB3.Visibility = Visibility.Visible;
+                    if (!player_choosed4 && !player_choosed5 || !player_choosed3 && !player_choosed9)
+                    {
+                    FB3 = true;
+                    cpu_choosed6 = true;
+                    BB3.Visibility = Visibility.Hidden;
+                    BOB3.Visibility = Visibility.Visible;
+                    }
                 }
             }
             else if (cpu_choice == 7 && player_choosed7 != true)
@@ -589,10 +835,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                FC1 = true;
-                cpu_choosed7 = true;
-                BC1.Visibility = Visibility.Hidden;
-                BOC1.Visibility = Visibility.Visible;
+                    if (!player_choosed4 && !player_choosed1 || !player_choosed8 && !player_choosed9 || !player_choosed5 && !player_choosed3)
+                    {
+                    FC1 = true;
+                    cpu_choosed7 = true;
+                    BC1.Visibility = Visibility.Hidden;
+                    BOC1.Visibility = Visibility.Visible;
+                    }
                 }
             }
             else if (cpu_choice == 8 && player_choosed8 != true)
@@ -640,10 +889,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                FC2 = true;
-                cpu_choosed8 = true;
-                BC2.Visibility = Visibility.Hidden;
-                BOC2.Visibility = Visibility.Visible;
+                    if (!player_choosed7 && !player_choosed9 || !player_choosed2 && !player_choosed5)
+                    {
+                    FC2 = true;
+                    cpu_choosed8 = true;
+                    BC2.Visibility = Visibility.Hidden;
+                    BOC2.Visibility = Visibility.Visible;
+                    }
                 }
             }
             else if (cpu_choice == 9 && player_choosed9 != true)
@@ -691,10 +943,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                FC3 = true;
-                cpu_choosed9 = true;
-                BC3.Visibility = Visibility.Hidden;
-                BOC3.Visibility = Visibility.Visible;
+                    if (!player_choosed8 && !player_choosed7 || !player_choosed6 && !player_choosed3 || !player_choosed5 && !player_choosed1)
+                    {
+                    FC3 = true;
+                    cpu_choosed9 = true;
+                    BC3.Visibility = Visibility.Hidden;
+                    BOC3.Visibility = Visibility.Visible;
+                    }
                 }
             }
             else
@@ -711,6 +966,8 @@ namespace TicTacToeWPFspiel
 
                 goto J1;
             }
+
+            J2:
 
             if (cpu_choosed1 && cpu_choosed2 && cpu_choosed3 == true)
             {
@@ -783,6 +1040,15 @@ namespace TicTacToeWPFspiel
                 restart.Visibility = Visibility.Visible;
                 exit.Visibility = Visibility.Visible;
                 return;
+            }
+
+            if (FA1 && FA2 && FA3 && FB1 && FB2 && FB3 && FC1 && FC2 && FC3)
+            {
+                INFO.Content = "SPIEL BEENDET...KEINER HAT GEWONNEN !";
+                INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
             }
 
             INFO.Visibility = Visibility.Hidden;
@@ -895,6 +1161,211 @@ namespace TicTacToeWPFspiel
 
             cpu_choice = rd_number_generated.Next(1, 10);
 
+            INFO.Visibility = Visibility.Hidden;
+
+            if (cpu_choosed1 && cpu_choosed3 && !player_choosed2)
+            {
+                FA2 = true;
+                cpu_choosed2 = true;
+                BA2.Visibility = Visibility.Hidden;
+                BOA2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed4 && cpu_choosed6 && !player_choosed5)
+            {
+                FB2 = true;
+                cpu_choosed5 = true;
+                BB2.Visibility = Visibility.Hidden;
+                BOB2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed7 && cpu_choosed9 && !player_choosed8)
+            {
+                FC2 = true;
+                cpu_choosed8 = true;
+                BC2.Visibility = Visibility.Hidden;
+                BOC2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed2 && cpu_choosed1 && !player_choosed3)
+            {
+                FA3 = true;
+                cpu_choosed3 = true;
+                BA3.Visibility = Visibility.Hidden;
+                BOA3.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed2 && cpu_choosed3 && !player_choosed1)
+            {
+                FA1 = true;
+                cpu_choosed1 = true;
+                BA1.Visibility = Visibility.Hidden;
+                BOA1.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed3 && cpu_choosed2 && !player_choosed1)
+            {
+                FA1 = true;
+                cpu_choosed1 = true;
+                BA1.Visibility = Visibility.Hidden;
+                BOA1.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed3 && cpu_choosed1 && !player_choosed2)
+            {
+                FA2 = true;
+                cpu_choosed2 = true;
+                BA2.Visibility = Visibility.Hidden;
+                BOA2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed1 && cpu_choosed5 && !player_choosed9)
+            {
+                FC3 = true;
+                cpu_choosed9 = true;
+                BC3.Visibility = Visibility.Hidden;
+                BOC3.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed1 && cpu_choosed9 && !player_choosed5)
+            {
+                FB2 = true;
+                cpu_choosed5 = true;
+                BB2.Visibility = Visibility.Hidden;
+                BOB2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed3 && cpu_choosed5 && !player_choosed7)
+            {
+                FC1 = true;
+                cpu_choosed7 = true;
+                BC1.Visibility = Visibility.Hidden;
+                BOC1.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed3 && cpu_choosed7 && !player_choosed5)
+            {
+                FB2 = true;
+                cpu_choosed5 = true;
+                BB2.Visibility = Visibility.Hidden;
+                BOB2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed4 && cpu_choosed5 && !player_choosed6)
+            {
+                FB3 = true;
+                cpu_choosed6 = true;
+                BB3.Visibility = Visibility.Hidden;
+                BOB3.Visibility = Visibility.Visible;
+                return;
+
+            }
+            else if (cpu_choosed5 && cpu_choosed4 && !player_choosed6)
+            {
+                FB3 = true;
+                cpu_choosed6 = true;
+                BB3.Visibility = Visibility.Hidden;
+                BOB3.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed5 && cpu_choosed6 && !player_choosed5)
+            {
+                FB2 = true;
+                cpu_choosed5 = true;
+                BB2.Visibility = Visibility.Hidden;
+                BOB2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed5 && cpu_choosed2 && !player_choosed8)
+            {
+                FC2 = true;
+                cpu_choosed8 = true;
+                BC2.Visibility = Visibility.Hidden;
+                BOC2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed5 && cpu_choosed8 && !player_choosed2)
+            {
+                FA2 = true;
+                cpu_choosed2 = true;
+                BA2.Visibility = Visibility.Hidden;
+                BOA2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed7 && cpu_choosed8 && !player_choosed9)
+            {
+                FC3 = true;
+                cpu_choosed9 = true;
+                BC3.Visibility = Visibility.Hidden;
+                BOC3.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed9 && cpu_choosed1 && !player_choosed5)
+            {
+                FB2 = true;
+                cpu_choosed5 = true;
+                BB2.Visibility = Visibility.Hidden;
+                BOB2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed9 && cpu_choosed5 && !player_choosed1)
+            {
+                FA1 = true;
+                cpu_choosed1 = true;
+                BA1.Visibility = Visibility.Hidden;
+                BOA1.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed1 && cpu_choosed4 && !player_choosed7)
+            {
+                FC1 = true;
+                cpu_choosed7 = true;
+                BC1.Visibility = Visibility.Hidden;
+                BOC1.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed1 && cpu_choosed7 && !player_choosed4)
+            {
+                FB1 = true;
+                cpu_choosed4 = true;
+                BB1.Visibility = Visibility.Hidden;
+                BOB1.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed2 && cpu_choosed5 && !player_choosed8)
+            {
+                FC2 = true;
+                cpu_choosed8 = true;
+                BC2.Visibility = Visibility.Hidden;
+                BOC2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed2 && cpu_choosed8 && !player_choosed5)
+            {
+                FB2 = true;
+                cpu_choosed5 = true;
+                BB2.Visibility = Visibility.Hidden;
+                BOB2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed3 && cpu_choosed6 && !player_choosed9)
+            {
+                FC3 = true;
+                cpu_choosed9 = true;
+                BC3.Visibility = Visibility.Hidden;
+                BOC3.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed3 && cpu_choosed9 && !player_choosed6)
+            {
+                FB3 = true;
+                cpu_choosed6 = true;
+                BB3.Visibility = Visibility.Hidden;
+                BOB3.Visibility = Visibility.Visible;
+                goto J2;
+            }
+
+
             if (cpu_choice == 1 && player_choosed1 != true)
             {
                 if (cpu_choosed1 == true)
@@ -957,10 +1428,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                    FA1 = true;
-                    cpu_choosed1 = true;
-                    BA1.Visibility = Visibility.Hidden;
-                    BOA1.Visibility = Visibility.Visible;
+                    if (!player_choosed2 && !player_choosed3 || !player_choosed4 && !player_choosed7 || !player_choosed5 && !player_choosed9)
+                    {
+                        FA1 = true;
+                        cpu_choosed1 = true;
+                        BA1.Visibility = Visibility.Hidden;
+                        BOA1.Visibility = Visibility.Visible;
+                    }
                 }
             }
             else if (cpu_choice == 2 && player_choosed2 != true)
@@ -1008,10 +1482,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                    FA2 = true;
-                    cpu_choosed2 = true;
-                    BA2.Visibility = Visibility.Hidden;
-                    BOA2.Visibility = Visibility.Visible;
+                    if (!player_choosed1 && !player_choosed3 || !player_choosed5 && !player_choosed8)
+                    {
+                        FA2 = true;
+                        cpu_choosed2 = true;
+                        BA2.Visibility = Visibility.Hidden;
+                        BOA2.Visibility = Visibility.Visible;
+                    }
                 }
 
             }
@@ -1060,10 +1537,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                    FA3 = true;
-                    cpu_choosed3 = true;
-                    BA3.Visibility = Visibility.Hidden;
-                    BOA3.Visibility = Visibility.Visible;
+                    if (!player_choosed2 && !player_choosed1 || !player_choosed5 && !player_choosed7 || !player_choosed6 && !player_choosed9)
+                    {
+                        FA3 = true;
+                        cpu_choosed3 = true;
+                        BA3.Visibility = Visibility.Hidden;
+                        BOA3.Visibility = Visibility.Visible;
+                    }
                 }
             }
             else if (cpu_choice == 4 && player_choosed4 != true)
@@ -1111,10 +1591,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                    FB1 = true;
-                    cpu_choosed4 = true;
-                    BB1.Visibility = Visibility.Hidden;
-                    BOB1.Visibility = Visibility.Visible;
+                    if (!player_choosed5 && !player_choosed6 || !player_choosed1 && !player_choosed7)
+                    {
+                        FB1 = true;
+                        cpu_choosed4 = true;
+                        BB1.Visibility = Visibility.Hidden;
+                        BOB1.Visibility = Visibility.Visible;
+                    }
                 }
             }
             else if (cpu_choice == 5 && player_choosed5 != true)
@@ -1196,10 +1679,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                    FB2 = true;
-                    cpu_choosed5 = true;
-                    BB2.Visibility = Visibility.Hidden;
-                    BOB2.Visibility = Visibility.Visible;
+                    if (!player_choosed4 && !player_choosed6 || !player_choosed2 && !player_choosed8 || !player_choosed1 && !player_choosed9 || !player_choosed3 && !player_choosed7)
+                    {
+                        FB2 = true;
+                        cpu_choosed5 = true;
+                        BB2.Visibility = Visibility.Hidden;
+                        BOB2.Visibility = Visibility.Visible;
+                    }
                 }
             }
             else if (cpu_choice == 6 && player_choosed6 != true)
@@ -1247,10 +1733,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                    FB3 = true;
-                    cpu_choosed6 = true;
-                    BB3.Visibility = Visibility.Hidden;
-                    BOB3.Visibility = Visibility.Visible;
+                    if (!player_choosed4 && !player_choosed5 || !player_choosed3 && !player_choosed9)
+                    {
+                        FB3 = true;
+                        cpu_choosed6 = true;
+                        BB3.Visibility = Visibility.Hidden;
+                        BOB3.Visibility = Visibility.Visible;
+                    }
                 }
             }
             else if (cpu_choice == 7 && player_choosed7 != true)
@@ -1315,10 +1804,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                    FC1 = true;
-                    cpu_choosed7 = true;
-                    BC1.Visibility = Visibility.Hidden;
-                    BOC1.Visibility = Visibility.Visible;
+                    if (!player_choosed4 && !player_choosed1 || !player_choosed8 && !player_choosed9 || !player_choosed5 && !player_choosed3)
+                    {
+                        FC1 = true;
+                        cpu_choosed7 = true;
+                        BC1.Visibility = Visibility.Hidden;
+                        BOC1.Visibility = Visibility.Visible;
+                    }
                 }
             }
             else if (cpu_choice == 8 && player_choosed8 != true)
@@ -1366,10 +1858,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                    FC2 = true;
-                    cpu_choosed8 = true;
-                    BC2.Visibility = Visibility.Hidden;
-                    BOC2.Visibility = Visibility.Visible;
+                    if (!player_choosed7 && !player_choosed9 || !player_choosed2 && !player_choosed5)
+                    {
+                        FC2 = true;
+                        cpu_choosed8 = true;
+                        BC2.Visibility = Visibility.Hidden;
+                        BOC2.Visibility = Visibility.Visible;
+                    }
                 }
             }
             else if (cpu_choice == 9 && player_choosed9 != true)
@@ -1417,10 +1912,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                    FC3 = true;
-                    cpu_choosed9 = true;
-                    BC3.Visibility = Visibility.Hidden;
-                    BOC3.Visibility = Visibility.Visible;
+                    if (!player_choosed8 && !player_choosed7 || !player_choosed6 && !player_choosed3 || !player_choosed5 && !player_choosed1)
+                    {
+                        FC3 = true;
+                        cpu_choosed9 = true;
+                        BC3.Visibility = Visibility.Hidden;
+                        BOC3.Visibility = Visibility.Visible;
+                    }
                 }
             }
             else
@@ -1439,6 +1937,8 @@ namespace TicTacToeWPFspiel
             }
 
             INFO.Visibility = Visibility.Hidden;
+
+            J2:
 
             if (cpu_choosed1 && cpu_choosed2 && cpu_choosed3 == true)
             {
@@ -1511,6 +2011,15 @@ namespace TicTacToeWPFspiel
                 restart.Visibility = Visibility.Visible;
                 exit.Visibility = Visibility.Visible;
                 return;
+            }
+
+            if (FA1 && FA2 && FA3 && FB1 && FB2 && FB3 && FC1 && FC2 && FC3)
+            {
+                INFO.Content = "SPIEL BEENDET...KEINER HAT GEWONNEN !";
+                INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
             }
 
             INFO.Visibility = Visibility.Hidden;
@@ -1623,6 +2132,210 @@ namespace TicTacToeWPFspiel
 
             cpu_choice = rd_number_generated.Next(1, 10);
 
+            INFO.Visibility = Visibility.Hidden;
+
+            if (cpu_choosed1 && cpu_choosed3 && !player_choosed2)
+            {
+                FA2 = true;
+                cpu_choosed2 = true;
+                BA2.Visibility = Visibility.Hidden;
+                BOA2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed4 && cpu_choosed6 && !player_choosed5)
+            {
+                FB2 = true;
+                cpu_choosed5 = true;
+                BB2.Visibility = Visibility.Hidden;
+                BOB2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed7 && cpu_choosed9 && !player_choosed8)
+            {
+                FC2 = true;
+                cpu_choosed8 = true;
+                BC2.Visibility = Visibility.Hidden;
+                BOC2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed2 && cpu_choosed1 && !player_choosed3)
+            {
+                FA3 = true;
+                cpu_choosed3 = true;
+                BA3.Visibility = Visibility.Hidden;
+                BOA3.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed2 && cpu_choosed3 && !player_choosed1)
+            {
+                FA1 = true;
+                cpu_choosed1 = true;
+                BA1.Visibility = Visibility.Hidden;
+                BOA1.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed3 && cpu_choosed2 && !player_choosed1)
+            {
+                FA1 = true;
+                cpu_choosed1 = true;
+                BA1.Visibility = Visibility.Hidden;
+                BOA1.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed3 && cpu_choosed1 && !player_choosed2)
+            {
+                FA2 = true;
+                cpu_choosed2 = true;
+                BA2.Visibility = Visibility.Hidden;
+                BOA2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed1 && cpu_choosed5 && !player_choosed9)
+            {
+                FC3 = true;
+                cpu_choosed9 = true;
+                BC3.Visibility = Visibility.Hidden;
+                BOC3.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed1 && cpu_choosed9 && !player_choosed5)
+            {
+                FB2 = true;
+                cpu_choosed5 = true;
+                BB2.Visibility = Visibility.Hidden;
+                BOB2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed3 && cpu_choosed5 && !player_choosed7)
+            {
+                FC1 = true;
+                cpu_choosed7 = true;
+                BC1.Visibility = Visibility.Hidden;
+                BOC1.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed3 && cpu_choosed7 && !player_choosed5)
+            {
+                FB2 = true;
+                cpu_choosed5 = true;
+                BB2.Visibility = Visibility.Hidden;
+                BOB2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed4 && cpu_choosed5 && !player_choosed6)
+            {
+                FB3 = true;
+                cpu_choosed6 = true;
+                BB3.Visibility = Visibility.Hidden;
+                BOB3.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed5 && cpu_choosed4 && !player_choosed6)
+            {
+                FB3 = true;
+                cpu_choosed6 = true;
+                BB3.Visibility = Visibility.Hidden;
+                BOB3.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed5 && cpu_choosed6 && !player_choosed5)
+            {
+                FB2 = true;
+                cpu_choosed5 = true;
+                BB2.Visibility = Visibility.Hidden;
+                BOB2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed5 && cpu_choosed2 && !player_choosed8)
+            {
+                FC2 = true;
+                cpu_choosed8 = true;
+                BC2.Visibility = Visibility.Hidden;
+                BOC2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed5 && cpu_choosed8 && !player_choosed2)
+            {
+                FA2 = true;
+                cpu_choosed2 = true;
+                BA2.Visibility = Visibility.Hidden;
+                BOA2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed7 && cpu_choosed8 && !player_choosed9)
+            {
+                FC3 = true;
+                cpu_choosed9 = true;
+                BC3.Visibility = Visibility.Hidden;
+                BOC3.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed9 && cpu_choosed1 && !player_choosed5)
+            {
+                FB2 = true;
+                cpu_choosed5 = true;
+                BB2.Visibility = Visibility.Hidden;
+                BOB2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed9 && cpu_choosed5 && !player_choosed1)
+            {
+                FA1 = true;
+                cpu_choosed1 = true;
+                BA1.Visibility = Visibility.Hidden;
+                BOA1.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed1 && cpu_choosed4 && !player_choosed7)
+            {
+                FC1 = true;
+                cpu_choosed7 = true;
+                BC1.Visibility = Visibility.Hidden;
+                BOC1.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed1 && cpu_choosed7 && !player_choosed4)
+            {
+                FB1 = true;
+                cpu_choosed4 = true;
+                BB1.Visibility = Visibility.Hidden;
+                BOB1.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed2 && cpu_choosed5 && !player_choosed8)
+            {
+                FC2 = true;
+                cpu_choosed8 = true;
+                BC2.Visibility = Visibility.Hidden;
+                BOC2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed2 && cpu_choosed8 && !player_choosed5)
+            {
+                FB2 = true;
+                cpu_choosed5 = true;
+                BB2.Visibility = Visibility.Hidden;
+                BOB2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed3 && cpu_choosed6 && !player_choosed9)
+            {
+                FC3 = true;
+                cpu_choosed9 = true;
+                BC3.Visibility = Visibility.Hidden;
+                BOC3.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed3 && cpu_choosed9 && !player_choosed6)
+            {
+                FB3 = true;
+                cpu_choosed6 = true;
+                BB3.Visibility = Visibility.Hidden;
+                BOB3.Visibility = Visibility.Visible;
+                goto J2;
+            }
+
+
             if (cpu_choice == 1 && player_choosed1 != true)
             {
                 if (cpu_choosed1 == true)
@@ -1685,10 +2398,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                    FA1 = true;
-                    cpu_choosed1 = true;
-                    BA1.Visibility = Visibility.Hidden;
-                    BOA1.Visibility = Visibility.Visible;
+                    if (!player_choosed2 && !player_choosed3 || !player_choosed4 && !player_choosed7 || !player_choosed5 && !player_choosed9)
+                    {
+                        FA1 = true;
+                        cpu_choosed1 = true;
+                        BA1.Visibility = Visibility.Hidden;
+                        BOA1.Visibility = Visibility.Visible;
+                    }
                 }
             }
             else if (cpu_choice == 2 && player_choosed2 != true)
@@ -1736,10 +2452,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                    FA2 = true;
-                    cpu_choosed2 = true;
-                    BA2.Visibility = Visibility.Hidden;
-                    BOA2.Visibility = Visibility.Visible;
+                    if (!player_choosed1 && !player_choosed3 || !player_choosed5 && !player_choosed8)
+                    {
+                        FA2 = true;
+                        cpu_choosed2 = true;
+                        BA2.Visibility = Visibility.Hidden;
+                        BOA2.Visibility = Visibility.Visible;
+                    }
                 }
 
             }
@@ -1788,10 +2507,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                    FA3 = true;
-                    cpu_choosed3 = true;
-                    BA3.Visibility = Visibility.Hidden;
-                    BOA3.Visibility = Visibility.Visible;
+                    if (!player_choosed2 && !player_choosed1 || !player_choosed5 && !player_choosed7 || !player_choosed6 && !player_choosed9)
+                    {
+                        FA3 = true;
+                        cpu_choosed3 = true;
+                        BA3.Visibility = Visibility.Hidden;
+                        BOA3.Visibility = Visibility.Visible;
+                    }
                 }
             }
             else if (cpu_choice == 4 && player_choosed4 != true)
@@ -1839,10 +2561,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                    FB1 = true;
-                    cpu_choosed4 = true;
-                    BB1.Visibility = Visibility.Hidden;
-                    BOB1.Visibility = Visibility.Visible;
+                    if (!player_choosed5 && !player_choosed6 || !player_choosed1 && !player_choosed7)
+                    {
+                        FB1 = true;
+                        cpu_choosed4 = true;
+                        BB1.Visibility = Visibility.Hidden;
+                        BOB1.Visibility = Visibility.Visible;
+                    }
                 }
             }
             else if (cpu_choice == 5 && player_choosed5 != true)
@@ -1924,10 +2649,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                    FB2 = true;
-                    cpu_choosed5 = true;
-                    BB2.Visibility = Visibility.Hidden;
-                    BOB2.Visibility = Visibility.Visible;
+                    if (!player_choosed4 && !player_choosed6 || !player_choosed2 && !player_choosed8 || !player_choosed1 && !player_choosed9 || !player_choosed3 && !player_choosed7)
+                    {
+                        FB2 = true;
+                        cpu_choosed5 = true;
+                        BB2.Visibility = Visibility.Hidden;
+                        BOB2.Visibility = Visibility.Visible;
+                    }
                 }
             }
             else if (cpu_choice == 6 && player_choosed6 != true)
@@ -1975,10 +2703,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                    FB3 = true;
-                    cpu_choosed6 = true;
-                    BB3.Visibility = Visibility.Hidden;
-                    BOB3.Visibility = Visibility.Visible;
+                    if (!player_choosed4 && !player_choosed5 || !player_choosed3 && !player_choosed9)
+                    {
+                        FB3 = true;
+                        cpu_choosed6 = true;
+                        BB3.Visibility = Visibility.Hidden;
+                        BOB3.Visibility = Visibility.Visible;
+                    }
                 }
             }
             else if (cpu_choice == 7 && player_choosed7 != true)
@@ -2043,10 +2774,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                    FC1 = true;
-                    cpu_choosed7 = true;
-                    BC1.Visibility = Visibility.Hidden;
-                    BOC1.Visibility = Visibility.Visible;
+                    if (!player_choosed4 && !player_choosed1 || !player_choosed8 && !player_choosed9 || !player_choosed5 && !player_choosed3)
+                    {
+                        FC1 = true;
+                        cpu_choosed7 = true;
+                        BC1.Visibility = Visibility.Hidden;
+                        BOC1.Visibility = Visibility.Visible;
+                    }
                 }
             }
             else if (cpu_choice == 8 && player_choosed8 != true)
@@ -2094,10 +2828,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                    FC2 = true;
-                    cpu_choosed8 = true;
-                    BC2.Visibility = Visibility.Hidden;
-                    BOC2.Visibility = Visibility.Visible;
+                    if (!player_choosed7 && !player_choosed9 || !player_choosed2 && !player_choosed5)
+                    {
+                        FC2 = true;
+                        cpu_choosed8 = true;
+                        BC2.Visibility = Visibility.Hidden;
+                        BOC2.Visibility = Visibility.Visible;
+                    }
                 }
             }
             else if (cpu_choice == 9 && player_choosed9 != true)
@@ -2145,10 +2882,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                    FC3 = true;
-                    cpu_choosed9 = true;
-                    BC3.Visibility = Visibility.Hidden;
-                    BOC3.Visibility = Visibility.Visible;
+                    if (!player_choosed8 && !player_choosed7 || !player_choosed6 && !player_choosed3 || !player_choosed5 && !player_choosed1)
+                    {
+                        FC3 = true;
+                        cpu_choosed9 = true;
+                        BC3.Visibility = Visibility.Hidden;
+                        BOC3.Visibility = Visibility.Visible;
+                    }
                 }
             }
             else
@@ -2167,6 +2907,8 @@ namespace TicTacToeWPFspiel
             }
 
             INFO.Visibility = Visibility.Hidden;
+
+            J2:
 
             if (cpu_choosed1 && cpu_choosed2 && cpu_choosed3 == true)
             {
@@ -2239,6 +2981,15 @@ namespace TicTacToeWPFspiel
                 restart.Visibility = Visibility.Visible;
                 exit.Visibility = Visibility.Visible;
                 return;
+            }
+
+            if (FA1 && FA2 && FA3 && FB1 && FB2 && FB3 && FC1 && FC2 && FC3)
+            {
+                INFO.Content = "SPIEL BEENDET...KEINER HAT GEWONNEN !";
+                INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
             }
 
             INFO.Visibility = Visibility.Hidden;
@@ -2351,6 +3102,210 @@ namespace TicTacToeWPFspiel
 
             cpu_choice = rd_number_generated.Next(1, 10);
 
+            INFO.Visibility = Visibility.Hidden;
+
+            if (cpu_choosed1 && cpu_choosed3 && !player_choosed2)
+            {
+                FA2 = true;
+                cpu_choosed2 = true;
+                BA2.Visibility = Visibility.Hidden;
+                BOA2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed4 && cpu_choosed6 && !player_choosed5)
+            {
+                FB2 = true;
+                cpu_choosed5 = true;
+                BB2.Visibility = Visibility.Hidden;
+                BOB2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed7 && cpu_choosed9 && !player_choosed8)
+            {
+                FC2 = true;
+                cpu_choosed8 = true;
+                BC2.Visibility = Visibility.Hidden;
+                BOC2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed2 && cpu_choosed1 && !player_choosed3)
+            {
+                FA3 = true;
+                cpu_choosed3 = true;
+                BA3.Visibility = Visibility.Hidden;
+                BOA3.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed2 && cpu_choosed3 && !player_choosed1)
+            {
+                FA1 = true;
+                cpu_choosed1 = true;
+                BA1.Visibility = Visibility.Hidden;
+                BOA1.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed3 && cpu_choosed2 && !player_choosed1)
+            {
+                FA1 = true;
+                cpu_choosed1 = true;
+                BA1.Visibility = Visibility.Hidden;
+                BOA1.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed3 && cpu_choosed1 && !player_choosed2)
+            {
+                FA2 = true;
+                cpu_choosed2 = true;
+                BA2.Visibility = Visibility.Hidden;
+                BOA2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed1 && cpu_choosed5 && !player_choosed9)
+            {
+                FC3 = true;
+                cpu_choosed9 = true;
+                BC3.Visibility = Visibility.Hidden;
+                BOC3.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed1 && cpu_choosed9 && !player_choosed5)
+            {
+                FB2 = true;
+                cpu_choosed5 = true;
+                BB2.Visibility = Visibility.Hidden;
+                BOB2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed3 && cpu_choosed5 && !player_choosed7)
+            {
+                FC1 = true;
+                cpu_choosed7 = true;
+                BC1.Visibility = Visibility.Hidden;
+                BOC1.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed3 && cpu_choosed7 && !player_choosed5)
+            {
+                FB2 = true;
+                cpu_choosed5 = true;
+                BB2.Visibility = Visibility.Hidden;
+                BOB2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed4 && cpu_choosed5 && !player_choosed6)
+            {
+                FB3 = true;
+                cpu_choosed6 = true;
+                BB3.Visibility = Visibility.Hidden;
+                BOB3.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed5 && cpu_choosed4 && !player_choosed6)
+            {
+                FB3 = true;
+                cpu_choosed6 = true;
+                BB3.Visibility = Visibility.Hidden;
+                BOB3.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed5 && cpu_choosed6 && !player_choosed5)
+            {
+                FB2 = true;
+                cpu_choosed5 = true;
+                BB2.Visibility = Visibility.Hidden;
+                BOB2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed5 && cpu_choosed2 && !player_choosed8)
+            {
+                FC2 = true;
+                cpu_choosed8 = true;
+                BC2.Visibility = Visibility.Hidden;
+                BOC2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed5 && cpu_choosed8 && !player_choosed2)
+            {
+                FA2 = true;
+                cpu_choosed2 = true;
+                BA2.Visibility = Visibility.Hidden;
+                BOA2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed7 && cpu_choosed8 && !player_choosed9)
+            {
+                FC3 = true;
+                cpu_choosed9 = true;
+                BC3.Visibility = Visibility.Hidden;
+                BOC3.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed9 && cpu_choosed1 && !player_choosed5)
+            {
+                FB2 = true;
+                cpu_choosed5 = true;
+                BB2.Visibility = Visibility.Hidden;
+                BOB2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed9 && cpu_choosed5 && !player_choosed1)
+            {
+                FA1 = true;
+                cpu_choosed1 = true;
+                BA1.Visibility = Visibility.Hidden;
+                BOA1.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed1 && cpu_choosed4 && !player_choosed7)
+            {
+                FC1 = true;
+                cpu_choosed7 = true;
+                BC1.Visibility = Visibility.Hidden;
+                BOC1.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed1 && cpu_choosed7 && !player_choosed4)
+            {
+                FB1 = true;
+                cpu_choosed4 = true;
+                BB1.Visibility = Visibility.Hidden;
+                BOB1.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed2 && cpu_choosed5 && !player_choosed8)
+            {
+                FC2 = true;
+                cpu_choosed8 = true;
+                BC2.Visibility = Visibility.Hidden;
+                BOC2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed2 && cpu_choosed8 && !player_choosed5)
+            {
+                FB2 = true;
+                cpu_choosed5 = true;
+                BB2.Visibility = Visibility.Hidden;
+                BOB2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed3 && cpu_choosed6 && !player_choosed9)
+            {
+                FC3 = true;
+                cpu_choosed9 = true;
+                BC3.Visibility = Visibility.Hidden;
+                BOC3.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed3 && cpu_choosed9 && !player_choosed6)
+            {
+                FB3 = true;
+                cpu_choosed6 = true;
+                BB3.Visibility = Visibility.Hidden;
+                BOB3.Visibility = Visibility.Visible;
+                goto J2;
+            }
+
+
             if (cpu_choice == 1 && player_choosed1 != true)
             {
                 if (cpu_choosed1 == true)
@@ -2413,10 +3368,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                    FA1 = true;
-                    cpu_choosed1 = true;
-                    BA1.Visibility = Visibility.Hidden;
-                    BOA1.Visibility = Visibility.Visible;
+                    if (!player_choosed2 && !player_choosed3 || !player_choosed4 && !player_choosed7 || !player_choosed5 && !player_choosed9)
+                    {
+                        FA1 = true;
+                        cpu_choosed1 = true;
+                        BA1.Visibility = Visibility.Hidden;
+                        BOA1.Visibility = Visibility.Visible;
+                    }
                 }
             }
             else if (cpu_choice == 2 && player_choosed2 != true)
@@ -2464,10 +3422,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                    FA2 = true;
-                    cpu_choosed2 = true;
-                    BA2.Visibility = Visibility.Hidden;
-                    BOA2.Visibility = Visibility.Visible;
+                    if (!player_choosed1 && !player_choosed3 || !player_choosed5 && !player_choosed8)
+                    {
+                        FA2 = true;
+                        cpu_choosed2 = true;
+                        BA2.Visibility = Visibility.Hidden;
+                        BOA2.Visibility = Visibility.Visible;
+                    }
                 }
 
             }
@@ -2516,10 +3477,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                    FA3 = true;
-                    cpu_choosed3 = true;
-                    BA3.Visibility = Visibility.Hidden;
-                    BOA3.Visibility = Visibility.Visible;
+                    if (!player_choosed2 && !player_choosed1 || !player_choosed5 && !player_choosed7 || !player_choosed6 && !player_choosed9)
+                    {
+                        FA3 = true;
+                        cpu_choosed3 = true;
+                        BA3.Visibility = Visibility.Hidden;
+                        BOA3.Visibility = Visibility.Visible;
+                    }
                 }
             }
             else if (cpu_choice == 4 && player_choosed4 != true)
@@ -2567,10 +3531,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                    FB1 = true;
-                    cpu_choosed4 = true;
-                    BB1.Visibility = Visibility.Hidden;
-                    BOB1.Visibility = Visibility.Visible;
+                    if (!player_choosed5 && !player_choosed6 || !player_choosed1 && !player_choosed7)
+                    {
+                        FB1 = true;
+                        cpu_choosed4 = true;
+                        BB1.Visibility = Visibility.Hidden;
+                        BOB1.Visibility = Visibility.Visible;
+                    }
                 }
             }
             else if (cpu_choice == 5 && player_choosed5 != true)
@@ -2652,10 +3619,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                    FB2 = true;
-                    cpu_choosed5 = true;
-                    BB2.Visibility = Visibility.Hidden;
-                    BOB2.Visibility = Visibility.Visible;
+                    if (!player_choosed4 && !player_choosed6 || !player_choosed2 && !player_choosed8 || !player_choosed1 && !player_choosed9 || !player_choosed3 && !player_choosed7)
+                    {
+                        FB2 = true;
+                        cpu_choosed5 = true;
+                        BB2.Visibility = Visibility.Hidden;
+                        BOB2.Visibility = Visibility.Visible;
+                    }
                 }
             }
             else if (cpu_choice == 6 && player_choosed6 != true)
@@ -2703,10 +3673,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                    FB3 = true;
-                    cpu_choosed6 = true;
-                    BB3.Visibility = Visibility.Hidden;
-                    BOB3.Visibility = Visibility.Visible;
+                    if (!player_choosed4 && !player_choosed5 || !player_choosed3 && !player_choosed9)
+                    {
+                        FB3 = true;
+                        cpu_choosed6 = true;
+                        BB3.Visibility = Visibility.Hidden;
+                        BOB3.Visibility = Visibility.Visible;
+                    }
                 }
             }
             else if (cpu_choice == 7 && player_choosed7 != true)
@@ -2771,10 +3744,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                    FC1 = true;
-                    cpu_choosed7 = true;
-                    BC1.Visibility = Visibility.Hidden;
-                    BOC1.Visibility = Visibility.Visible;
+                    if (!player_choosed4 && !player_choosed1 || !player_choosed8 && !player_choosed9 || !player_choosed5 && !player_choosed3)
+                    {
+                        FC1 = true;
+                        cpu_choosed7 = true;
+                        BC1.Visibility = Visibility.Hidden;
+                        BOC1.Visibility = Visibility.Visible;
+                    }
                 }
             }
             else if (cpu_choice == 8 && player_choosed8 != true)
@@ -2822,10 +3798,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                    FC2 = true;
-                    cpu_choosed8 = true;
-                    BC2.Visibility = Visibility.Hidden;
-                    BOC2.Visibility = Visibility.Visible;
+                    if (!player_choosed7 && !player_choosed9 || !player_choosed2 && !player_choosed5)
+                    {
+                        FC2 = true;
+                        cpu_choosed8 = true;
+                        BC2.Visibility = Visibility.Hidden;
+                        BOC2.Visibility = Visibility.Visible;
+                    }
                 }
             }
             else if (cpu_choice == 9 && player_choosed9 != true)
@@ -2873,10 +3852,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                    FC3 = true;
-                    cpu_choosed9 = true;
-                    BC3.Visibility = Visibility.Hidden;
-                    BOC3.Visibility = Visibility.Visible;
+                    if (!player_choosed8 && !player_choosed7 || !player_choosed6 && !player_choosed3 || !player_choosed5 && !player_choosed1)
+                    {
+                        FC3 = true;
+                        cpu_choosed9 = true;
+                        BC3.Visibility = Visibility.Hidden;
+                        BOC3.Visibility = Visibility.Visible;
+                    }
                 }
             }
             else
@@ -2895,6 +3877,8 @@ namespace TicTacToeWPFspiel
             }
 
             INFO.Visibility = Visibility.Hidden;
+
+            J2:
 
             if (cpu_choosed1 && cpu_choosed2 && cpu_choosed3 == true)
             {
@@ -2967,6 +3951,15 @@ namespace TicTacToeWPFspiel
                 restart.Visibility = Visibility.Visible;
                 exit.Visibility = Visibility.Visible;
                 return;
+            }
+
+            if (FA1 && FA2 && FA3 && FB1 && FB2 && FB3 && FC1 && FC2 && FC3)
+            {
+                INFO.Content = "SPIEL BEENDET...KEINER HAT GEWONNEN !";
+                INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
             }
 
             INFO.Visibility = Visibility.Hidden;
@@ -3079,6 +4072,210 @@ namespace TicTacToeWPFspiel
 
             cpu_choice = rd_number_generated.Next(1, 10);
 
+            INFO.Visibility = Visibility.Hidden;
+
+            if (cpu_choosed1 && cpu_choosed3 && !player_choosed2)
+            {
+                FA2 = true;
+                cpu_choosed2 = true;
+                BA2.Visibility = Visibility.Hidden;
+                BOA2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed4 && cpu_choosed6 && !player_choosed5)
+            {
+                FB2 = true;
+                cpu_choosed5 = true;
+                BB2.Visibility = Visibility.Hidden;
+                BOB2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed7 && cpu_choosed9 && !player_choosed8)
+            {
+                FC2 = true;
+                cpu_choosed8 = true;
+                BC2.Visibility = Visibility.Hidden;
+                BOC2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed2 && cpu_choosed1 && !player_choosed3)
+            {
+                FA3 = true;
+                cpu_choosed3 = true;
+                BA3.Visibility = Visibility.Hidden;
+                BOA3.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed2 && cpu_choosed3 && !player_choosed1)
+            {
+                FA1 = true;
+                cpu_choosed1 = true;
+                BA1.Visibility = Visibility.Hidden;
+                BOA1.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed3 && cpu_choosed2 && !player_choosed1)
+            {
+                FA1 = true;
+                cpu_choosed1 = true;
+                BA1.Visibility = Visibility.Hidden;
+                BOA1.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed3 && cpu_choosed1 && !player_choosed2)
+            {
+                FA2 = true;
+                cpu_choosed2 = true;
+                BA2.Visibility = Visibility.Hidden;
+                BOA2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed1 && cpu_choosed5 && !player_choosed9)
+            {
+                FC3 = true;
+                cpu_choosed9 = true;
+                BC3.Visibility = Visibility.Hidden;
+                BOC3.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed1 && cpu_choosed9 && !player_choosed5)
+            {
+                FB2 = true;
+                cpu_choosed5 = true;
+                BB2.Visibility = Visibility.Hidden;
+                BOB2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed3 && cpu_choosed5 && !player_choosed7)
+            {
+                FC1 = true;
+                cpu_choosed7 = true;
+                BC1.Visibility = Visibility.Hidden;
+                BOC1.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed3 && cpu_choosed7 && !player_choosed5)
+            {
+                FB2 = true;
+                cpu_choosed5 = true;
+                BB2.Visibility = Visibility.Hidden;
+                BOB2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed4 && cpu_choosed5 && !player_choosed6)
+            {
+                FB3 = true;
+                cpu_choosed6 = true;
+                BB3.Visibility = Visibility.Hidden;
+                BOB3.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed5 && cpu_choosed4 && !player_choosed6)
+            {
+                FB3 = true;
+                cpu_choosed6 = true;
+                BB3.Visibility = Visibility.Hidden;
+                BOB3.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed5 && cpu_choosed6 && !player_choosed5)
+            {
+                FB2 = true;
+                cpu_choosed5 = true;
+                BB2.Visibility = Visibility.Hidden;
+                BOB2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed5 && cpu_choosed2 && !player_choosed8)
+            {
+                FC2 = true;
+                cpu_choosed8 = true;
+                BC2.Visibility = Visibility.Hidden;
+                BOC2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed5 && cpu_choosed8 && !player_choosed2)
+            {
+                FA2 = true;
+                cpu_choosed2 = true;
+                BA2.Visibility = Visibility.Hidden;
+                BOA2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed7 && cpu_choosed8 && !player_choosed9)
+            {
+                FC3 = true;
+                cpu_choosed9 = true;
+                BC3.Visibility = Visibility.Hidden;
+                BOC3.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed9 && cpu_choosed1 && !player_choosed5)
+            {
+                FB2 = true;
+                cpu_choosed5 = true;
+                BB2.Visibility = Visibility.Hidden;
+                BOB2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed9 && cpu_choosed5 && !player_choosed1)
+            {
+                FA1 = true;
+                cpu_choosed1 = true;
+                BA1.Visibility = Visibility.Hidden;
+                BOA1.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed1 && cpu_choosed4 && !player_choosed7)
+            {
+                FC1 = true;
+                cpu_choosed7 = true;
+                BC1.Visibility = Visibility.Hidden;
+                BOC1.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed1 && cpu_choosed7 && !player_choosed4)
+            {
+                FB1 = true;
+                cpu_choosed4 = true;
+                BB1.Visibility = Visibility.Hidden;
+                BOB1.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed2 && cpu_choosed5 && !player_choosed8)
+            {
+                FC2 = true;
+                cpu_choosed8 = true;
+                BC2.Visibility = Visibility.Hidden;
+                BOC2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed2 && cpu_choosed8 && !player_choosed5)
+            {
+                FB2 = true;
+                cpu_choosed5 = true;
+                BB2.Visibility = Visibility.Hidden;
+                BOB2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed3 && cpu_choosed6 && !player_choosed9)
+            {
+                FC3 = true;
+                cpu_choosed9 = true;
+                BC3.Visibility = Visibility.Hidden;
+                BOC3.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed3 && cpu_choosed9 && !player_choosed6)
+            {
+                FB3 = true;
+                cpu_choosed6 = true;
+                BB3.Visibility = Visibility.Hidden;
+                BOB3.Visibility = Visibility.Visible;
+                goto J2;
+            }
+
+
             if (cpu_choice == 1 && player_choosed1 != true)
             {
                 if (cpu_choosed1 == true)
@@ -3141,10 +4338,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                    FA1 = true;
-                    cpu_choosed1 = true;
-                    BA1.Visibility = Visibility.Hidden;
-                    BOA1.Visibility = Visibility.Visible;
+                    if (!player_choosed2 && !player_choosed3 || !player_choosed4 && !player_choosed7 || !player_choosed5 && !player_choosed9)
+                    {
+                        FA1 = true;
+                        cpu_choosed1 = true;
+                        BA1.Visibility = Visibility.Hidden;
+                        BOA1.Visibility = Visibility.Visible;
+                    }
                 }
             }
             else if (cpu_choice == 2 && player_choosed2 != true)
@@ -3192,10 +4392,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                    FA2 = true;
-                    cpu_choosed2 = true;
-                    BA2.Visibility = Visibility.Hidden;
-                    BOA2.Visibility = Visibility.Visible;
+                    if (!player_choosed1 && !player_choosed3 || !player_choosed5 && !player_choosed8)
+                    {
+                        FA2 = true;
+                        cpu_choosed2 = true;
+                        BA2.Visibility = Visibility.Hidden;
+                        BOA2.Visibility = Visibility.Visible;
+                    }
                 }
 
             }
@@ -3244,10 +4447,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                    FA3 = true;
-                    cpu_choosed3 = true;
-                    BA3.Visibility = Visibility.Hidden;
-                    BOA3.Visibility = Visibility.Visible;
+                    if (!player_choosed2 && !player_choosed1 || !player_choosed5 && !player_choosed7 || !player_choosed6 && !player_choosed9)
+                    {
+                        FA3 = true;
+                        cpu_choosed3 = true;
+                        BA3.Visibility = Visibility.Hidden;
+                        BOA3.Visibility = Visibility.Visible;
+                    }
                 }
             }
             else if (cpu_choice == 4 && player_choosed4 != true)
@@ -3295,10 +4501,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                    FB1 = true;
-                    cpu_choosed4 = true;
-                    BB1.Visibility = Visibility.Hidden;
-                    BOB1.Visibility = Visibility.Visible;
+                    if (!player_choosed5 && !player_choosed6 || !player_choosed1 && !player_choosed7)
+                    {
+                        FB1 = true;
+                        cpu_choosed4 = true;
+                        BB1.Visibility = Visibility.Hidden;
+                        BOB1.Visibility = Visibility.Visible;
+                    }
                 }
             }
             else if (cpu_choice == 5 && player_choosed5 != true)
@@ -3380,10 +4589,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                    FB2 = true;
-                    cpu_choosed5 = true;
-                    BB2.Visibility = Visibility.Hidden;
-                    BOB2.Visibility = Visibility.Visible;
+                    if (!player_choosed4 && !player_choosed6 || !player_choosed2 && !player_choosed8 || !player_choosed1 && !player_choosed9 || !player_choosed3 && !player_choosed7)
+                    {
+                        FB2 = true;
+                        cpu_choosed5 = true;
+                        BB2.Visibility = Visibility.Hidden;
+                        BOB2.Visibility = Visibility.Visible;
+                    }
                 }
             }
             else if (cpu_choice == 6 && player_choosed6 != true)
@@ -3431,10 +4643,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                    FB3 = true;
-                    cpu_choosed6 = true;
-                    BB3.Visibility = Visibility.Hidden;
-                    BOB3.Visibility = Visibility.Visible;
+                    if (!player_choosed4 && !player_choosed5 || !player_choosed3 && !player_choosed9)
+                    {
+                        FB3 = true;
+                        cpu_choosed6 = true;
+                        BB3.Visibility = Visibility.Hidden;
+                        BOB3.Visibility = Visibility.Visible;
+                    }
                 }
             }
             else if (cpu_choice == 7 && player_choosed7 != true)
@@ -3499,10 +4714,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                    FC1 = true;
-                    cpu_choosed7 = true;
-                    BC1.Visibility = Visibility.Hidden;
-                    BOC1.Visibility = Visibility.Visible;
+                    if (!player_choosed4 && !player_choosed1 || !player_choosed8 && !player_choosed9 || !player_choosed5 && !player_choosed3)
+                    {
+                        FC1 = true;
+                        cpu_choosed7 = true;
+                        BC1.Visibility = Visibility.Hidden;
+                        BOC1.Visibility = Visibility.Visible;
+                    }
                 }
             }
             else if (cpu_choice == 8 && player_choosed8 != true)
@@ -3550,10 +4768,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                    FC2 = true;
-                    cpu_choosed8 = true;
-                    BC2.Visibility = Visibility.Hidden;
-                    BOC2.Visibility = Visibility.Visible;
+                    if (!player_choosed7 && !player_choosed9 || !player_choosed2 && !player_choosed5)
+                    {
+                        FC2 = true;
+                        cpu_choosed8 = true;
+                        BC2.Visibility = Visibility.Hidden;
+                        BOC2.Visibility = Visibility.Visible;
+                    }
                 }
             }
             else if (cpu_choice == 9 && player_choosed9 != true)
@@ -3601,10 +4822,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                    FC3 = true;
-                    cpu_choosed9 = true;
-                    BC3.Visibility = Visibility.Hidden;
-                    BOC3.Visibility = Visibility.Visible;
+                    if (!player_choosed8 && !player_choosed7 || !player_choosed6 && !player_choosed3 || !player_choosed5 && !player_choosed1)
+                    {
+                        FC3 = true;
+                        cpu_choosed9 = true;
+                        BC3.Visibility = Visibility.Hidden;
+                        BOC3.Visibility = Visibility.Visible;
+                    }
                 }
             }
             else
@@ -3623,6 +4847,8 @@ namespace TicTacToeWPFspiel
             }
 
             INFO.Visibility = Visibility.Hidden;
+
+            J2:
 
             if (cpu_choosed1 && cpu_choosed2 && cpu_choosed3 == true)
             {
@@ -3695,6 +4921,15 @@ namespace TicTacToeWPFspiel
                 restart.Visibility = Visibility.Visible;
                 exit.Visibility = Visibility.Visible;
                 return;
+            }
+
+            if (FA1 && FA2 && FA3 && FB1 && FB2 && FB3 && FC1 && FC2 && FC3)
+            {
+                INFO.Content = "SPIEL BEENDET...KEINER HAT GEWONNEN !";
+                INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
             }
 
             INFO.Visibility = Visibility.Hidden;
@@ -3808,6 +5043,210 @@ namespace TicTacToeWPFspiel
 
             cpu_choice = rd_number_generated.Next(1, 10);
 
+            INFO.Visibility = Visibility.Hidden;
+
+            if (cpu_choosed1 && cpu_choosed3 && !player_choosed2)
+            {
+                FA2 = true;
+                cpu_choosed2 = true;
+                BA2.Visibility = Visibility.Hidden;
+                BOA2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed4 && cpu_choosed6 && !player_choosed5)
+            {
+                FB2 = true;
+                cpu_choosed5 = true;
+                BB2.Visibility = Visibility.Hidden;
+                BOB2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed7 && cpu_choosed9 && !player_choosed8)
+            {
+                FC2 = true;
+                cpu_choosed8 = true;
+                BC2.Visibility = Visibility.Hidden;
+                BOC2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed2 && cpu_choosed1 && !player_choosed3)
+            {
+                FA3 = true;
+                cpu_choosed3 = true;
+                BA3.Visibility = Visibility.Hidden;
+                BOA3.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed2 && cpu_choosed3 && !player_choosed1)
+            {
+                FA1 = true;
+                cpu_choosed1 = true;
+                BA1.Visibility = Visibility.Hidden;
+                BOA1.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed3 && cpu_choosed2 && !player_choosed1)
+            {
+                FA1 = true;
+                cpu_choosed1 = true;
+                BA1.Visibility = Visibility.Hidden;
+                BOA1.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed3 && cpu_choosed1 && !player_choosed2)
+            {
+                FA2 = true;
+                cpu_choosed2 = true;
+                BA2.Visibility = Visibility.Hidden;
+                BOA2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed1 && cpu_choosed5 && !player_choosed9)
+            {
+                FC3 = true;
+                cpu_choosed9 = true;
+                BC3.Visibility = Visibility.Hidden;
+                BOC3.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed1 && cpu_choosed9 && !player_choosed5)
+            {
+                FB2 = true;
+                cpu_choosed5 = true;
+                BB2.Visibility = Visibility.Hidden;
+                BOB2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed3 && cpu_choosed5 && !player_choosed7)
+            {
+                FC1 = true;
+                cpu_choosed7 = true;
+                BC1.Visibility = Visibility.Hidden;
+                BOC1.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed3 && cpu_choosed7 && !player_choosed5)
+            {
+                FB2 = true;
+                cpu_choosed5 = true;
+                BB2.Visibility = Visibility.Hidden;
+                BOB2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed4 && cpu_choosed5 && !player_choosed6)
+            {
+                FB3 = true;
+                cpu_choosed6 = true;
+                BB3.Visibility = Visibility.Hidden;
+                BOB3.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed5 && cpu_choosed4 && !player_choosed6)
+            {
+                FB3 = true;
+                cpu_choosed6 = true;
+                BB3.Visibility = Visibility.Hidden;
+                BOB3.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed5 && cpu_choosed6 && !player_choosed5)
+            {
+                FB2 = true;
+                cpu_choosed5 = true;
+                BB2.Visibility = Visibility.Hidden;
+                BOB2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed5 && cpu_choosed2 && !player_choosed8)
+            {
+                FC2 = true;
+                cpu_choosed8 = true;
+                BC2.Visibility = Visibility.Hidden;
+                BOC2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed5 && cpu_choosed8 && !player_choosed2)
+            {
+                FA2 = true;
+                cpu_choosed2 = true;
+                BA2.Visibility = Visibility.Hidden;
+                BOA2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed7 && cpu_choosed8 && !player_choosed9)
+            {
+                FC3 = true;
+                cpu_choosed9 = true;
+                BC3.Visibility = Visibility.Hidden;
+                BOC3.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed9 && cpu_choosed1 && !player_choosed5)
+            {
+                FB2 = true;
+                cpu_choosed5 = true;
+                BB2.Visibility = Visibility.Hidden;
+                BOB2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed9 && cpu_choosed5 && !player_choosed1)
+            {
+                FA1 = true;
+                cpu_choosed1 = true;
+                BA1.Visibility = Visibility.Hidden;
+                BOA1.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed1 && cpu_choosed4 && !player_choosed7)
+            {
+                FC1 = true;
+                cpu_choosed7 = true;
+                BC1.Visibility = Visibility.Hidden;
+                BOC1.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed1 && cpu_choosed7 && !player_choosed4)
+            {
+                FB1 = true;
+                cpu_choosed4 = true;
+                BB1.Visibility = Visibility.Hidden;
+                BOB1.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed2 && cpu_choosed5 && !player_choosed8)
+            {
+                FC2 = true;
+                cpu_choosed8 = true;
+                BC2.Visibility = Visibility.Hidden;
+                BOC2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed2 && cpu_choosed8 && !player_choosed5)
+            {
+                FB2 = true;
+                cpu_choosed5 = true;
+                BB2.Visibility = Visibility.Hidden;
+                BOB2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed3 && cpu_choosed6 && !player_choosed9)
+            {
+                FC3 = true;
+                cpu_choosed9 = true;
+                BC3.Visibility = Visibility.Hidden;
+                BOC3.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed3 && cpu_choosed9 && !player_choosed6)
+            {
+                FB3 = true;
+                cpu_choosed6 = true;
+                BB3.Visibility = Visibility.Hidden;
+                BOB3.Visibility = Visibility.Visible;
+                goto J2;
+            }
+
+
             if (cpu_choice == 1 && player_choosed1 != true)
             {
                 if (cpu_choosed1 == true)
@@ -3870,10 +5309,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                    FA1 = true;
-                    cpu_choosed1 = true;
-                    BA1.Visibility = Visibility.Hidden;
-                    BOA1.Visibility = Visibility.Visible;
+                    if (!player_choosed2 && !player_choosed3 || !player_choosed4 && !player_choosed7 || !player_choosed5 && !player_choosed9)
+                    {
+                        FA1 = true;
+                        cpu_choosed1 = true;
+                        BA1.Visibility = Visibility.Hidden;
+                        BOA1.Visibility = Visibility.Visible;
+                    }
                 }
             }
             else if (cpu_choice == 2 && player_choosed2 != true)
@@ -3921,10 +5363,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                    FA2 = true;
-                    cpu_choosed2 = true;
-                    BA2.Visibility = Visibility.Hidden;
-                    BOA2.Visibility = Visibility.Visible;
+                    if (!player_choosed1 && !player_choosed3 || !player_choosed5 && !player_choosed8)
+                    {
+                        FA2 = true;
+                        cpu_choosed2 = true;
+                        BA2.Visibility = Visibility.Hidden;
+                        BOA2.Visibility = Visibility.Visible;
+                    }
                 }
 
             }
@@ -3973,10 +5418,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                    FA3 = true;
-                    cpu_choosed3 = true;
-                    BA3.Visibility = Visibility.Hidden;
-                    BOA3.Visibility = Visibility.Visible;
+                    if (!player_choosed2 && !player_choosed1 || !player_choosed5 && !player_choosed7 || !player_choosed6 && !player_choosed9)
+                    {
+                        FA3 = true;
+                        cpu_choosed3 = true;
+                        BA3.Visibility = Visibility.Hidden;
+                        BOA3.Visibility = Visibility.Visible;
+                    }
                 }
             }
             else if (cpu_choice == 4 && player_choosed4 != true)
@@ -4024,10 +5472,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                    FB1 = true;
-                    cpu_choosed4 = true;
-                    BB1.Visibility = Visibility.Hidden;
-                    BOB1.Visibility = Visibility.Visible;
+                    if (!player_choosed5 && !player_choosed6 || !player_choosed1 && !player_choosed7)
+                    {
+                        FB1 = true;
+                        cpu_choosed4 = true;
+                        BB1.Visibility = Visibility.Hidden;
+                        BOB1.Visibility = Visibility.Visible;
+                    }
                 }
             }
             else if (cpu_choice == 5 && player_choosed5 != true)
@@ -4109,10 +5560,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                    FB2 = true;
-                    cpu_choosed5 = true;
-                    BB2.Visibility = Visibility.Hidden;
-                    BOB2.Visibility = Visibility.Visible;
+                    if (!player_choosed4 && !player_choosed6 || !player_choosed2 && !player_choosed8 || !player_choosed1 && !player_choosed9 || !player_choosed3 && !player_choosed7)
+                    {
+                        FB2 = true;
+                        cpu_choosed5 = true;
+                        BB2.Visibility = Visibility.Hidden;
+                        BOB2.Visibility = Visibility.Visible;
+                    }
                 }
             }
             else if (cpu_choice == 6 && player_choosed6 != true)
@@ -4160,10 +5614,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                    FB3 = true;
-                    cpu_choosed6 = true;
-                    BB3.Visibility = Visibility.Hidden;
-                    BOB3.Visibility = Visibility.Visible;
+                    if (!player_choosed4 && !player_choosed5 || !player_choosed3 && !player_choosed9)
+                    {
+                        FB3 = true;
+                        cpu_choosed6 = true;
+                        BB3.Visibility = Visibility.Hidden;
+                        BOB3.Visibility = Visibility.Visible;
+                    }
                 }
             }
             else if (cpu_choice == 7 && player_choosed7 != true)
@@ -4228,10 +5685,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                    FC1 = true;
-                    cpu_choosed7 = true;
-                    BC1.Visibility = Visibility.Hidden;
-                    BOC1.Visibility = Visibility.Visible;
+                    if (!player_choosed4 && !player_choosed1 || !player_choosed8 && !player_choosed9 || !player_choosed5 && !player_choosed3)
+                    {
+                        FC1 = true;
+                        cpu_choosed7 = true;
+                        BC1.Visibility = Visibility.Hidden;
+                        BOC1.Visibility = Visibility.Visible;
+                    }
                 }
             }
             else if (cpu_choice == 8 && player_choosed8 != true)
@@ -4279,10 +5739,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                    FC2 = true;
-                    cpu_choosed8 = true;
-                    BC2.Visibility = Visibility.Hidden;
-                    BOC2.Visibility = Visibility.Visible;
+                    if (!player_choosed7 && !player_choosed9 || !player_choosed2 && !player_choosed5)
+                    {
+                        FC2 = true;
+                        cpu_choosed8 = true;
+                        BC2.Visibility = Visibility.Hidden;
+                        BOC2.Visibility = Visibility.Visible;
+                    }
                 }
             }
             else if (cpu_choice == 9 && player_choosed9 != true)
@@ -4330,10 +5793,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                    FC3 = true;
-                    cpu_choosed9 = true;
-                    BC3.Visibility = Visibility.Hidden;
-                    BOC3.Visibility = Visibility.Visible;
+                    if (!player_choosed8 && !player_choosed7 || !player_choosed6 && !player_choosed3 || !player_choosed5 && !player_choosed1)
+                    {
+                        FC3 = true;
+                        cpu_choosed9 = true;
+                        BC3.Visibility = Visibility.Hidden;
+                        BOC3.Visibility = Visibility.Visible;
+                    }
                 }
             }
             else
@@ -4352,6 +5818,8 @@ namespace TicTacToeWPFspiel
             }
 
             INFO.Visibility = Visibility.Hidden;
+
+            J2:
 
             if (cpu_choosed1 && cpu_choosed2 && cpu_choosed3 == true)
             {
@@ -4424,6 +5892,15 @@ namespace TicTacToeWPFspiel
                 restart.Visibility = Visibility.Visible;
                 exit.Visibility = Visibility.Visible;
                 return;
+            }
+
+            if (FA1 && FA2 && FA3 && FB1 && FB2 && FB3 && FC1 && FC2 && FC3)
+            {
+                INFO.Content = "SPIEL BEENDET...KEINER HAT GEWONNEN !";
+                INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
             }
 
             INFO.Visibility = Visibility.Hidden;
@@ -4537,6 +6014,210 @@ namespace TicTacToeWPFspiel
 
             cpu_choice = rd_number_generated.Next(1, 10);
 
+            INFO.Visibility = Visibility.Hidden;
+
+            if (cpu_choosed1 && cpu_choosed3 && !player_choosed2)
+            {
+                FA2 = true;
+                cpu_choosed2 = true;
+                BA2.Visibility = Visibility.Hidden;
+                BOA2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed4 && cpu_choosed6 && !player_choosed5)
+            {
+                FB2 = true;
+                cpu_choosed5 = true;
+                BB2.Visibility = Visibility.Hidden;
+                BOB2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed7 && cpu_choosed9 && !player_choosed8)
+            {
+                FC2 = true;
+                cpu_choosed8 = true;
+                BC2.Visibility = Visibility.Hidden;
+                BOC2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed2 && cpu_choosed1 && !player_choosed3)
+            {
+                FA3 = true;
+                cpu_choosed3 = true;
+                BA3.Visibility = Visibility.Hidden;
+                BOA3.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed2 && cpu_choosed3 && !player_choosed1)
+            {
+                FA1 = true;
+                cpu_choosed1 = true;
+                BA1.Visibility = Visibility.Hidden;
+                BOA1.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed3 && cpu_choosed2 && !player_choosed1)
+            {
+                FA1 = true;
+                cpu_choosed1 = true;
+                BA1.Visibility = Visibility.Hidden;
+                BOA1.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed3 && cpu_choosed1 && !player_choosed2)
+            {
+                FA2 = true;
+                cpu_choosed2 = true;
+                BA2.Visibility = Visibility.Hidden;
+                BOA2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed1 && cpu_choosed5 && !player_choosed9)
+            {
+                FC3 = true;
+                cpu_choosed9 = true;
+                BC3.Visibility = Visibility.Hidden;
+                BOC3.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed1 && cpu_choosed9 && !player_choosed5)
+            {
+                FB2 = true;
+                cpu_choosed5 = true;
+                BB2.Visibility = Visibility.Hidden;
+                BOB2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed3 && cpu_choosed5 && !player_choosed7)
+            {
+                FC1 = true;
+                cpu_choosed7 = true;
+                BC1.Visibility = Visibility.Hidden;
+                BOC1.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed3 && cpu_choosed7 && !player_choosed5)
+            {
+                FB2 = true;
+                cpu_choosed5 = true;
+                BB2.Visibility = Visibility.Hidden;
+                BOB2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed4 && cpu_choosed5 && !player_choosed6)
+            {
+                FB3 = true;
+                cpu_choosed6 = true;
+                BB3.Visibility = Visibility.Hidden;
+                BOB3.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed5 && cpu_choosed4 && !player_choosed6)
+            {
+                FB3 = true;
+                cpu_choosed6 = true;
+                BB3.Visibility = Visibility.Hidden;
+                BOB3.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed5 && cpu_choosed6 && !player_choosed5)
+            {
+                FB2 = true;
+                cpu_choosed5 = true;
+                BB2.Visibility = Visibility.Hidden;
+                BOB2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed5 && cpu_choosed2 && !player_choosed8)
+            {
+                FC2 = true;
+                cpu_choosed8 = true;
+                BC2.Visibility = Visibility.Hidden;
+                BOC2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed5 && cpu_choosed8 && !player_choosed2)
+            {
+                FA2 = true;
+                cpu_choosed2 = true;
+                BA2.Visibility = Visibility.Hidden;
+                BOA2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed7 && cpu_choosed8 && !player_choosed9)
+            {
+                FC3 = true;
+                cpu_choosed9 = true;
+                BC3.Visibility = Visibility.Hidden;
+                BOC3.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed9 && cpu_choosed1 && !player_choosed5)
+            {
+                FB2 = true;
+                cpu_choosed5 = true;
+                BB2.Visibility = Visibility.Hidden;
+                BOB2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed9 && cpu_choosed5 && !player_choosed1)
+            {
+                FA1 = true;
+                cpu_choosed1 = true;
+                BA1.Visibility = Visibility.Hidden;
+                BOA1.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed1 && cpu_choosed4 && !player_choosed7)
+            {
+                FC1 = true;
+                cpu_choosed7 = true;
+                BC1.Visibility = Visibility.Hidden;
+                BOC1.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed1 && cpu_choosed7 && !player_choosed4)
+            {
+                FB1 = true;
+                cpu_choosed4 = true;
+                BB1.Visibility = Visibility.Hidden;
+                BOB1.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed2 && cpu_choosed5 && !player_choosed8)
+            {
+                FC2 = true;
+                cpu_choosed8 = true;
+                BC2.Visibility = Visibility.Hidden;
+                BOC2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed2 && cpu_choosed8 && !player_choosed5)
+            {
+                FB2 = true;
+                cpu_choosed5 = true;
+                BB2.Visibility = Visibility.Hidden;
+                BOB2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed3 && cpu_choosed6 && !player_choosed9)
+            {
+                FC3 = true;
+                cpu_choosed9 = true;
+                BC3.Visibility = Visibility.Hidden;
+                BOC3.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed3 && cpu_choosed9 && !player_choosed6)
+            {
+                FB3 = true;
+                cpu_choosed6 = true;
+                BB3.Visibility = Visibility.Hidden;
+                BOB3.Visibility = Visibility.Visible;
+                goto J2;
+            }
+
+
             if (cpu_choice == 1 && player_choosed1 != true)
             {
                 if (cpu_choosed1 == true)
@@ -4599,10 +6280,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                    FA1 = true;
-                    cpu_choosed1 = true;
-                    BA1.Visibility = Visibility.Hidden;
-                    BOA1.Visibility = Visibility.Visible;
+                    if (!player_choosed2 && !player_choosed3 || !player_choosed4 && !player_choosed7 || !player_choosed5 && !player_choosed9)
+                    {
+                        FA1 = true;
+                        cpu_choosed1 = true;
+                        BA1.Visibility = Visibility.Hidden;
+                        BOA1.Visibility = Visibility.Visible;
+                    }
                 }
             }
             else if (cpu_choice == 2 && player_choosed2 != true)
@@ -4650,10 +6334,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                    FA2 = true;
-                    cpu_choosed2 = true;
-                    BA2.Visibility = Visibility.Hidden;
-                    BOA2.Visibility = Visibility.Visible;
+                    if (!player_choosed1 && !player_choosed3 || !player_choosed5 && !player_choosed8)
+                    {
+                        FA2 = true;
+                        cpu_choosed2 = true;
+                        BA2.Visibility = Visibility.Hidden;
+                        BOA2.Visibility = Visibility.Visible;
+                    }
                 }
 
             }
@@ -4702,10 +6389,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                    FA3 = true;
-                    cpu_choosed3 = true;
-                    BA3.Visibility = Visibility.Hidden;
-                    BOA3.Visibility = Visibility.Visible;
+                    if (!player_choosed2 && !player_choosed1 || !player_choosed5 && !player_choosed7 || !player_choosed6 && !player_choosed9)
+                    {
+                        FA3 = true;
+                        cpu_choosed3 = true;
+                        BA3.Visibility = Visibility.Hidden;
+                        BOA3.Visibility = Visibility.Visible;
+                    }
                 }
             }
             else if (cpu_choice == 4 && player_choosed4 != true)
@@ -4753,10 +6443,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                    FB1 = true;
-                    cpu_choosed4 = true;
-                    BB1.Visibility = Visibility.Hidden;
-                    BOB1.Visibility = Visibility.Visible;
+                    if (!player_choosed5 && !player_choosed6 || !player_choosed1 && !player_choosed7)
+                    {
+                        FB1 = true;
+                        cpu_choosed4 = true;
+                        BB1.Visibility = Visibility.Hidden;
+                        BOB1.Visibility = Visibility.Visible;
+                    }
                 }
             }
             else if (cpu_choice == 5 && player_choosed5 != true)
@@ -4838,10 +6531,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                    FB2 = true;
-                    cpu_choosed5 = true;
-                    BB2.Visibility = Visibility.Hidden;
-                    BOB2.Visibility = Visibility.Visible;
+                    if (!player_choosed4 && !player_choosed6 || !player_choosed2 && !player_choosed8 || !player_choosed1 && !player_choosed9 || !player_choosed3 && !player_choosed7)
+                    {
+                        FB2 = true;
+                        cpu_choosed5 = true;
+                        BB2.Visibility = Visibility.Hidden;
+                        BOB2.Visibility = Visibility.Visible;
+                    }
                 }
             }
             else if (cpu_choice == 6 && player_choosed6 != true)
@@ -4889,10 +6585,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                    FB3 = true;
-                    cpu_choosed6 = true;
-                    BB3.Visibility = Visibility.Hidden;
-                    BOB3.Visibility = Visibility.Visible;
+                    if (!player_choosed4 && !player_choosed5 || !player_choosed3 && !player_choosed9)
+                    {
+                        FB3 = true;
+                        cpu_choosed6 = true;
+                        BB3.Visibility = Visibility.Hidden;
+                        BOB3.Visibility = Visibility.Visible;
+                    }
                 }
             }
             else if (cpu_choice == 7 && player_choosed7 != true)
@@ -4957,10 +6656,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                    FC1 = true;
-                    cpu_choosed7 = true;
-                    BC1.Visibility = Visibility.Hidden;
-                    BOC1.Visibility = Visibility.Visible;
+                    if (!player_choosed4 && !player_choosed1 || !player_choosed8 && !player_choosed9 || !player_choosed5 && !player_choosed3)
+                    {
+                        FC1 = true;
+                        cpu_choosed7 = true;
+                        BC1.Visibility = Visibility.Hidden;
+                        BOC1.Visibility = Visibility.Visible;
+                    }
                 }
             }
             else if (cpu_choice == 8 && player_choosed8 != true)
@@ -5008,10 +6710,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                    FC2 = true;
-                    cpu_choosed8 = true;
-                    BC2.Visibility = Visibility.Hidden;
-                    BOC2.Visibility = Visibility.Visible;
+                    if (!player_choosed7 && !player_choosed9 || !player_choosed2 && !player_choosed5)
+                    {
+                        FC2 = true;
+                        cpu_choosed8 = true;
+                        BC2.Visibility = Visibility.Hidden;
+                        BOC2.Visibility = Visibility.Visible;
+                    }
                 }
             }
             else if (cpu_choice == 9 && player_choosed9 != true)
@@ -5059,10 +6764,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                    FC3 = true;
-                    cpu_choosed9 = true;
-                    BC3.Visibility = Visibility.Hidden;
-                    BOC3.Visibility = Visibility.Visible;
+                    if (!player_choosed8 && !player_choosed7 || !player_choosed6 && !player_choosed3 || !player_choosed5 && !player_choosed1)
+                    {
+                        FC3 = true;
+                        cpu_choosed9 = true;
+                        BC3.Visibility = Visibility.Hidden;
+                        BOC3.Visibility = Visibility.Visible;
+                    }
                 }
             }
             else
@@ -5081,6 +6789,8 @@ namespace TicTacToeWPFspiel
             }
 
             INFO.Visibility = Visibility.Hidden;
+
+            J2:
 
             if (cpu_choosed1 && cpu_choosed2 && cpu_choosed3 == true)
             {
@@ -5153,6 +6863,15 @@ namespace TicTacToeWPFspiel
                 restart.Visibility = Visibility.Visible;
                 exit.Visibility = Visibility.Visible;
                 return;
+            }
+
+            if (FA1 && FA2 && FA3 && FB1 && FB2 && FB3 && FC1 && FC2 && FC3)
+            {
+                INFO.Content = "SPIEL BEENDET...KEINER HAT GEWONNEN !";
+                INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
             }
 
             INFO.Visibility = Visibility.Hidden;
@@ -5266,6 +6985,209 @@ namespace TicTacToeWPFspiel
 
             cpu_choice = rd_number_generated.Next(1, 10);
 
+            INFO.Visibility = Visibility.Hidden;
+
+            if (cpu_choosed1 && cpu_choosed3 && !player_choosed2)
+            {
+                FA2 = true;
+                cpu_choosed2 = true;
+                BA2.Visibility = Visibility.Hidden;
+                BOA2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed4 && cpu_choosed6 && !player_choosed5)
+            {
+                FB2 = true;
+                cpu_choosed5 = true;
+                BB2.Visibility = Visibility.Hidden;
+                BOB2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed7 && cpu_choosed9 && !player_choosed8)
+            {
+                FC2 = true;
+                cpu_choosed8 = true;
+                BC2.Visibility = Visibility.Hidden;
+                BOC2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed2 && cpu_choosed1 && !player_choosed3)
+            {
+                FA3 = true;
+                cpu_choosed3 = true;
+                BA3.Visibility = Visibility.Hidden;
+                BOA3.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed2 && cpu_choosed3 && !player_choosed1)
+            {
+                FA1 = true;
+                cpu_choosed1 = true;
+                BA1.Visibility = Visibility.Hidden;
+                BOA1.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed3 && cpu_choosed2 && !player_choosed1)
+            {
+                FA1 = true;
+                cpu_choosed1 = true;
+                BA1.Visibility = Visibility.Hidden;
+                BOA1.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed3 && cpu_choosed1 && !player_choosed2)
+            {
+                FA2 = true;
+                cpu_choosed2 = true;
+                BA2.Visibility = Visibility.Hidden;
+                BOA2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed1 && cpu_choosed5 && !player_choosed9)
+            {
+                FC3 = true;
+                cpu_choosed9 = true;
+                BC3.Visibility = Visibility.Hidden;
+                BOC3.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed1 && cpu_choosed9 && !player_choosed5)
+            {
+                FB2 = true;
+                cpu_choosed5 = true;
+                BB2.Visibility = Visibility.Hidden;
+                BOB2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed3 && cpu_choosed5 && !player_choosed7)
+            {
+                FC1 = true;
+                cpu_choosed7 = true;
+                BC1.Visibility = Visibility.Hidden;
+                BOC1.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed3 && cpu_choosed7 && !player_choosed5)
+            {
+                FB2 = true;
+                cpu_choosed5 = true;
+                BB2.Visibility = Visibility.Hidden;
+                BOB2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed4 && cpu_choosed5 && !player_choosed6)
+            {
+                FB3 = true;
+                cpu_choosed6 = true;
+                BB3.Visibility = Visibility.Hidden;
+                BOB3.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed5 && cpu_choosed4 && !player_choosed6)
+            {
+                FB3 = true;
+                cpu_choosed6 = true;
+                BB3.Visibility = Visibility.Hidden;
+                BOB3.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed5 && cpu_choosed6 && !player_choosed5)
+            {
+                FB2 = true;
+                cpu_choosed5 = true;
+                BB2.Visibility = Visibility.Hidden;
+                BOB2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed5 && cpu_choosed2 && !player_choosed8)
+            {
+                FC2 = true;
+                cpu_choosed8 = true;
+                BC2.Visibility = Visibility.Hidden;
+                BOC2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed5 && cpu_choosed8 && !player_choosed2)
+            {
+                FA2 = true;
+                cpu_choosed2 = true;
+                BA2.Visibility = Visibility.Hidden;
+                BOA2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed7 && cpu_choosed8 && !player_choosed9)
+            {
+                FC3 = true;
+                cpu_choosed9 = true;
+                BC3.Visibility = Visibility.Hidden;
+                BOC3.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed9 && cpu_choosed1 && !player_choosed5)
+            {
+                FB2 = true;
+                cpu_choosed5 = true;
+                BB2.Visibility = Visibility.Hidden;
+                BOB2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed9 && cpu_choosed5 && !player_choosed1)
+            {
+                FA1 = true;
+                cpu_choosed1 = true;
+                BA1.Visibility = Visibility.Hidden;
+                BOA1.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed1 && cpu_choosed4 && !player_choosed7)
+            {
+                FC1 = true;
+                cpu_choosed7 = true;
+                BC1.Visibility = Visibility.Hidden;
+                BOC1.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed1 && cpu_choosed7 && !player_choosed4)
+            {
+                FB1 = true;
+                cpu_choosed4 = true;
+                BB1.Visibility = Visibility.Hidden;
+                BOB1.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed2 && cpu_choosed5 && !player_choosed8)
+            {
+                FC2 = true;
+                cpu_choosed8 = true;
+                BC2.Visibility = Visibility.Hidden;
+                BOC2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed2 && cpu_choosed8 && !player_choosed5)
+            {
+                FB2 = true;
+                cpu_choosed5 = true;
+                BB2.Visibility = Visibility.Hidden;
+                BOB2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed3 && cpu_choosed6 && !player_choosed9)
+            {
+                FC3 = true;
+                cpu_choosed9 = true;
+                BC3.Visibility = Visibility.Hidden;
+                BOC3.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed3 && cpu_choosed9 && !player_choosed6)
+            {
+                FB3 = true;
+                cpu_choosed6 = true;
+                BB3.Visibility = Visibility.Hidden;
+                BOB3.Visibility = Visibility.Visible;
+                goto J2;
+            }
+
             if (cpu_choice == 1 && player_choosed1 != true)
             {
                 if (cpu_choosed1 == true)
@@ -5328,10 +7250,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                    FA1 = true;
-                    cpu_choosed1 = true;
-                    BA1.Visibility = Visibility.Hidden;
-                    BOA1.Visibility = Visibility.Visible;
+                    if (!player_choosed2 && !player_choosed3 || !player_choosed4 && !player_choosed7 || !player_choosed5 && !player_choosed9)
+                    {
+                        FA1 = true;
+                        cpu_choosed1 = true;
+                        BA1.Visibility = Visibility.Hidden;
+                        BOA1.Visibility = Visibility.Visible;
+                    }
                 }
             }
             else if (cpu_choice == 2 && player_choosed2 != true)
@@ -5379,10 +7304,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                    FA2 = true;
-                    cpu_choosed2 = true;
-                    BA2.Visibility = Visibility.Hidden;
-                    BOA2.Visibility = Visibility.Visible;
+                    if (!player_choosed1 && !player_choosed3 || !player_choosed5 && !player_choosed8)
+                    {
+                        FA2 = true;
+                        cpu_choosed2 = true;
+                        BA2.Visibility = Visibility.Hidden;
+                        BOA2.Visibility = Visibility.Visible;
+                    }
                 }
 
             }
@@ -5431,10 +7359,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                    FA3 = true;
-                    cpu_choosed3 = true;
-                    BA3.Visibility = Visibility.Hidden;
-                    BOA3.Visibility = Visibility.Visible;
+                    if (!player_choosed2 && !player_choosed1 || !player_choosed5 && !player_choosed7 || !player_choosed6 && !player_choosed9)
+                    {
+                        FA3 = true;
+                        cpu_choosed3 = true;
+                        BA3.Visibility = Visibility.Hidden;
+                        BOA3.Visibility = Visibility.Visible;
+                    }
                 }
             }
             else if (cpu_choice == 4 && player_choosed4 != true)
@@ -5482,10 +7413,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                    FB1 = true;
-                    cpu_choosed4 = true;
-                    BB1.Visibility = Visibility.Hidden;
-                    BOB1.Visibility = Visibility.Visible;
+                    if (!player_choosed5 && !player_choosed6 || !player_choosed1 && !player_choosed7)
+                    {
+                        FB1 = true;
+                        cpu_choosed4 = true;
+                        BB1.Visibility = Visibility.Hidden;
+                        BOB1.Visibility = Visibility.Visible;
+                    }
                 }
             }
             else if (cpu_choice == 5 && player_choosed5 != true)
@@ -5567,10 +7501,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                    FB2 = true;
-                    cpu_choosed5 = true;
-                    BB2.Visibility = Visibility.Hidden;
-                    BOB2.Visibility = Visibility.Visible;
+                    if (!player_choosed4 && !player_choosed6 || !player_choosed2 && !player_choosed8 || !player_choosed1 && !player_choosed9 || !player_choosed3 && !player_choosed7)
+                    {
+                        FB2 = true;
+                        cpu_choosed5 = true;
+                        BB2.Visibility = Visibility.Hidden;
+                        BOB2.Visibility = Visibility.Visible;
+                    }
                 }
             }
             else if (cpu_choice == 6 && player_choosed6 != true)
@@ -5618,10 +7555,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                    FB3 = true;
-                    cpu_choosed6 = true;
-                    BB3.Visibility = Visibility.Hidden;
-                    BOB3.Visibility = Visibility.Visible;
+                    if (!player_choosed4 && !player_choosed5 || !player_choosed3 && !player_choosed9)
+                    {
+                        FB3 = true;
+                        cpu_choosed6 = true;
+                        BB3.Visibility = Visibility.Hidden;
+                        BOB3.Visibility = Visibility.Visible;
+                    }
                 }
             }
             else if (cpu_choice == 7 && player_choosed7 != true)
@@ -5686,15 +7626,18 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                    FC1 = true;
-                    cpu_choosed7 = true;
-                    BC1.Visibility = Visibility.Hidden;
-                    BOC1.Visibility = Visibility.Visible;
+                    if (!player_choosed4 && !player_choosed1 || !player_choosed8 && !player_choosed9 || !player_choosed5 && !player_choosed3)
+                    {
+                        FC1 = true;
+                        cpu_choosed7 = true;
+                        BC1.Visibility = Visibility.Hidden;
+                        BOC1.Visibility = Visibility.Visible;
+                    }
                 }
             }
             else if (cpu_choice == 8 && player_choosed8 != true)
             {
-                if (cpu_choosed8 == true)
+                if (cpu_choosed8)
                 {
                     if (!player_choosed5 && !player_choosed2)
                     {
@@ -5737,10 +7680,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                    FC2 = true;
-                    cpu_choosed8 = true;
-                    BC2.Visibility = Visibility.Hidden;
-                    BOC2.Visibility = Visibility.Visible;
+                    if (!player_choosed7 && !player_choosed9 || !player_choosed2 && !player_choosed5)
+                    {
+                        FC2 = true;
+                        cpu_choosed8 = true;
+                        BC2.Visibility = Visibility.Hidden;
+                        BOC2.Visibility = Visibility.Visible;
+                    }
                 }
             }
             else if (cpu_choice == 9 && player_choosed9 != true)
@@ -5788,10 +7734,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                    FC3 = true;
-                    cpu_choosed9 = true;
-                    BC3.Visibility = Visibility.Hidden;
-                    BOC3.Visibility = Visibility.Visible;
+                    if (!player_choosed8 && !player_choosed7 || !player_choosed6 && !player_choosed3 || !player_choosed5 && !player_choosed1)
+                    {
+                        FC3 = true;
+                        cpu_choosed9 = true;
+                        BC3.Visibility = Visibility.Hidden;
+                        BOC3.Visibility = Visibility.Visible;
+                    }
                 }
             }
             else
@@ -5810,6 +7759,8 @@ namespace TicTacToeWPFspiel
             }
 
             INFO.Visibility = Visibility.Hidden;
+
+            J2:
 
             if (cpu_choosed1 && cpu_choosed2 && cpu_choosed3 == true)
             {
@@ -5882,6 +7833,15 @@ namespace TicTacToeWPFspiel
                 restart.Visibility = Visibility.Visible;
                 exit.Visibility = Visibility.Visible;
                 return;
+            }
+
+            if (FA1 && FA2 && FA3 && FB1 && FB2 && FB3 && FC1 && FC2 && FC3)
+            {
+                INFO.Content = "SPIEL BEENDET...KEINER HAT GEWONNEN !";
+                INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
             }
 
             INFO.Visibility = Visibility.Hidden;
@@ -5994,6 +7954,210 @@ namespace TicTacToeWPFspiel
 
             cpu_choice = rd_number_generated.Next(1, 10);
 
+            INFO.Visibility = Visibility.Hidden;
+
+            if (cpu_choosed1 && cpu_choosed3 && !player_choosed2)
+            {
+                FA2 = true;
+                cpu_choosed2 = true;
+                BA2.Visibility = Visibility.Hidden;
+                BOA2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed4 && cpu_choosed6 && !player_choosed5)
+            {
+                FB2 = true;
+                cpu_choosed5 = true;
+                BB2.Visibility = Visibility.Hidden;
+                BOB2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed7 && cpu_choosed9 && !player_choosed8)
+            {
+                FC2 = true;
+                cpu_choosed8 = true;
+                BC2.Visibility = Visibility.Hidden;
+                BOC2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed2 && cpu_choosed1 && !player_choosed3)
+            {
+                FA3 = true;
+                cpu_choosed3 = true;
+                BA3.Visibility = Visibility.Hidden;
+                BOA3.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed2 && cpu_choosed3 && !player_choosed1)
+            {
+                FA1 = true;
+                cpu_choosed1 = true;
+                BA1.Visibility = Visibility.Hidden;
+                BOA1.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed3 && cpu_choosed2 && !player_choosed1)
+            {
+                FA1 = true;
+                cpu_choosed1 = true;
+                BA1.Visibility = Visibility.Hidden;
+                BOA1.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed3 && cpu_choosed1 && !player_choosed2)
+            {
+                FA2 = true;
+                cpu_choosed2 = true;
+                BA2.Visibility = Visibility.Hidden;
+                BOA2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed1 && cpu_choosed5 && !player_choosed9)
+            {
+                FC3 = true;
+                cpu_choosed9 = true;
+                BC3.Visibility = Visibility.Hidden;
+                BOC3.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed1 && cpu_choosed9 && !player_choosed5)
+            {
+                FB2 = true;
+                cpu_choosed5 = true;
+                BB2.Visibility = Visibility.Hidden;
+                BOB2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed3 && cpu_choosed5 && !player_choosed7)
+            {
+                FC1 = true;
+                cpu_choosed7 = true;
+                BC1.Visibility = Visibility.Hidden;
+                BOC1.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed3 && cpu_choosed7 && !player_choosed5)
+            {
+                FB2 = true;
+                cpu_choosed5 = true;
+                BB2.Visibility = Visibility.Hidden;
+                BOB2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed4 && cpu_choosed5 && !player_choosed6)
+            {
+                FB3 = true;
+                cpu_choosed6 = true;
+                BB3.Visibility = Visibility.Hidden;
+                BOB3.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed5 && cpu_choosed4 && !player_choosed6)
+            {
+                FB3 = true;
+                cpu_choosed6 = true;
+                BB3.Visibility = Visibility.Hidden;
+                BOB3.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed5 && cpu_choosed6 && !player_choosed5)
+            {
+                FB2 = true;
+                cpu_choosed5 = true;
+                BB2.Visibility = Visibility.Hidden;
+                BOB2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed5 && cpu_choosed2 && !player_choosed8)
+            {
+                FC2 = true;
+                cpu_choosed8 = true;
+                BC2.Visibility = Visibility.Hidden;
+                BOC2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed5 && cpu_choosed8 && !player_choosed2)
+            {
+                FA2 = true;
+                cpu_choosed2 = true;
+                BA2.Visibility = Visibility.Hidden;
+                BOA2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed7 && cpu_choosed8 && !player_choosed9)
+            {
+                FC3 = true;
+                cpu_choosed9 = true;
+                BC3.Visibility = Visibility.Hidden;
+                BOC3.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed9 && cpu_choosed1 && !player_choosed5)
+            {
+                FB2 = true;
+                cpu_choosed5 = true;
+                BB2.Visibility = Visibility.Hidden;
+                BOB2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed9 && cpu_choosed5 && !player_choosed1)
+            {
+                FA1 = true;
+                cpu_choosed1 = true;
+                BA1.Visibility = Visibility.Hidden;
+                BOA1.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed1 && cpu_choosed4 && !player_choosed7)
+            {
+                FC1 = true;
+                cpu_choosed7 = true;
+                BC1.Visibility = Visibility.Hidden;
+                BOC1.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed1 && cpu_choosed7 && !player_choosed4)
+            {
+                FB1 = true;
+                cpu_choosed4 = true;
+                BB1.Visibility = Visibility.Hidden;
+                BOB1.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed2 && cpu_choosed5 && !player_choosed8)
+            {
+                FC2 = true;
+                cpu_choosed8 = true;
+                BC2.Visibility = Visibility.Hidden;
+                BOC2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed2 && cpu_choosed8 && !player_choosed5)
+            {
+                FB2 = true;
+                cpu_choosed5 = true;
+                BB2.Visibility = Visibility.Hidden;
+                BOB2.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed3 && cpu_choosed6 && !player_choosed9)
+            {
+                FC3 = true;
+                cpu_choosed9 = true;
+                BC3.Visibility = Visibility.Hidden;
+                BOC3.Visibility = Visibility.Visible;
+                goto J2;
+            }
+            else if (cpu_choosed3 && cpu_choosed9 && !player_choosed6)
+            {
+                FB3 = true;
+                cpu_choosed6 = true;
+                BB3.Visibility = Visibility.Hidden;
+                BOB3.Visibility = Visibility.Visible;
+                goto J2;
+            }
+
+
             if (cpu_choice == 1 && player_choosed1 != true)
             {
                 if (cpu_choosed1 == true)
@@ -6056,10 +8220,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                    FA1 = true;
-                    cpu_choosed1 = true;
-                    BA1.Visibility = Visibility.Hidden;
-                    BOA1.Visibility = Visibility.Visible;
+                    if (!player_choosed2 && !player_choosed3 || !player_choosed4 && !player_choosed7 || !player_choosed5 && !player_choosed9)
+                    {
+                        FA1 = true;
+                        cpu_choosed1 = true;
+                        BA1.Visibility = Visibility.Hidden;
+                        BOA1.Visibility = Visibility.Visible;
+                    }
                 }
             }
             else if (cpu_choice == 2 && player_choosed2 != true)
@@ -6107,10 +8274,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                    FA2 = true;
-                    cpu_choosed2 = true;
-                    BA2.Visibility = Visibility.Hidden;
-                    BOA2.Visibility = Visibility.Visible;
+                    if (!player_choosed1 && !player_choosed3 || !player_choosed5 && !player_choosed8)
+                    {
+                        FA2 = true;
+                        cpu_choosed2 = true;
+                        BA2.Visibility = Visibility.Hidden;
+                        BOA2.Visibility = Visibility.Visible;
+                    }
                 }
 
             }
@@ -6159,10 +8329,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                    FA3 = true;
-                    cpu_choosed3 = true;
-                    BA3.Visibility = Visibility.Hidden;
-                    BOA3.Visibility = Visibility.Visible;
+                    if (!player_choosed2 && !player_choosed1 || !player_choosed5 && !player_choosed7 || !player_choosed6 && !player_choosed9)
+                    {
+                        FA3 = true;
+                        cpu_choosed3 = true;
+                        BA3.Visibility = Visibility.Hidden;
+                        BOA3.Visibility = Visibility.Visible;
+                    }
                 }
             }
             else if (cpu_choice == 4 && player_choosed4 != true)
@@ -6210,10 +8383,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                    FB1 = true;
-                    cpu_choosed4 = true;
-                    BB1.Visibility = Visibility.Hidden;
-                    BOB1.Visibility = Visibility.Visible;
+                    if (!player_choosed5 && !player_choosed6 || !player_choosed1 && !player_choosed7)
+                    {
+                        FB1 = true;
+                        cpu_choosed4 = true;
+                        BB1.Visibility = Visibility.Hidden;
+                        BOB1.Visibility = Visibility.Visible;
+                    }
                 }
             }
             else if (cpu_choice == 5 && player_choosed5 != true)
@@ -6295,10 +8471,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                    FB2 = true;
-                    cpu_choosed5 = true;
-                    BB2.Visibility = Visibility.Hidden;
-                    BOB2.Visibility = Visibility.Visible;
+                    if (!player_choosed4 && !player_choosed6 || !player_choosed2 && !player_choosed8 || !player_choosed1 && !player_choosed9 || !player_choosed3 && !player_choosed7)
+                    {
+                        FB2 = true;
+                        cpu_choosed5 = true;
+                        BB2.Visibility = Visibility.Hidden;
+                        BOB2.Visibility = Visibility.Visible;
+                    }
                 }
             }
             else if (cpu_choice == 6 && player_choosed6 != true)
@@ -6346,10 +8525,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                    FB3 = true;
-                    cpu_choosed6 = true;
-                    BB3.Visibility = Visibility.Hidden;
-                    BOB3.Visibility = Visibility.Visible;
+                    if (!player_choosed4 && !player_choosed5 || !player_choosed3 && !player_choosed9)
+                    {
+                        FB3 = true;
+                        cpu_choosed6 = true;
+                        BB3.Visibility = Visibility.Hidden;
+                        BOB3.Visibility = Visibility.Visible;
+                    }
                 }
             }
             else if (cpu_choice == 7 && player_choosed7 != true)
@@ -6414,10 +8596,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                    FC1 = true;
-                    cpu_choosed7 = true;
-                    BC1.Visibility = Visibility.Hidden;
-                    BOC1.Visibility = Visibility.Visible;
+                    if (!player_choosed4 && !player_choosed1 || !player_choosed8 && !player_choosed9 || !player_choosed5 && !player_choosed3)
+                    {
+                        FC1 = true;
+                        cpu_choosed7 = true;
+                        BC1.Visibility = Visibility.Hidden;
+                        BOC1.Visibility = Visibility.Visible;
+                    }
                 }
             }
             else if (cpu_choice == 8 && player_choosed8 != true)
@@ -6465,10 +8650,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                    FC2 = true;
-                    cpu_choosed8 = true;
-                    BC2.Visibility = Visibility.Hidden;
-                    BOC2.Visibility = Visibility.Visible;
+                    if (!player_choosed7 && !player_choosed9 || !player_choosed2 && !player_choosed5)
+                    {
+                        FC2 = true;
+                        cpu_choosed8 = true;
+                        BC2.Visibility = Visibility.Hidden;
+                        BOC2.Visibility = Visibility.Visible;
+                    }
                 }
             }
             else if (cpu_choice == 9 && player_choosed9 != true)
@@ -6516,10 +8704,13 @@ namespace TicTacToeWPFspiel
                 }
                 else
                 {
-                    FC3 = true;
-                    cpu_choosed9 = true;
-                    BC3.Visibility = Visibility.Hidden;
-                    BOC3.Visibility = Visibility.Visible;
+                    if (!player_choosed8 && !player_choosed7 || !player_choosed6 && !player_choosed3 || !player_choosed5 && !player_choosed1)
+                    {
+                        FC3 = true;
+                        cpu_choosed9 = true;
+                        BC3.Visibility = Visibility.Hidden;
+                        BOC3.Visibility = Visibility.Visible;
+                    }
                 }
             }
             else
@@ -6537,7 +8728,7 @@ namespace TicTacToeWPFspiel
                 goto J1;
             }
 
-            INFO.Visibility = Visibility.Hidden;
+            J2:
 
             if (cpu_choosed1 && cpu_choosed2 && cpu_choosed3 == true)
             {
@@ -6610,6 +8801,15 @@ namespace TicTacToeWPFspiel
                 restart.Visibility = Visibility.Visible;
                 exit.Visibility = Visibility.Visible;
                 return;
+            }
+
+            if (FA1 && FA2 && FA3 && FB1 && FB2 && FB3 && FC1 && FC2 && FC3)
+            {
+                INFO.Content = "SPIEL BEENDET...KEINER HAT GEWONNEN !";
+                INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
             }
 
             INFO.Visibility = Visibility.Hidden;
