@@ -21,8 +21,9 @@ namespace TicTacToeWPFspiel
     /// </summary>
     public partial class MainWindow : Window
     {
-        int cpu_choice       = 0;
-        bool game_ended      = false;
+        int cpu_choice          = 0;
+        bool game_ended         = false;
+        bool leaveClickEventNow = false;
 
         // Diese Variablen bestimmen ob ein Feld von Spieler oder CPU bereits gewählt wurde !
         bool FA1 = false;
@@ -61,6 +62,94 @@ namespace TicTacToeWPFspiel
             InitializeComponent();
         }
 
+        public void NpcLeaveClickEventAndCheckLooseCondition()
+        {
+            if (cpu_choosed1 && cpu_choosed2 && cpu_choosed3 == true)
+            {
+                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
+                INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
+                leaveClickEventNow = true;
+            }
+            else if (cpu_choosed4 && cpu_choosed5 && cpu_choosed6 == true)
+            {
+                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
+                INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
+                leaveClickEventNow = true;
+            }
+            else if (cpu_choosed7 && cpu_choosed8 && cpu_choosed9 == true)
+            {
+                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
+                INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
+                leaveClickEventNow = true;
+            }
+            else if (cpu_choosed1 && cpu_choosed5 && cpu_choosed9 == true)
+            {
+                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
+                INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
+                leaveClickEventNow = true;
+            }
+            else if (cpu_choosed3 && cpu_choosed5 && cpu_choosed7 == true)
+            {
+                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
+                INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
+                leaveClickEventNow = true;
+            }
+            else if (cpu_choosed1 && cpu_choosed4 && cpu_choosed7 == true)
+            {
+                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
+                INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
+                leaveClickEventNow = true;
+            }
+            else if (cpu_choosed2 && cpu_choosed5 && cpu_choosed8 == true)
+            {
+                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
+                INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
+                leaveClickEventNow = true;
+            }
+            else if (cpu_choosed3 && cpu_choosed6 && cpu_choosed9 == true)
+            {
+                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
+                INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
+                leaveClickEventNow = true;
+            }
+
+            if (FA1 && FA2 && FA3 && FB1 && FB2 && FB3 && FC1 && FC2 && FC3)
+            {
+                INFO.Content = "SPIEL BEENDET...KEINER HAT GEWONNEN !";
+                INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
+                leaveClickEventNow = true;
+            }
+
+            leaveClickEventNow = true;
+            INFO.Visibility = Visibility.Hidden;
+        }
         public void NpcPlayerBlocksHumanPLayer()
         {
             if (player_choosed1 && player_choosed5 && !cpu_choosed9)
@@ -69,6 +158,7 @@ namespace TicTacToeWPFspiel
                 cpu_choosed9 = true;
                 BC3.Visibility = Visibility.Hidden;
                 BOC3.Visibility = Visibility.Visible;
+                NpcLeaveClickEventAndCheckLooseCondition();
             }
             else if (player_choosed9 && player_choosed5 && !cpu_choosed1)
             {
@@ -76,6 +166,7 @@ namespace TicTacToeWPFspiel
                 cpu_choosed1 = true;
                 BA1.Visibility = Visibility.Hidden;
                 BOA1.Visibility = Visibility.Visible;
+                NpcLeaveClickEventAndCheckLooseCondition();
             }
             else if (player_choosed1 && player_choosed9 && !cpu_choosed5)
             {
@@ -83,6 +174,7 @@ namespace TicTacToeWPFspiel
                 cpu_choosed5 = true;
                 BB2.Visibility = Visibility.Hidden;
                 BOB2.Visibility = Visibility.Visible;
+                NpcLeaveClickEventAndCheckLooseCondition();
             }
             else if (player_choosed1 && player_choosed2 && !cpu_choosed3)
             {
@@ -90,6 +182,7 @@ namespace TicTacToeWPFspiel
                 cpu_choosed3 = true;
                 BA3.Visibility = Visibility.Hidden;
                 BOA3.Visibility = Visibility.Visible;
+                NpcLeaveClickEventAndCheckLooseCondition();
             }
             else if (player_choosed1 && player_choosed3 && !cpu_choosed2)
             {
@@ -97,6 +190,7 @@ namespace TicTacToeWPFspiel
                 cpu_choosed2 = true;
                 BA2.Visibility = Visibility.Hidden;
                 BOA2.Visibility = Visibility.Visible;
+                NpcLeaveClickEventAndCheckLooseCondition();
             }
             else if (player_choosed2 && player_choosed3 && !cpu_choosed1)
             {
@@ -104,6 +198,7 @@ namespace TicTacToeWPFspiel
                 cpu_choosed1 = true;
                 BA1.Visibility = Visibility.Hidden;
                 BOA1.Visibility = Visibility.Visible;
+                NpcLeaveClickEventAndCheckLooseCondition();
             }
             else if (player_choosed4 && player_choosed5 && !cpu_choosed6)
             {
@@ -111,6 +206,7 @@ namespace TicTacToeWPFspiel
                 cpu_choosed6 = true;
                 BB3.Visibility = Visibility.Hidden;
                 BOB3.Visibility = Visibility.Visible;
+                NpcLeaveClickEventAndCheckLooseCondition();
             }
             else if (player_choosed4 && player_choosed6 && !cpu_choosed5)
             {
@@ -118,6 +214,7 @@ namespace TicTacToeWPFspiel
                 cpu_choosed5 = true;
                 BB2.Visibility = Visibility.Hidden;
                 BOB2.Visibility = Visibility.Visible;
+                NpcLeaveClickEventAndCheckLooseCondition();
             }
             else if (player_choosed5 && player_choosed6 && !cpu_choosed4)
             {
@@ -125,6 +222,7 @@ namespace TicTacToeWPFspiel
                 cpu_choosed4 = true;
                 BB1.Visibility = Visibility.Hidden;
                 BOB1.Visibility = Visibility.Visible;
+                NpcLeaveClickEventAndCheckLooseCondition();
             }
             else if (player_choosed5 && player_choosed3 && !cpu_choosed7)
             {
@@ -132,6 +230,7 @@ namespace TicTacToeWPFspiel
                 cpu_choosed7 = true;
                 BC1.Visibility = Visibility.Hidden;
                 BOC1.Visibility = Visibility.Visible;
+                NpcLeaveClickEventAndCheckLooseCondition();
             }
             else if (player_choosed5 && player_choosed7 && !cpu_choosed3)
             {
@@ -139,6 +238,7 @@ namespace TicTacToeWPFspiel
                 cpu_choosed3 = true;
                 BA3.Visibility = Visibility.Hidden;
                 BOA3.Visibility = Visibility.Visible;
+                NpcLeaveClickEventAndCheckLooseCondition();
             }
             else if (player_choosed7 && player_choosed3 && !cpu_choosed5)
             {
@@ -146,6 +246,7 @@ namespace TicTacToeWPFspiel
                 cpu_choosed5 = true;
                 BB2.Visibility = Visibility.Hidden;
                 BOB2.Visibility = Visibility.Visible;
+                NpcLeaveClickEventAndCheckLooseCondition();
             }
             else if (player_choosed1 && player_choosed5 && !cpu_choosed9)
             {
@@ -153,6 +254,7 @@ namespace TicTacToeWPFspiel
                 cpu_choosed9 = true;
                 BC3.Visibility = Visibility.Hidden;
                 BOC3.Visibility = Visibility.Visible;
+                NpcLeaveClickEventAndCheckLooseCondition();
             }
             else if (player_choosed1 && player_choosed9 && !cpu_choosed5)
             {
@@ -160,6 +262,7 @@ namespace TicTacToeWPFspiel
                 cpu_choosed5 = true;
                 BB2.Visibility = Visibility.Hidden;
                 BOB2.Visibility = Visibility.Visible;
+                NpcLeaveClickEventAndCheckLooseCondition();
             }
             else if (player_choosed5 && player_choosed9 && !cpu_choosed1)
             {
@@ -167,6 +270,7 @@ namespace TicTacToeWPFspiel
                 cpu_choosed1 = true;
                 BA1.Visibility = Visibility.Hidden;
                 BOA1.Visibility = Visibility.Visible;
+                NpcLeaveClickEventAndCheckLooseCondition();
             }
             else if (player_choosed7 && player_choosed8 && !cpu_choosed9)
             {
@@ -174,6 +278,7 @@ namespace TicTacToeWPFspiel
                 cpu_choosed9 = true;
                 BC3.Visibility = Visibility.Hidden;
                 BOC3.Visibility = Visibility.Visible;
+                NpcLeaveClickEventAndCheckLooseCondition();
             }
             else if (player_choosed7 && player_choosed9 && !cpu_choosed8)
             {
@@ -181,6 +286,7 @@ namespace TicTacToeWPFspiel
                 cpu_choosed8 = true;
                 BC2.Visibility = Visibility.Hidden;
                 BOC2.Visibility = Visibility.Visible;
+                NpcLeaveClickEventAndCheckLooseCondition();
             }
             else if (player_choosed8 && player_choosed9 && !cpu_choosed7)
             {
@@ -188,6 +294,7 @@ namespace TicTacToeWPFspiel
                 cpu_choosed7 = true;
                 BC1.Visibility = Visibility.Hidden;
                 BOC1.Visibility = Visibility.Visible;
+                NpcLeaveClickEventAndCheckLooseCondition();
             }
             else if (player_choosed1 && player_choosed4 && !cpu_choosed7)
             {
@@ -195,6 +302,7 @@ namespace TicTacToeWPFspiel
                 cpu_choosed7 = true;
                 BC1.Visibility = Visibility.Hidden;
                 BOC1.Visibility = Visibility.Visible;
+                NpcLeaveClickEventAndCheckLooseCondition();
             }
             else if (player_choosed1 && player_choosed7 && !cpu_choosed4)
             {
@@ -202,6 +310,7 @@ namespace TicTacToeWPFspiel
                 cpu_choosed4 = true;
                 BB1.Visibility = Visibility.Hidden;
                 BOB1.Visibility = Visibility.Visible;
+                NpcLeaveClickEventAndCheckLooseCondition();
             }
             else if (player_choosed4 && player_choosed7 && !cpu_choosed1)
             {
@@ -209,6 +318,7 @@ namespace TicTacToeWPFspiel
                 cpu_choosed1 = true;
                 BA1.Visibility = Visibility.Hidden;
                 BOA1.Visibility = Visibility.Visible;
+                NpcLeaveClickEventAndCheckLooseCondition();
             }
             else if (player_choosed2 && player_choosed5 && !cpu_choosed8)
             {
@@ -216,6 +326,7 @@ namespace TicTacToeWPFspiel
                 cpu_choosed8 = true;
                 BC2.Visibility = Visibility.Hidden;
                 BOC2.Visibility = Visibility.Visible;
+                NpcLeaveClickEventAndCheckLooseCondition();
             }
             else if (player_choosed2 && player_choosed8 && !cpu_choosed5)
             {
@@ -223,6 +334,7 @@ namespace TicTacToeWPFspiel
                 cpu_choosed5 = true;
                 BB2.Visibility = Visibility.Hidden;
                 BOB2.Visibility = Visibility.Visible;
+                NpcLeaveClickEventAndCheckLooseCondition();
             }
             else if (player_choosed5 && player_choosed8 && !cpu_choosed2)
             {
@@ -230,6 +342,7 @@ namespace TicTacToeWPFspiel
                 cpu_choosed2 = true;
                 BA2.Visibility = Visibility.Hidden;
                 BOA2.Visibility = Visibility.Visible;
+                NpcLeaveClickEventAndCheckLooseCondition();
             }
             else if (player_choosed3 && player_choosed6 && !cpu_choosed9)
             {
@@ -237,6 +350,7 @@ namespace TicTacToeWPFspiel
                 cpu_choosed9 = true;
                 BC3.Visibility = Visibility.Hidden;
                 BOC3.Visibility = Visibility.Visible;
+                NpcLeaveClickEventAndCheckLooseCondition();
             }
             else if (player_choosed3 && player_choosed9 && !cpu_choosed6)
             {
@@ -244,6 +358,7 @@ namespace TicTacToeWPFspiel
                 cpu_choosed6 = true;
                 BB3.Visibility = Visibility.Hidden;
                 BOB3.Visibility = Visibility.Visible;
+                NpcLeaveClickEventAndCheckLooseCondition();
             }
             else if (player_choosed6 && player_choosed9 && !cpu_choosed3)
             {
@@ -251,11 +366,14 @@ namespace TicTacToeWPFspiel
                 cpu_choosed3 = true;
                 BA3.Visibility = Visibility.Hidden;
                 BOA3.Visibility = Visibility.Visible;
+                NpcLeaveClickEventAndCheckLooseCondition();
             }
         }
 
         private async void BA1_Click(object sender, RoutedEventArgs e)
         {
+            leaveClickEventNow = false;
+
             if (game_ended == true)
             {
                 return;
@@ -590,6 +708,11 @@ namespace TicTacToeWPFspiel
             }
 
             NpcPlayerBlocksHumanPLayer();
+
+            if (leaveClickEventNow)
+            {
+                return;
+            }
 
             if (cpu_choice == 1 && player_choosed1 != true)
             {
@@ -1852,6 +1975,8 @@ namespace TicTacToeWPFspiel
 
         private async void BA2_Click(object sender, RoutedEventArgs e)
         {
+            leaveClickEventNow = false;
+
             if (INFO.Content.ToString() != "CPU DENKT ... BITTE WARTEN !")
             {
                 return;
@@ -2162,6 +2287,11 @@ namespace TicTacToeWPFspiel
             }
 
             NpcPlayerBlocksHumanPLayer();
+
+            if (leaveClickEventNow)
+            {
+                return;
+            }
 
             if (cpu_choice == 1 && player_choosed1 != true)
             {
@@ -3427,6 +3557,8 @@ namespace TicTacToeWPFspiel
 
         private async void BA3_Click(object sender, RoutedEventArgs e)
         {
+            leaveClickEventNow = false;
+
             if (INFO.Content.ToString() != "CPU DENKT ... BITTE WARTEN !")
             {
                 return;
@@ -3736,6 +3868,11 @@ namespace TicTacToeWPFspiel
             }
 
             NpcPlayerBlocksHumanPLayer();
+
+            if (leaveClickEventNow)
+            {
+                return;
+            }
 
             if (cpu_choice == 1 && player_choosed1 != true)
             {
@@ -5001,6 +5138,8 @@ namespace TicTacToeWPFspiel
 
         private async void BB1_Click(object sender, RoutedEventArgs e)
         {
+            leaveClickEventNow = false;
+
             if (INFO.Content.ToString() != "CPU DENKT ... BITTE WARTEN !")
             {
                 return;
@@ -5310,6 +5449,11 @@ namespace TicTacToeWPFspiel
             }
 
             NpcPlayerBlocksHumanPLayer();
+
+            if (leaveClickEventNow)
+            {
+                return;
+            }
 
             if (cpu_choice == 1 && player_choosed1 != true)
             {
@@ -6575,6 +6719,8 @@ namespace TicTacToeWPFspiel
 
         private async void BB2_Click(object sender, RoutedEventArgs e)
         {
+            leaveClickEventNow = false;
+
             if (INFO.Content.ToString() != "CPU DENKT ... BITTE WARTEN !")
             {
                 return;
@@ -6884,6 +7030,11 @@ namespace TicTacToeWPFspiel
             }
 
             NpcPlayerBlocksHumanPLayer();
+
+            if (leaveClickEventNow)
+            {
+                return;
+            }
 
             if (cpu_choice == 1 && player_choosed1 != true)
             {
@@ -8149,6 +8300,8 @@ namespace TicTacToeWPFspiel
 
         private async void BB3_Click(object sender, RoutedEventArgs e)
         {
+            leaveClickEventNow = false;
+
             if (INFO.Content.ToString() != "CPU DENKT ... BITTE WARTEN !")
             {
                 return;
@@ -8459,6 +8612,11 @@ namespace TicTacToeWPFspiel
             }
 
             NpcPlayerBlocksHumanPLayer();
+
+            if (leaveClickEventNow)
+            {
+                return;
+            }
 
             if (cpu_choice == 1 && player_choosed1 != true)
             {
@@ -9724,6 +9882,8 @@ namespace TicTacToeWPFspiel
 
         private async void BC1_Click(object sender, RoutedEventArgs e)
         {
+            leaveClickEventNow = false;
+
             if (INFO.Content.ToString() != "CPU DENKT ... BITTE WARTEN !")
             {
                 return;
@@ -10034,6 +10194,11 @@ namespace TicTacToeWPFspiel
             }
 
             NpcPlayerBlocksHumanPLayer();
+
+            if (leaveClickEventNow)
+            {
+                return;
+            }
 
             if (cpu_choice == 1 && player_choosed1 != true)
             {
@@ -11299,6 +11464,8 @@ namespace TicTacToeWPFspiel
 
         private async void BC2_Click(object sender, RoutedEventArgs e)
         {
+            leaveClickEventNow = false;
+
             if (INFO.Content.ToString() != "CPU DENKT ... BITTE WARTEN !")
             {
                 return;
@@ -11609,6 +11776,11 @@ namespace TicTacToeWPFspiel
             }
 
             NpcPlayerBlocksHumanPLayer();
+
+            if (leaveClickEventNow)
+            {
+                return;
+            }
 
             if (cpu_choice == 1 && player_choosed1 != true)
             {
@@ -12874,6 +13046,8 @@ namespace TicTacToeWPFspiel
 
         private async void BC3_Click(object sender, RoutedEventArgs e)
         {
+            leaveClickEventNow = false;
+
             if (INFO.Content.ToString() != "CPU DENKT ... BITTE WARTEN !")
             {
                 return;
@@ -13183,6 +13357,11 @@ namespace TicTacToeWPFspiel
             }
 
             NpcPlayerBlocksHumanPLayer();
+
+            if (leaveClickEventNow)
+            {
+                return;
+            }
 
             if (cpu_choice == 1 && player_choosed1 != true)
             {
