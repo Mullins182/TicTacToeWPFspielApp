@@ -25,18 +25,20 @@
             <RowDefinition Height="100"/>
             <RowDefinition Height="100"/>
             <RowDefinition Height="100"/>
-
+            <RowDefinition Height="100"/>
 
         </Grid.RowDefinitions>
 
-        <Button x:Name="restart" Content="Restart Game" MaxWidth="190" MaxHeight="90" BorderThickness="3" BorderBrush="Black" Grid.Column="5" Grid.Row="5" Grid.ColumnSpan="2" Background="Gold" FontWeight="Bold" FontFamily="chiller" FontSize="40" Foreground="Black" Click="restart_Click" Visibility="Hidden"/>
-        <Button x:Name="exit" Content="Quit Game" MaxWidth="190" MaxHeight="90" BorderThickness="3" BorderBrush="Black" Grid.Column="5" Grid.Row="7" Grid.ColumnSpan="2" Background="OrangeRed" Foreground="Black" FontWeight="Bold" FontFamily="chiller" FontSize="50" Click="exit_Click" Visibility="Visible"/>
+        <MediaElement x:Name="BackgroundVideo" Grid.RowSpan="8" Grid.ColumnSpan="7" Stretch="Fill" MediaEnded="BackgroundVideo_MediaEnded" IsMuted="True"/>
+
+        <Button x:Name="restart" Content="Restart Game" MaxWidth="190" MaxHeight="90" BorderThickness="3" BorderBrush="Black" Grid.Column="5" Grid.Row="5" Grid.ColumnSpan="2" Background="Gold" FontWeight="Bold" FontFamily="chiller" FontSize="40" Foreground="Black" Click="Restart_Click" Visibility="Hidden"/>
+        <Button x:Name="exit" Content="Quit Game" MaxWidth="190" MaxHeight="90" BorderThickness="3" BorderBrush="Black" Grid.Column="5" Grid.Row="6" Grid.ColumnSpan="2" Background="OrangeRed" Foreground="Black" FontWeight="Bold" FontFamily="chiller" FontSize="50" Click="Exit_Click" Visibility="Visible"/>
 
         <Label Height="160" Width="500" Grid.Column="1" Grid.Row="0" Grid.RowSpan="5" Grid.ColumnSpan="5" Margin="0,40,0,0" VerticalAlignment="Top" HorizontalAlignment="center" HorizontalContentAlignment="center" VerticalContentAlignment="center" FontFamily="chiller" FontSize="120" Foreground="DarkOrange" FontWeight="Bold" Content="TicTacToe"/>
-        <Image x:Name="TicTacToeRaster" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="5" Grid.RowSpan="5" Height="300" Width="300" Margin="0,100,0,0" VerticalAlignment="center" HorizontalAlignment="Center" Cursor="Hand" Source="/e797539a1376987930021d2cf4ef74dd5e2ea131.png"/>
+        <Image x:Name="TicTacToeRaster" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="5" Grid.RowSpan="4" Height="300" Width="300" Margin="0,100,0,0" VerticalAlignment="center" HorizontalAlignment="Center" Cursor="Hand" Source="/e797539a1376987930021d2cf4ef74dd5e2ea131.png"/>
 
         <Label x:Name="INFO" Visibility="Hidden" Foreground="YellowGreen" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="7" Grid.RowSpan="2" Height="150" Width="700" Content="CPU DENKT ... BITTE WARTEN !" FontFamily="chiller" FontSize="35" HorizontalContentAlignment="center" VerticalContentAlignment="center"/>
-        
+
         <Button x:Name="BA1" Grid.Column="2" HorizontalAlignment="center" Height="100" Grid.Row="4" VerticalAlignment="center" Width="100" Click="BA1_Click" Visibility="Visible">
             <Button.Background>
                 <ImageBrush Stretch="None" ImageSource="/Muster.png"/>
