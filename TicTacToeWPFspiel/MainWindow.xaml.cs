@@ -24,6 +24,7 @@ namespace TicTacToeWPFspiel
         int cpu_choice          = 0;
         bool game_ended         = false;
         bool leaveClickEventNow = false;
+        bool waitForNpc         = false;
 
         // Diese Variablen bestimmen ob ein Feld von Spieler oder CPU bereits gewählt wurde !
         bool FA1 = false;
@@ -147,8 +148,9 @@ namespace TicTacToeWPFspiel
                 leaveClickEventNow = true;
             }
 
+            waitForNpc = false;
             leaveClickEventNow = true;
-            INFO.Visibility = Visibility.Hidden;
+            //INFO.Visibility = Visibility.Hidden;
         }
         public void NpcPlayerBlocksHumanPLayer()
         {
@@ -370,15 +372,334 @@ namespace TicTacToeWPFspiel
             }
         }
 
+        public void NpcWinningMove()
+        {
+            if (cpu_choosed1 && cpu_choosed3 && !player_choosed2)
+            {
+                FA2 = true;
+                cpu_choosed2 = true;
+                BA2.Visibility = Visibility.Hidden;
+                BOA2.Visibility = Visibility.Visible;
+                leaveClickEventNow = true;
+                NpcLeaveClickEventAndCheckLooseCondition();
+            }
+            else if (cpu_choosed4 && cpu_choosed6 && !player_choosed5)
+            {
+                FB2 = true;
+                cpu_choosed5 = true;
+                BB2.Visibility = Visibility.Hidden;
+                BOB2.Visibility = Visibility.Visible;
+                leaveClickEventNow = true;
+                NpcLeaveClickEventAndCheckLooseCondition();
+            }
+            else if (cpu_choosed7 && cpu_choosed9 && !player_choosed8)
+            {
+                FC2 = true;
+                cpu_choosed8 = true;
+                BC2.Visibility = Visibility.Hidden;
+                BOC2.Visibility = Visibility.Visible;
+                leaveClickEventNow = true;
+                NpcLeaveClickEventAndCheckLooseCondition();
+            }
+            else if (cpu_choosed2 && cpu_choosed1 && !player_choosed3)
+            {
+                FA3 = true;
+                cpu_choosed3 = true;
+                BA3.Visibility = Visibility.Hidden;
+                BOA3.Visibility = Visibility.Visible;
+                leaveClickEventNow = true;
+                NpcLeaveClickEventAndCheckLooseCondition();
+            }
+            else if (cpu_choosed2 && cpu_choosed3 && !player_choosed1)
+            {
+                FA1 = true;
+                cpu_choosed1 = true;
+                BA1.Visibility = Visibility.Hidden;
+                BOA1.Visibility = Visibility.Visible;
+                leaveClickEventNow = true;
+                NpcLeaveClickEventAndCheckLooseCondition();
+            }
+            else if (cpu_choosed3 && cpu_choosed2 && !player_choosed1)
+            {
+                FA1 = true;
+                cpu_choosed1 = true;
+                BA1.Visibility = Visibility.Hidden;
+                BOA1.Visibility = Visibility.Visible;
+                leaveClickEventNow = true;
+                NpcLeaveClickEventAndCheckLooseCondition();
+            }
+            else if (cpu_choosed3 && cpu_choosed1 && !player_choosed2)
+            {
+                FA2 = true;
+                cpu_choosed2 = true;
+                BA2.Visibility = Visibility.Hidden;
+                BOA2.Visibility = Visibility.Visible;
+                leaveClickEventNow = true;
+                NpcLeaveClickEventAndCheckLooseCondition();
+            }
+            else if (cpu_choosed1 && cpu_choosed5 && !player_choosed9)
+            {
+                FC3 = true;
+                cpu_choosed9 = true;
+                BC3.Visibility = Visibility.Hidden;
+                BOC3.Visibility = Visibility.Visible;
+                leaveClickEventNow = true;
+                NpcLeaveClickEventAndCheckLooseCondition();
+            }
+            else if (cpu_choosed1 && cpu_choosed9 && !player_choosed5)
+            {
+                FB2 = true;
+                cpu_choosed5 = true;
+                BB2.Visibility = Visibility.Hidden;
+                BOB2.Visibility = Visibility.Visible;
+                leaveClickEventNow = true;
+                NpcLeaveClickEventAndCheckLooseCondition();
+            }
+            else if (cpu_choosed3 && cpu_choosed5 && !player_choosed7)
+            {
+                FC1 = true;
+                cpu_choosed7 = true;
+                BC1.Visibility = Visibility.Hidden;
+                BOC1.Visibility = Visibility.Visible;
+                leaveClickEventNow = true;
+                NpcLeaveClickEventAndCheckLooseCondition();
+            }
+            else if (cpu_choosed3 && cpu_choosed7 && !player_choosed5)
+            {
+                FB2 = true;
+                cpu_choosed5 = true;
+                BB2.Visibility = Visibility.Hidden;
+                BOB2.Visibility = Visibility.Visible;
+                leaveClickEventNow = true;
+                NpcLeaveClickEventAndCheckLooseCondition();
+            }
+            else if (cpu_choosed4 && cpu_choosed5 && !player_choosed6)
+            {
+                FB3 = true;
+                cpu_choosed6 = true;
+                BB3.Visibility = Visibility.Hidden;
+                BOB3.Visibility = Visibility.Visible;
+                leaveClickEventNow = true;
+                NpcLeaveClickEventAndCheckLooseCondition();
+            }
+            else if (cpu_choosed5 && cpu_choosed4 && !player_choosed6)
+            {
+                FB3 = true;
+                cpu_choosed6 = true;
+                BB3.Visibility = Visibility.Hidden;
+                BOB3.Visibility = Visibility.Visible;
+                leaveClickEventNow = true;
+                NpcLeaveClickEventAndCheckLooseCondition();
+            }
+            else if (cpu_choosed4 && cpu_choosed6 && !player_choosed5)
+            {
+                FB2 = true;
+                cpu_choosed5 = true;
+                BB2.Visibility = Visibility.Hidden;
+                BOB2.Visibility = Visibility.Visible;
+                leaveClickEventNow = true;
+                NpcLeaveClickEventAndCheckLooseCondition();
+            }
+            else if (cpu_choosed5 && cpu_choosed2 && !player_choosed8)
+            {
+                FC2 = true;
+                cpu_choosed8 = true;
+                BC2.Visibility = Visibility.Hidden;
+                BOC2.Visibility = Visibility.Visible;
+                leaveClickEventNow = true;
+                NpcLeaveClickEventAndCheckLooseCondition();
+            }
+            else if (cpu_choosed5 && cpu_choosed8 && !player_choosed2)
+            {
+                FA2 = true;
+                cpu_choosed2 = true;
+                BA2.Visibility = Visibility.Hidden;
+                BOA2.Visibility = Visibility.Visible;
+                leaveClickEventNow = true;
+                NpcLeaveClickEventAndCheckLooseCondition();
+            }
+            else if (cpu_choosed7 && cpu_choosed8 && !player_choosed9)
+            {
+                FC3 = true;
+                cpu_choosed9 = true;
+                BC3.Visibility = Visibility.Hidden;
+                BOC3.Visibility = Visibility.Visible;
+                leaveClickEventNow = true;
+                NpcLeaveClickEventAndCheckLooseCondition();
+            }
+            else if (cpu_choosed9 && cpu_choosed1 && !player_choosed5)
+            {
+                FB2 = true;
+                cpu_choosed5 = true;
+                BB2.Visibility = Visibility.Hidden;
+                BOB2.Visibility = Visibility.Visible;
+                leaveClickEventNow = true;
+                NpcLeaveClickEventAndCheckLooseCondition();
+            }
+            else if (cpu_choosed9 && cpu_choosed5 && !player_choosed1)
+            {
+                FA1 = true;
+                cpu_choosed1 = true;
+                BA1.Visibility = Visibility.Hidden;
+                BOA1.Visibility = Visibility.Visible;
+                leaveClickEventNow = true;
+                NpcLeaveClickEventAndCheckLooseCondition();
+            }
+            else if (cpu_choosed1 && cpu_choosed4 && !player_choosed7)
+            {
+                FC1 = true;
+                cpu_choosed7 = true;
+                BC1.Visibility = Visibility.Hidden;
+                BOC1.Visibility = Visibility.Visible;
+                leaveClickEventNow = true;
+                NpcLeaveClickEventAndCheckLooseCondition();
+            }
+            else if (cpu_choosed1 && cpu_choosed7 && !player_choosed4)
+            {
+                FB1 = true;
+                cpu_choosed4 = true;
+                BB1.Visibility = Visibility.Hidden;
+                BOB1.Visibility = Visibility.Visible;
+                leaveClickEventNow = true;
+                NpcLeaveClickEventAndCheckLooseCondition();
+            }
+            else if (cpu_choosed2 && cpu_choosed5 && !player_choosed8)
+            {
+                FC2 = true;
+                cpu_choosed8 = true;
+                BC2.Visibility = Visibility.Hidden;
+                BOC2.Visibility = Visibility.Visible;
+                leaveClickEventNow = true;
+                NpcLeaveClickEventAndCheckLooseCondition();
+            }
+            else if (cpu_choosed2 && cpu_choosed8 && !player_choosed5)
+            {
+                FB2 = true;
+                cpu_choosed5 = true;
+                BB2.Visibility = Visibility.Hidden;
+                BOB2.Visibility = Visibility.Visible;
+                leaveClickEventNow = true;
+                NpcLeaveClickEventAndCheckLooseCondition();
+            }
+            else if (cpu_choosed3 && cpu_choosed6 && !player_choosed9)
+            {
+                FC3 = true;
+                cpu_choosed9 = true;
+                BC3.Visibility = Visibility.Hidden;
+                BOC3.Visibility = Visibility.Visible;
+                leaveClickEventNow = true;
+                NpcLeaveClickEventAndCheckLooseCondition();
+            }
+            else if (cpu_choosed3 && cpu_choosed9 && !player_choosed6)
+            {
+                FB3 = true;
+                cpu_choosed6 = true;
+                BB3.Visibility = Visibility.Hidden;
+                BOB3.Visibility = Visibility.Visible;
+                leaveClickEventNow = true;
+                NpcLeaveClickEventAndCheckLooseCondition();
+            }
+
+        }
+
+        public void PlayerWinCheck()
+        {
+            if (player_choosed1 && player_choosed2 && player_choosed3)
+            {
+                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
+                INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
+                NpcLeaveClickEventAndCheckLooseCondition();
+            }
+            else if (player_choosed4 && player_choosed5 && player_choosed6)
+            {
+                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
+                INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
+                NpcLeaveClickEventAndCheckLooseCondition();
+            }
+            else if (player_choosed7 && player_choosed8 && player_choosed9)
+            {
+                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
+                INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
+                NpcLeaveClickEventAndCheckLooseCondition();
+            }
+            else if (player_choosed1 && player_choosed4 && player_choosed7)
+            {
+                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
+                INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
+                NpcLeaveClickEventAndCheckLooseCondition();
+            }
+            else if (player_choosed2 && player_choosed5 && player_choosed8)
+            {
+                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
+                INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
+                NpcLeaveClickEventAndCheckLooseCondition();
+            }
+            else if (player_choosed3 && player_choosed6 && player_choosed9)
+            {
+                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
+                INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
+                NpcLeaveClickEventAndCheckLooseCondition();
+            }
+            else if (player_choosed1 && player_choosed5 && player_choosed9)
+            {
+                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
+                INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
+                NpcLeaveClickEventAndCheckLooseCondition();
+            }
+            else if (player_choosed3 && player_choosed5 && player_choosed7)
+            {
+                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
+                INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
+                NpcLeaveClickEventAndCheckLooseCondition();
+            }
+
+            if (FA1 && FA2 && FA3 && FB1 && FB2 && FB3 && FC1 && FC2 && FC3)
+            {
+                INFO.Content = "SPIEL BEENDET...KEINER HAT GEWONNEN !";
+                INFO.Visibility = Visibility.Visible;
+                game_ended = true;
+                restart.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
+                NpcLeaveClickEventAndCheckLooseCondition();
+            }
+
+        }
+
         private async void BA1_Click(object sender, RoutedEventArgs e)
         {
-            leaveClickEventNow = false;
 
-            if (game_ended == true)
+            if (game_ended || waitForNpc)
             {
                 return;
             }
             
+            waitForNpc = true;
+            leaveClickEventNow = false;
+
             FA1 = true;
 
             var rd_number_generated = new Random();
@@ -389,87 +710,11 @@ namespace TicTacToeWPFspiel
             BXA1.Visibility = Visibility.Visible;
 
             INFO.Visibility = Visibility.Visible;
-            
-            if (player_choosed1 && player_choosed2 && player_choosed3)
-            {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (player_choosed4 && player_choosed5 && player_choosed6)
-            {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (player_choosed7 && player_choosed8 && player_choosed9)
-            {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (player_choosed1 && player_choosed4 && player_choosed7)
-            {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (player_choosed2 && player_choosed5 && player_choosed8)
-            {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (player_choosed3 && player_choosed6 && player_choosed9)
-            {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (player_choosed1 && player_choosed5 && player_choosed9)
-            {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (player_choosed3 && player_choosed5 && player_choosed7)
-            {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
 
-            if (FA1 && FA2 && FA3 && FB1 && FB2 && FB3 && FC1 && FC2 && FC3)
+            PlayerWinCheck();
+            
+            if (leaveClickEventNow)
             {
-                INFO.Content = "SPIEL BEENDET...KEINER HAT GEWONNEN !";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
                 return;
             }
 
@@ -481,230 +726,11 @@ namespace TicTacToeWPFspiel
 
             INFO.Visibility = Visibility.Hidden;
 
-            if (cpu_choosed1 && cpu_choosed3 && !player_choosed2)
-            {
-                FA2 = true;
-                cpu_choosed2 = true;
-                BA2.Visibility = Visibility.Hidden;
-                BOA2.Visibility = Visibility.Visible;
-                goto J2;
+            NpcWinningMove();
 
-            }
-            else if (cpu_choosed4 && cpu_choosed6 && !player_choosed5)
+            if (leaveClickEventNow)
             {
-                FB2 = true;
-                cpu_choosed5 = true;
-                BB2.Visibility = Visibility.Hidden;
-                BOB2.Visibility = Visibility.Visible;
-                goto J2;
-
-            }
-            else if (cpu_choosed7 && cpu_choosed9 && !player_choosed8)
-            {
-                FC2 = true;
-                cpu_choosed8 = true;
-                BC2.Visibility = Visibility.Hidden;
-                BOC2.Visibility = Visibility.Visible;
-                goto J2;
-
-            }
-            else if (cpu_choosed2 && cpu_choosed1 && !player_choosed3)
-            {
-                FA3 = true;
-                cpu_choosed3 = true;
-                BA3.Visibility = Visibility.Hidden;
-                BOA3.Visibility = Visibility.Visible;
-                goto J2;
-
-            }
-            else if (cpu_choosed2 && cpu_choosed3 && !player_choosed1)
-            {
-                FA1 = true;
-                cpu_choosed1 = true;
-                BA1.Visibility = Visibility.Hidden;
-                BOA1.Visibility = Visibility.Visible;
-                goto J2;
-
-            }
-            else if (cpu_choosed3 && cpu_choosed2 && !player_choosed1)
-            {
-                FA1 = true;
-                cpu_choosed1 = true;
-                BA1.Visibility = Visibility.Hidden;
-                BOA1.Visibility = Visibility.Visible;
-                goto J2;
-
-            }
-            else if (cpu_choosed3 && cpu_choosed1 && !player_choosed2)
-            {
-                FA2 = true;
-                cpu_choosed2 = true;
-                BA2.Visibility = Visibility.Hidden;
-                BOA2.Visibility = Visibility.Visible;
-                goto J2;
-
-            }
-            else if (cpu_choosed1 && cpu_choosed5 && !player_choosed9)
-            {
-                FC3 = true;
-                cpu_choosed9 = true;
-                BC3.Visibility = Visibility.Hidden;
-                BOC3.Visibility = Visibility.Visible;
-                goto J2;
-
-            }
-            else if (cpu_choosed1 && cpu_choosed9 && !player_choosed5)
-            {
-                FB2 = true;
-                cpu_choosed5 = true;
-                BB2.Visibility = Visibility.Hidden;
-                BOB2.Visibility = Visibility.Visible;
-                goto J2;
-
-            }
-            else if (cpu_choosed3 && cpu_choosed5 && !player_choosed7)
-            {
-                FC1 = true;
-                cpu_choosed7 = true;
-                BC1.Visibility = Visibility.Hidden;
-                BOC1.Visibility = Visibility.Visible;
-                goto J2;
-
-            }
-            else if (cpu_choosed3 && cpu_choosed7 && !player_choosed5)
-            {
-                FB2 = true;
-                cpu_choosed5 = true;
-                BB2.Visibility = Visibility.Hidden;
-                BOB2.Visibility = Visibility.Visible;
-                goto J2;
-
-            }
-            else if (cpu_choosed4 && cpu_choosed5 && !player_choosed6)
-            {
-                FB3 = true;
-                cpu_choosed6 = true;
-                BB3.Visibility = Visibility.Hidden;
-                BOB3.Visibility = Visibility.Visible;
-                goto J2;
-
-            }
-            else if (cpu_choosed5 && cpu_choosed4 && !player_choosed6)
-            {
-                FB3 = true;
-                cpu_choosed6 = true;
-                BB3.Visibility = Visibility.Hidden;
-                BOB3.Visibility = Visibility.Visible;
-                goto J2;
-
-            }
-            else if (cpu_choosed5 && cpu_choosed6 && !player_choosed5)
-            {
-                FB2 = true;
-                cpu_choosed5 = true;
-                BB2.Visibility = Visibility.Hidden;
-                BOB2.Visibility = Visibility.Visible;
-                goto J2;
-
-            }
-            else if (cpu_choosed5 && cpu_choosed2 && !player_choosed8)
-            {
-                FC2 = true;
-                cpu_choosed8 = true;
-                BC2.Visibility = Visibility.Hidden;
-                BOC2.Visibility = Visibility.Visible;
-                goto J2;
-
-            }
-            else if (cpu_choosed5 && cpu_choosed8 && !player_choosed2)
-            {
-                FA2 = true;
-                cpu_choosed2 = true;
-                BA2.Visibility = Visibility.Hidden;
-                BOA2.Visibility = Visibility.Visible;
-                goto J2;
-
-            }
-            else if (cpu_choosed7 && cpu_choosed8 && !player_choosed9)
-            {
-                FC3 = true;
-                cpu_choosed9 = true;
-                BC3.Visibility = Visibility.Hidden;
-                BOC3.Visibility = Visibility.Visible;
-                goto J2;
-
-            }
-            else if (cpu_choosed9 && cpu_choosed1 && !player_choosed5)
-            {
-                FB2 = true;
-                cpu_choosed5 = true;
-                BB2.Visibility = Visibility.Hidden;
-                BOB2.Visibility = Visibility.Visible;
-                goto J2;
-
-            }
-            else if (cpu_choosed9 && cpu_choosed5 && !player_choosed1)
-            {
-                FA1 = true;
-                cpu_choosed1 = true;
-                BA1.Visibility = Visibility.Hidden;
-                BOA1.Visibility = Visibility.Visible;
-                goto J2;
-
-            }
-            else if (cpu_choosed1 && cpu_choosed4 && !player_choosed7)
-            {
-                FC1 = true;
-                cpu_choosed7 = true;
-                BC1.Visibility = Visibility.Hidden;
-                BOC1.Visibility = Visibility.Visible;
-                goto J2;
-
-            }
-            else if (cpu_choosed1 && cpu_choosed7 && !player_choosed4)
-            {
-                FB1 = true;
-                cpu_choosed4 = true;
-                BB1.Visibility = Visibility.Hidden;
-                BOB1.Visibility = Visibility.Visible;
-                goto J2;
-
-            }
-            else if (cpu_choosed2 && cpu_choosed5 && !player_choosed8)
-            {
-                FC2 = true;
-                cpu_choosed8 = true;
-                BC2.Visibility = Visibility.Hidden;
-                BOC2.Visibility = Visibility.Visible;
-                goto J2;
-
-            }
-            else if (cpu_choosed2 && cpu_choosed8 && !player_choosed5)
-            {
-                FB2 = true;
-                cpu_choosed5 = true;
-                BB2.Visibility = Visibility.Hidden;
-                BOB2.Visibility = Visibility.Visible;
-                goto J2;
-
-            }
-            else if (cpu_choosed3 && cpu_choosed6 && !player_choosed9)
-            {
-                FC3 = true;
-                cpu_choosed9 = true;
-                BC3.Visibility = Visibility.Hidden;
-                BOC3.Visibility = Visibility.Visible;
-                goto J2;
-
-            }
-            else if (cpu_choosed3 && cpu_choosed9 && !player_choosed6)
-            {
-                FB3 = true;
-                cpu_choosed6 = true;
-                BB3.Visibility = Visibility.Hidden;
-                BOB3.Visibility = Visibility.Visible;
-                goto J2;
-
+                return;
             }
 
             NpcPlayerBlocksHumanPLayer();
@@ -1880,107 +1906,26 @@ namespace TicTacToeWPFspiel
                     game_ended = true;
                     restart.Visibility = Visibility.Visible;
                     exit.Visibility = Visibility.Visible;
+                    waitForNpc = false;
                     return;
                 }
 
                 goto J1;
             }
 
-            J2:
-
-            if (cpu_choosed1 && cpu_choosed2 && cpu_choosed3 == true)
-            {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (cpu_choosed4 && cpu_choosed5 && cpu_choosed6 == true)
-            {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (cpu_choosed7 && cpu_choosed8 && cpu_choosed9 == true)
-            {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (cpu_choosed1 && cpu_choosed5 && cpu_choosed9 == true)
-            {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (cpu_choosed3 && cpu_choosed5 && cpu_choosed7 == true)
-            {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (cpu_choosed1 && cpu_choosed4 && cpu_choosed7 == true)
-            {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (cpu_choosed2 && cpu_choosed5 && cpu_choosed8 == true)
-            {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (cpu_choosed3 && cpu_choosed6 && cpu_choosed9 == true)
-            {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-
-            if (FA1 && FA2 && FA3 && FB1 && FB2 && FB3 && FC1 && FC2 && FC3)
-            {
-                INFO.Content = "SPIEL BEENDET...KEINER HAT GEWONNEN !";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-            }
-
-            INFO.Visibility = Visibility.Hidden;
+            NpcLeaveClickEventAndCheckLooseCondition();
         }
 
         private async void BA2_Click(object sender, RoutedEventArgs e)
         {
-            leaveClickEventNow = false;
 
-            if (INFO.Content.ToString() != "CPU DENKT ... BITTE WARTEN !")
+            if (game_ended || waitForNpc)
             {
                 return;
             }
+
+            waitForNpc = true;
+            leaveClickEventNow = false;
 
             FA2 = true;
 
@@ -1993,86 +1938,10 @@ namespace TicTacToeWPFspiel
 
             INFO.Visibility = Visibility.Visible;
 
-            if (player_choosed1 && player_choosed2 && player_choosed3)
-            {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (player_choosed4 && player_choosed5 && player_choosed6)
-            {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (player_choosed7 && player_choosed8 && player_choosed9)
-            {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (player_choosed1 && player_choosed4 && player_choosed7)
-            {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (player_choosed2 && player_choosed5 && player_choosed8)
-            {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (player_choosed3 && player_choosed6 && player_choosed9)
-            {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (player_choosed1 && player_choosed5 && player_choosed9)
-            {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (player_choosed3 && player_choosed5 && player_choosed7)
-            {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
+            PlayerWinCheck();
 
-            if (FA1 && FA2 && FA3 && FB1 && FB2 && FB3 && FC1 && FC2 && FC3)
+            if (leaveClickEventNow)
             {
-                INFO.Content = "SPIEL BEENDET...KEINER HAT GEWONNEN !";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
                 return;
             }
 
@@ -2084,206 +1953,11 @@ namespace TicTacToeWPFspiel
 
             INFO.Visibility = Visibility.Hidden;
 
-            if (cpu_choosed1 && cpu_choosed3 && !player_choosed2)
-            {
-                FA2 = true;
-                cpu_choosed2 = true;
-                BA2.Visibility = Visibility.Hidden;
-                BOA2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed4 && cpu_choosed6 && !player_choosed5)
-            {
-                FB2 = true;
-                cpu_choosed5 = true;
-                BB2.Visibility = Visibility.Hidden;
-                BOB2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed7 && cpu_choosed9 && !player_choosed8)
-            {
-                FC2 = true;
-                cpu_choosed8 = true;
-                BC2.Visibility = Visibility.Hidden;
-                BOC2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed2 && cpu_choosed1 && !player_choosed3)
-            {
-                FA3 = true;
-                cpu_choosed3 = true;
-                BA3.Visibility = Visibility.Hidden;
-                BOA3.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed2 && cpu_choosed3 && !player_choosed1)
-            {
-                FA1 = true;
-                cpu_choosed1 = true;
-                BA1.Visibility = Visibility.Hidden;
-                BOA1.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed3 && cpu_choosed2 && !player_choosed1)
-            {
-                FA1 = true;
-                cpu_choosed1 = true;
-                BA1.Visibility = Visibility.Hidden;
-                BOA1.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed3 && cpu_choosed1 && !player_choosed2)
-            {
-                FA2 = true;
-                cpu_choosed2 = true;
-                BA2.Visibility = Visibility.Hidden;
-                BOA2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed1 && cpu_choosed5 && !player_choosed9)
-            {
-                FC3 = true;
-                cpu_choosed9 = true;
-                BC3.Visibility = Visibility.Hidden;
-                BOC3.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed1 && cpu_choosed9 && !player_choosed5)
-            {
-                FB2 = true;
-                cpu_choosed5 = true;
-                BB2.Visibility = Visibility.Hidden;
-                BOB2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed3 && cpu_choosed5 && !player_choosed7)
-            {
-                FC1 = true;
-                cpu_choosed7 = true;
-                BC1.Visibility = Visibility.Hidden;
-                BOC1.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed3 && cpu_choosed7 && !player_choosed5)
-            {
-                FB2 = true;
-                cpu_choosed5 = true;
-                BB2.Visibility = Visibility.Hidden;
-                BOB2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed4 && cpu_choosed5 && !player_choosed6)
-            {
-                FB3 = true;
-                cpu_choosed6 = true;
-                BB3.Visibility = Visibility.Hidden;
-                BOB3.Visibility = Visibility.Visible;
-                return;
+            NpcWinningMove();
 
-            }
-            else if (cpu_choosed5 && cpu_choosed4 && !player_choosed6)
+            if (leaveClickEventNow)
             {
-                FB3 = true;
-                cpu_choosed6 = true;
-                BB3.Visibility = Visibility.Hidden;
-                BOB3.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed5 && cpu_choosed6 && !player_choosed5)
-            {
-                FB2 = true;
-                cpu_choosed5 = true;
-                BB2.Visibility = Visibility.Hidden;
-                BOB2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed5 && cpu_choosed2 && !player_choosed8)
-            {
-                FC2 = true;
-                cpu_choosed8 = true;
-                BC2.Visibility = Visibility.Hidden;
-                BOC2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed5 && cpu_choosed8 && !player_choosed2)
-            {
-                FA2 = true;
-                cpu_choosed2 = true;
-                BA2.Visibility = Visibility.Hidden;
-                BOA2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed7 && cpu_choosed8 && !player_choosed9)
-            {
-                FC3 = true;
-                cpu_choosed9 = true;
-                BC3.Visibility = Visibility.Hidden;
-                BOC3.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed9 && cpu_choosed1 && !player_choosed5)
-            {
-                FB2 = true;
-                cpu_choosed5 = true;
-                BB2.Visibility = Visibility.Hidden;
-                BOB2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed9 && cpu_choosed5 && !player_choosed1)
-            {
-                FA1 = true;
-                cpu_choosed1 = true;
-                BA1.Visibility = Visibility.Hidden;
-                BOA1.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed1 && cpu_choosed4 && !player_choosed7)
-            {
-                FC1 = true;
-                cpu_choosed7 = true;
-                BC1.Visibility = Visibility.Hidden;
-                BOC1.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed1 && cpu_choosed7 && !player_choosed4)
-            {
-                FB1 = true;
-                cpu_choosed4 = true;
-                BB1.Visibility = Visibility.Hidden;
-                BOB1.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed2 && cpu_choosed5 && !player_choosed8)
-            {
-                FC2 = true;
-                cpu_choosed8 = true;
-                BC2.Visibility = Visibility.Hidden;
-                BOC2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed2 && cpu_choosed8 && !player_choosed5)
-            {
-                FB2 = true;
-                cpu_choosed5 = true;
-                BB2.Visibility = Visibility.Hidden;
-                BOB2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed3 && cpu_choosed6 && !player_choosed9)
-            {
-                FC3 = true;
-                cpu_choosed9 = true;
-                BC3.Visibility = Visibility.Hidden;
-                BOC3.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed3 && cpu_choosed9 && !player_choosed6)
-            {
-                FB3 = true;
-                cpu_choosed6 = true;
-                BB3.Visibility = Visibility.Hidden;
-                BOB3.Visibility = Visibility.Visible;
-                goto J2;
+                return;
             }
 
             NpcPlayerBlocksHumanPLayer();
@@ -3460,109 +3134,26 @@ namespace TicTacToeWPFspiel
                     game_ended = true;
                     restart.Visibility = Visibility.Visible;
                     exit.Visibility = Visibility.Visible;
+                    waitForNpc = false;
                     return;
                 }
 
                 goto J1;
             }
 
-            INFO.Visibility = Visibility.Hidden;
-
-            J2:
-
-            if (cpu_choosed1 && cpu_choosed2 && cpu_choosed3 == true)
-            {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (cpu_choosed4 && cpu_choosed5 && cpu_choosed6 == true)
-            {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (cpu_choosed7 && cpu_choosed8 && cpu_choosed9 == true)
-            {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (cpu_choosed1 && cpu_choosed5 && cpu_choosed9 == true)
-            {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (cpu_choosed3 && cpu_choosed5 && cpu_choosed7 == true)
-            {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (cpu_choosed1 && cpu_choosed4 && cpu_choosed7 == true)
-            {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (cpu_choosed2 && cpu_choosed5 && cpu_choosed8 == true)
-            {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (cpu_choosed3 && cpu_choosed6 && cpu_choosed9 == true)
-            {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-
-            if (FA1 && FA2 && FA3 && FB1 && FB2 && FB3 && FC1 && FC2 && FC3)
-            {
-                INFO.Content = "SPIEL BEENDET...KEINER HAT GEWONNEN !";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-            }
-
-            INFO.Visibility = Visibility.Hidden;
+            NpcLeaveClickEventAndCheckLooseCondition();
         }
 
         private async void BA3_Click(object sender, RoutedEventArgs e)
         {
-            leaveClickEventNow = false;
 
-            if (INFO.Content.ToString() != "CPU DENKT ... BITTE WARTEN !")
+            if (game_ended || waitForNpc)
             {
                 return;
             }
+
+            waitForNpc = true;
+            leaveClickEventNow = false;
 
             FA3 = true;
 
@@ -3575,86 +3166,10 @@ namespace TicTacToeWPFspiel
 
             INFO.Visibility = Visibility.Visible;
 
-            if (player_choosed1 && player_choosed2 && player_choosed3)
-            {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (player_choosed4 && player_choosed5 && player_choosed6)
-            {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (player_choosed7 && player_choosed8 && player_choosed9)
-            {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (player_choosed1 && player_choosed4 && player_choosed7)
-            {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (player_choosed2 && player_choosed5 && player_choosed8)
-            {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (player_choosed3 && player_choosed6 && player_choosed9)
-            {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (player_choosed1 && player_choosed5 && player_choosed9)
-            {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (player_choosed3 && player_choosed5 && player_choosed7)
-            {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
+            PlayerWinCheck();
 
-            if (FA1 && FA2 && FA3 && FB1 && FB2 && FB3 && FC1 && FC2 && FC3)
+            if (leaveClickEventNow)
             {
-                INFO.Content = "SPIEL BEENDET...KEINER HAT GEWONNEN !";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
                 return;
             }
 
@@ -3662,209 +3177,17 @@ namespace TicTacToeWPFspiel
 
         J1:
 
+
+
             cpu_choice = rd_number_generated.Next(1, 10);
 
             INFO.Visibility = Visibility.Hidden;
 
-            if (cpu_choosed1 && cpu_choosed3 && !player_choosed2)
+            NpcWinningMove();
+
+            if (leaveClickEventNow)
             {
-                FA2 = true;
-                cpu_choosed2 = true;
-                BA2.Visibility = Visibility.Hidden;
-                BOA2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed4 && cpu_choosed6 && !player_choosed5)
-            {
-                FB2 = true;
-                cpu_choosed5 = true;
-                BB2.Visibility = Visibility.Hidden;
-                BOB2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed7 && cpu_choosed9 && !player_choosed8)
-            {
-                FC2 = true;
-                cpu_choosed8 = true;
-                BC2.Visibility = Visibility.Hidden;
-                BOC2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed2 && cpu_choosed1 && !player_choosed3)
-            {
-                FA3 = true;
-                cpu_choosed3 = true;
-                BA3.Visibility = Visibility.Hidden;
-                BOA3.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed2 && cpu_choosed3 && !player_choosed1)
-            {
-                FA1 = true;
-                cpu_choosed1 = true;
-                BA1.Visibility = Visibility.Hidden;
-                BOA1.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed3 && cpu_choosed2 && !player_choosed1)
-            {
-                FA1 = true;
-                cpu_choosed1 = true;
-                BA1.Visibility = Visibility.Hidden;
-                BOA1.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed3 && cpu_choosed1 && !player_choosed2)
-            {
-                FA2 = true;
-                cpu_choosed2 = true;
-                BA2.Visibility = Visibility.Hidden;
-                BOA2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed1 && cpu_choosed5 && !player_choosed9)
-            {
-                FC3 = true;
-                cpu_choosed9 = true;
-                BC3.Visibility = Visibility.Hidden;
-                BOC3.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed1 && cpu_choosed9 && !player_choosed5)
-            {
-                FB2 = true;
-                cpu_choosed5 = true;
-                BB2.Visibility = Visibility.Hidden;
-                BOB2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed3 && cpu_choosed5 && !player_choosed7)
-            {
-                FC1 = true;
-                cpu_choosed7 = true;
-                BC1.Visibility = Visibility.Hidden;
-                BOC1.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed3 && cpu_choosed7 && !player_choosed5)
-            {
-                FB2 = true;
-                cpu_choosed5 = true;
-                BB2.Visibility = Visibility.Hidden;
-                BOB2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed4 && cpu_choosed5 && !player_choosed6)
-            {
-                FB3 = true;
-                cpu_choosed6 = true;
-                BB3.Visibility = Visibility.Hidden;
-                BOB3.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed5 && cpu_choosed4 && !player_choosed6)
-            {
-                FB3 = true;
-                cpu_choosed6 = true;
-                BB3.Visibility = Visibility.Hidden;
-                BOB3.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed5 && cpu_choosed6 && !player_choosed5)
-            {
-                FB2 = true;
-                cpu_choosed5 = true;
-                BB2.Visibility = Visibility.Hidden;
-                BOB2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed5 && cpu_choosed2 && !player_choosed8)
-            {
-                FC2 = true;
-                cpu_choosed8 = true;
-                BC2.Visibility = Visibility.Hidden;
-                BOC2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed5 && cpu_choosed8 && !player_choosed2)
-            {
-                FA2 = true;
-                cpu_choosed2 = true;
-                BA2.Visibility = Visibility.Hidden;
-                BOA2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed7 && cpu_choosed8 && !player_choosed9)
-            {
-                FC3 = true;
-                cpu_choosed9 = true;
-                BC3.Visibility = Visibility.Hidden;
-                BOC3.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed9 && cpu_choosed1 && !player_choosed5)
-            {
-                FB2 = true;
-                cpu_choosed5 = true;
-                BB2.Visibility = Visibility.Hidden;
-                BOB2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed9 && cpu_choosed5 && !player_choosed1)
-            {
-                FA1 = true;
-                cpu_choosed1 = true;
-                BA1.Visibility = Visibility.Hidden;
-                BOA1.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed1 && cpu_choosed4 && !player_choosed7)
-            {
-                FC1 = true;
-                cpu_choosed7 = true;
-                BC1.Visibility = Visibility.Hidden;
-                BOC1.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed1 && cpu_choosed7 && !player_choosed4)
-            {
-                FB1 = true;
-                cpu_choosed4 = true;
-                BB1.Visibility = Visibility.Hidden;
-                BOB1.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed2 && cpu_choosed5 && !player_choosed8)
-            {
-                FC2 = true;
-                cpu_choosed8 = true;
-                BC2.Visibility = Visibility.Hidden;
-                BOC2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed2 && cpu_choosed8 && !player_choosed5)
-            {
-                FB2 = true;
-                cpu_choosed5 = true;
-                BB2.Visibility = Visibility.Hidden;
-                BOB2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed3 && cpu_choosed6 && !player_choosed9)
-            {
-                FC3 = true;
-                cpu_choosed9 = true;
-                BC3.Visibility = Visibility.Hidden;
-                BOC3.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed3 && cpu_choosed9 && !player_choosed6)
-            {
-                FB3 = true;
-                cpu_choosed6 = true;
-                BB3.Visibility = Visibility.Hidden;
-                BOB3.Visibility = Visibility.Visible;
-                goto J2;
+                return;
             }
 
             NpcPlayerBlocksHumanPLayer();
@@ -5041,109 +4364,26 @@ namespace TicTacToeWPFspiel
                     game_ended = true;
                     restart.Visibility = Visibility.Visible;
                     exit.Visibility = Visibility.Visible;
+                    waitForNpc = false;
                     return;
                 }
 
                 goto J1;
             }
 
-            INFO.Visibility = Visibility.Hidden;
-
-            J2:
-
-            if (cpu_choosed1 && cpu_choosed2 && cpu_choosed3 == true)
-            {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (cpu_choosed4 && cpu_choosed5 && cpu_choosed6 == true)
-            {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (cpu_choosed7 && cpu_choosed8 && cpu_choosed9 == true)
-            {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (cpu_choosed1 && cpu_choosed5 && cpu_choosed9 == true)
-            {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (cpu_choosed3 && cpu_choosed5 && cpu_choosed7 == true)
-            {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (cpu_choosed1 && cpu_choosed4 && cpu_choosed7 == true)
-            {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (cpu_choosed2 && cpu_choosed5 && cpu_choosed8 == true)
-            {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (cpu_choosed3 && cpu_choosed6 && cpu_choosed9 == true)
-            {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-
-            if (FA1 && FA2 && FA3 && FB1 && FB2 && FB3 && FC1 && FC2 && FC3)
-            {
-                INFO.Content = "SPIEL BEENDET...KEINER HAT GEWONNEN !";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-            }
-
-            INFO.Visibility = Visibility.Hidden;
+            NpcLeaveClickEventAndCheckLooseCondition();
         }
 
         private async void BB1_Click(object sender, RoutedEventArgs e)
         {
-            leaveClickEventNow = false;
 
-            if (INFO.Content.ToString() != "CPU DENKT ... BITTE WARTEN !")
+            if (game_ended || waitForNpc)
             {
                 return;
             }
+
+            waitForNpc = true;
+            leaveClickEventNow = false;
 
             FB1 = true;
 
@@ -5156,86 +4396,10 @@ namespace TicTacToeWPFspiel
 
             INFO.Visibility = Visibility.Visible;
 
-            if (player_choosed1 && player_choosed2 && player_choosed3)
-            {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (player_choosed4 && player_choosed5 && player_choosed6)
-            {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (player_choosed7 && player_choosed8 && player_choosed9)
-            {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (player_choosed1 && player_choosed4 && player_choosed7)
-            {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (player_choosed2 && player_choosed5 && player_choosed8)
-            {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (player_choosed3 && player_choosed6 && player_choosed9)
-            {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (player_choosed1 && player_choosed5 && player_choosed9)
-            {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (player_choosed3 && player_choosed5 && player_choosed7)
-            {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
+            PlayerWinCheck();
 
-            if (FA1 && FA2 && FA3 && FB1 && FB2 && FB3 && FC1 && FC2 && FC3)
+            if (leaveClickEventNow)
             {
-                INFO.Content = "SPIEL BEENDET...KEINER HAT GEWONNEN !";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
                 return;
             }
 
@@ -5247,205 +4411,11 @@ namespace TicTacToeWPFspiel
 
             INFO.Visibility = Visibility.Hidden;
 
-            if (cpu_choosed1 && cpu_choosed3 && !player_choosed2)
+            NpcWinningMove();
+
+            if (leaveClickEventNow)
             {
-                FA2 = true;
-                cpu_choosed2 = true;
-                BA2.Visibility = Visibility.Hidden;
-                BOA2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed4 && cpu_choosed6 && !player_choosed5)
-            {
-                FB2 = true;
-                cpu_choosed5 = true;
-                BB2.Visibility = Visibility.Hidden;
-                BOB2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed7 && cpu_choosed9 && !player_choosed8)
-            {
-                FC2 = true;
-                cpu_choosed8 = true;
-                BC2.Visibility = Visibility.Hidden;
-                BOC2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed2 && cpu_choosed1 && !player_choosed3)
-            {
-                FA3 = true;
-                cpu_choosed3 = true;
-                BA3.Visibility = Visibility.Hidden;
-                BOA3.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed2 && cpu_choosed3 && !player_choosed1)
-            {
-                FA1 = true;
-                cpu_choosed1 = true;
-                BA1.Visibility = Visibility.Hidden;
-                BOA1.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed3 && cpu_choosed2 && !player_choosed1)
-            {
-                FA1 = true;
-                cpu_choosed1 = true;
-                BA1.Visibility = Visibility.Hidden;
-                BOA1.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed3 && cpu_choosed1 && !player_choosed2)
-            {
-                FA2 = true;
-                cpu_choosed2 = true;
-                BA2.Visibility = Visibility.Hidden;
-                BOA2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed1 && cpu_choosed5 && !player_choosed9)
-            {
-                FC3 = true;
-                cpu_choosed9 = true;
-                BC3.Visibility = Visibility.Hidden;
-                BOC3.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed1 && cpu_choosed9 && !player_choosed5)
-            {
-                FB2 = true;
-                cpu_choosed5 = true;
-                BB2.Visibility = Visibility.Hidden;
-                BOB2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed3 && cpu_choosed5 && !player_choosed7)
-            {
-                FC1 = true;
-                cpu_choosed7 = true;
-                BC1.Visibility = Visibility.Hidden;
-                BOC1.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed3 && cpu_choosed7 && !player_choosed5)
-            {
-                FB2 = true;
-                cpu_choosed5 = true;
-                BB2.Visibility = Visibility.Hidden;
-                BOB2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed4 && cpu_choosed5 && !player_choosed6)
-            {
-                FB3 = true;
-                cpu_choosed6 = true;
-                BB3.Visibility = Visibility.Hidden;
-                BOB3.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed5 && cpu_choosed4 && !player_choosed6)
-            {
-                FB3 = true;
-                cpu_choosed6 = true;
-                BB3.Visibility = Visibility.Hidden;
-                BOB3.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed5 && cpu_choosed6 && !player_choosed5)
-            {
-                FB2 = true;
-                cpu_choosed5 = true;
-                BB2.Visibility = Visibility.Hidden;
-                BOB2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed5 && cpu_choosed2 && !player_choosed8)
-            {
-                FC2 = true;
-                cpu_choosed8 = true;
-                BC2.Visibility = Visibility.Hidden;
-                BOC2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed5 && cpu_choosed8 && !player_choosed2)
-            {
-                FA2 = true;
-                cpu_choosed2 = true;
-                BA2.Visibility = Visibility.Hidden;
-                BOA2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed7 && cpu_choosed8 && !player_choosed9)
-            {
-                FC3 = true;
-                cpu_choosed9 = true;
-                BC3.Visibility = Visibility.Hidden;
-                BOC3.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed9 && cpu_choosed1 && !player_choosed5)
-            {
-                FB2 = true;
-                cpu_choosed5 = true;
-                BB2.Visibility = Visibility.Hidden;
-                BOB2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed9 && cpu_choosed5 && !player_choosed1)
-            {
-                FA1 = true;
-                cpu_choosed1 = true;
-                BA1.Visibility = Visibility.Hidden;
-                BOA1.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed1 && cpu_choosed4 && !player_choosed7)
-            {
-                FC1 = true;
-                cpu_choosed7 = true;
-                BC1.Visibility = Visibility.Hidden;
-                BOC1.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed1 && cpu_choosed7 && !player_choosed4)
-            {
-                FB1 = true;
-                cpu_choosed4 = true;
-                BB1.Visibility = Visibility.Hidden;
-                BOB1.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed2 && cpu_choosed5 && !player_choosed8)
-            {
-                FC2 = true;
-                cpu_choosed8 = true;
-                BC2.Visibility = Visibility.Hidden;
-                BOC2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed2 && cpu_choosed8 && !player_choosed5)
-            {
-                FB2 = true;
-                cpu_choosed5 = true;
-                BB2.Visibility = Visibility.Hidden;
-                BOB2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed3 && cpu_choosed6 && !player_choosed9)
-            {
-                FC3 = true;
-                cpu_choosed9 = true;
-                BC3.Visibility = Visibility.Hidden;
-                BOC3.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed3 && cpu_choosed9 && !player_choosed6)
-            {
-                FB3 = true;
-                cpu_choosed6 = true;
-                BB3.Visibility = Visibility.Hidden;
-                BOB3.Visibility = Visibility.Visible;
-                goto J2;
+                return;
             }
 
             NpcPlayerBlocksHumanPLayer();
@@ -6622,109 +5592,26 @@ namespace TicTacToeWPFspiel
                     game_ended = true;
                     restart.Visibility = Visibility.Visible;
                     exit.Visibility = Visibility.Visible;
+                    waitForNpc = false;
                     return;
                 }
 
                 goto J1;
             }
 
-            INFO.Visibility = Visibility.Hidden;
-
-            J2:
-
-            if (cpu_choosed1 && cpu_choosed2 && cpu_choosed3 == true)
-            {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (cpu_choosed4 && cpu_choosed5 && cpu_choosed6 == true)
-            {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (cpu_choosed7 && cpu_choosed8 && cpu_choosed9 == true)
-            {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (cpu_choosed1 && cpu_choosed5 && cpu_choosed9 == true)
-            {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (cpu_choosed3 && cpu_choosed5 && cpu_choosed7 == true)
-            {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (cpu_choosed1 && cpu_choosed4 && cpu_choosed7 == true)
-            {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (cpu_choosed2 && cpu_choosed5 && cpu_choosed8 == true)
-            {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (cpu_choosed3 && cpu_choosed6 && cpu_choosed9 == true)
-            {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-
-            if (FA1 && FA2 && FA3 && FB1 && FB2 && FB3 && FC1 && FC2 && FC3)
-            {
-                INFO.Content = "SPIEL BEENDET...KEINER HAT GEWONNEN !";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-            }
-
-            INFO.Visibility = Visibility.Hidden;
+            NpcLeaveClickEventAndCheckLooseCondition();
         }
 
         private async void BB2_Click(object sender, RoutedEventArgs e)
         {
-            leaveClickEventNow = false;
 
-            if (INFO.Content.ToString() != "CPU DENKT ... BITTE WARTEN !")
+            if (game_ended || waitForNpc)
             {
                 return;
             }
+
+            waitForNpc = true;
+            leaveClickEventNow = false;
 
             FB2 = true;
 
@@ -6737,86 +5624,10 @@ namespace TicTacToeWPFspiel
 
             INFO.Visibility = Visibility.Visible;
 
-            if (player_choosed1 && player_choosed2 && player_choosed3)
-            {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (player_choosed4 && player_choosed5 && player_choosed6)
-            {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (player_choosed7 && player_choosed8 && player_choosed9)
-            {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (player_choosed1 && player_choosed4 && player_choosed7)
-            {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (player_choosed2 && player_choosed5 && player_choosed8)
-            {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (player_choosed3 && player_choosed6 && player_choosed9)
-            {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (player_choosed1 && player_choosed5 && player_choosed9)
-            {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (player_choosed3 && player_choosed5 && player_choosed7)
-            {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
+            PlayerWinCheck();
 
-            if (FA1 && FA2 && FA3 && FB1 && FB2 && FB3 && FC1 && FC2 && FC3)
+            if (leaveClickEventNow)
             {
-                INFO.Content = "SPIEL BEENDET...KEINER HAT GEWONNEN !";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
                 return;
             }
 
@@ -6828,205 +5639,11 @@ namespace TicTacToeWPFspiel
 
             INFO.Visibility = Visibility.Hidden;
 
-            if (cpu_choosed1 && cpu_choosed3 && !player_choosed2)
+            NpcWinningMove();
+
+            if (leaveClickEventNow)
             {
-                FA2 = true;
-                cpu_choosed2 = true;
-                BA2.Visibility = Visibility.Hidden;
-                BOA2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed4 && cpu_choosed6 && !player_choosed5)
-            {
-                FB2 = true;
-                cpu_choosed5 = true;
-                BB2.Visibility = Visibility.Hidden;
-                BOB2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed7 && cpu_choosed9 && !player_choosed8)
-            {
-                FC2 = true;
-                cpu_choosed8 = true;
-                BC2.Visibility = Visibility.Hidden;
-                BOC2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed2 && cpu_choosed1 && !player_choosed3)
-            {
-                FA3 = true;
-                cpu_choosed3 = true;
-                BA3.Visibility = Visibility.Hidden;
-                BOA3.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed2 && cpu_choosed3 && !player_choosed1)
-            {
-                FA1 = true;
-                cpu_choosed1 = true;
-                BA1.Visibility = Visibility.Hidden;
-                BOA1.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed3 && cpu_choosed2 && !player_choosed1)
-            {
-                FA1 = true;
-                cpu_choosed1 = true;
-                BA1.Visibility = Visibility.Hidden;
-                BOA1.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed3 && cpu_choosed1 && !player_choosed2)
-            {
-                FA2 = true;
-                cpu_choosed2 = true;
-                BA2.Visibility = Visibility.Hidden;
-                BOA2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed1 && cpu_choosed5 && !player_choosed9)
-            {
-                FC3 = true;
-                cpu_choosed9 = true;
-                BC3.Visibility = Visibility.Hidden;
-                BOC3.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed1 && cpu_choosed9 && !player_choosed5)
-            {
-                FB2 = true;
-                cpu_choosed5 = true;
-                BB2.Visibility = Visibility.Hidden;
-                BOB2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed3 && cpu_choosed5 && !player_choosed7)
-            {
-                FC1 = true;
-                cpu_choosed7 = true;
-                BC1.Visibility = Visibility.Hidden;
-                BOC1.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed3 && cpu_choosed7 && !player_choosed5)
-            {
-                FB2 = true;
-                cpu_choosed5 = true;
-                BB2.Visibility = Visibility.Hidden;
-                BOB2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed4 && cpu_choosed5 && !player_choosed6)
-            {
-                FB3 = true;
-                cpu_choosed6 = true;
-                BB3.Visibility = Visibility.Hidden;
-                BOB3.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed5 && cpu_choosed4 && !player_choosed6)
-            {
-                FB3 = true;
-                cpu_choosed6 = true;
-                BB3.Visibility = Visibility.Hidden;
-                BOB3.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed5 && cpu_choosed6 && !player_choosed5)
-            {
-                FB2 = true;
-                cpu_choosed5 = true;
-                BB2.Visibility = Visibility.Hidden;
-                BOB2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed5 && cpu_choosed2 && !player_choosed8)
-            {
-                FC2 = true;
-                cpu_choosed8 = true;
-                BC2.Visibility = Visibility.Hidden;
-                BOC2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed5 && cpu_choosed8 && !player_choosed2)
-            {
-                FA2 = true;
-                cpu_choosed2 = true;
-                BA2.Visibility = Visibility.Hidden;
-                BOA2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed7 && cpu_choosed8 && !player_choosed9)
-            {
-                FC3 = true;
-                cpu_choosed9 = true;
-                BC3.Visibility = Visibility.Hidden;
-                BOC3.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed9 && cpu_choosed1 && !player_choosed5)
-            {
-                FB2 = true;
-                cpu_choosed5 = true;
-                BB2.Visibility = Visibility.Hidden;
-                BOB2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed9 && cpu_choosed5 && !player_choosed1)
-            {
-                FA1 = true;
-                cpu_choosed1 = true;
-                BA1.Visibility = Visibility.Hidden;
-                BOA1.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed1 && cpu_choosed4 && !player_choosed7)
-            {
-                FC1 = true;
-                cpu_choosed7 = true;
-                BC1.Visibility = Visibility.Hidden;
-                BOC1.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed1 && cpu_choosed7 && !player_choosed4)
-            {
-                FB1 = true;
-                cpu_choosed4 = true;
-                BB1.Visibility = Visibility.Hidden;
-                BOB1.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed2 && cpu_choosed5 && !player_choosed8)
-            {
-                FC2 = true;
-                cpu_choosed8 = true;
-                BC2.Visibility = Visibility.Hidden;
-                BOC2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed2 && cpu_choosed8 && !player_choosed5)
-            {
-                FB2 = true;
-                cpu_choosed5 = true;
-                BB2.Visibility = Visibility.Hidden;
-                BOB2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed3 && cpu_choosed6 && !player_choosed9)
-            {
-                FC3 = true;
-                cpu_choosed9 = true;
-                BC3.Visibility = Visibility.Hidden;
-                BOC3.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed3 && cpu_choosed9 && !player_choosed6)
-            {
-                FB3 = true;
-                cpu_choosed6 = true;
-                BB3.Visibility = Visibility.Hidden;
-                BOB3.Visibility = Visibility.Visible;
-                goto J2;
+                return;
             }
 
             NpcPlayerBlocksHumanPLayer();
@@ -8203,6 +6820,7 @@ namespace TicTacToeWPFspiel
                     game_ended = true;
                     restart.Visibility = Visibility.Visible;
                     exit.Visibility = Visibility.Visible;
+                    waitForNpc = false;
                     return;
                 }
 
@@ -8211,101 +6829,19 @@ namespace TicTacToeWPFspiel
 
             INFO.Visibility = Visibility.Hidden;
 
-            J2:
-
-            if (cpu_choosed1 && cpu_choosed2 && cpu_choosed3 == true)
-            {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (cpu_choosed4 && cpu_choosed5 && cpu_choosed6 == true)
-            {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (cpu_choosed7 && cpu_choosed8 && cpu_choosed9 == true)
-            {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (cpu_choosed1 && cpu_choosed5 && cpu_choosed9 == true)
-            {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (cpu_choosed3 && cpu_choosed5 && cpu_choosed7 == true)
-            {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (cpu_choosed1 && cpu_choosed4 && cpu_choosed7 == true)
-            {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (cpu_choosed2 && cpu_choosed5 && cpu_choosed8 == true)
-            {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (cpu_choosed3 && cpu_choosed6 && cpu_choosed9 == true)
-            {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-
-            if (FA1 && FA2 && FA3 && FB1 && FB2 && FB3 && FC1 && FC2 && FC3)
-            {
-                INFO.Content = "SPIEL BEENDET...KEINER HAT GEWONNEN !";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-            }
-
-            INFO.Visibility = Visibility.Hidden;
+            NpcLeaveClickEventAndCheckLooseCondition();
         }
 
         private async void BB3_Click(object sender, RoutedEventArgs e)
         {
-            leaveClickEventNow = false;
 
-            if (INFO.Content.ToString() != "CPU DENKT ... BITTE WARTEN !")
+            if (game_ended || waitForNpc)
             {
                 return;
             }
+
+            waitForNpc = true;
+            leaveClickEventNow = false;
 
             FB3 = true;
 
@@ -8318,89 +6854,12 @@ namespace TicTacToeWPFspiel
 
             INFO.Visibility = Visibility.Visible;
 
-            if (player_choosed1 && player_choosed2 && player_choosed3)
-            {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (player_choosed4 && player_choosed5 && player_choosed6)
-            {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (player_choosed7 && player_choosed8 && player_choosed9)
-            {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (player_choosed1 && player_choosed4 && player_choosed7)
-            {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (player_choosed2 && player_choosed5 && player_choosed8)
-            {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (player_choosed3 && player_choosed6 && player_choosed9)
-            {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (player_choosed1 && player_choosed5 && player_choosed9)
-            {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (player_choosed3 && player_choosed5 && player_choosed7)
-            {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
+            PlayerWinCheck();
 
-            if (FA1 && FA2 && FA3 && FB1 && FB2 && FB3 && FC1 && FC2 && FC3)
+            if (leaveClickEventNow)
             {
-                INFO.Content = "SPIEL BEENDET...KEINER HAT GEWONNEN !";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
                 return;
             }
-
 
             await Task.Delay(3000);
 
@@ -8410,205 +6869,11 @@ namespace TicTacToeWPFspiel
 
             INFO.Visibility = Visibility.Hidden;
 
-            if (cpu_choosed1 && cpu_choosed3 && !player_choosed2)
+            NpcWinningMove();
+
+            if (leaveClickEventNow)
             {
-                FA2 = true;
-                cpu_choosed2 = true;
-                BA2.Visibility = Visibility.Hidden;
-                BOA2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed4 && cpu_choosed6 && !player_choosed5)
-            {
-                FB2 = true;
-                cpu_choosed5 = true;
-                BB2.Visibility = Visibility.Hidden;
-                BOB2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed7 && cpu_choosed9 && !player_choosed8)
-            {
-                FC2 = true;
-                cpu_choosed8 = true;
-                BC2.Visibility = Visibility.Hidden;
-                BOC2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed2 && cpu_choosed1 && !player_choosed3)
-            {
-                FA3 = true;
-                cpu_choosed3 = true;
-                BA3.Visibility = Visibility.Hidden;
-                BOA3.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed2 && cpu_choosed3 && !player_choosed1)
-            {
-                FA1 = true;
-                cpu_choosed1 = true;
-                BA1.Visibility = Visibility.Hidden;
-                BOA1.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed3 && cpu_choosed2 && !player_choosed1)
-            {
-                FA1 = true;
-                cpu_choosed1 = true;
-                BA1.Visibility = Visibility.Hidden;
-                BOA1.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed3 && cpu_choosed1 && !player_choosed2)
-            {
-                FA2 = true;
-                cpu_choosed2 = true;
-                BA2.Visibility = Visibility.Hidden;
-                BOA2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed1 && cpu_choosed5 && !player_choosed9)
-            {
-                FC3 = true;
-                cpu_choosed9 = true;
-                BC3.Visibility = Visibility.Hidden;
-                BOC3.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed1 && cpu_choosed9 && !player_choosed5)
-            {
-                FB2 = true;
-                cpu_choosed5 = true;
-                BB2.Visibility = Visibility.Hidden;
-                BOB2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed3 && cpu_choosed5 && !player_choosed7)
-            {
-                FC1 = true;
-                cpu_choosed7 = true;
-                BC1.Visibility = Visibility.Hidden;
-                BOC1.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed3 && cpu_choosed7 && !player_choosed5)
-            {
-                FB2 = true;
-                cpu_choosed5 = true;
-                BB2.Visibility = Visibility.Hidden;
-                BOB2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed4 && cpu_choosed5 && !player_choosed6)
-            {
-                FB3 = true;
-                cpu_choosed6 = true;
-                BB3.Visibility = Visibility.Hidden;
-                BOB3.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed5 && cpu_choosed4 && !player_choosed6)
-            {
-                FB3 = true;
-                cpu_choosed6 = true;
-                BB3.Visibility = Visibility.Hidden;
-                BOB3.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed5 && cpu_choosed6 && !player_choosed5)
-            {
-                FB2 = true;
-                cpu_choosed5 = true;
-                BB2.Visibility = Visibility.Hidden;
-                BOB2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed5 && cpu_choosed2 && !player_choosed8)
-            {
-                FC2 = true;
-                cpu_choosed8 = true;
-                BC2.Visibility = Visibility.Hidden;
-                BOC2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed5 && cpu_choosed8 && !player_choosed2)
-            {
-                FA2 = true;
-                cpu_choosed2 = true;
-                BA2.Visibility = Visibility.Hidden;
-                BOA2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed7 && cpu_choosed8 && !player_choosed9)
-            {
-                FC3 = true;
-                cpu_choosed9 = true;
-                BC3.Visibility = Visibility.Hidden;
-                BOC3.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed9 && cpu_choosed1 && !player_choosed5)
-            {
-                FB2 = true;
-                cpu_choosed5 = true;
-                BB2.Visibility = Visibility.Hidden;
-                BOB2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed9 && cpu_choosed5 && !player_choosed1)
-            {
-                FA1 = true;
-                cpu_choosed1 = true;
-                BA1.Visibility = Visibility.Hidden;
-                BOA1.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed1 && cpu_choosed4 && !player_choosed7)
-            {
-                FC1 = true;
-                cpu_choosed7 = true;
-                BC1.Visibility = Visibility.Hidden;
-                BOC1.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed1 && cpu_choosed7 && !player_choosed4)
-            {
-                FB1 = true;
-                cpu_choosed4 = true;
-                BB1.Visibility = Visibility.Hidden;
-                BOB1.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed2 && cpu_choosed5 && !player_choosed8)
-            {
-                FC2 = true;
-                cpu_choosed8 = true;
-                BC2.Visibility = Visibility.Hidden;
-                BOC2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed2 && cpu_choosed8 && !player_choosed5)
-            {
-                FB2 = true;
-                cpu_choosed5 = true;
-                BB2.Visibility = Visibility.Hidden;
-                BOB2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed3 && cpu_choosed6 && !player_choosed9)
-            {
-                FC3 = true;
-                cpu_choosed9 = true;
-                BC3.Visibility = Visibility.Hidden;
-                BOC3.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed3 && cpu_choosed9 && !player_choosed6)
-            {
-                FB3 = true;
-                cpu_choosed6 = true;
-                BB3.Visibility = Visibility.Hidden;
-                BOB3.Visibility = Visibility.Visible;
-                goto J2;
+                return;
             }
 
             NpcPlayerBlocksHumanPLayer();
@@ -9785,109 +8050,26 @@ namespace TicTacToeWPFspiel
                     game_ended = true;
                     restart.Visibility = Visibility.Visible;
                     exit.Visibility = Visibility.Visible;
+                    waitForNpc = false;
                     return;
                 }
 
                 goto J1;
             }
 
-            INFO.Visibility = Visibility.Hidden;
-
-            J2:
-
-            if (cpu_choosed1 && cpu_choosed2 && cpu_choosed3 == true)
-            {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (cpu_choosed4 && cpu_choosed5 && cpu_choosed6 == true)
-            {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (cpu_choosed7 && cpu_choosed8 && cpu_choosed9 == true)
-            {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (cpu_choosed1 && cpu_choosed5 && cpu_choosed9 == true)
-            {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (cpu_choosed3 && cpu_choosed5 && cpu_choosed7 == true)
-            {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (cpu_choosed1 && cpu_choosed4 && cpu_choosed7 == true)
-            {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (cpu_choosed2 && cpu_choosed5 && cpu_choosed8 == true)
-            {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (cpu_choosed3 && cpu_choosed6 && cpu_choosed9 == true)
-            {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-
-            if (FA1 && FA2 && FA3 && FB1 && FB2 && FB3 && FC1 && FC2 && FC3)
-            {
-                INFO.Content = "SPIEL BEENDET...KEINER HAT GEWONNEN !";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-            }
-
-            INFO.Visibility = Visibility.Hidden;
+            NpcLeaveClickEventAndCheckLooseCondition();
         }
 
         private async void BC1_Click(object sender, RoutedEventArgs e)
         {
-            leaveClickEventNow = false;
 
-            if (INFO.Content.ToString() != "CPU DENKT ... BITTE WARTEN !")
+            if (game_ended || waitForNpc)
             {
                 return;
             }
+
+            waitForNpc = true;
+            leaveClickEventNow = false;
 
             FC1 = true;
 
@@ -9900,89 +8082,12 @@ namespace TicTacToeWPFspiel
 
             INFO.Visibility = Visibility.Visible;
 
-            if (player_choosed1 && player_choosed2 && player_choosed3)
-            {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (player_choosed4 && player_choosed5 && player_choosed6)
-            {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (player_choosed7 && player_choosed8 && player_choosed9)
-            {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (player_choosed1 && player_choosed4 && player_choosed7)
-            {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (player_choosed2 && player_choosed5 && player_choosed8)
-            {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (player_choosed3 && player_choosed6 && player_choosed9)
-            {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (player_choosed1 && player_choosed5 && player_choosed9)
-            {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (player_choosed3 && player_choosed5 && player_choosed7)
-            {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
+            PlayerWinCheck();
 
-            if (FA1 && FA2 && FA3 && FB1 && FB2 && FB3 && FC1 && FC2 && FC3)
+            if (leaveClickEventNow)
             {
-                INFO.Content = "SPIEL BEENDET...KEINER HAT GEWONNEN !";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
                 return;
             }
-
 
             await Task.Delay(3000);
 
@@ -9992,205 +8097,11 @@ namespace TicTacToeWPFspiel
 
             INFO.Visibility = Visibility.Hidden;
 
-            if (cpu_choosed1 && cpu_choosed3 && !player_choosed2)
+            NpcWinningMove();
+
+            if (leaveClickEventNow)
             {
-                FA2 = true;
-                cpu_choosed2 = true;
-                BA2.Visibility = Visibility.Hidden;
-                BOA2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed4 && cpu_choosed6 && !player_choosed5)
-            {
-                FB2 = true;
-                cpu_choosed5 = true;
-                BB2.Visibility = Visibility.Hidden;
-                BOB2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed7 && cpu_choosed9 && !player_choosed8)
-            {
-                FC2 = true;
-                cpu_choosed8 = true;
-                BC2.Visibility = Visibility.Hidden;
-                BOC2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed2 && cpu_choosed1 && !player_choosed3)
-            {
-                FA3 = true;
-                cpu_choosed3 = true;
-                BA3.Visibility = Visibility.Hidden;
-                BOA3.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed2 && cpu_choosed3 && !player_choosed1)
-            {
-                FA1 = true;
-                cpu_choosed1 = true;
-                BA1.Visibility = Visibility.Hidden;
-                BOA1.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed3 && cpu_choosed2 && !player_choosed1)
-            {
-                FA1 = true;
-                cpu_choosed1 = true;
-                BA1.Visibility = Visibility.Hidden;
-                BOA1.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed3 && cpu_choosed1 && !player_choosed2)
-            {
-                FA2 = true;
-                cpu_choosed2 = true;
-                BA2.Visibility = Visibility.Hidden;
-                BOA2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed1 && cpu_choosed5 && !player_choosed9)
-            {
-                FC3 = true;
-                cpu_choosed9 = true;
-                BC3.Visibility = Visibility.Hidden;
-                BOC3.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed1 && cpu_choosed9 && !player_choosed5)
-            {
-                FB2 = true;
-                cpu_choosed5 = true;
-                BB2.Visibility = Visibility.Hidden;
-                BOB2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed3 && cpu_choosed5 && !player_choosed7)
-            {
-                FC1 = true;
-                cpu_choosed7 = true;
-                BC1.Visibility = Visibility.Hidden;
-                BOC1.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed3 && cpu_choosed7 && !player_choosed5)
-            {
-                FB2 = true;
-                cpu_choosed5 = true;
-                BB2.Visibility = Visibility.Hidden;
-                BOB2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed4 && cpu_choosed5 && !player_choosed6)
-            {
-                FB3 = true;
-                cpu_choosed6 = true;
-                BB3.Visibility = Visibility.Hidden;
-                BOB3.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed5 && cpu_choosed4 && !player_choosed6)
-            {
-                FB3 = true;
-                cpu_choosed6 = true;
-                BB3.Visibility = Visibility.Hidden;
-                BOB3.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed5 && cpu_choosed6 && !player_choosed5)
-            {
-                FB2 = true;
-                cpu_choosed5 = true;
-                BB2.Visibility = Visibility.Hidden;
-                BOB2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed5 && cpu_choosed2 && !player_choosed8)
-            {
-                FC2 = true;
-                cpu_choosed8 = true;
-                BC2.Visibility = Visibility.Hidden;
-                BOC2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed5 && cpu_choosed8 && !player_choosed2)
-            {
-                FA2 = true;
-                cpu_choosed2 = true;
-                BA2.Visibility = Visibility.Hidden;
-                BOA2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed7 && cpu_choosed8 && !player_choosed9)
-            {
-                FC3 = true;
-                cpu_choosed9 = true;
-                BC3.Visibility = Visibility.Hidden;
-                BOC3.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed9 && cpu_choosed1 && !player_choosed5)
-            {
-                FB2 = true;
-                cpu_choosed5 = true;
-                BB2.Visibility = Visibility.Hidden;
-                BOB2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed9 && cpu_choosed5 && !player_choosed1)
-            {
-                FA1 = true;
-                cpu_choosed1 = true;
-                BA1.Visibility = Visibility.Hidden;
-                BOA1.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed1 && cpu_choosed4 && !player_choosed7)
-            {
-                FC1 = true;
-                cpu_choosed7 = true;
-                BC1.Visibility = Visibility.Hidden;
-                BOC1.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed1 && cpu_choosed7 && !player_choosed4)
-            {
-                FB1 = true;
-                cpu_choosed4 = true;
-                BB1.Visibility = Visibility.Hidden;
-                BOB1.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed2 && cpu_choosed5 && !player_choosed8)
-            {
-                FC2 = true;
-                cpu_choosed8 = true;
-                BC2.Visibility = Visibility.Hidden;
-                BOC2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed2 && cpu_choosed8 && !player_choosed5)
-            {
-                FB2 = true;
-                cpu_choosed5 = true;
-                BB2.Visibility = Visibility.Hidden;
-                BOB2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed3 && cpu_choosed6 && !player_choosed9)
-            {
-                FC3 = true;
-                cpu_choosed9 = true;
-                BC3.Visibility = Visibility.Hidden;
-                BOC3.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed3 && cpu_choosed9 && !player_choosed6)
-            {
-                FB3 = true;
-                cpu_choosed6 = true;
-                BB3.Visibility = Visibility.Hidden;
-                BOB3.Visibility = Visibility.Visible;
-                goto J2;
+                return;
             }
 
             NpcPlayerBlocksHumanPLayer();
@@ -11367,109 +9278,26 @@ namespace TicTacToeWPFspiel
                     game_ended = true;
                     restart.Visibility = Visibility.Visible;
                     exit.Visibility = Visibility.Visible;
+                    waitForNpc = false;
                     return;
                 }
 
                 goto J1;
             }
 
-            INFO.Visibility = Visibility.Hidden;
-
-            J2:
-
-            if (cpu_choosed1 && cpu_choosed2 && cpu_choosed3 == true)
-            {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (cpu_choosed4 && cpu_choosed5 && cpu_choosed6 == true)
-            {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (cpu_choosed7 && cpu_choosed8 && cpu_choosed9 == true)
-            {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (cpu_choosed1 && cpu_choosed5 && cpu_choosed9 == true)
-            {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (cpu_choosed3 && cpu_choosed5 && cpu_choosed7 == true)
-            {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (cpu_choosed1 && cpu_choosed4 && cpu_choosed7 == true)
-            {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (cpu_choosed2 && cpu_choosed5 && cpu_choosed8 == true)
-            {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (cpu_choosed3 && cpu_choosed6 && cpu_choosed9 == true)
-            {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-
-            if (FA1 && FA2 && FA3 && FB1 && FB2 && FB3 && FC1 && FC2 && FC3)
-            {
-                INFO.Content = "SPIEL BEENDET...KEINER HAT GEWONNEN !";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-            }
-
-            INFO.Visibility = Visibility.Hidden;
+            NpcLeaveClickEventAndCheckLooseCondition();
         }
 
         private async void BC2_Click(object sender, RoutedEventArgs e)
         {
-            leaveClickEventNow = false;
 
-            if (INFO.Content.ToString() != "CPU DENKT ... BITTE WARTEN !")
+            if (game_ended || waitForNpc)
             {
                 return;
             }
+
+            waitForNpc = true;
+            leaveClickEventNow = false;
 
             FC2 = true;
 
@@ -11482,89 +9310,12 @@ namespace TicTacToeWPFspiel
 
             INFO.Visibility = Visibility.Visible;
 
-            if (player_choosed1 && player_choosed2 && player_choosed3)
-            {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (player_choosed4 && player_choosed5 && player_choosed6)
-            {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (player_choosed7 && player_choosed8 && player_choosed9)
-            {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (player_choosed1 && player_choosed4 && player_choosed7)
-            {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (player_choosed2 && player_choosed5 && player_choosed8)
-            {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (player_choosed3 && player_choosed6 && player_choosed9)
-            {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (player_choosed1 && player_choosed5 && player_choosed9)
-            {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (player_choosed3 && player_choosed5 && player_choosed7)
-            {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
+            PlayerWinCheck();
 
-            if (FA1 && FA2 && FA3 && FB1 && FB2 && FB3 && FC1 && FC2 && FC3)
+            if (leaveClickEventNow)
             {
-                INFO.Content = "SPIEL BEENDET...KEINER HAT GEWONNEN !";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
                 return;
             }
-
 
             await Task.Delay(3000);
 
@@ -11574,205 +9325,11 @@ namespace TicTacToeWPFspiel
 
             INFO.Visibility = Visibility.Hidden;
 
-            if (cpu_choosed1 && cpu_choosed3 && !player_choosed2)
+            NpcWinningMove();
+
+            if (leaveClickEventNow)
             {
-                FA2 = true;
-                cpu_choosed2 = true;
-                BA2.Visibility = Visibility.Hidden;
-                BOA2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed4 && cpu_choosed6 && !player_choosed5)
-            {
-                FB2 = true;
-                cpu_choosed5 = true;
-                BB2.Visibility = Visibility.Hidden;
-                BOB2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed7 && cpu_choosed9 && !player_choosed8)
-            {
-                FC2 = true;
-                cpu_choosed8 = true;
-                BC2.Visibility = Visibility.Hidden;
-                BOC2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed2 && cpu_choosed1 && !player_choosed3)
-            {
-                FA3 = true;
-                cpu_choosed3 = true;
-                BA3.Visibility = Visibility.Hidden;
-                BOA3.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed2 && cpu_choosed3 && !player_choosed1)
-            {
-                FA1 = true;
-                cpu_choosed1 = true;
-                BA1.Visibility = Visibility.Hidden;
-                BOA1.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed3 && cpu_choosed2 && !player_choosed1)
-            {
-                FA1 = true;
-                cpu_choosed1 = true;
-                BA1.Visibility = Visibility.Hidden;
-                BOA1.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed3 && cpu_choosed1 && !player_choosed2)
-            {
-                FA2 = true;
-                cpu_choosed2 = true;
-                BA2.Visibility = Visibility.Hidden;
-                BOA2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed1 && cpu_choosed5 && !player_choosed9)
-            {
-                FC3 = true;
-                cpu_choosed9 = true;
-                BC3.Visibility = Visibility.Hidden;
-                BOC3.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed1 && cpu_choosed9 && !player_choosed5)
-            {
-                FB2 = true;
-                cpu_choosed5 = true;
-                BB2.Visibility = Visibility.Hidden;
-                BOB2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed3 && cpu_choosed5 && !player_choosed7)
-            {
-                FC1 = true;
-                cpu_choosed7 = true;
-                BC1.Visibility = Visibility.Hidden;
-                BOC1.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed3 && cpu_choosed7 && !player_choosed5)
-            {
-                FB2 = true;
-                cpu_choosed5 = true;
-                BB2.Visibility = Visibility.Hidden;
-                BOB2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed4 && cpu_choosed5 && !player_choosed6)
-            {
-                FB3 = true;
-                cpu_choosed6 = true;
-                BB3.Visibility = Visibility.Hidden;
-                BOB3.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed5 && cpu_choosed4 && !player_choosed6)
-            {
-                FB3 = true;
-                cpu_choosed6 = true;
-                BB3.Visibility = Visibility.Hidden;
-                BOB3.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed5 && cpu_choosed6 && !player_choosed5)
-            {
-                FB2 = true;
-                cpu_choosed5 = true;
-                BB2.Visibility = Visibility.Hidden;
-                BOB2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed5 && cpu_choosed2 && !player_choosed8)
-            {
-                FC2 = true;
-                cpu_choosed8 = true;
-                BC2.Visibility = Visibility.Hidden;
-                BOC2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed5 && cpu_choosed8 && !player_choosed2)
-            {
-                FA2 = true;
-                cpu_choosed2 = true;
-                BA2.Visibility = Visibility.Hidden;
-                BOA2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed7 && cpu_choosed8 && !player_choosed9)
-            {
-                FC3 = true;
-                cpu_choosed9 = true;
-                BC3.Visibility = Visibility.Hidden;
-                BOC3.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed9 && cpu_choosed1 && !player_choosed5)
-            {
-                FB2 = true;
-                cpu_choosed5 = true;
-                BB2.Visibility = Visibility.Hidden;
-                BOB2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed9 && cpu_choosed5 && !player_choosed1)
-            {
-                FA1 = true;
-                cpu_choosed1 = true;
-                BA1.Visibility = Visibility.Hidden;
-                BOA1.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed1 && cpu_choosed4 && !player_choosed7)
-            {
-                FC1 = true;
-                cpu_choosed7 = true;
-                BC1.Visibility = Visibility.Hidden;
-                BOC1.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed1 && cpu_choosed7 && !player_choosed4)
-            {
-                FB1 = true;
-                cpu_choosed4 = true;
-                BB1.Visibility = Visibility.Hidden;
-                BOB1.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed2 && cpu_choosed5 && !player_choosed8)
-            {
-                FC2 = true;
-                cpu_choosed8 = true;
-                BC2.Visibility = Visibility.Hidden;
-                BOC2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed2 && cpu_choosed8 && !player_choosed5)
-            {
-                FB2 = true;
-                cpu_choosed5 = true;
-                BB2.Visibility = Visibility.Hidden;
-                BOB2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed3 && cpu_choosed6 && !player_choosed9)
-            {
-                FC3 = true;
-                cpu_choosed9 = true;
-                BC3.Visibility = Visibility.Hidden;
-                BOC3.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed3 && cpu_choosed9 && !player_choosed6)
-            {
-                FB3 = true;
-                cpu_choosed6 = true;
-                BB3.Visibility = Visibility.Hidden;
-                BOB3.Visibility = Visibility.Visible;
-                goto J2;
+                return;
             }
 
             NpcPlayerBlocksHumanPLayer();
@@ -12949,109 +10506,26 @@ namespace TicTacToeWPFspiel
                     game_ended = true;
                     restart.Visibility = Visibility.Visible;
                     exit.Visibility = Visibility.Visible;
+                    waitForNpc = false;
                     return;
                 }
 
                 goto J1;
             }
 
-            INFO.Visibility = Visibility.Hidden;
-
-            J2:
-
-            if (cpu_choosed1 && cpu_choosed2 && cpu_choosed3 == true)
-            {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (cpu_choosed4 && cpu_choosed5 && cpu_choosed6 == true)
-            {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (cpu_choosed7 && cpu_choosed8 && cpu_choosed9 == true)
-            {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (cpu_choosed1 && cpu_choosed5 && cpu_choosed9 == true)
-            {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (cpu_choosed3 && cpu_choosed5 && cpu_choosed7 == true)
-            {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (cpu_choosed1 && cpu_choosed4 && cpu_choosed7 == true)
-            {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (cpu_choosed2 && cpu_choosed5 && cpu_choosed8 == true)
-            {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (cpu_choosed3 && cpu_choosed6 && cpu_choosed9 == true)
-            {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-
-            if (FA1 && FA2 && FA3 && FB1 && FB2 && FB3 && FC1 && FC2 && FC3)
-            {
-                INFO.Content = "SPIEL BEENDET...KEINER HAT GEWONNEN !";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-            }
-
-            INFO.Visibility = Visibility.Hidden;
+            NpcLeaveClickEventAndCheckLooseCondition();
         }
 
         private async void BC3_Click(object sender, RoutedEventArgs e)
         {
-            leaveClickEventNow = false;
 
-            if (INFO.Content.ToString() != "CPU DENKT ... BITTE WARTEN !")
+            if (game_ended || waitForNpc)
             {
                 return;
             }
+
+            waitForNpc = true;
+            leaveClickEventNow = false;
 
             FC3 = true;
 
@@ -13064,86 +10538,10 @@ namespace TicTacToeWPFspiel
 
             INFO.Visibility = Visibility.Visible;
 
-            if (player_choosed1 && player_choosed2 && player_choosed3)
-            {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (player_choosed4 && player_choosed5 && player_choosed6)
-            {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (player_choosed7 && player_choosed8 && player_choosed9)
-            {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (player_choosed1 && player_choosed4 && player_choosed7)
-            {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (player_choosed2 && player_choosed5 && player_choosed8)
-            {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (player_choosed3 && player_choosed6 && player_choosed9)
-            {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (player_choosed1 && player_choosed5 && player_choosed9)
-            {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (player_choosed3 && player_choosed5 && player_choosed7)
-            {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
+            PlayerWinCheck();
 
-            if (FA1 && FA2 && FA3 && FB1 && FB2 && FB3 && FC1 && FC2 && FC3)
+            if (leaveClickEventNow)
             {
-                INFO.Content = "SPIEL BEENDET...KEINER HAT GEWONNEN !";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
                 return;
             }
 
@@ -13155,205 +10553,11 @@ namespace TicTacToeWPFspiel
 
             INFO.Visibility = Visibility.Hidden;
 
-            if (cpu_choosed1 && cpu_choosed3 && !player_choosed2)
+            NpcWinningMove();
+
+            if (leaveClickEventNow)
             {
-                FA2 = true;
-                cpu_choosed2 = true;
-                BA2.Visibility = Visibility.Hidden;
-                BOA2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed4 && cpu_choosed6 && !player_choosed5)
-            {
-                FB2 = true;
-                cpu_choosed5 = true;
-                BB2.Visibility = Visibility.Hidden;
-                BOB2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed7 && cpu_choosed9 && !player_choosed8)
-            {
-                FC2 = true;
-                cpu_choosed8 = true;
-                BC2.Visibility = Visibility.Hidden;
-                BOC2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed2 && cpu_choosed1 && !player_choosed3)
-            {
-                FA3 = true;
-                cpu_choosed3 = true;
-                BA3.Visibility = Visibility.Hidden;
-                BOA3.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed2 && cpu_choosed3 && !player_choosed1)
-            {
-                FA1 = true;
-                cpu_choosed1 = true;
-                BA1.Visibility = Visibility.Hidden;
-                BOA1.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed3 && cpu_choosed2 && !player_choosed1)
-            {
-                FA1 = true;
-                cpu_choosed1 = true;
-                BA1.Visibility = Visibility.Hidden;
-                BOA1.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed3 && cpu_choosed1 && !player_choosed2)
-            {
-                FA2 = true;
-                cpu_choosed2 = true;
-                BA2.Visibility = Visibility.Hidden;
-                BOA2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed1 && cpu_choosed5 && !player_choosed9)
-            {
-                FC3 = true;
-                cpu_choosed9 = true;
-                BC3.Visibility = Visibility.Hidden;
-                BOC3.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed1 && cpu_choosed9 && !player_choosed5)
-            {
-                FB2 = true;
-                cpu_choosed5 = true;
-                BB2.Visibility = Visibility.Hidden;
-                BOB2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed3 && cpu_choosed5 && !player_choosed7)
-            {
-                FC1 = true;
-                cpu_choosed7 = true;
-                BC1.Visibility = Visibility.Hidden;
-                BOC1.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed3 && cpu_choosed7 && !player_choosed5)
-            {
-                FB2 = true;
-                cpu_choosed5 = true;
-                BB2.Visibility = Visibility.Hidden;
-                BOB2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed4 && cpu_choosed5 && !player_choosed6)
-            {
-                FB3 = true;
-                cpu_choosed6 = true;
-                BB3.Visibility = Visibility.Hidden;
-                BOB3.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed5 && cpu_choosed4 && !player_choosed6)
-            {
-                FB3 = true;
-                cpu_choosed6 = true;
-                BB3.Visibility = Visibility.Hidden;
-                BOB3.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed5 && cpu_choosed6 && !player_choosed5)
-            {
-                FB2 = true;
-                cpu_choosed5 = true;
-                BB2.Visibility = Visibility.Hidden;
-                BOB2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed5 && cpu_choosed2 && !player_choosed8)
-            {
-                FC2 = true;
-                cpu_choosed8 = true;
-                BC2.Visibility = Visibility.Hidden;
-                BOC2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed5 && cpu_choosed8 && !player_choosed2)
-            {
-                FA2 = true;
-                cpu_choosed2 = true;
-                BA2.Visibility = Visibility.Hidden;
-                BOA2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed7 && cpu_choosed8 && !player_choosed9)
-            {
-                FC3 = true;
-                cpu_choosed9 = true;
-                BC3.Visibility = Visibility.Hidden;
-                BOC3.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed9 && cpu_choosed1 && !player_choosed5)
-            {
-                FB2 = true;
-                cpu_choosed5 = true;
-                BB2.Visibility = Visibility.Hidden;
-                BOB2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed9 && cpu_choosed5 && !player_choosed1)
-            {
-                FA1 = true;
-                cpu_choosed1 = true;
-                BA1.Visibility = Visibility.Hidden;
-                BOA1.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed1 && cpu_choosed4 && !player_choosed7)
-            {
-                FC1 = true;
-                cpu_choosed7 = true;
-                BC1.Visibility = Visibility.Hidden;
-                BOC1.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed1 && cpu_choosed7 && !player_choosed4)
-            {
-                FB1 = true;
-                cpu_choosed4 = true;
-                BB1.Visibility = Visibility.Hidden;
-                BOB1.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed2 && cpu_choosed5 && !player_choosed8)
-            {
-                FC2 = true;
-                cpu_choosed8 = true;
-                BC2.Visibility = Visibility.Hidden;
-                BOC2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed2 && cpu_choosed8 && !player_choosed5)
-            {
-                FB2 = true;
-                cpu_choosed5 = true;
-                BB2.Visibility = Visibility.Hidden;
-                BOB2.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed3 && cpu_choosed6 && !player_choosed9)
-            {
-                FC3 = true;
-                cpu_choosed9 = true;
-                BC3.Visibility = Visibility.Hidden;
-                BOC3.Visibility = Visibility.Visible;
-                goto J2;
-            }
-            else if (cpu_choosed3 && cpu_choosed9 && !player_choosed6)
-            {
-                FB3 = true;
-                cpu_choosed6 = true;
-                BB3.Visibility = Visibility.Hidden;
-                BOB3.Visibility = Visibility.Visible;
-                goto J2;
+                return;
             }
 
             NpcPlayerBlocksHumanPLayer();
@@ -14530,97 +11734,14 @@ namespace TicTacToeWPFspiel
                     game_ended = true;
                     restart.Visibility = Visibility.Visible;
                     exit.Visibility = Visibility.Visible;
+                    waitForNpc = false;
                     return;
                 }
 
                 goto J1;
             }
 
-            J2:
-
-            if (cpu_choosed1 && cpu_choosed2 && cpu_choosed3 == true)
-            {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (cpu_choosed4 && cpu_choosed5 && cpu_choosed6 == true)
-            {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (cpu_choosed7 && cpu_choosed8 && cpu_choosed9 == true)
-            {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (cpu_choosed1 && cpu_choosed5 && cpu_choosed9 == true)
-            {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (cpu_choosed3 && cpu_choosed5 && cpu_choosed7 == true)
-            {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (cpu_choosed1 && cpu_choosed4 && cpu_choosed7 == true)
-            {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (cpu_choosed2 && cpu_choosed5 && cpu_choosed8 == true)
-            {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-            else if (cpu_choosed3 && cpu_choosed6 && cpu_choosed9 == true)
-            {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-                return;
-            }
-
-            if (FA1 && FA2 && FA3 && FB1 && FB2 && FB3 && FC1 && FC2 && FC3)
-            {
-                INFO.Content = "SPIEL BEENDET...KEINER HAT GEWONNEN !";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-            }
-
-            INFO.Visibility = Visibility.Hidden;
+            NpcLeaveClickEventAndCheckLooseCondition();
         }
 
         private void Restart_Click(object sender, RoutedEventArgs e)
