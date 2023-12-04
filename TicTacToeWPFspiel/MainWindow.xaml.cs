@@ -1,6 +1,7 @@
 ﻿using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System;
+using System.IO;
 using System.Windows;
 using System.Threading;
 using System.Windows.Controls;
@@ -61,6 +62,22 @@ namespace TicTacToeWPFspiel
         public MainWindow()
         {
             InitializeComponent();
+
+
+            BackgroundVideo.Source = new Uri("SnowfallStreet2.mp4", UriKind.RelativeOrAbsolute);
+
+
+            if (!File.Exists("SnowfallStreet2.mp4"))
+            {
+                if (MessageBox.Show("DATEI NICHT GEFUNDEN. Möchten Sie das Spiel trotzdem starten ?", "FEHLER", MessageBoxButton.OKCancel) == MessageBoxResult.OK)
+                {
+                   
+                }
+                else
+                {
+                    Close();
+                }
+            }
         }
 
         public void NpcLeaveClickEventAndCheckLooseCondition()
@@ -11814,6 +11831,11 @@ namespace TicTacToeWPFspiel
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
             Close();
+        }
+
+        private void BackgroundVideo_MediaEnded(object sender, RoutedEventArgs e)
+        {
+            BackgroundVideo.Position = TimeSpan.Zero;
         }
     }
 }
