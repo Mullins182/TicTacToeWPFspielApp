@@ -39,7 +39,7 @@ namespace TicTacToeWPFspiel
         bool FC2 = false;
         bool FC3 = false;
 
-        // CPU hat folgende Felder "geklickt"
+        // NPC hat folgende Felder "geklickt"
         bool cpu_choosed1    = false;
         bool cpu_choosed2    = false;
         bool cpu_choosed3    = false;
@@ -64,9 +64,9 @@ namespace TicTacToeWPFspiel
         {
             InitializeComponent();
 
-            BackgroundVideo.Source = new Uri("SnowfallStreet2.mp4", UriKind.RelativeOrAbsolute);
+            BackgroundVideo.Source = new Uri("SnowfallStreet2.mp4", UriKind.RelativeOrAbsolute); // Quellangabe für Mediaelement !
 
-            if (!File.Exists("SnowfallStreet2.mp4"))
+            if (!File.Exists("SnowfallStreet2.mp4"))  // Dialogfenster öffnet wenn die Datei nicht im Programmverzeichnis existiert !
             {
                 if (MessageBox.Show("DATEI NICHT GEFUNDEN. Möchten Sie das Spiel trotzdem starten ?", "FEHLER", MessageBoxButton.OKCancel) == MessageBoxResult.OK)
                 {
@@ -2297,9 +2297,9 @@ namespace TicTacToeWPFspiel
             Close();
         }
 
-        private void BackgroundVideo_MediaEnded(object sender, RoutedEventArgs e)
+        private void BackgroundVideo_MediaEnded(object sender, RoutedEventArgs e)   // Ereignishandler bei Playbackposition Video-Ende !
         {
-            BackgroundVideo.Position = TimeSpan.Zero;
+            BackgroundVideo.Position = TimeSpan.Zero;           // Bei erreichen von Video-Ende wird die Playbackposition auf NULL zurückgesetzt und das Video beginnt von Neuem !
         }
     }
 }
