@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TicTacToeWPFspiel"
         mc:Ignorable="d"
-        Title="TicTacToe Game by Mullins182" Height="800" Width="715" Background="#005500" x:Name="TicTacToehauptfenster">
+        Title="TicTacToe Game | Version 1.0 | by Mullins182" Height="800" Width="715" Background="#005500" x:Name="TicTacToehauptfenster">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="100"/>
@@ -31,154 +31,164 @@
 
         <MediaElement x:Name="BackgroundVideo" Grid.RowSpan="8" Grid.ColumnSpan="7" Stretch="Fill" MediaEnded="BackgroundVideo_MediaEnded" IsMuted="True"/>
 
-        <Button x:Name="restart" Content="Restart Game" MaxWidth="190" MaxHeight="90" BorderThickness="3" BorderBrush="Black" Grid.Column="5" Grid.Row="5" Grid.ColumnSpan="2" Background="Gold" FontWeight="Bold" FontFamily="chiller" FontSize="40" Foreground="Black" Click="Restart_Click" Visibility="Hidden"/>
-        <Button x:Name="exit" Content="Quit Game" MaxWidth="190" MaxHeight="90" BorderThickness="3" BorderBrush="Black" Grid.Column="5" Grid.Row="6" Grid.ColumnSpan="2" Background="OrangeRed" Foreground="Black" FontWeight="Bold" FontFamily="chiller" FontSize="50" Click="Exit_Click" Visibility="Visible"/>
+        <Button x:Name="restart" Opacity="0.62" Content="Restart Game" MaxWidth="190" MaxHeight="90" BorderThickness="3" BorderBrush="Black" Grid.Column="5" Grid.Row="5" Grid.ColumnSpan="2" Background="Gold" FontWeight="Bold" FontFamily="chiller" FontSize="40" Foreground="Black" Click="Restart_Click" Visibility="Hidden"/>
+        <Button x:Name="exit" Opacity="0.70" Content="Quit Game" MaxWidth="190" MaxHeight="90" BorderThickness="3" BorderBrush="Black" Grid.Column="5" Grid.Row="6" Grid.ColumnSpan="2" Background="OrangeRed" Foreground="Black" FontWeight="Bold" FontFamily="chiller" FontSize="50" Click="Exit_Click" Visibility="Visible"/>
 
-        <Label Height="160" Width="500" Grid.Column="1" Grid.Row="0" Grid.RowSpan="5" Grid.ColumnSpan="5" Margin="0,40,0,0" VerticalAlignment="Top" HorizontalAlignment="center" HorizontalContentAlignment="center" VerticalContentAlignment="center" FontFamily="chiller" FontSize="120" Foreground="DarkOrange" FontWeight="Bold" Content="TicTacToe"/>
-        <Image x:Name="TicTacToeRaster" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="5" Grid.RowSpan="4" Height="300" Width="300" Margin="0,100,0,0" VerticalAlignment="center" HorizontalAlignment="Center" Cursor="Hand" Source="/e797539a1376987930021d2cf4ef74dd5e2ea131.png"/>
+        <Label Height="160" Width="500" Grid.Column="1" Opacity="0.73" Grid.Row="0" Grid.RowSpan="5" Grid.ColumnSpan="5" Margin="0,40,0,0" VerticalAlignment="Top" HorizontalAlignment="center" HorizontalContentAlignment="center" VerticalContentAlignment="center" FontFamily="chiller" FontSize="120" Foreground="DarkOrange" FontWeight="Bold" Content="TicTacToe"/>
+        <Label x:Name="INFO" Visibility="Hidden" Foreground="YellowGreen" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="7" Grid.RowSpan="2" Height="150" Width="700" Content="CPU DENKT ... BITTE WARTEN !" FontFamily="chiller" FontSize="40" HorizontalContentAlignment="center" VerticalContentAlignment="center"/>
 
-        <Label x:Name="INFO" Visibility="Hidden" Foreground="YellowGreen" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="7" Grid.RowSpan="2" Height="150" Width="700" Content="CPU DENKT ... BITTE WARTEN !" FontFamily="chiller" FontSize="35" HorizontalContentAlignment="center" VerticalContentAlignment="center"/>
+        <Grid Grid.Column="2" Grid.Row="4" Grid.RowSpan="3" Grid.ColumnSpan="3" Opacity="0.65">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="100"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+            </Grid.RowDefinitions>
+        <Image x:Name="TicTacToeRaster" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" Grid.RowSpan="3" Height="300" Width="300" VerticalAlignment="center" HorizontalAlignment="Center" Cursor="Hand" Source="/e797539a1376987930021d2cf4ef74dd5e2ea131.png"/>
 
-        <Button x:Name="BA1" Grid.Column="2" HorizontalAlignment="center" Height="100" Grid.Row="4" VerticalAlignment="center" Width="100" Click="BA1_Click" Visibility="Visible">
+        <Button x:Name="BA1" Grid.Column="0" HorizontalAlignment="center" Height="100" Grid.Row="0" VerticalAlignment="center" Width="100" Click="BA1_Click" Visibility="Visible">
             <Button.Background>
                 <ImageBrush Stretch="None" ImageSource="/Muster.png"/>
             </Button.Background>
         </Button>
-        <Label x:Name="BXA1" Grid.Column="2" HorizontalAlignment="center" Height="100" Grid.Row="4" VerticalAlignment="center" Width="100" Visibility="Hidden">
+        <Label x:Name="BXA1" Grid.Column="0" HorizontalAlignment="center" Height="100" Grid.Row="0" VerticalAlignment="center" Width="100" Visibility="Hidden">
             <Label.Background>
                 <ImageBrush ImageSource="/X.png"/>
             </Label.Background>
         </Label>
-        <Label x:Name="BOA1" Grid.Column="2" HorizontalAlignment="center" Height="100" Grid.Row="4" VerticalAlignment="center" Width="100" Visibility="Hidden">
+        <Label x:Name="BOA1" Grid.Column="0" HorizontalAlignment="center" Height="100" Grid.Row="0" VerticalAlignment="center" Width="100" Visibility="Hidden">
             <Label.Background>
                 <ImageBrush ImageSource="/O.png"/>
             </Label.Background>
         </Label>
 
-        <Button x:Name="BA2" Grid.Column="3" HorizontalAlignment="center" Height="100" Grid.Row="4" VerticalAlignment="center" Width="100" Click="BA2_Click" Visibility="Visible">
+        <Button x:Name="BA2" Grid.Column="1" HorizontalAlignment="center" Height="100" Grid.Row="0" VerticalAlignment="center" Width="100" Click="BA2_Click" Visibility="Visible">
             <Button.Background>
                 <ImageBrush Stretch="None" ImageSource="/Muster.png"/>
             </Button.Background>
         </Button>
-        <Label x:Name="BXA2" Grid.Column="3" HorizontalAlignment="center" Height="100" Grid.Row="4" VerticalAlignment="center" Width="100" Visibility="Hidden">
+        <Label x:Name="BXA2" Grid.Column="1" HorizontalAlignment="center" Height="100" Grid.Row="0" VerticalAlignment="center" Width="100" Visibility="Hidden">
             <Label.Background>
                 <ImageBrush ImageSource="/X.png"/>
             </Label.Background>
         </Label>
-        <Label x:Name="BOA2" Grid.Column="3" HorizontalAlignment="center" Height="100" Grid.Row="4" VerticalAlignment="center" Width="100" Visibility="Hidden">
+        <Label x:Name="BOA2" Grid.Column="1" HorizontalAlignment="center" Height="100" Grid.Row="0" VerticalAlignment="center" Width="100" Visibility="Hidden">
             <Label.Background>
                 <ImageBrush ImageSource="/O.png"/>
             </Label.Background>
         </Label>
 
-        <Button x:Name="BA3" Grid.Column="4" HorizontalAlignment="center" Height="100" Grid.Row="4" VerticalAlignment="center" Width="100" Click="BA3_Click" Visibility="Visible">
+        <Button x:Name="BA3" Grid.Column="2" HorizontalAlignment="center" Height="100" Grid.Row="0" VerticalAlignment="center" Width="100" Click="BA3_Click" Visibility="Visible">
             <Button.Background>
                 <ImageBrush Stretch="None" ImageSource="/Muster.png"/>
             </Button.Background>
         </Button>
-        <Label x:Name="BXA3" Grid.Column="4" HorizontalAlignment="center" Height="100" Grid.Row="4" VerticalAlignment="center" Width="100" Visibility="Hidden">
+        <Label x:Name="BXA3" Grid.Column="2" HorizontalAlignment="center" Height="100" Grid.Row="0" VerticalAlignment="center" Width="100" Visibility="Hidden">
             <Label.Background>
                 <ImageBrush ImageSource="/X.png"/>
             </Label.Background>
         </Label>
-        <Label x:Name="BOA3" Grid.Column="4" HorizontalAlignment="center" Height="100" Grid.Row="4" VerticalAlignment="center" Width="100" Visibility="Hidden">
+        <Label x:Name="BOA3" Grid.Column="2" HorizontalAlignment="center" Height="100" Grid.Row="0" VerticalAlignment="center" Width="100" Visibility="Hidden">
             <Label.Background>
                 <ImageBrush ImageSource="/O.png"/>
             </Label.Background>
         </Label>
 
-        <Button x:Name="BB1" Grid.Column="2" HorizontalAlignment="center" Height="100" Grid.Row="5" VerticalAlignment="center" Width="100" Click="BB1_Click" Visibility="Visible">
+        <Button x:Name="BB1" Grid.Column="0" HorizontalAlignment="center" Height="100" Grid.Row="1" VerticalAlignment="center" Width="100" Click="BB1_Click" Visibility="Visible">
             <Button.Background>
                 <ImageBrush Stretch="None" ImageSource="/Muster.png"/>
             </Button.Background>
         </Button>
-        <Label x:Name="BXB1" Grid.Column="2" HorizontalAlignment="center" Height="100" Grid.Row="5" VerticalAlignment="center" Width="100" Visibility="Hidden">
+        <Label x:Name="BXB1" Grid.Column="0" HorizontalAlignment="center" Height="100" Grid.Row="1" VerticalAlignment="center" Width="100" Visibility="Hidden">
             <Label.Background>
                 <ImageBrush ImageSource="/X.png"/>
             </Label.Background>
         </Label>
-        <Label x:Name="BOB1" Grid.Column="2" HorizontalAlignment="center" Height="100" Grid.Row="5" VerticalAlignment="center" Width="100" Visibility="Hidden">
+        <Label x:Name="BOB1" Grid.Column="0" HorizontalAlignment="center" Height="100" Grid.Row="1" VerticalAlignment="center" Width="100" Visibility="Hidden">
             <Label.Background>
                 <ImageBrush ImageSource="/O.png"/>
             </Label.Background>
         </Label>
-        <Button x:Name="BB2" Grid.Column="3" HorizontalAlignment="center" Height="100" Grid.Row="5" VerticalAlignment="center" Width="100" Click="BB2_Click" Visibility="Visible">
+        <Button x:Name="BB2" Grid.Column="1" HorizontalAlignment="center" Height="100" Grid.Row="1" VerticalAlignment="center" Width="100" Click="BB2_Click" Visibility="Visible">
             <Button.Background>
                 <ImageBrush Stretch="None" ImageSource="/Muster.png"/>
             </Button.Background>
         </Button>
-        <Label x:Name="BXB2" Grid.Column="3" HorizontalAlignment="center" Height="100" Grid.Row="5" VerticalAlignment="center" Width="100" Visibility="Hidden">
+        <Label x:Name="BXB2" Grid.Column="1" HorizontalAlignment="center" Height="100" Grid.Row="1" VerticalAlignment="center" Width="100" Visibility="Hidden">
             <Label.Background>
                 <ImageBrush ImageSource="/X.png"/>
             </Label.Background>
         </Label>
-        <Label x:Name="BOB2" Grid.Column="3" HorizontalAlignment="center" Height="100" Grid.Row="5" VerticalAlignment="center" Width="100" Visibility="Hidden">
+        <Label x:Name="BOB2" Grid.Column="1" HorizontalAlignment="center" Height="100" Grid.Row="1" VerticalAlignment="center" Width="100" Visibility="Hidden">
             <Label.Background>
                 <ImageBrush ImageSource="/O.png"/>
             </Label.Background>
         </Label>
-        <Button x:Name="BB3" Grid.Column="4" HorizontalAlignment="center" Height="100" Grid.Row="5" VerticalAlignment="center" Width="100" Click="BB3_Click" Visibility="Visible">
+        <Button x:Name="BB3" Grid.Column="2" HorizontalAlignment="center" Height="100" Grid.Row="1" VerticalAlignment="center" Width="100" Click="BB3_Click" Visibility="Visible">
             <Button.Background>
                 <ImageBrush Stretch="None" ImageSource="/Muster.png"/>
             </Button.Background>
         </Button>
-        <Label x:Name="BXB3" Grid.Column="4" HorizontalAlignment="center" Height="100" Grid.Row="5" VerticalAlignment="center" Width="100" Visibility="Hidden">
+        <Label x:Name="BXB3" Grid.Column="2" HorizontalAlignment="center" Height="100" Grid.Row="1" VerticalAlignment="center" Width="100" Visibility="Hidden">
             <Label.Background>
                 <ImageBrush ImageSource="/X.png"/>
             </Label.Background>
         </Label>
-        <Label x:Name="BOB3" Grid.Column="4" HorizontalAlignment="center" Height="100" Grid.Row="5" VerticalAlignment="center" Width="100" Visibility="Hidden">
-            <Label.Background>
-                <ImageBrush ImageSource="/O.png"/>
-            </Label.Background>
-        </Label>
-
-        <Button x:Name="BC1" Grid.Column="2" HorizontalAlignment="center" Height="100" Grid.Row="6" VerticalAlignment="center" Width="100" Click="BC1_Click" Visibility="Visible">
-            <Button.Background>
-                <ImageBrush Stretch="None" ImageSource="/Muster.png"/>
-            </Button.Background>
-        </Button>
-        <Label x:Name="BXC1" Grid.Column="2" HorizontalAlignment="center" Height="100" Grid.Row="6" VerticalAlignment="center" Width="100" Visibility="Hidden">
-            <Label.Background>
-                <ImageBrush ImageSource="/X.png"/>
-            </Label.Background>
-        </Label>
-        <Label x:Name="BOC1" Grid.Column="2" HorizontalAlignment="center" Height="100" Grid.Row="6" VerticalAlignment="center" Width="100" Visibility="Hidden">
-            <Label.Background>
-                <ImageBrush ImageSource="/O.png"/>
-            </Label.Background>
-        </Label>
-        <Button x:Name="BC2" Grid.Column="3" HorizontalAlignment="center" Height="100" Grid.Row="6" VerticalAlignment="center" Width="100" Click="BC2_Click" Visibility="Visible">
-            <Button.Background>
-                <ImageBrush Stretch="None" ImageSource="/Muster.png"/>
-            </Button.Background>
-        </Button>
-        <Label x:Name="BXC2" Grid.Column="3" HorizontalAlignment="center" Height="100" Grid.Row="6" VerticalAlignment="center" Width="100" Visibility="Hidden">
-            <Label.Background>
-                <ImageBrush ImageSource="/X.png"/>
-            </Label.Background>
-        </Label>
-        <Label x:Name="BOC2" Grid.Column="3" HorizontalAlignment="center" Height="100" Grid.Row="6" VerticalAlignment="center" Width="100" Visibility="Hidden">
-            <Label.Background>
-                <ImageBrush ImageSource="/O.png"/>
-            </Label.Background>
-        </Label>
-        <Button x:Name="BC3" Grid.Column="4" HorizontalAlignment="center" Height="100" Grid.Row="6" VerticalAlignment="center" Width="100" Click="BC3_Click" Visibility="Visible">
-            <Button.Background>
-                <ImageBrush Stretch="None" ImageSource="/Muster.png"/>
-            </Button.Background>
-        </Button>
-        <Label x:Name="BXC3" Grid.Column="4" HorizontalAlignment="center" Height="100" Grid.Row="6" VerticalAlignment="center" Width="100" Visibility="Hidden">
-            <Label.Background>
-                <ImageBrush ImageSource="/X.png"/>
-            </Label.Background>
-        </Label>
-        <Label x:Name="BOC3" Grid.Column="4" HorizontalAlignment="center" Height="100" Grid.Row="6" VerticalAlignment="center" Width="100" Visibility="Hidden">
+        <Label x:Name="BOB3" Grid.Column="2" HorizontalAlignment="center" Height="100" Grid.Row="1" VerticalAlignment="center" Width="100" Visibility="Hidden">
             <Label.Background>
                 <ImageBrush ImageSource="/O.png"/>
             </Label.Background>
         </Label>
 
-
+        <Button x:Name="BC1" Grid.Column="0" HorizontalAlignment="center" Height="100" Grid.Row="2" VerticalAlignment="center" Width="100" Click="BC1_Click" Visibility="Visible">
+            <Button.Background>
+                <ImageBrush Stretch="None" ImageSource="/Muster.png"/>
+            </Button.Background>
+        </Button>
+        <Label x:Name="BXC1" Grid.Column="0" HorizontalAlignment="center" Height="100" Grid.Row="2" VerticalAlignment="center" Width="100" Visibility="Hidden">
+            <Label.Background>
+                <ImageBrush ImageSource="/X.png"/>
+            </Label.Background>
+        </Label>
+        <Label x:Name="BOC1" Grid.Column="0" HorizontalAlignment="center" Height="100" Grid.Row="2" VerticalAlignment="center" Width="100" Visibility="Hidden">
+            <Label.Background>
+                <ImageBrush ImageSource="/O.png"/>
+            </Label.Background>
+        </Label>
+        <Button x:Name="BC2" Grid.Column="1" HorizontalAlignment="center" Height="100" Grid.Row="2" VerticalAlignment="center" Width="100" Click="BC2_Click" Visibility="Visible">
+            <Button.Background>
+                <ImageBrush Stretch="None" ImageSource="/Muster.png"/>
+            </Button.Background>
+        </Button>
+        <Label x:Name="BXC2" Grid.Column="1" HorizontalAlignment="center" Height="100" Grid.Row="2" VerticalAlignment="center" Width="100" Visibility="Hidden">
+            <Label.Background>
+                <ImageBrush ImageSource="/X.png"/>
+            </Label.Background>
+        </Label>
+        <Label x:Name="BOC2" Grid.Column="1" HorizontalAlignment="center" Height="100" Grid.Row="2" VerticalAlignment="center" Width="100" Visibility="Hidden">
+            <Label.Background>
+                <ImageBrush ImageSource="/O.png"/>
+            </Label.Background>
+        </Label>
+        <Button x:Name="BC3" Grid.Column="2" HorizontalAlignment="center" Height="100" Grid.Row="2" VerticalAlignment="center" Width="100" Click="BC3_Click" Visibility="Visible">
+            <Button.Background>
+                <ImageBrush Stretch="None" ImageSource="/Muster.png"/>
+            </Button.Background>
+        </Button>
+        <Label x:Name="BXC3" Grid.Column="2" HorizontalAlignment="center" Height="100" Grid.Row="2" VerticalAlignment="center" Width="100" Visibility="Hidden">
+            <Label.Background>
+                <ImageBrush ImageSource="/X.png"/>
+            </Label.Background>
+        </Label>
+        <Label x:Name="BOC3" Grid.Column="2" HorizontalAlignment="center" Height="100" Grid.Row="2" VerticalAlignment="center" Width="100" Visibility="Hidden">
+            <Label.Background>
+                <ImageBrush ImageSource="/O.png"/>
+            </Label.Background>
+        </Label>
+      </Grid>
     </Grid>
 </Window>
