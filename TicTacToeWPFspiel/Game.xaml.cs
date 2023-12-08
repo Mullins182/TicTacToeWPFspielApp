@@ -49,14 +49,12 @@ namespace TicTacToeWPFspiel
         bool player_choosed8 = false;
         bool player_choosed9 = false;
 
-        MainWindow MAIN;
-        public Game(MainWindow MAIN)        // Die Adresse des MainWindow übergeben, um Zugriff auf Objekte vom MainWindow zu haben !
+        MainWindow MAIN;                    // Deklarieren eines Zeigers
+        public Game(MainWindow main)        // Die Adresse des MainWindow übergeben, um Zugriff auf Objekte vom MainWindow zu haben !
         {
-            this.MAIN = MAIN;
+            this.MAIN = main;
 
             InitializeComponent();
-
-
 
             BackgroundVideo.Source = new Uri("SnowfallStreet2.mp4", UriKind.RelativeOrAbsolute); // Quellangabe für Mediaelement !
 
