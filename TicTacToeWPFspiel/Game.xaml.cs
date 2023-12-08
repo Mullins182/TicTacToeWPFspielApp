@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using System.Runtime.CompilerServices;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -9,6 +10,7 @@ namespace TicTacToeWPFspiel
     /// </summary>
     public partial class Game : Page
     {
+
         int cpu_choice = 0;
         int NpcThinkTime = 2266;
         bool game_ended = false;
@@ -47,10 +49,14 @@ namespace TicTacToeWPFspiel
         bool player_choosed8 = false;
         bool player_choosed9 = false;
 
-
-        public Game()
+        MainWindow MAIN;
+        public Game(MainWindow MAIN)        // Die Adresse des MainWindow übergeben, um Zugriff auf Objekte vom MainWindow zu haben !
         {
+            this.MAIN = MAIN;
+
             InitializeComponent();
+
+
 
             BackgroundVideo.Source = new Uri("SnowfallStreet2.mp4", UriKind.RelativeOrAbsolute); // Quellangabe für Mediaelement !
 
@@ -66,7 +72,6 @@ namespace TicTacToeWPFspiel
 
                 }
             }
-
         }
 
         public void NpcLeaveClickEventAndCheckLooseCondition()
@@ -2284,8 +2289,7 @@ namespace TicTacToeWPFspiel
 
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
-            //OptionsFrame.NavigationService.
-            return;
+            MAIN.Close();
         }
 
         private void BackgroundVideo_MediaEnded(object sender, RoutedEventArgs e)   // Ereignishandler bei Playbackposition Video-Ende !
@@ -2295,11 +2299,14 @@ namespace TicTacToeWPFspiel
 
         private void options_Click(object sender, RoutedEventArgs e)
         {
+
             //SpielOptionen OptionsSeite = new SpielOptionen();
 
             //OptionsFrame.Source = new Uri("SpielOptionen.xaml", UriKind.Relative);
 
-            OptionsFrame.NavigationService.Navigate(new SpielOptionen(OptionsFrame));
+            //OptionsFrame.NavigationService.Navigate(OptionsWindow(OptionsFrame));
+
+            OptionsFrame.NavigationService.Navigate(new SpielOptionen(MAIN));       // Ersetzt den Inhalt von OptionsFrame mit einer neuen Seite vom Typ Spieloptionen.
         }
     }
 }

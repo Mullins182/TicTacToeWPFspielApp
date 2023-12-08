@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TicTacToeWPFspiel"
         mc:Ignorable="d"
-        Title="TicTacToe Game | Version 1.0 | by Mullins182" Height="800" Width="715" Background="#005500" x:Name="TicTacToehauptfenster">
+        Title="TicTacToe Game | Version 1.0 | by Mullins182" Height="800" Width="715" Background="#005500" x:Name="TicTacToeHauptfenster">
     <Grid>
         <Frame x:Name="OptionsFrame"/>
     </Grid>

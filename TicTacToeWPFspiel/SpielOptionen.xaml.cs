@@ -8,18 +8,23 @@ namespace TicTacToeWPFspiel
     /// </summary>
     public partial class SpielOptionen : Page
     {
-        Frame OptionsFrame;                             // Klassenverfügbare Property, die die Referenz zum Frame speichert !
-
-        public SpielOptionen(Frame OptionsFrame)        // Referenz von OptionsFrame übergeben. (Zeiger)
+        MainWindow MAIN;
+        public SpielOptionen(MainWindow MAIN) 
         {
-            this.OptionsFrame = OptionsFrame;           // Hier wird die Referenz zu OptionsFrame an Property übergeben 
+            this.MAIN = MAIN;                           // Adresse des Mainwindow übergeben
+            //this.OptionsFrame = Game.OptionsFrame;
             InitializeComponent();
+
+
+            
         }
 
 
         private void backToMain_Click(object sender, RoutedEventArgs e)
-        {            
-            OptionsFrame.NavigationService.Navigate(new Game());
+        {
+            
+
+            MAIN.OptionsFrame.NavigationService.Navigate(new Game(MAIN));
         }
     }
 }

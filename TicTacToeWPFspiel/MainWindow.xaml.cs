@@ -1,4 +1,7 @@
 ﻿using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Media;
+
 
 namespace TicTacToeWPFspiel
 {
@@ -8,11 +11,14 @@ namespace TicTacToeWPFspiel
     /// </summary>
     public partial class MainWindow : Window
     {
+        //public Game GameWindow;
+        //public SpielOptionen OptionsPage;    
+
         public MainWindow()
         {
             InitializeComponent();
-
-            OptionsFrame.NavigationService.Navigate(new Game());
+                                       
+            OptionsFrame.NavigationService.Navigate(new Game(this));    // Erstellt ein Gameobjekt und fügt es dem OptionsFrame hinzu und navigiert dorthin. This gibt adresse von MainWindow mit.
         }
     }
 }
