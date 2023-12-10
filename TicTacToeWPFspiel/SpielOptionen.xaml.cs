@@ -1,5 +1,9 @@
-﻿using System.Windows;
+﻿using Accessibility;
+using System;
+using System.IO;
+using System.Windows;
 using System.Windows.Controls;
+using TicTacToeWPFspiel;
 
 namespace TicTacToeWPFspiel
 {
@@ -8,18 +12,41 @@ namespace TicTacToeWPFspiel
     /// </summary>
     public partial class SpielOptionen : Page
     {
-        MainWindow MAIN;
-        public SpielOptionen(MainWindow main) 
+
+        public SpielOptionen() 
         {
-            this.MAIN = main;                           // Adresse des Mainwindow übergeben
-            //this.OptionsFrame = Game.OptionsFrame;
-            InitializeComponent();            
+            InitializeComponent();
+
+            if (!File.Exists("SnowfallStreet1.mp4"))  // Dialogfenster öffnet wenn die Datei nicht im Programmverzeichnis existiert !
+            {
+
+                if (MessageBox.Show("Hintergrund-Videodatei (Optionen) nicht gefunden. Trotzdem starten ?", "FEHLER", MessageBoxButton.OKCancel) == MessageBoxResult.OK)
+                {
+
+                }
+                else
+                {
+
+                }
+            }
+
+            BackgroundVideoOptions.Source = new Uri("SnowfallStreet1.mp4", UriKind.RelativeOrAbsolute); // Quellangabe für Mediaelement !
+
         }
 
+        private void BG_1_Checked(object sender, RoutedEventArgs e)
+        {
+            MainWindow.BG_Video = "SnowfallStreet2.mp4";
+        }
 
-        private void backToMain_Click(object sender, RoutedEventArgs e)
-        {          
-            MAIN.OptionsFrame.NavigationService.Navigate(new Game(MAIN));
+        private void BG_2_Checked(object sender, RoutedEventArgs e)
+        {
+            MainWindow.BG_Video = "Snowflakes.mp4";
+        }
+
+        private void BackgroundVideoOptions_MediaEnded(object sender, RoutedEventArgs e)
+        {
+            BackgroundVideoOptions.Position = TimeSpan.Zero;           // Bei erreichen von Video-Ende wird die Playbackposition auf NULL zurückgesetzt und das Video beginnt von Neuem !
         }
     }
 }

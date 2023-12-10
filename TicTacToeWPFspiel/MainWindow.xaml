@@ -5,8 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TicTacToeWPFspiel"
         mc:Ignorable="d"
-        Title="TicTacToe Game | Version 1.0 | by Mullins182" Height="800" Width="715" Background="#005500" x:Name="TicTacToeHauptfenster">
+        Title="TicTacToe Game | Version 1.0 | by Mullins182" Height="800" Width="700" Background="#005500" x:Name="TicTacToeHauptfenster">
     <Grid>
-        <Frame x:Name="OptionsFrame"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <StackPanel x:Name="MenuPanel" Orientation="Horizontal" HorizontalAlignment="Center" Width="715" Background="Black">
+            <Button x:Name="backToGame" Opacity="0.80" Content="Back to Game" Width="700" Background="black" Foreground="DarkGoldenrod" FontWeight="Bold" FontFamily="chiller" FontSize="30" Visibility="Collapsed" Click="backToGame_Click"/>
+            <Button x:Name="options" Opacity="0.80" Content="Options" Width="350" Background="black" Foreground="DarkGoldenrod" FontWeight="Bold" FontFamily="chiller" FontSize="30" Visibility="Visible" Click="options_Click"/>
+            <Button x:Name="quitGame" Opacity="0.80" Content="Quit Game" Width="350" Background="black" Foreground="DarkGoldenrod" FontWeight="Bold" FontFamily="chiller" FontSize="30" Visibility="Visible" Click="quitGame_Click"/>
+        </StackPanel>
+        
+        <Frame x:Name="NavigationFrame" Grid.Row="1" NavigationUIVisibility="Hidden"/>
+        
     </Grid>
 </Window>

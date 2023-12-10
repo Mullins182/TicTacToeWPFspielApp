@@ -2,6 +2,7 @@
 using System.Runtime.CompilerServices;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media.Media3D;
 
 namespace TicTacToeWPFspiel
 {
@@ -49,19 +50,17 @@ namespace TicTacToeWPFspiel
         bool player_choosed8 = false;
         bool player_choosed9 = false;
 
-        MainWindow MAIN;                    // Deklarieren eines Zeigers
-        public Game(MainWindow main)        // Die Adresse des MainWindow übergeben, um Zugriff auf Objekte vom MainWindow zu haben !
+
+        public Game(string bgVid)        
         {
-            this.MAIN = main;
-
             InitializeComponent();
+            
+            BackgroundVideo.Source = new Uri(bgVid, UriKind.RelativeOrAbsolute); // Quellangabe für Mediaelement !
 
-            BackgroundVideo.Source = new Uri("SnowfallStreet2.mp4", UriKind.RelativeOrAbsolute); // Quellangabe für Mediaelement !
-
-            if (!File.Exists("SnowfallStreet2.mp4"))  // Dialogfenster öffnet wenn die Datei nicht im Programmverzeichnis existiert !
+            if (!File.Exists(bgVid))  // Dialogfenster öffnet wenn die Datei nicht im Programmverzeichnis existiert !
             {
 
-                if (MessageBox.Show("DATEI NICHT GEFUNDEN. Möchten Sie das Spiel trotzdem starten ?", "FEHLER", MessageBoxButton.OKCancel) == MessageBoxResult.OK)
+                if (MessageBox.Show("Hintergrund-Videodatei nicht gefunden. Trotzdem starten ?", "FEHLER", MessageBoxButton.OKCancel) == MessageBoxResult.OK)
                 {
 
                 }
@@ -72,6 +71,8 @@ namespace TicTacToeWPFspiel
             }
         }
 
+
+
         public void NpcLeaveClickEventAndCheckLooseCondition()
         {
             if (cpu_choosed1 && cpu_choosed2 && cpu_choosed3 == true)
@@ -80,7 +81,7 @@ namespace TicTacToeWPFspiel
                 INFO.Visibility = Visibility.Visible;
                 game_ended = true;
                 restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
+                
                 leaveClickEventNow = true;
             }
             else if (cpu_choosed4 && cpu_choosed5 && cpu_choosed6 == true)
@@ -89,7 +90,7 @@ namespace TicTacToeWPFspiel
                 INFO.Visibility = Visibility.Visible;
                 game_ended = true;
                 restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
+                
                 leaveClickEventNow = true;
             }
             else if (cpu_choosed7 && cpu_choosed8 && cpu_choosed9 == true)
@@ -98,7 +99,7 @@ namespace TicTacToeWPFspiel
                 INFO.Visibility = Visibility.Visible;
                 game_ended = true;
                 restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
+                
                 leaveClickEventNow = true;
             }
             else if (cpu_choosed1 && cpu_choosed5 && cpu_choosed9 == true)
@@ -107,7 +108,7 @@ namespace TicTacToeWPFspiel
                 INFO.Visibility = Visibility.Visible;
                 game_ended = true;
                 restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
+                
                 leaveClickEventNow = true;
             }
             else if (cpu_choosed3 && cpu_choosed5 && cpu_choosed7 == true)
@@ -116,7 +117,7 @@ namespace TicTacToeWPFspiel
                 INFO.Visibility = Visibility.Visible;
                 game_ended = true;
                 restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
+                
                 leaveClickEventNow = true;
             }
             else if (cpu_choosed1 && cpu_choosed4 && cpu_choosed7 == true)
@@ -125,7 +126,7 @@ namespace TicTacToeWPFspiel
                 INFO.Visibility = Visibility.Visible;
                 game_ended = true;
                 restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
+                
                 leaveClickEventNow = true;
             }
             else if (cpu_choosed2 && cpu_choosed5 && cpu_choosed8 == true)
@@ -134,7 +135,7 @@ namespace TicTacToeWPFspiel
                 INFO.Visibility = Visibility.Visible;
                 game_ended = true;
                 restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
+                
                 leaveClickEventNow = true;
             }
             else if (cpu_choosed3 && cpu_choosed6 && cpu_choosed9 == true)
@@ -143,7 +144,7 @@ namespace TicTacToeWPFspiel
                 INFO.Visibility = Visibility.Visible;
                 game_ended = true;
                 restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
+                
                 leaveClickEventNow = true;
             }
 
@@ -153,7 +154,7 @@ namespace TicTacToeWPFspiel
                 INFO.Visibility = Visibility.Visible;
                 game_ended = true;
                 restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
+                
                 leaveClickEventNow = true;
             }
 
@@ -619,7 +620,7 @@ namespace TicTacToeWPFspiel
                 INFO.Visibility = Visibility.Visible;
                 game_ended = true;
                 restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
+                
                 NpcLeaveClickEventAndCheckLooseCondition();
             }
             else if (player_choosed4 && player_choosed5 && player_choosed6)
@@ -628,7 +629,7 @@ namespace TicTacToeWPFspiel
                 INFO.Visibility = Visibility.Visible;
                 game_ended = true;
                 restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
+                
                 NpcLeaveClickEventAndCheckLooseCondition();
             }
             else if (player_choosed7 && player_choosed8 && player_choosed9)
@@ -637,7 +638,7 @@ namespace TicTacToeWPFspiel
                 INFO.Visibility = Visibility.Visible;
                 game_ended = true;
                 restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
+                
                 NpcLeaveClickEventAndCheckLooseCondition();
             }
             else if (player_choosed1 && player_choosed4 && player_choosed7)
@@ -646,7 +647,7 @@ namespace TicTacToeWPFspiel
                 INFO.Visibility = Visibility.Visible;
                 game_ended = true;
                 restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
+                
                 NpcLeaveClickEventAndCheckLooseCondition();
             }
             else if (player_choosed2 && player_choosed5 && player_choosed8)
@@ -655,7 +656,7 @@ namespace TicTacToeWPFspiel
                 INFO.Visibility = Visibility.Visible;
                 game_ended = true;
                 restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
+                
                 NpcLeaveClickEventAndCheckLooseCondition();
             }
             else if (player_choosed3 && player_choosed6 && player_choosed9)
@@ -664,7 +665,7 @@ namespace TicTacToeWPFspiel
                 INFO.Visibility = Visibility.Visible;
                 game_ended = true;
                 restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
+                
                 NpcLeaveClickEventAndCheckLooseCondition();
             }
             else if (player_choosed1 && player_choosed5 && player_choosed9)
@@ -673,7 +674,7 @@ namespace TicTacToeWPFspiel
                 INFO.Visibility = Visibility.Visible;
                 game_ended = true;
                 restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
+                
                 NpcLeaveClickEventAndCheckLooseCondition();
             }
             else if (player_choosed3 && player_choosed5 && player_choosed7)
@@ -682,7 +683,7 @@ namespace TicTacToeWPFspiel
                 INFO.Visibility = Visibility.Visible;
                 game_ended = true;
                 restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
+                
                 NpcLeaveClickEventAndCheckLooseCondition();
             }
 
@@ -692,7 +693,7 @@ namespace TicTacToeWPFspiel
                 INFO.Visibility = Visibility.Visible;
                 game_ended = true;
                 restart.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
+                
                 NpcLeaveClickEventAndCheckLooseCondition();
             }
 
@@ -1887,7 +1888,7 @@ namespace TicTacToeWPFspiel
                     INFO.Visibility = Visibility.Visible;
                     game_ended = true;
                     restart.Visibility = Visibility.Visible;
-                    exit.Visibility = Visibility.Visible;
+                    
                     waitForNpc = false;
                     return;
                 }
@@ -2281,30 +2282,13 @@ namespace TicTacToeWPFspiel
             BOC2.Visibility = Visibility.Hidden;
             BOC3.Visibility = Visibility.Hidden;
             restart.Visibility = Visibility.Hidden;
-            exit.Visibility = Visibility.Visible;
+            
             game_ended = false;
-        }
-
-        private void Exit_Click(object sender, RoutedEventArgs e)
-        {
-            MAIN.Close();
         }
 
         private void BackgroundVideo_MediaEnded(object sender, RoutedEventArgs e)   // Ereignishandler bei Playbackposition Video-Ende !
         {
             BackgroundVideo.Position = TimeSpan.Zero;           // Bei erreichen von Video-Ende wird die Playbackposition auf NULL zurückgesetzt und das Video beginnt von Neuem !
-        }
-
-        private void options_Click(object sender, RoutedEventArgs e)
-        {
-
-            //SpielOptionen OptionsSeite = new SpielOptionen();
-
-            //OptionsFrame.Source = new Uri("SpielOptionen.xaml", UriKind.Relative);
-
-            //OptionsFrame.NavigationService.Navigate(OptionsWindow(OptionsFrame));
-
-            OptionsFrame.NavigationService.Navigate(new SpielOptionen(MAIN));       // Ersetzt den Inhalt von OptionsFrame mit einer neuen Seite vom Typ Spieloptionen.
         }
     }
 }
