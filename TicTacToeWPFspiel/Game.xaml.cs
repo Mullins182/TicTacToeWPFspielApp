@@ -12,11 +12,11 @@ namespace TicTacToeWPFspiel
     public partial class Game : Page
     {
 
-        int cpu_choice = 0;
-        int NpcThinkTime = 2266;
-        bool game_ended = false;
+        int cpu_choice          = 0;
+        int NpcThinkTime        = 2266;
+        bool game_ended         = false;
         bool leaveClickEventNow = false;
-        bool waitForNpc = false;
+        bool waitForNpc         = false;
 
         // Diese Variablen bestimmen ob ein Feld von Spieler oder CPU bereits gewählt wurde !
         bool FA1 = false;
@@ -60,7 +60,7 @@ namespace TicTacToeWPFspiel
             if (!File.Exists(bgVid))  // Dialogfenster öffnet wenn die Datei nicht im Programmverzeichnis existiert !
             {
 
-                if (MessageBox.Show("Hintergrund-Videodatei nicht gefunden. Trotzdem starten ?", "FEHLER", MessageBoxButton.OKCancel) == MessageBoxResult.OK)
+                if (MessageBox.Show("Hintergrund-Videodatei (Game) nicht gefunden. Trotzdem starten ?", "FEHLER", MessageBoxButton.OKCancel) == MessageBoxResult.OK)
                 {
 
                 }
@@ -2289,6 +2289,6 @@ namespace TicTacToeWPFspiel
         private void BackgroundVideo_MediaEnded(object sender, RoutedEventArgs e)   // Ereignishandler bei Playbackposition Video-Ende !
         {
             BackgroundVideo.Position = TimeSpan.Zero;           // Bei erreichen von Video-Ende wird die Playbackposition auf NULL zurückgesetzt und das Video beginnt von Neuem !
-        }
+        }        
     }
 }
