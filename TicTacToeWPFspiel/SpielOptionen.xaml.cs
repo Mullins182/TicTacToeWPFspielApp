@@ -13,12 +13,9 @@ namespace TicTacToeWPFspiel
     public partial class SpielOptionen : Page
     {
 
-        //public string Video = "";
-
         public SpielOptionen(string bgVid) 
         {
             InitializeComponent();
-            //Video = bgVid;
                         
             if (!File.Exists(bgVid))  // Dialogfenster öffnet wenn die Datei nicht im Programmverzeichnis existiert !
             {
@@ -36,6 +33,10 @@ namespace TicTacToeWPFspiel
             BackgroundVideoOptions.Source = new Uri(bgVid, UriKind.RelativeOrAbsolute); // Quellangabe für Mediaelement !
         }
 
+        private void BackgroundVideoOptions_MediaEnded(object sender, RoutedEventArgs e)
+        {
+            BackgroundVideoOptions.Position = TimeSpan.Zero;           // Bei erreichen von Video-Ende wird die Playbackposition auf NULL zurückgesetzt und das Video beginnt von Neuem !
+        }
 
         private void BG_1_Checked(object sender, RoutedEventArgs e)
         {
@@ -49,9 +50,12 @@ namespace TicTacToeWPFspiel
             BackgroundVideoOptions.Source = new Uri(MainWindow.BG_Video, UriKind.RelativeOrAbsolute); // Quellangabe für Mediaelement !
         }
 
-        private void BackgroundVideoOptions_MediaEnded(object sender, RoutedEventArgs e)
+
+        private void BG_3_Checked(object sender, RoutedEventArgs e)
         {
-            BackgroundVideoOptions.Position = TimeSpan.Zero;           // Bei erreichen von Video-Ende wird die Playbackposition auf NULL zurückgesetzt und das Video beginnt von Neuem !
+            MainWindow.BG_Video = "StarExploding.mp4";
+            BackgroundVideoOptions.Source = new Uri(MainWindow.BG_Video, UriKind.RelativeOrAbsolute); // Quellangabe für Mediaelement !
+            
         }
     }
 }

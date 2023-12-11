@@ -25,7 +25,7 @@
         <Label x:Name="optionsLabel" Width="250" Height="100" Content="OPTIONEN" Foreground="Goldenrod" FontSize="40" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" Grid.RowSpan="2" VerticalContentAlignment="Top" Margin="30,0,0,0" HorizontalAlignment="left"/>
 
         <StackPanel Grid.Column="1" Grid.Row="1">
-            <RibbonRadioButton x:Name="BG_1" Height="30" Background="black" Label="Hintergrund-Video 1 wählen" Checked="BG_1_Checked" IsChecked="True" Foreground="#FFEF9E0C" CheckedBorderBrush="#FF4DFD00">
+            <RibbonRadioButton x:Name="BG_1" Height="30" Background="black" Label="Snowy-Street-Evening wählen" Checked="BG_1_Checked" IsChecked="True" Foreground="#FFEF9E0C" CheckedBorderBrush="#FF4DFD00">
                 <RibbonRadioButton.MouseOverBackground>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="#FF5B8612" Offset="0.293"/>
@@ -33,7 +33,7 @@
                     </LinearGradientBrush>
                 </RibbonRadioButton.MouseOverBackground>
             </RibbonRadioButton>
-            <RibbonRadioButton x:Name="BG_2" Height="30" Background="black" Label="Hintergrund-Video 2 wählen" Checked="BG_2_Checked" IsChecked="False" Foreground="#FFEF9E0C" CheckedBorderBrush="#FF4DFD00">
+            <RibbonRadioButton x:Name="BG_2" Height="30" Background="black" Label="Snowflakes wählen" Checked="BG_2_Checked" Foreground="#FFEF9E0C" CheckedBorderBrush="#FF4DFD00">
                 <RibbonRadioButton.MouseOverBackground>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="#FF5B8612" Offset="0.293"/>
@@ -41,6 +41,15 @@
                     </LinearGradientBrush>
                 </RibbonRadioButton.MouseOverBackground>
             </RibbonRadioButton>
+            <RibbonRadioButton x:Name="BG_3" Height="30" Background="black" Label="Exploding Star wählen" Foreground="#FFEF9E0C" CheckedBorderBrush="#FF4DFD00" Checked="BG_3_Checked">
+                <RibbonRadioButton.MouseOverBackground>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF5B8612" Offset="0.293"/>
+                        <GradientStop Color="#FF28C857" Offset="1"/>
+                    </LinearGradientBrush>
+                </RibbonRadioButton.MouseOverBackground>
+            </RibbonRadioButton>
+
         </StackPanel>
 
     </Grid>

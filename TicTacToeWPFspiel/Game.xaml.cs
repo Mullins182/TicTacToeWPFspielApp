@@ -55,7 +55,6 @@ namespace TicTacToeWPFspiel
         {
             InitializeComponent();
             
-            BackgroundVideo.Source = new Uri(bgVid, UriKind.RelativeOrAbsolute); // Quellangabe für Mediaelement !
 
             if (!File.Exists(bgVid))  // Dialogfenster öffnet wenn die Datei nicht im Programmverzeichnis existiert !
             {
@@ -69,6 +68,7 @@ namespace TicTacToeWPFspiel
 
                 }
             }
+            BackgroundVideo.Source = new Uri(bgVid, UriKind.RelativeOrAbsolute); // Quellangabe für Mediaelement !
         }
 
 
