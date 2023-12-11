@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.CompilerServices;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -14,13 +15,15 @@ namespace TicTacToeWPFspiel
     public partial class MainWindow : Window
     {
         public static string BG_Video = "SnowfallStreet2.mp4";
-
-        Game            _runningGame    = new Game(BG_Video);
-        SpielOptionen   _options        = new SpielOptionen();
+        public SpielOptionen _options;
+        public Game _runningGame       = new Game(BG_Video);
 
         public MainWindow()
         {
+
             InitializeComponent();
+
+            _options = new SpielOptionen(BG_Video);
 
             NavigationFrame.Content = _runningGame;
         }

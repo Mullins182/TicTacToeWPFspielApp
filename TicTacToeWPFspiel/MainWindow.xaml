@@ -20,7 +20,7 @@
             <Button x:Name="options" Opacity="0.80" Content="Options" Width="350" Background="black" Foreground="DarkGoldenrod" FontWeight="Bold" FontFamily="chiller" FontSize="30" Visibility="Visible" Click="options_Click"/>
             <Button x:Name="quitGame" Opacity="0.80" Content="Quit Game" Width="350" Background="black" Foreground="DarkGoldenrod" FontWeight="Bold" FontFamily="chiller" FontSize="30" Visibility="Visible" Click="quitGame_Click"/>
         </StackPanel>
-        
+
         <Frame x:Name="NavigationFrame" Grid.Row="1" NavigationUIVisibility="Hidden"/>
         
     </Grid>
