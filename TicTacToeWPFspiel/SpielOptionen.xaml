@@ -1,0 +1,48 @@
+﻿<Page x:Class="TicTacToeWPFspiel.SpielOptionen"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TicTacToeWPFspiel"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="715"
+        Title="TicTacToe Game | Version 1.0 | by Mullins182" Height="800" Width="715" Background="Black" x:Name="Optionen">
+
+    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="250"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="80"/>
+
+        </Grid.RowDefinitions>
+
+        <MediaElement x:Name="BackgroundVideoOptions" Grid.RowSpan="2" Grid.ColumnSpan="2" Stretch="Fill" MediaEnded="BackgroundVideoOptions_MediaEnded" IsMuted="False" Margin="0,0,-212,-491"/>
+
+        <Label x:Name="optionsLabel" Width="250" Height="100" Content="OPTIONEN" Foreground="Goldenrod" FontSize="40" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" Grid.RowSpan="2" VerticalContentAlignment="Top" Margin="30,0,0,0" HorizontalAlignment="left"/>
+
+        <StackPanel Grid.Column="1" Grid.Row="1">
+            <RibbonRadioButton x:Name="BG_1" Height="30" Background="black" Label="Hintergrund-Video 1 wählen" Checked="BG_1_Checked" IsChecked="True" Foreground="#FFEF9E0C" CheckedBorderBrush="#FF4DFD00">
+                <RibbonRadioButton.MouseOverBackground>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF5B8612" Offset="0.293"/>
+                        <GradientStop Color="#FF28C857" Offset="1"/>
+                    </LinearGradientBrush>
+                </RibbonRadioButton.MouseOverBackground>
+            </RibbonRadioButton>
+            <RibbonRadioButton x:Name="BG_2" Height="30" Background="black" Label="Hintergrund-Video 2 wählen" Checked="BG_2_Checked" IsChecked="False" Foreground="#FFEF9E0C" CheckedBorderBrush="#FF4DFD00">
+                <RibbonRadioButton.MouseOverBackground>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF5B8612" Offset="0.293"/>
+                        <GradientStop Color="#FF28C857" Offset="1"/>
+                    </LinearGradientBrush>
+                </RibbonRadioButton.MouseOverBackground>
+            </RibbonRadioButton>
+
+        </StackPanel>
+
+    </Grid>
+</Page>
