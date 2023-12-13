@@ -10,22 +10,21 @@
 
     <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="250"/>
-            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="4*"/>
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
             <RowDefinition Height="200"/>
-            <RowDefinition Height="80"/>
+            <RowDefinition/>
 
         </Grid.RowDefinitions>
 
-        <MediaElement x:Name="BackgroundVideoOptions" Grid.RowSpan="2" Grid.ColumnSpan="2" Stretch="Fill" MediaEnded="BackgroundVideoOptions_MediaEnded" IsMuted="False" Margin="0,0,-212,-491"/>
+        <MediaElement x:Name="BackgroundVideoOptions" Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" Grid.ColumnSpan="2" Stretch="Fill" MediaEnded="BackgroundVideoOptions_MediaEnded" IsMuted="False" Margin="0,0,16,23"/>
 
-        <Label x:Name="optionsLabel" Width="250" Height="100" Content="OPTIONEN" Foreground="Goldenrod" FontSize="40" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" Grid.RowSpan="2" VerticalContentAlignment="Top" Margin="30,0,0,0" HorizontalAlignment="left"/>
-
-        <StackPanel Grid.Column="1" Grid.Row="1">
-            <RibbonRadioButton x:Name="BG_1" Height="30" Background="black" Label="Snowy-Street-Evening wählen" Checked="BG_1_Checked" IsChecked="True" Foreground="#FFEF9E0C" CheckedBorderBrush="#FF4DFD00">
+        <Label x:Name="optionsLabel" Width="auto" Height="70" Content="OPTIONEN" Foreground="Goldenrod" FontSize="40" FontWeight="Bold" BorderThickness="1" BorderBrush="Goldenrod" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" Grid.RowSpan="2" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" Margin="0,0,0,0" HorizontalAlignment="center" VerticalAlignment="Top"/>
+        <StackPanel Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Width="400" VerticalAlignment="top" HorizontalAlignment="Center">
+            <RibbonRadioButton x:Name="BG_1" Height="30" Width="400" Background="black" FontFamily="Arial" FontSize="15" Label="Snowy-Street-Evening wählen" VerticalContentAlignment="Center" Checked="BG_1_Checked" IsChecked="True" Foreground="#FFEF9E0C" CheckedBorderBrush="#FF4DFD00" CheckedBackground="#FF222D1A" Padding="0,3,0,0" CornerRadius="10,10,10,10" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <RibbonRadioButton.MouseOverBackground>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="#FF5B8612" Offset="0.293"/>
@@ -33,7 +32,7 @@
                     </LinearGradientBrush>
                 </RibbonRadioButton.MouseOverBackground>
             </RibbonRadioButton>
-            <RibbonRadioButton x:Name="BG_2" Height="30" Background="black" Label="Snowflakes wählen" Checked="BG_2_Checked" Foreground="#FFEF9E0C" CheckedBorderBrush="#FF4DFD00">
+            <RibbonRadioButton x:Name="BG_2" Height="30" Width="400" Background="black" FontFamily="Arial" FontSize="15" Label="Snowflakes wählen" Checked="BG_2_Checked" Foreground="#FFEF9E0C" CheckedBorderBrush="#FF4DFD00" CheckedBackground="#FF222D1A" Padding="0,3,0,0" CornerRadius="10,10,10,10">
                 <RibbonRadioButton.MouseOverBackground>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="#FF5B8612" Offset="0.293"/>
@@ -41,7 +40,7 @@
                     </LinearGradientBrush>
                 </RibbonRadioButton.MouseOverBackground>
             </RibbonRadioButton>
-            <RibbonRadioButton x:Name="BG_3" Height="30" Background="black" Label="Exploding Star wählen" Foreground="#FFEF9E0C" CheckedBorderBrush="#FF4DFD00" Checked="BG_3_Checked">
+            <RibbonRadioButton x:Name="BG_3" Height="30" Width="400" Background="black" FontFamily="Arial" FontSize="15" Label="Exploding Star wählen" Foreground="#FFEF9E0C" CheckedBorderBrush="#FF4DFD00" Checked="BG_3_Checked" CheckedBackground="#FF222D1A" Padding="0,3,0,0" CornerRadius="10,10,10,10">
                 <RibbonRadioButton.MouseOverBackground>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="#FF5B8612" Offset="0.293"/>

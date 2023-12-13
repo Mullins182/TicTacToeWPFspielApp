@@ -16,12 +16,13 @@
         </Grid.RowDefinitions>
 
         <StackPanel x:Name="MenuPanel" Orientation="Horizontal" HorizontalAlignment="Center" Width="715" Background="Black">
-            <Button x:Name="backToGame" Opacity="0.80" Content="Back to Game" Width="700" Background="black" Foreground="DarkGoldenrod" FontWeight="Bold" FontFamily="chiller" FontSize="30" Visibility="Collapsed" Click="backToGame_Click"/>
-            <Button x:Name="options" Opacity="0.80" Content="Options" Width="350" Background="black" Foreground="DarkGoldenrod" FontWeight="Bold" FontFamily="chiller" FontSize="30" Visibility="Visible" Click="options_Click"/>
-            <Button x:Name="quitGame" Opacity="0.80" Content="Quit Game" Width="350" Background="black" Foreground="DarkGoldenrod" FontWeight="Bold" FontFamily="chiller" FontSize="30" Visibility="Visible" Click="quitGame_Click"/>
+            <Button x:Name="backToGame" Opacity="0.80" Content="Back to Game" Width="700" Background="black" Foreground="DarkGoldenrod" FontWeight="Bold" FontFamily="chiller" FontSize="30" Visibility="Collapsed" Click="backToGame_Click" MouseEnter="backToGame_MouseEnter" MouseLeave="backToGame_MouseLeave"/>
+            <Button x:Name="options" Opacity="0.80" Content="Options" Width="350" Background="black" Foreground="DarkGoldenrod" FontWeight="Bold" FontFamily="chiller" FontSize="30" Visibility="Visible" Click="options_Click" MouseEnter="options_MouseEnter" MouseLeave="options_MouseLeave"/>
+            <Button x:Name="quitGame" Opacity="0.80" Content="Quit Game" Width="350" Background="black" Foreground="DarkGoldenrod" FontWeight="Bold" FontFamily="chiller" FontSize="30" Visibility="Visible" Click="quitGame_Click" MouseEnter="quitGame_MouseEnter" MouseLeave="quitGame_MouseLeave"/>
+
         </StackPanel>
 
-        <Frame x:Name="NavigationFrame" Grid.Row="1" NavigationUIVisibility="Hidden"/>
+        <Frame x:Name="NavigationFrame" Grid.Row="1" Margin="0,0,0,0" Background="Transparent" NavigationUIVisibility="Hidden"/>
         
     </Grid>
 </Window>

@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using static System.Net.Mime.MediaTypeNames;
 
 
@@ -48,6 +50,51 @@ namespace TicTacToeWPFspiel
             options.Visibility = Visibility.Visible;
             quitGame.Visibility = Visibility.Visible;
             _runningGame.BackgroundVideo.Source = new Uri(BG_Video, UriKind.RelativeOrAbsolute); // Quellangabe für Mediaelement !
+        }
+
+        private void ButtonAnimation(string x)
+        {
+            ColorAnimation ButtonColorEffect = new ColorAnimation();
+            ButtonColorEffect.Duration = new Duration(TimeSpan.FromSeconds(2));
+            ButtonColorEffect.From = Colors.Blue;
+            ButtonColorEffect.To = Colors.Red;
+            Storyboard.SetTargetName(ButtonColorEffect, x);
+            Storyboard.SetTargetProperty(ButtonColorEffect, new PropertyPath
+            ("(Button.Background).(SolidColorBrush.Color)"));
+            Storyboard FarbAnimation = new Storyboard();
+            FarbAnimation.AutoReverse = true;
+            FarbAnimation.RepeatBehavior = RepeatBehavior.Forever;
+            FarbAnimation.Children.Add(ButtonColorEffect);
+            FarbAnimation.Begin(quitGame);
+        }
+
+        private void backToGame_MouseEnter(object sender, System.Windows.Input.MouseEventArgs e)
+        {
+            ButtonAnimation(backToGame.Name);
+        }
+
+        private void backToGame_MouseLeave(object sender, System.Windows.Input.MouseEventArgs e)
+        {
+
+        }
+
+        private void options_MouseEnter(object sender, System.Windows.Input.MouseEventArgs e)
+        {
+            ButtonAnimation(options.Name);
+        }
+
+        private void options_MouseLeave(object sender, System.Windows.Input.MouseEventArgs e)
+        {
+        }
+
+        private void quitGame_MouseEnter(object sender, System.Windows.Input.MouseEventArgs e)
+        {
+            ButtonAnimation(quitGame.Name);
+        }
+
+        private void quitGame_MouseLeave(object sender, System.Windows.Input.MouseEventArgs e)
+        {
+
         }
     }
 }

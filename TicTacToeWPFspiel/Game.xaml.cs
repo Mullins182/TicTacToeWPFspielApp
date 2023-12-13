@@ -2,6 +2,7 @@
 using System.Runtime.CompilerServices;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Media3D;
 
 namespace TicTacToeWPFspiel
@@ -2284,6 +2285,18 @@ namespace TicTacToeWPFspiel
             restart.Visibility = Visibility.Hidden;
             
             game_ended = false;
+
+
+            DoubleAnimation animation = new DoubleAnimation
+            {
+                From = 0,
+                To = 10,
+                Duration = TimeSpan.FromSeconds(0.05),
+                AutoReverse = true,
+                RepeatBehavior = new RepeatBehavior(3)
+            };
+            TicTacToeRaster.BeginAnimation(Frame.MarginProperty, animation);
+
         }
 
         private void BackgroundVideo_MediaEnded(object sender, RoutedEventArgs e)   // Ereignishandler bei Playbackposition Video-Ende !
