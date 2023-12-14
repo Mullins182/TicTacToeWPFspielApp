@@ -86,25 +86,10 @@ namespace TicTacToeWPFspiel
 
         }
 
-        public Game(string bgVid)        
+        public Game()        
         {
             InitializeComponent();
             
-
-            if (!File.Exists(bgVid))  // Dialogfenster öffnet wenn die Datei nicht im Programmverzeichnis existiert !
-            {
-
-                if (MessageBox.Show("Hintergrund-Videodatei (Game) nicht gefunden. Trotzdem starten ?", "FEHLER", MessageBoxButton.OKCancel) == MessageBoxResult.OK)
-                {
-
-                }
-                else
-                {
-
-                }
-            }
-            BackgroundVideo.Source = new Uri(bgVid, UriKind.RelativeOrAbsolute); // Quellangabe für Mediaelement !
-
             InfoLabelAnimation(INFO.Name, INFO);
         }
 
@@ -2334,10 +2319,5 @@ namespace TicTacToeWPFspiel
             //TicTacToeRaster.BeginAnimation(Frame.MarginProperty, animation);
 
         }
-
-        private void BackgroundVideo_MediaEnded(object sender, RoutedEventArgs e)   // Ereignishandler bei Playbackposition Video-Ende !
-        {
-            BackgroundVideo.Position = TimeSpan.Zero;           // Bei erreichen von Video-Ende wird die Playbackposition auf NULL zurückgesetzt und das Video beginnt von Neuem !
-        }        
     }
 }

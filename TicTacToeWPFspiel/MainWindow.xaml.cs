@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Media;
 using System.Runtime.CompilerServices;
 using System.Windows;
@@ -20,12 +21,28 @@ namespace TicTacToeWPFspiel
     {
         public static string BG_Video = "SnowfallStreet2.mp4";
         public SpielOptionen _options;
-        public Game _runningGame       = new Game(BG_Video);
+        public Game _runningGame       = new Game();
+
 
         public MainWindow()
         {
 
             InitializeComponent();
+
+            if (!File.Exists(BG_Video))  // Dialogfenster öffnet wenn die Datei nicht im Programmverzeichnis existiert !
+            {
+
+                if (MessageBox.Show("Hintergrund-Videodatei (Game) nicht gefunden. Trotzdem starten ?", "FEHLER", MessageBoxButton.OKCancel) == MessageBoxResult.OK)
+                {
+
+                }
+                else
+                {
+
+                }
+            }
+
+            BackgroundVideo.Source = new Uri(BG_Video, UriKind.RelativeOrAbsolute); // Quellangabe für Mediaelement !
 
             _options = new SpielOptionen(BG_Video);
 
@@ -51,7 +68,7 @@ namespace TicTacToeWPFspiel
             backToGame.Visibility = Visibility.Collapsed;
             options.Visibility = Visibility.Visible;
             quitGame.Visibility = Visibility.Visible;
-            _runningGame.BackgroundVideo.Source = new Uri(BG_Video, UriKind.RelativeOrAbsolute); // Quellangabe für Mediaelement !
+            BackgroundVideo.Source = new Uri(BG_Video, UriKind.RelativeOrAbsolute); // Quellangabe für Mediaelement !
         }
 
         private void ButtonAnimation(string x, Button y)
@@ -145,5 +162,10 @@ namespace TicTacToeWPFspiel
         {
             ButtonReverseAnimation(quitGame.Name, quitGame);
         }
+                private void BackgroundVideo_MediaEnded(object sender, RoutedEventArgs e)   // Ereignishandler bei Playbackposition Video-Ende !
+        {
+            BackgroundVideo.Position = TimeSpan.Zero;           // Bei erreichen von Video-Ende wird die Playbackposition auf NULL zurückgesetzt und das Video beginnt von Neuem !
+        }
+
     }
 }

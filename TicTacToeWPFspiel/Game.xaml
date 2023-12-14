@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:TicTacToeWPFspiel"
       mc:Ignorable="d" 
       d:DesignHeight="800" d:DesignWidth="715"
-        Title="TicTacToe Game | Version 1.4 | by Mullins182" Height="800" Width="715" Background="#005500" x:Name="TicTacToeGame">
+        Title="TicTacToe Game | Version 1.4 | by Mullins182" Height="800" Width="715" x:Name="TicTacToeGame">
 
     <Grid>
         <Grid.ColumnDefinitions>
@@ -31,7 +31,7 @@
 
         </Grid.RowDefinitions>
 
-        <MediaElement x:Name="BackgroundVideo" Grid.RowSpan="8" Grid.ColumnSpan="7" Stretch="Fill" MediaEnded="BackgroundVideo_MediaEnded" IsMuted="False"/>
+        <!--<MediaElement x:Name="BackgroundVideo" Grid.RowSpan="8" Grid.ColumnSpan="7" Stretch="Fill" MediaEnded="BackgroundVideo_MediaEnded" IsMuted="False"/>-->
 
         <Label Height="160" Width="500" Grid.Column="1" Opacity="0.73" Grid.Row="0" Grid.RowSpan="5" Grid.ColumnSpan="5" Margin="0,40,0,0" VerticalAlignment="Top" HorizontalAlignment="center" HorizontalContentAlignment="center" VerticalContentAlignment="center" FontFamily="chiller" FontSize="120" Foreground="DarkOrange" FontWeight="Bold" Content="TicTacToe"/>
 

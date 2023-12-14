@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:TicTacToeWPFspiel"
       mc:Ignorable="d" 
       d:DesignHeight="800" d:DesignWidth="715"
-        Title="TicTacToe Game | Version 1.0 | by Mullins182" Height="800" Width="715" Background="Black" x:Name="Optionen">
+        Title="TicTacToe Game | Version 1.0 | by Mullins182" Height="800" Width="715" x:Name="Optionen">
 
     <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
         <Grid.ColumnDefinitions>
@@ -20,7 +20,7 @@
 
         </Grid.RowDefinitions>
 
-        <MediaElement x:Name="BackgroundVideoOptions" Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" Grid.ColumnSpan="2" Stretch="Fill" MediaEnded="BackgroundVideoOptions_MediaEnded" IsMuted="False" Margin="0,0,16,23"/>
+        <!--<MediaElement x:Name="BackgroundVideoOptions" Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" Grid.ColumnSpan="2" Stretch="Fill" MediaEnded="BackgroundVideoOptions_MediaEnded" IsMuted="False" Margin="0,0,16,23"/>-->
 
         <Label x:Name="optionsLabel" Width="auto" Height="70" Content="OPTIONEN" Foreground="Goldenrod" FontSize="40" FontWeight="Bold" BorderThickness="2" BorderBrush="Goldenrod" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" Grid.RowSpan="2" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" Margin="-30,30,0,0" HorizontalAlignment="center" VerticalAlignment="Top"/>
         <StackPanel Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Width="400" VerticalAlignment="top" HorizontalAlignment="Center">
