@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TicTacToeWPFspiel"
         mc:Ignorable="d"
-        Title="TicTacToe Game | Version 1.0 | by Mullins182" Height="800" Width="700" Background="#005500" x:Name="TicTacToeHauptfenster">
+        Title="TicTacToe Game | Version 1.4 | by Mullins182" Height="800" Width="700" Background="#005500" x:Name="TicTacToeHauptfenster">
     <!--Control Template Override für Buttons um Highlighting bei Mouseover zu verhindern !-->
     <Window.Resources>
-        <ControlTemplate x:Key="NoMouseOverButtonTemplate"   
+        <ControlTemplate x:Key="NoMouseOverButtonTemplate"
                  TargetType="Button">
             <Border Background="{TemplateBinding Background}"  
           BorderBrush="{TemplateBinding BorderBrush}"  
@@ -28,6 +28,9 @@
             </ControlTemplate.Triggers>
         </ControlTemplate>
     </Window.Resources>
+    
+    <!--Control Templates Override ENDE !-->
+    
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -41,7 +44,6 @@
             <Button x:Name="backToGame" Opacity="0.80" OverridesDefaultStyle="True" Content="Back to Game" Template="{StaticResource NoMouseOverButtonTemplate}" HorizontalContentAlignment="Center" Width="700" Background="DarkRed" Foreground="Yellow" FontWeight="Bold" FontFamily="chiller" FontSize="30" Visibility="Collapsed" Click="backToGame_Click" MouseEnter="backToGame_MouseEnter" MouseLeave="backToGame_MouseLeave"/>
             <Button x:Name="options" Opacity="0.80" OverridesDefaultStyle="True" Content="Options" Template="{StaticResource NoMouseOverButtonTemplate}" HorizontalContentAlignment="Center" Width="350" Background="DarkRed" Foreground="Yellow" FontWeight="Bold" FontFamily="chiller" FontSize="30" Visibility="Visible" Click="options_Click" MouseEnter="options_MouseEnter" MouseLeave="options_MouseLeave"/>
             <Button x:Name="quitGame" Opacity="0.80" OverridesDefaultStyle="True" Content="Quit Game" Template="{StaticResource NoMouseOverButtonTemplate}" HorizontalContentAlignment="Center" Width="350" Background="DarkRed" Foreground="Yellow" FontWeight="Bold" FontFamily="chiller" FontSize="30" Visibility="Visible" Click="quitGame_Click" MouseEnter="quitGame_MouseEnter" MouseLeave="quitGame_MouseLeave"/>
-
         </StackPanel>
 
         <Frame x:Name="NavigationFrame" Grid.Row="1" Background="Transparent" NavigationUIVisibility="Hidden"/>

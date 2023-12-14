@@ -31,9 +31,8 @@
 
         </Grid.RowDefinitions>
 
-        <!--<MediaElement x:Name="BackgroundVideo" Grid.RowSpan="8" Grid.ColumnSpan="7" Stretch="Fill" MediaEnded="BackgroundVideo_MediaEnded" IsMuted="False"/>-->
-
         <Label Height="160" Width="500" Grid.Column="1" Opacity="0.73" Grid.Row="0" Grid.RowSpan="5" Grid.ColumnSpan="5" Margin="0,40,0,0" VerticalAlignment="Top" HorizontalAlignment="center" HorizontalContentAlignment="center" VerticalContentAlignment="center" FontFamily="chiller" FontSize="120" Foreground="DarkOrange" FontWeight="Bold" Content="TicTacToe"/>
+        <Label x:Name="INFO" Visibility="Collapsed" Foreground="Goldenrod" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="7" Grid.RowSpan="2" Height="150" Width="700" Content="CPU DENKT ... BITTE WARTEN !" FontFamily="chiller" FontSize="35" FontWeight="Bold" HorizontalContentAlignment="center" VerticalContentAlignment="Top"/>
 
         <Button x:Name="restart" Opacity="0.70" Content="Restart" Grid.Column="5" Grid.Row="5" Grid.ColumnSpan="2" MaxWidth="150" MaxHeight="70" BorderThickness="3" BorderBrush="Black" Background="OrangeRed" Foreground="Black" FontWeight="Bold" FontFamily="chiller" FontSize="50" Click="Restart_Click" Visibility="Collapsed"/>
 
@@ -190,6 +189,5 @@
                 </Label.Background>
             </Label>
         </Grid>
-        <Label x:Name="INFO" Visibility="Collapsed" Foreground="Goldenrod" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="7" Grid.RowSpan="2" Height="150" Width="700" Content="CPU DENKT ... BITTE WARTEN !" FontFamily="chiller" FontSize="35" FontWeight="Bold" HorizontalContentAlignment="center" VerticalContentAlignment="Top"/>
     </Grid>
 </Page>

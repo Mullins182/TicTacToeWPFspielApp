@@ -20,8 +20,6 @@
 
         </Grid.RowDefinitions>
 
-        <!--<MediaElement x:Name="BackgroundVideoOptions" Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" Grid.ColumnSpan="2" Stretch="Fill" MediaEnded="BackgroundVideoOptions_MediaEnded" IsMuted="False" Margin="0,0,16,23"/>-->
-
         <Label x:Name="optionsLabel" Width="auto" Height="70" Content="OPTIONEN" Foreground="Goldenrod" FontSize="40" FontWeight="Bold" BorderThickness="2" BorderBrush="Goldenrod" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" Grid.RowSpan="2" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" Margin="-30,30,0,0" HorizontalAlignment="center" VerticalAlignment="Top"/>
         <StackPanel Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Width="400" VerticalAlignment="top" HorizontalAlignment="Center">
             <RibbonRadioButton x:Name="BG_1" Height="30" Width="400" Background="DarkRed" FontFamily="Arial" FontSize="18" FontWeight="Bold" Label="Snowy-Street-Evening wählen" Checked="BG_1_Checked" IsChecked="True" Foreground="PaleGoldenrod" MouseOverBorderBrush="LawnGreen" CheckedBorderBrush="LawnGreen" CheckedBackground="DarkGreen" Padding="0,8,0,0" CornerRadius="10,10,10,10">
