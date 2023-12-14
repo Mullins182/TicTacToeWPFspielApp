@@ -1,11 +1,13 @@
 ﻿using System;
-using System.Drawing;
+using System.Media;
 using System.Runtime.CompilerServices;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using static System.Net.Mime.MediaTypeNames;
+using Color = System.Windows.Media.Color;
 
 
 namespace TicTacToeWPFspiel
@@ -52,49 +54,96 @@ namespace TicTacToeWPFspiel
             _runningGame.BackgroundVideo.Source = new Uri(BG_Video, UriKind.RelativeOrAbsolute); // Quellangabe für Mediaelement !
         }
 
-        private void ButtonAnimation(string x)
+        private void ButtonAnimation(string x, Button y)
         {
-            ColorAnimation ButtonColorEffect = new ColorAnimation();
-            ButtonColorEffect.Duration = new Duration(TimeSpan.FromSeconds(2));
-            ButtonColorEffect.From = Colors.Blue;
-            ButtonColorEffect.To = Colors.Red;
+            
+            ColorAnimationUsingKeyFrames ButtonColorEffect = new ColorAnimationUsingKeyFrames();
+            ColorAnimationUsingKeyFrames BackgroundAnimation = new ColorAnimationUsingKeyFrames();
+            BackgroundAnimation.Duration = new Duration(TimeSpan.FromSeconds(3));
+            BackgroundAnimation.KeyFrames.Add(new LinearColorKeyFrame(Colors.Yellow, KeyTime.FromTimeSpan(TimeSpan.FromMilliseconds(500))));
+            ButtonColorEffect.Duration = new Duration(TimeSpan.FromSeconds(5));
+            ButtonColorEffect.KeyFrames.Add(new LinearColorKeyFrame(Colors.Black,KeyTime.FromTimeSpan(TimeSpan.FromMilliseconds(500))));
+            //ButtonColorEffect.KeyFrames.Add(new LinearColorKeyFrame(Colors.Black, KeyTime.FromTimeSpan(TimeSpan.FromSeconds(1))));
             Storyboard.SetTargetName(ButtonColorEffect, x);
-            Storyboard.SetTargetProperty(ButtonColorEffect, new PropertyPath
+            Storyboard.SetTargetProperty(BackgroundAnimation, new PropertyPath
             ("(Button.Background).(SolidColorBrush.Color)"));
+            Storyboard.SetTargetProperty(ButtonColorEffect, new PropertyPath
+            ("(Button.Foreground).(SolidColorBrush.Color)"));
             Storyboard FarbAnimation = new Storyboard();
-            FarbAnimation.AutoReverse = true;
-            FarbAnimation.RepeatBehavior = RepeatBehavior.Forever;
+            //FarbAnimation.AutoReverse = true;
+            //FarbAnimation.RepeatBehavior = RepeatBehavior.Forever;
+            FarbAnimation.Children.Add(BackgroundAnimation);
             FarbAnimation.Children.Add(ButtonColorEffect);
-            FarbAnimation.Begin(quitGame);
+            FarbAnimation.Begin(y);
+        }
+
+        private void ButtonReverseAnimation(string x, Button y)
+        {
+            ColorAnimationUsingKeyFrames ButtonColorEffect = new ColorAnimationUsingKeyFrames();
+            ColorAnimationUsingKeyFrames BackgroundAnimation = new ColorAnimationUsingKeyFrames();
+            BackgroundAnimation.Duration = new Duration(TimeSpan.FromSeconds(3));
+            BackgroundAnimation.KeyFrames.Add(new LinearColorKeyFrame(Colors.DarkRed, KeyTime.FromTimeSpan(TimeSpan.FromMilliseconds(950))));
+            ButtonColorEffect.Duration = new Duration(TimeSpan.FromSeconds(5));
+            ButtonColorEffect.KeyFrames.Add(new LinearColorKeyFrame(Colors.Yellow, KeyTime.FromTimeSpan(TimeSpan.FromMilliseconds(950))));
+            //ButtonColorEffect.KeyFrames.Add(new LinearColorKeyFrame(Colors.Black, KeyTime.FromTimeSpan(TimeSpan.FromSeconds(1))));
+            Storyboard.SetTargetName(ButtonColorEffect, x);
+            Storyboard.SetTargetProperty(BackgroundAnimation, new PropertyPath
+            ("(Button.Background).(SolidColorBrush.Color)"));
+            Storyboard.SetTargetProperty(ButtonColorEffect, new PropertyPath
+            ("(Button.Foreground).(SolidColorBrush.Color)"));
+            Storyboard FarbAnimation = new Storyboard();
+            //FarbAnimation.AutoReverse = true;
+            //FarbAnimation.RepeatBehavior = RepeatBehavior.Forever;
+            FarbAnimation.Children.Add(BackgroundAnimation);
+            FarbAnimation.Children.Add(ButtonColorEffect);
+            FarbAnimation.Begin(y);
+
+
+            //ColorAnimation ButtonColorEffect = new ColorAnimation();
+            //ButtonColorEffect.Duration = new Duration(TimeSpan.FromSeconds(2));
+            //ButtonColorEffect.From = Colors.GreenYellow;
+            //ButtonColorEffect.To = Colors.DarkRed;
+            //Storyboard.SetTargetName(ButtonColorEffect, x);
+            //Storyboard.SetTargetProperty(ButtonColorEffect, new PropertyPath
+            //("(Button.Background).(SolidColorBrush.Color)"));
+            ////Storyboard.SetTargetProperty(ButtonColorEffect, new PropertyPath
+            ////("(Button.Foreground).(SolidColorBrush.Color)"));
+            //Storyboard FarbAnimation = new Storyboard();
+            ////FarbAnimation.AutoReverse = true;
+            ////FarbAnimation.RepeatBehavior = RepeatBehavior.Forever;
+            //FarbAnimation.Children.Add(ButtonColorEffect);
+            //FarbAnimation.Begin(y);
         }
 
         private void backToGame_MouseEnter(object sender, System.Windows.Input.MouseEventArgs e)
         {
-            ButtonAnimation(backToGame.Name);
+
+            ButtonAnimation(backToGame.Name, backToGame);
         }
 
         private void backToGame_MouseLeave(object sender, System.Windows.Input.MouseEventArgs e)
         {
-
+            ButtonReverseAnimation(backToGame.Name, backToGame);
         }
 
         private void options_MouseEnter(object sender, System.Windows.Input.MouseEventArgs e)
         {
-            ButtonAnimation(options.Name);
+            ButtonAnimation(options.Name, options);
         }
 
         private void options_MouseLeave(object sender, System.Windows.Input.MouseEventArgs e)
         {
+            ButtonReverseAnimation(options.Name, options);
         }
 
         private void quitGame_MouseEnter(object sender, System.Windows.Input.MouseEventArgs e)
         {
-            ButtonAnimation(quitGame.Name);
+            ButtonAnimation(quitGame.Name, quitGame);
         }
 
         private void quitGame_MouseLeave(object sender, System.Windows.Input.MouseEventArgs e)
         {
-
+            ButtonReverseAnimation(quitGame.Name, quitGame);
         }
     }
 }

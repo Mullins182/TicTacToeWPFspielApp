@@ -2287,15 +2287,15 @@ namespace TicTacToeWPFspiel
             game_ended = false;
 
 
-            DoubleAnimation animation = new DoubleAnimation
-            {
-                From = 0,
-                To = 10,
-                Duration = TimeSpan.FromSeconds(0.05),
-                AutoReverse = true,
-                RepeatBehavior = new RepeatBehavior(3)
-            };
-            TicTacToeRaster.BeginAnimation(Frame.MarginProperty, animation);
+            //DoubleAnimation animation = new DoubleAnimation
+            //{
+            //    From = 0,
+            //    To = 10,
+            //    Duration = TimeSpan.FromSeconds(0.05),
+            //    AutoReverse = true,
+            //    RepeatBehavior = new RepeatBehavior(3)
+            //};
+            //TicTacToeRaster.BeginAnimation(Frame.MarginProperty, animation);
 
         }
 
