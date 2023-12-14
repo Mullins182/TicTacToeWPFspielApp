@@ -2,6 +2,7 @@
 using System.Runtime.CompilerServices;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Media.Media3D;
 
@@ -52,6 +53,39 @@ namespace TicTacToeWPFspiel
         bool player_choosed9 = false;
 
 
+        private void InfoLabelAnimation(string x, Label y)
+        {
+            ColorAnimation LabelColorEffect = new ColorAnimation();
+            LabelColorEffect.Duration = new Duration(TimeSpan.FromSeconds(2));
+            LabelColorEffect.From = Colors.LimeGreen;
+            LabelColorEffect.To = Colors.OrangeRed;
+            //ButtonColorEffect.KeyFrames.Add(new LinearColorKeyFrame(Colors.Black, KeyTime.FromTimeSpan(TimeSpan.FromSeconds(1))));
+            Storyboard.SetTargetName(LabelColorEffect, x);
+            Storyboard.SetTargetProperty(LabelColorEffect, new PropertyPath
+            ("(Label.Foreground).(SolidColorBrush.Color)"));
+            Storyboard FarbAnimation = new Storyboard();
+            FarbAnimation.Children.Add(LabelColorEffect);
+            FarbAnimation.AutoReverse = true;
+            FarbAnimation.RepeatBehavior = RepeatBehavior.Forever;
+            FarbAnimation.Begin(y);
+
+            //ColorAnimation ButtonColorEffect = new ColorAnimation();
+            //ButtonColorEffect.Duration = new Duration(TimeSpan.FromSeconds(2));
+            //ButtonColorEffect.From = Colors.GreenYellow;
+            //ButtonColorEffect.To = Colors.DarkRed;
+            //Storyboard.SetTargetName(ButtonColorEffect, x);
+            //Storyboard.SetTargetProperty(ButtonColorEffect, new PropertyPath
+            //("(Button.Background).(SolidColorBrush.Color)"));
+            ////Storyboard.SetTargetProperty(ButtonColorEffect, new PropertyPath
+            ////("(Button.Foreground).(SolidColorBrush.Color)"));
+            //Storyboard FarbAnimation = new Storyboard();
+            ////FarbAnimation.AutoReverse = true;
+            ////FarbAnimation.RepeatBehavior = RepeatBehavior.Forever;
+            //FarbAnimation.Children.Add(ButtonColorEffect);
+            //FarbAnimation.Begin(y);
+
+        }
+
         public Game(string bgVid)        
         {
             InitializeComponent();
@@ -70,6 +104,8 @@ namespace TicTacToeWPFspiel
                 }
             }
             BackgroundVideo.Source = new Uri(bgVid, UriKind.RelativeOrAbsolute); // Quellangabe für Mediaelement !
+
+            InfoLabelAnimation(INFO.Name, INFO);
         }
 
 
