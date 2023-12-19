@@ -55,8 +55,6 @@ namespace TicTacToeWPFspiel
         bool player_choosed8 = false;
         bool player_choosed9 = false;
 
-        string fg = "3";
-
         private void InfoLabelAnimation(string x, Label y)
         {
             ColorAnimation LabelColorEffect = new ColorAnimation();
@@ -186,7 +184,7 @@ namespace TicTacToeWPFspiel
 
         private void LoosingConditionOrders()
         {
-            PlayGrid.Opacity = 0.49;
+            PlayGrid.Opacity = 0.40;
             restart.Opacity = 0.45;
             //INFO.BorderBrush = new SolidColorBrush(Colors.Green);
             //INFO.BorderThickness = new Thickness(5);
@@ -245,7 +243,7 @@ namespace TicTacToeWPFspiel
 
             if (FA1 && FA2 && FA3 && FB1 && FB2 && FB3 && FC1 && FC2 && FC3)
             {
-                PlayGrid.Opacity = 0.49;
+                PlayGrid.Opacity = 0.40;
                 restart.Opacity = 0.45;
                 //INFO.BorderBrush = new SolidColorBrush(Colors.Green);
                 //INFO.BorderThickness = new Thickness(5);
@@ -756,7 +754,7 @@ namespace TicTacToeWPFspiel
 
             if (FA1 && FA2 && FA3 && FB1 && FB2 && FB3 && FC1 && FC2 && FC3)
             {
-                PlayGrid.Opacity = 0.49;
+                PlayGrid.Opacity = 0.40;
                 restart.Opacity = 0.45;
                 //INFO.BorderBrush = new SolidColorBrush(Colors.Green);
                 //INFO.BorderThickness = new Thickness(5);
