@@ -12,26 +12,37 @@ namespace TicTacToeWPFspiel
     /// </summary>
     public partial class SpielOptionen : Page
     {
+        public static event EventHandler<string>? BGvideoChanged;
 
         public SpielOptionen(string bgVid) 
         {
-            InitializeComponent();                        
+            InitializeComponent();
         }
 
         private void BG_1_Checked(object sender, RoutedEventArgs e)
         {
-            MainWindow.BG_Video = "SnowfallStreet2.mp4";            
+            MainWindow.BG_Video = "SnowfallStreet2.mp4";
+            BGvideoChanged?.Invoke(this, "...");      // Invoke ist der Trigger !
         }
 
         private void BG_2_Checked(object sender, RoutedEventArgs e)
         {
             MainWindow.BG_Video = "Snowflakes.mp4";
+            BGvideoChanged?.Invoke(this, "Snowflake");      // Invoke ist der Trigger !
         }
 
 
         private void BG_3_Checked(object sender, RoutedEventArgs e)
         {
-            MainWindow.BG_Video = "StarExploding.mp4";            
+            MainWindow.BG_Video = "StarExploding.mp4";
+            BGvideoChanged?.Invoke(this, "Star Exploding");      // Invoke ist der Trigger !
+        }
+
+        private void BG_4_Checked(object sender, RoutedEventArgs e)
+        {
+            MainWindow.BG_Video = "SnowfallStreet1.mp4";
+            BGvideoChanged?.Invoke(this, "...");      // Invoke ist der Trigger !
+
         }
     }
 }

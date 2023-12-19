@@ -13,6 +13,7 @@ namespace TicTacToeWPFspiel
     /// </summary>
     public partial class Game : Page
     {
+        public static event EventHandler<string>? PlayerWins;
 
         int cpu_choice          = 0;
         int NpcThinkTime        = 2266;
@@ -56,14 +57,14 @@ namespace TicTacToeWPFspiel
         private void InfoLabelAnimation(string x, Label y)
         {
             ColorAnimation LabelColorEffect = new ColorAnimation();
-            LabelColorEffect.Duration = new Duration(TimeSpan.FromSeconds(2));
+            LabelColorEffect.Duration = new Duration(TimeSpan.FromSeconds(1));
             LabelColorEffect.From = Colors.LimeGreen;
             LabelColorEffect.To = Colors.OrangeRed;
             //ButtonColorEffect.KeyFrames.Add(new LinearColorKeyFrame(Colors.Black, KeyTime.FromTimeSpan(TimeSpan.FromSeconds(1))));
+            Storyboard FarbAnimation = new Storyboard();
             Storyboard.SetTargetName(LabelColorEffect, x);
             Storyboard.SetTargetProperty(LabelColorEffect, new PropertyPath
             ("(Label.Foreground).(SolidColorBrush.Color)"));
-            Storyboard FarbAnimation = new Storyboard();
             FarbAnimation.Children.Add(LabelColorEffect);
             FarbAnimation.AutoReverse = true;
             FarbAnimation.RepeatBehavior = RepeatBehavior.Forever;
@@ -84,7 +85,98 @@ namespace TicTacToeWPFspiel
             //FarbAnimation.Children.Add(ButtonColorEffect);
             //FarbAnimation.Begin(y);
 
+            //ColorAnimationUsingKeyFrames ButtonColorEffect = new ColorAnimationUsingKeyFrames();
+            //ColorAnimationUsingKeyFrames BackgroundAnimation = new ColorAnimationUsingKeyFrames();
+            //BackgroundAnimation.Duration = new Duration(TimeSpan.FromSeconds(1));
+            //BackgroundAnimation.KeyFrames.Add(new LinearColorKeyFrame(Colors.Yellow, KeyTime.FromTimeSpan(TimeSpan.FromMilliseconds(100))));
+            //ButtonColorEffect.Duration = new Duration(TimeSpan.FromSeconds(1));
+            //ButtonColorEffect.KeyFrames.Add(new LinearColorKeyFrame(Colors.Black, KeyTime.FromTimeSpan(TimeSpan.FromMilliseconds(100))));
+            ////ButtonColorEffect.KeyFrames.Add(new LinearColorKeyFrame(Colors.Black, KeyTime.FromTimeSpan(TimeSpan.FromSeconds(1))));
+            //Storyboard.SetTargetName(ButtonColorEffect, x);
+            //Storyboard.SetTargetProperty(BackgroundAnimation, new PropertyPath
+            //("(Button.Background).(SolidColorBrush.Color)"));
+            //Storyboard.SetTargetProperty(ButtonColorEffect, new PropertyPath
+            //("(Button.Foreground).(SolidColorBrush.Color)"));
+            //Storyboard FarbAnimation = new Storyboard();
+            ////FarbAnimation.AutoReverse = true;
+            ////FarbAnimation.RepeatBehavior = RepeatBehavior.Forever;
+            //FarbAnimation.Children.Add(BackgroundAnimation);
+            //FarbAnimation.Children.Add(ButtonColorEffect);
+            //FarbAnimation.Begin(y);
         }
+
+        private void ButtonAnimation(string x, Button y)
+        {
+
+            ColorAnimationUsingKeyFrames ButtonColorEffect = new ColorAnimationUsingKeyFrames();
+            ColorAnimationUsingKeyFrames BackgroundAnimation = new ColorAnimationUsingKeyFrames();
+            BackgroundAnimation.Duration = new Duration(TimeSpan.FromSeconds(1));
+            BackgroundAnimation.KeyFrames.Add(new LinearColorKeyFrame(Colors.DarkRed, KeyTime.FromTimeSpan(TimeSpan.FromMilliseconds(100))));
+            ButtonColorEffect.Duration = new Duration(TimeSpan.FromSeconds(1));
+            ButtonColorEffect.KeyFrames.Add(new LinearColorKeyFrame(Colors.Yellow, KeyTime.FromTimeSpan(TimeSpan.FromMilliseconds(100))));
+            //ButtonColorEffect.KeyFrames.Add(new LinearColorKeyFrame(Colors.Black, KeyTime.FromTimeSpan(TimeSpan.FromSeconds(1))));
+            Storyboard.SetTargetName(ButtonColorEffect, x);
+            Storyboard.SetTargetProperty(BackgroundAnimation, new PropertyPath
+            ("(Button.Background).(SolidColorBrush.Color)"));
+            Storyboard.SetTargetProperty(ButtonColorEffect, new PropertyPath
+            ("(Button.Foreground).(SolidColorBrush.Color)"));
+            Storyboard FarbAnimation = new Storyboard();
+            //FarbAnimation.AutoReverse = true;
+            //FarbAnimation.RepeatBehavior = RepeatBehavior.Forever;
+            FarbAnimation.Children.Add(BackgroundAnimation);
+            FarbAnimation.Children.Add(ButtonColorEffect);
+            FarbAnimation.Begin(y);
+        }
+
+        private void ButtonReverseAnimation(string x, Button y)
+        {
+            ColorAnimationUsingKeyFrames ButtonColorEffect = new ColorAnimationUsingKeyFrames();
+            ColorAnimationUsingKeyFrames BackgroundAnimation = new ColorAnimationUsingKeyFrames();
+            BackgroundAnimation.Duration = new Duration(TimeSpan.FromSeconds(1));
+            BackgroundAnimation.KeyFrames.Add(new LinearColorKeyFrame(Colors.Yellow, KeyTime.FromTimeSpan(TimeSpan.FromMilliseconds(200))));
+            ButtonColorEffect.Duration = new Duration(TimeSpan.FromSeconds(1));
+            ButtonColorEffect.KeyFrames.Add(new LinearColorKeyFrame(Colors.DarkRed, KeyTime.FromTimeSpan(TimeSpan.FromMilliseconds(200))));
+            //ButtonColorEffect.KeyFrames.Add(new LinearColorKeyFrame(Colors.Black, KeyTime.FromTimeSpan(TimeSpan.FromSeconds(1))));
+            Storyboard.SetTargetName(ButtonColorEffect, x);
+            Storyboard.SetTargetProperty(BackgroundAnimation, new PropertyPath
+            ("(Button.Background).(SolidColorBrush.Color)"));
+            Storyboard.SetTargetProperty(ButtonColorEffect, new PropertyPath
+            ("(Button.Foreground).(SolidColorBrush.Color)"));
+            Storyboard FarbAnimation = new Storyboard();
+            //FarbAnimation.AutoReverse = true;
+            //FarbAnimation.RepeatBehavior = RepeatBehavior.Forever;
+            FarbAnimation.Children.Add(BackgroundAnimation);
+            FarbAnimation.Children.Add(ButtonColorEffect);
+            FarbAnimation.Begin(y);
+
+
+            //ColorAnimation ButtonColorEffect = new ColorAnimation();
+            //ButtonColorEffect.Duration = new Duration(TimeSpan.FromSeconds(2));
+            //ButtonColorEffect.From = Colors.GreenYellow;
+            //ButtonColorEffect.To = Colors.DarkRed;
+            //Storyboard.SetTargetName(ButtonColorEffect, x);
+            //Storyboard.SetTargetProperty(ButtonColorEffect, new PropertyPath
+            //("(Button.Background).(SolidColorBrush.Color)"));
+            ////Storyboard.SetTargetProperty(ButtonColorEffect, new PropertyPath
+            ////("(Button.Foreground).(SolidColorBrush.Color)"));
+            //Storyboard FarbAnimation = new Storyboard();
+            ////FarbAnimation.AutoReverse = true;
+            ////FarbAnimation.RepeatBehavior = RepeatBehavior.Forever;
+            //FarbAnimation.Children.Add(ButtonColorEffect);
+            //FarbAnimation.Begin(y);
+        }
+
+        private void WinningConditionOrders()
+        {
+            INFO.Content = "DU HAST GEWONNEN !!!";
+            INFO.Visibility = Visibility.Visible;
+            game_ended = true;
+            restart.Visibility = Visibility.Visible;
+            PlayerWins?.Invoke(this, "DU HAST GEWONNEN !!!");      // Invoke ist der Trigger !
+
+            NpcLeaveClickEventAndCheckLooseCondition();
+        }
+
 
         public Game()        
         {
@@ -638,75 +730,35 @@ namespace TicTacToeWPFspiel
         {
             if (player_choosed1 && player_choosed2 && player_choosed3)
             {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                
-                NpcLeaveClickEventAndCheckLooseCondition();
+                WinningConditionOrders();
             }
             else if (player_choosed4 && player_choosed5 && player_choosed6)
             {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                
-                NpcLeaveClickEventAndCheckLooseCondition();
+                WinningConditionOrders();
             }
             else if (player_choosed7 && player_choosed8 && player_choosed9)
             {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                
-                NpcLeaveClickEventAndCheckLooseCondition();
+                WinningConditionOrders();
             }
             else if (player_choosed1 && player_choosed4 && player_choosed7)
             {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                
-                NpcLeaveClickEventAndCheckLooseCondition();
+                WinningConditionOrders();
             }
             else if (player_choosed2 && player_choosed5 && player_choosed8)
             {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                
-                NpcLeaveClickEventAndCheckLooseCondition();
+                WinningConditionOrders();
             }
             else if (player_choosed3 && player_choosed6 && player_choosed9)
             {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                
-                NpcLeaveClickEventAndCheckLooseCondition();
+                WinningConditionOrders();
             }
             else if (player_choosed1 && player_choosed5 && player_choosed9)
             {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                
-                NpcLeaveClickEventAndCheckLooseCondition();
+                WinningConditionOrders();
             }
             else if (player_choosed3 && player_choosed5 && player_choosed7)
             {
-                INFO.Content = "DU HAST GEWONNEN !!! HERZLICHEN GLÜCKWUNSCH";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                
-                NpcLeaveClickEventAndCheckLooseCondition();
+                WinningConditionOrders();
             }
 
             if (FA1 && FA2 && FA3 && FB1 && FB2 && FB3 && FC1 && FC2 && FC3)
@@ -718,7 +770,6 @@ namespace TicTacToeWPFspiel
                 
                 NpcLeaveClickEventAndCheckLooseCondition();
             }
-
         }
 
         public void NpcLogic()
@@ -2307,17 +2358,16 @@ namespace TicTacToeWPFspiel
             
             game_ended = false;
 
+        }
 
-            //DoubleAnimation animation = new DoubleAnimation
-            //{
-            //    From = 0,
-            //    To = 10,
-            //    Duration = TimeSpan.FromSeconds(0.05),
-            //    AutoReverse = true,
-            //    RepeatBehavior = new RepeatBehavior(3)
-            //};
-            //TicTacToeRaster.BeginAnimation(Frame.MarginProperty, animation);
+        private void restart_MouseEnter(object sender, System.Windows.Input.MouseEventArgs e)
+        {
+            ButtonAnimation(restart.Name, restart);
+        }
 
+        private void restart_MouseLeave(object sender, System.Windows.Input.MouseEventArgs e)
+        {
+            ButtonReverseAnimation(restart.Name, restart);
         }
     }
 }

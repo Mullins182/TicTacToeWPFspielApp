@@ -2,6 +2,7 @@
 using System.IO;
 using System.Media;
 using System.Runtime.CompilerServices;
+using System.Threading.Channels;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -19,14 +20,28 @@ namespace TicTacToeWPFspiel
     /// </summary>
     public partial class MainWindow : Window
     {
-        public static string BG_Video = "SnowfallStreet2.mp4";
+        public static string BG_Video       = "SnowfallStreet2.mp4";
+        public static string confettiCannon = "ConfettiCannon.mp4";
         public SpielOptionen _options;
-        public Game _runningGame       = new Game();
+        public Game _runningGame            = new Game();
+
+        public void ChangeBackgroundVideo(object? sender, string e)
+        {
+            //var temp = sender as SpielOptionen;
+            BackgroundVideo.Source = new Uri(BG_Video, UriKind.RelativeOrAbsolute); // Quellangabe für Mediaelement !
+            BackgroundVideo.ApplyTemplate();
+            //backToGame.Content = e;
+        }
+
+        public void ConfettiCannon(object? sender, string e)
+        {
+            BackgroundVideo.Source = new Uri(confettiCannon, UriKind.RelativeOrAbsolute); // Quellangabe für Mediaelement !
+        }
 
 
         public MainWindow()
         {
-
+            
             InitializeComponent();
 
             if (!File.Exists(BG_Video))  // Dialogfenster öffnet wenn die Datei nicht im Programmverzeichnis existiert !
@@ -43,15 +58,20 @@ namespace TicTacToeWPFspiel
             }
 
             BackgroundVideo.Source = new Uri(BG_Video, UriKind.RelativeOrAbsolute); // Quellangabe für Mediaelement !
+            BackgroundVideo.ApplyTemplate();
 
             _options = new SpielOptionen(BG_Video);
 
             NavigationFrame.Content = _runningGame;
+
+            SpielOptionen.BGvideoChanged += ChangeBackgroundVideo;
+            Game.PlayerWins += ConfettiCannon;
+
         }
 
         private void options_Click(object sender, RoutedEventArgs e)
         {
-            NavigationFrame.Navigate(_options);
+            NavigationFrame.NavigationService.Navigate(_options);
             options.Visibility = Visibility.Collapsed;
             quitGame.Visibility = Visibility.Collapsed;
             backToGame.Visibility = Visibility.Visible;
@@ -64,7 +84,7 @@ namespace TicTacToeWPFspiel
 
         private void backToGame_Click(object sender, RoutedEventArgs e)
         {
-            NavigationFrame.Navigate(_runningGame);
+            NavigationFrame.NavigationService.Navigate(_runningGame);
             backToGame.Visibility = Visibility.Collapsed;
             options.Visibility = Visibility.Visible;
             quitGame.Visibility = Visibility.Visible;
@@ -164,7 +184,8 @@ namespace TicTacToeWPFspiel
         }
                 private void BackgroundVideo_MediaEnded(object sender, RoutedEventArgs e)   // Ereignishandler bei Playbackposition Video-Ende !
         {
-            BackgroundVideo.Position = TimeSpan.Zero;           // Bei erreichen von Video-Ende wird die Playbackposition auf NULL zurückgesetzt und das Video beginnt von Neuem !
+            BackgroundVideo.Position = TimeSpan.FromMilliseconds(5);           // Bei erreichen von Video-Ende wird die Playbackposition auf NULL zurückgesetzt und das Video beginnt von Neuem !
+            //_runningGame.INFO.Visibility = Visibility.Visible;
         }
 
     }
