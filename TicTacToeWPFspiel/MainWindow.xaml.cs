@@ -22,22 +22,27 @@ namespace TicTacToeWPFspiel
     {
         public static string BG_Video       = "SnowfallStreet2.mp4";
         public static string confettiCannon = "ConfettiCannon.mp4";
+        public static string gameOverVideo  = "GameOver.mp4";
         public SpielOptionen _options;
         public Game _runningGame            = new Game();
 
         public void ChangeBackgroundVideo(object? sender, string e)
         {
-            //var temp = sender as SpielOptionen;
             BackgroundVideo.Source = new Uri(BG_Video, UriKind.RelativeOrAbsolute); // Quellangabe für Mediaelement !
             BackgroundVideo.ApplyTemplate();
-            //backToGame.Content = e;
         }
 
         public void ConfettiCannon(object? sender, string e)
         {
             BackgroundVideo.Source = new Uri(confettiCannon, UriKind.RelativeOrAbsolute); // Quellangabe für Mediaelement !
+            BackgroundVideo.ApplyTemplate();
         }
 
+        private void GameOverVideo(object? sender, string e)
+        {            
+            BackgroundVideo.Source = new Uri(gameOverVideo, UriKind.RelativeOrAbsolute); // Quellangabe für Mediaelement !
+            BackgroundVideo.ApplyTemplate();
+        }
 
         public MainWindow()
         {
@@ -64,9 +69,10 @@ namespace TicTacToeWPFspiel
 
             NavigationFrame.Content = _runningGame;
 
-            SpielOptionen.BGvideoChanged += ChangeBackgroundVideo;
-            Game.PlayerWins += ConfettiCannon;
-
+            SpielOptionen.BGvideoChanged    += ChangeBackgroundVideo;
+            Game.PlayerWins                 += ConfettiCannon;
+            Game.GameOver                   += GameOverVideo;
+            Game.ResetBGvideo               += ChangeBackgroundVideo;
         }
 
         private void options_Click(object sender, RoutedEventArgs e)
@@ -96,10 +102,10 @@ namespace TicTacToeWPFspiel
             
             ColorAnimationUsingKeyFrames ButtonColorEffect = new ColorAnimationUsingKeyFrames();
             ColorAnimationUsingKeyFrames BackgroundAnimation = new ColorAnimationUsingKeyFrames();
-            BackgroundAnimation.Duration = new Duration(TimeSpan.FromSeconds(3));
-            BackgroundAnimation.KeyFrames.Add(new LinearColorKeyFrame(Colors.Yellow, KeyTime.FromTimeSpan(TimeSpan.FromMilliseconds(500))));
-            ButtonColorEffect.Duration = new Duration(TimeSpan.FromSeconds(5));
-            ButtonColorEffect.KeyFrames.Add(new LinearColorKeyFrame(Colors.Black,KeyTime.FromTimeSpan(TimeSpan.FromMilliseconds(500))));
+            ButtonColorEffect.Duration = new Duration(TimeSpan.FromSeconds(0.5));
+            ButtonColorEffect.KeyFrames.Add(new LinearColorKeyFrame(Colors.Black,KeyTime.FromTimeSpan(TimeSpan.FromMilliseconds(200))));
+            //BackgroundAnimation.Duration = new Duration(TimeSpan.FromSeconds(0.5));
+            BackgroundAnimation.KeyFrames.Add(new LinearColorKeyFrame(Colors.Yellow, KeyTime.FromTimeSpan(TimeSpan.FromMilliseconds(200))));
             //ButtonColorEffect.KeyFrames.Add(new LinearColorKeyFrame(Colors.Black, KeyTime.FromTimeSpan(TimeSpan.FromSeconds(1))));
             Storyboard.SetTargetName(ButtonColorEffect, x);
             Storyboard.SetTargetProperty(BackgroundAnimation, new PropertyPath
@@ -118,10 +124,10 @@ namespace TicTacToeWPFspiel
         {
             ColorAnimationUsingKeyFrames ButtonColorEffect = new ColorAnimationUsingKeyFrames();
             ColorAnimationUsingKeyFrames BackgroundAnimation = new ColorAnimationUsingKeyFrames();
-            BackgroundAnimation.Duration = new Duration(TimeSpan.FromSeconds(3));
-            BackgroundAnimation.KeyFrames.Add(new LinearColorKeyFrame(Colors.DarkRed, KeyTime.FromTimeSpan(TimeSpan.FromMilliseconds(950))));
-            ButtonColorEffect.Duration = new Duration(TimeSpan.FromSeconds(5));
-            ButtonColorEffect.KeyFrames.Add(new LinearColorKeyFrame(Colors.Yellow, KeyTime.FromTimeSpan(TimeSpan.FromMilliseconds(950))));
+            ButtonColorEffect.Duration = new Duration(TimeSpan.FromSeconds(0.5));
+            ButtonColorEffect.KeyFrames.Add(new LinearColorKeyFrame(Colors.Yellow, KeyTime.FromTimeSpan(TimeSpan.FromMilliseconds(350))));
+            //BackgroundAnimation.Duration = new Duration(TimeSpan.FromSeconds(0.5));
+            BackgroundAnimation.KeyFrames.Add(new LinearColorKeyFrame(Colors.DarkRed, KeyTime.FromTimeSpan(TimeSpan.FromMilliseconds(350))));
             //ButtonColorEffect.KeyFrames.Add(new LinearColorKeyFrame(Colors.Black, KeyTime.FromTimeSpan(TimeSpan.FromSeconds(1))));
             Storyboard.SetTargetName(ButtonColorEffect, x);
             Storyboard.SetTargetProperty(BackgroundAnimation, new PropertyPath
@@ -184,7 +190,7 @@ namespace TicTacToeWPFspiel
         }
                 private void BackgroundVideo_MediaEnded(object sender, RoutedEventArgs e)   // Ereignishandler bei Playbackposition Video-Ende !
         {
-            BackgroundVideo.Position = TimeSpan.FromMilliseconds(5);           // Bei erreichen von Video-Ende wird die Playbackposition auf NULL zurückgesetzt und das Video beginnt von Neuem !
+            BackgroundVideo.Position = TimeSpan.FromMilliseconds(50);           // Bei erreichen von Video-Ende wird die Playbackposition auf NULL zurückgesetzt und das Video beginnt von Neuem !
             //_runningGame.INFO.Visibility = Visibility.Visible;
         }
 

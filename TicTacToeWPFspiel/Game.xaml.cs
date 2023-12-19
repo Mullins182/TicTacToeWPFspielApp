@@ -14,6 +14,8 @@ namespace TicTacToeWPFspiel
     public partial class Game : Page
     {
         public static event EventHandler<string>? PlayerWins;
+        public static event EventHandler<string>? GameOver;
+        public static event EventHandler<string>? ResetBGvideo;
 
         int cpu_choice          = 0;
         int NpcThinkTime        = 2266;
@@ -53,6 +55,7 @@ namespace TicTacToeWPFspiel
         bool player_choosed8 = false;
         bool player_choosed9 = false;
 
+        string fg = "3";
 
         private void InfoLabelAnimation(string x, Label y)
         {
@@ -110,10 +113,10 @@ namespace TicTacToeWPFspiel
 
             ColorAnimationUsingKeyFrames ButtonColorEffect = new ColorAnimationUsingKeyFrames();
             ColorAnimationUsingKeyFrames BackgroundAnimation = new ColorAnimationUsingKeyFrames();
-            BackgroundAnimation.Duration = new Duration(TimeSpan.FromSeconds(1));
-            BackgroundAnimation.KeyFrames.Add(new LinearColorKeyFrame(Colors.DarkRed, KeyTime.FromTimeSpan(TimeSpan.FromMilliseconds(100))));
             ButtonColorEffect.Duration = new Duration(TimeSpan.FromSeconds(1));
-            ButtonColorEffect.KeyFrames.Add(new LinearColorKeyFrame(Colors.Yellow, KeyTime.FromTimeSpan(TimeSpan.FromMilliseconds(100))));
+            ButtonColorEffect.KeyFrames.Add(new LinearColorKeyFrame(Colors.DarkRed, KeyTime.FromTimeSpan(TimeSpan.FromMilliseconds(100))));
+            BackgroundAnimation.Duration = new Duration(TimeSpan.FromSeconds(1));
+            BackgroundAnimation.KeyFrames.Add(new LinearColorKeyFrame(Colors.LawnGreen, KeyTime.FromTimeSpan(TimeSpan.FromMilliseconds(100))));
             //ButtonColorEffect.KeyFrames.Add(new LinearColorKeyFrame(Colors.Black, KeyTime.FromTimeSpan(TimeSpan.FromSeconds(1))));
             Storyboard.SetTargetName(ButtonColorEffect, x);
             Storyboard.SetTargetProperty(BackgroundAnimation, new PropertyPath
@@ -132,10 +135,10 @@ namespace TicTacToeWPFspiel
         {
             ColorAnimationUsingKeyFrames ButtonColorEffect = new ColorAnimationUsingKeyFrames();
             ColorAnimationUsingKeyFrames BackgroundAnimation = new ColorAnimationUsingKeyFrames();
-            BackgroundAnimation.Duration = new Duration(TimeSpan.FromSeconds(1));
-            BackgroundAnimation.KeyFrames.Add(new LinearColorKeyFrame(Colors.Yellow, KeyTime.FromTimeSpan(TimeSpan.FromMilliseconds(200))));
             ButtonColorEffect.Duration = new Duration(TimeSpan.FromSeconds(1));
-            ButtonColorEffect.KeyFrames.Add(new LinearColorKeyFrame(Colors.DarkRed, KeyTime.FromTimeSpan(TimeSpan.FromMilliseconds(200))));
+            ButtonColorEffect.KeyFrames.Add(new LinearColorKeyFrame(Colors.LawnGreen, KeyTime.FromTimeSpan(TimeSpan.FromMilliseconds(200))));
+            BackgroundAnimation.Duration = new Duration(TimeSpan.FromSeconds(1));
+            BackgroundAnimation.KeyFrames.Add(new LinearColorKeyFrame(Colors.DarkRed, KeyTime.FromTimeSpan(TimeSpan.FromMilliseconds(200))));
             //ButtonColorEffect.KeyFrames.Add(new LinearColorKeyFrame(Colors.Black, KeyTime.FromTimeSpan(TimeSpan.FromSeconds(1))));
             Storyboard.SetTargetName(ButtonColorEffect, x);
             Storyboard.SetTargetProperty(BackgroundAnimation, new PropertyPath
@@ -168,6 +171,10 @@ namespace TicTacToeWPFspiel
 
         private void WinningConditionOrders()
         {
+            PlayGrid.Opacity    = 0.49;
+            restart.Opacity     = 0.45;
+            //INFO.BorderBrush = new SolidColorBrush(Colors.Green);
+            //INFO.BorderThickness = new Thickness(5);
             INFO.Content = "DU HAST GEWONNEN !!!";
             INFO.Visibility = Visibility.Visible;
             game_ended = true;
@@ -177,6 +184,20 @@ namespace TicTacToeWPFspiel
             NpcLeaveClickEventAndCheckLooseCondition();
         }
 
+        private void LoosingConditionOrders()
+        {
+            PlayGrid.Opacity = 0.49;
+            restart.Opacity = 0.45;
+            //INFO.BorderBrush = new SolidColorBrush(Colors.Green);
+            //INFO.BorderThickness = new Thickness(5);
+            INFO.Content = "DU HAST LEIDER VERLOREN !!!";
+            INFO.Visibility = Visibility.Visible;
+            game_ended = true;
+            restart.Visibility = Visibility.Visible;
+            GameOver?.Invoke(this, "GAME OVER");
+
+            //leaveClickEventNow = true;
+        }
 
         public Game()        
         {
@@ -191,90 +212,54 @@ namespace TicTacToeWPFspiel
         {
             if (cpu_choosed1 && cpu_choosed2 && cpu_choosed3 == true)
             {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                
-                leaveClickEventNow = true;
+                LoosingConditionOrders();                
             }
             else if (cpu_choosed4 && cpu_choosed5 && cpu_choosed6 == true)
             {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                
-                leaveClickEventNow = true;
+                LoosingConditionOrders();
             }
             else if (cpu_choosed7 && cpu_choosed8 && cpu_choosed9 == true)
             {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                
-                leaveClickEventNow = true;
+                LoosingConditionOrders();
             }
             else if (cpu_choosed1 && cpu_choosed5 && cpu_choosed9 == true)
             {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                
-                leaveClickEventNow = true;
+                LoosingConditionOrders();
             }
             else if (cpu_choosed3 && cpu_choosed5 && cpu_choosed7 == true)
             {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                
-                leaveClickEventNow = true;
+                LoosingConditionOrders();
             }
             else if (cpu_choosed1 && cpu_choosed4 && cpu_choosed7 == true)
             {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                
-                leaveClickEventNow = true;
+                LoosingConditionOrders();
             }
             else if (cpu_choosed2 && cpu_choosed5 && cpu_choosed8 == true)
             {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                
-                leaveClickEventNow = true;
+                LoosingConditionOrders();
             }
             else if (cpu_choosed3 && cpu_choosed6 && cpu_choosed9 == true)
             {
-                INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-                INFO.Visibility = Visibility.Visible;
-                game_ended = true;
-                restart.Visibility = Visibility.Visible;
-                
-                leaveClickEventNow = true;
+                LoosingConditionOrders();
             }
 
             if (FA1 && FA2 && FA3 && FB1 && FB2 && FB3 && FC1 && FC2 && FC3)
             {
+                PlayGrid.Opacity = 0.49;
+                restart.Opacity = 0.45;
+                //INFO.BorderBrush = new SolidColorBrush(Colors.Green);
+                //INFO.BorderThickness = new Thickness(5);
                 INFO.Content = "SPIEL BEENDET...KEINER HAT GEWONNEN !";
                 INFO.Visibility = Visibility.Visible;
                 game_ended = true;
                 restart.Visibility = Visibility.Visible;
-                
+                GameOver?.Invoke(this, "GAME OVER");
+
                 leaveClickEventNow = true;
             }
 
             waitForNpc = false;
             leaveClickEventNow = true;
-            //INFO.Visibility = Visibility.Hidden;
         }
         public void NpcPlayerBlocksHumanPLayer()
         {
@@ -731,43 +716,57 @@ namespace TicTacToeWPFspiel
             if (player_choosed1 && player_choosed2 && player_choosed3)
             {
                 WinningConditionOrders();
+                return;
             }
             else if (player_choosed4 && player_choosed5 && player_choosed6)
             {
                 WinningConditionOrders();
+                return;
             }
             else if (player_choosed7 && player_choosed8 && player_choosed9)
             {
                 WinningConditionOrders();
+                return;
             }
             else if (player_choosed1 && player_choosed4 && player_choosed7)
             {
                 WinningConditionOrders();
+                return;
             }
             else if (player_choosed2 && player_choosed5 && player_choosed8)
             {
                 WinningConditionOrders();
+                return;
             }
             else if (player_choosed3 && player_choosed6 && player_choosed9)
             {
                 WinningConditionOrders();
+                return;
             }
             else if (player_choosed1 && player_choosed5 && player_choosed9)
             {
                 WinningConditionOrders();
+                return;
             }
             else if (player_choosed3 && player_choosed5 && player_choosed7)
             {
                 WinningConditionOrders();
+                return;
             }
 
             if (FA1 && FA2 && FA3 && FB1 && FB2 && FB3 && FC1 && FC2 && FC3)
             {
+                PlayGrid.Opacity = 0.49;
+                restart.Opacity = 0.45;
+                //INFO.BorderBrush = new SolidColorBrush(Colors.Green);
+                //INFO.BorderThickness = new Thickness(5);
                 INFO.Content = "SPIEL BEENDET...KEINER HAT GEWONNEN !";
                 INFO.Visibility = Visibility.Visible;
                 game_ended = true;
                 restart.Visibility = Visibility.Visible;
-                
+
+                GameOver?.Invoke(this, "GAME OVER");
+
                 NpcLeaveClickEventAndCheckLooseCondition();
             }
         }
@@ -2294,6 +2293,9 @@ namespace TicTacToeWPFspiel
 
         private void Restart_Click(object sender, RoutedEventArgs e)
         {
+            ResetBGvideo?.Invoke(this, "Reset");      // Invoke ist der Trigger !
+            PlayGrid.Opacity = 0.6;
+
             cpu_choice = 0;
             cpu_choosed1 = false;
             cpu_choosed2 = false;
