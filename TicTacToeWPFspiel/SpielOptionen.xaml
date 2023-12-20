@@ -63,7 +63,7 @@
 
         <StackPanel Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" Width="400" VerticalAlignment="top" HorizontalAlignment="Center">
                 
-            <RibbonRadioButton x:Name="BGm_1" Height="30" Width="400" Background="DarkRed" FontFamily="Arial" FontSize="18" FontWeight="Bold" Label="Christmas Swing" Foreground="PaleGoldenrod" MouseOverBorderBrush="LawnGreen" CheckedBorderBrush="LawnGreen" CheckedBackground="DarkGreen" Padding="0,8,0,0" CornerRadius="10,10,10,10" Checked="BGm_1_Checked">
+            <RibbonRadioButton x:Name="BGm_1" IsChecked="True" Height="30" Width="400" Background="DarkRed" FontFamily="Arial" FontSize="18" FontWeight="Bold" Label="Christmas Swing" Foreground="PaleGoldenrod" MouseOverBorderBrush="LawnGreen" CheckedBorderBrush="LawnGreen" CheckedBackground="DarkGreen" Padding="0,8,0,0" CornerRadius="10,10,10,10" Checked="BGm_1_Checked">
                 <RibbonRadioButton.MouseOverBackground>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="#FF5B8612" Offset="0.293"/>

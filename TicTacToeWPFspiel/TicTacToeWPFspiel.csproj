@@ -10,9 +10,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Donut.jpg" />
     <None Remove="SpielfeldSnow.png" />
     <None Remove="O.png" />
     <None Remove="X.png" />
+    <None Remove="Zuckerstangen.jpg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -20,9 +22,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Donut.jpg" />
     <Resource Include="SpielfeldSnow.png" />
     <Resource Include="O.png" />
     <Resource Include="X.png" />
+    <Resource Include="Zuckerstangen.jpg" />
   </ItemGroup>
 
   <ItemGroup>
