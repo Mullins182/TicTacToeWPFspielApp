@@ -22,39 +22,39 @@ namespace TicTacToeWPFspiel
 
         private void BG_1_Checked(object sender, RoutedEventArgs e)
         {
-            MainWindow.BG_Video = "SnowfallStreet2.mp4";
+            MainWindow.BG_Video = @"BG_Videos\SnowfallStreet2.mp4";
             BGvideoChanged?.Invoke(this, "...");      // Invoke ist der Trigger !
         }
 
         private void BG_2_Checked(object sender, RoutedEventArgs e)
         {
-            MainWindow.BG_Video = "Snowflakes.mp4";
+            MainWindow.BG_Video = @"BG_Videos\Snowflakes.mp4";
             BGvideoChanged?.Invoke(this, "Snowflake");      // Invoke ist der Trigger !
         }
 
 
         private void BG_3_Checked(object sender, RoutedEventArgs e)
         {
-            MainWindow.BG_Video = "StarExploding.mp4";
+            MainWindow.BG_Video = @"BG_Videos\StarExploding.mp4";
             BGvideoChanged?.Invoke(this, "Star Exploding");      // Invoke ist der Trigger !
         }
 
         private void BG_4_Checked(object sender, RoutedEventArgs e)
         {
-            MainWindow.BG_Video = "SnowfallStreet1.mp4";
+            MainWindow.BG_Video = @"BG_Videos\SnowfallStreet1.mp4";
             BGvideoChanged?.Invoke(this, "...");      // Invoke ist der Trigger !
 
         }
 
         private void BGm_1_Checked(object sender, RoutedEventArgs e)
         {
-            MainWindow.BG_Music = "ChristmasSwing.mp3";
+            MainWindow.BG_Music = @"Music\ChristmasSwing.mp3";
             BGaudioChanged?.Invoke(this, "...");
         }
 
         private void BGm_2_Checked(object sender, RoutedEventArgs e)
         {
-            MainWindow.BG_Music = "Schneefloeckchen.mp3";
+            MainWindow.BG_Music = @"Music\Schneefloeckchen.mp3";
             BGaudioChanged?.Invoke(this, "...");
         }
     }

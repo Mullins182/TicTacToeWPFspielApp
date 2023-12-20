@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TicTacToeWPFspiel"
         mc:Ignorable="d"
-        Title="TicTacToe Game | Version 2.5 | by Mullins182" Height="800" Width="700" Background="Transparent" x:Name="TicTacToeHauptfenster">
+        Title="TicTacToe Game | Version 2.7 | by Mullins182" Height="800" Width="700" Background="Transparent" x:Name="TicTacToeHauptfenster">
     <!--Control Template Override für Buttons um Highlighting bei Mouseover zu verhindern !-->
     <Window.Resources>
         <ControlTemplate x:Key="NoMouseOverButtonTemplate"

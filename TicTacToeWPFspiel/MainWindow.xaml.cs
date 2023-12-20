@@ -22,10 +22,10 @@ namespace TicTacToeWPFspiel
     /// </summary>
     public partial class MainWindow : Window
     {
-        public static string BG_Video       = "SnowfallStreet2.mp4";
-        public static string BG_Music       = "ChristmasSwing.mp3";
-        public static string confettiCannon = "ConfettiCannon.mp4";
-        public static string gameOverVideo  = "GameOver.mp4";
+        public static string BG_Video       = @"BG_Videos\SnowfallStreet2.mp4";
+        public static string BG_Music       = @"Music\ChristmasSwing.mp3";
+        public static string confettiCannon = @"BG_Videos\ConfettiCannon.mp4";
+        public static string gameOverVideo  = @"BG_Videos\GameOver.mp4";
         public SpielOptionen _options;
         public Game _runningGame            = new Game();
 
