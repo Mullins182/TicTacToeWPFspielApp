@@ -104,7 +104,7 @@ namespace TicTacToeWPFspiel
             backToGame.Visibility = Visibility.Collapsed;
             options.Visibility = Visibility.Visible;
             quitGame.Visibility = Visibility.Visible;
-            BackgroundVideo.Source = new Uri(BG_Video, UriKind.RelativeOrAbsolute); // Quellangabe für Mediaelement !
+            //BackgroundVideo.Source = new Uri(BG_Video, UriKind.RelativeOrAbsolute); // Quellangabe für Mediaelement !
         }
 
         private void ButtonAnimation(string x, Button y)
