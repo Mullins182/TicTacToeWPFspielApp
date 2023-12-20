@@ -72,19 +72,19 @@
                 <RowDefinition Height="100"/>
                 <RowDefinition Height="100"/>
             </Grid.RowDefinitions>
-            <Image x:Name="TicTacToeRaster" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" Grid.RowSpan="3" Height="300" Width="300" VerticalAlignment="center" HorizontalAlignment="Center" Cursor="Hand" Source="/e797539a1376987930021d2cf4ef74dd5e2ea131.png"/>
+            <!--<Image x:Name="TicTacToeRaster" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" Grid.RowSpan="3" Height="300" Width="300" VerticalAlignment="center" HorizontalAlignment="Center"/>-->
 
             <Button x:Name="BA1" Grid.Column="0" HorizontalAlignment="center" Height="100" Grid.Row="0" VerticalAlignment="center" Width="100" Click="BA1_Click" Visibility="Visible">
                 <Button.Background>
-                    <ImageBrush Stretch="None" ImageSource="/Muster.png"/>
+                    <ImageBrush Stretch="None" ImageSource="/SpielfeldSnow.png"/>
                 </Button.Background>
             </Button>
-            <Label x:Name="BXA1" Grid.Column="0" HorizontalAlignment="center" Height="100" Grid.Row="0" VerticalAlignment="center" Width="100" Visibility="Hidden">
+            <Label x:Name="BXA1" Grid.Column="0" HorizontalAlignment="center" Height="100" Grid.Row="0" VerticalAlignment="center" Width="100" Visibility="Collapsed">
                 <Label.Background>
                     <ImageBrush ImageSource="/X.png"/>
                 </Label.Background>
             </Label>
-            <Label x:Name="BOA1" Grid.Column="0" HorizontalAlignment="center" Height="100" Grid.Row="0" VerticalAlignment="center" Width="100" Visibility="Hidden">
+            <Label x:Name="BOA1" Grid.Column="0" HorizontalAlignment="center" Height="100" Grid.Row="0" VerticalAlignment="center" Width="100" Visibility="Collapsed">
                 <Label.Background>
                     <ImageBrush ImageSource="/O.png"/>
                 </Label.Background>
@@ -92,15 +92,15 @@
 
             <Button x:Name="BA2" Grid.Column="1" HorizontalAlignment="center" Height="100" Grid.Row="0" VerticalAlignment="center" Width="100" Click="BA2_Click" Visibility="Visible">
                 <Button.Background>
-                    <ImageBrush Stretch="None" ImageSource="/Muster.png"/>
+                    <ImageBrush Stretch="None" ImageSource="/SpielfeldSnow.png"/>
                 </Button.Background>
             </Button>
-            <Label x:Name="BXA2" Grid.Column="1" HorizontalAlignment="center" Height="100" Grid.Row="0" VerticalAlignment="center" Width="100" Visibility="Hidden">
+            <Label x:Name="BXA2" Grid.Column="1" HorizontalAlignment="center" Height="100" Grid.Row="0" VerticalAlignment="center" Width="100" Visibility="Collapsed">
                 <Label.Background>
                     <ImageBrush ImageSource="/X.png"/>
                 </Label.Background>
             </Label>
-            <Label x:Name="BOA2" Grid.Column="1" HorizontalAlignment="center" Height="100" Grid.Row="0" VerticalAlignment="center" Width="100" Visibility="Hidden">
+            <Label x:Name="BOA2" Grid.Column="1" HorizontalAlignment="center" Height="100" Grid.Row="0" VerticalAlignment="center" Width="100" Visibility="Collapsed">
                 <Label.Background>
                     <ImageBrush ImageSource="/O.png"/>
                 </Label.Background>
@@ -108,15 +108,15 @@
 
             <Button x:Name="BA3" Grid.Column="2" HorizontalAlignment="center" Height="100" Grid.Row="0" VerticalAlignment="center" Width="100" Click="BA3_Click" Visibility="Visible">
                 <Button.Background>
-                    <ImageBrush Stretch="None" ImageSource="/Muster.png"/>
+                    <ImageBrush Stretch="None" ImageSource="/SpielfeldSnow.png"/>
                 </Button.Background>
             </Button>
-            <Label x:Name="BXA3" Grid.Column="2" HorizontalAlignment="center" Height="100" Grid.Row="0" VerticalAlignment="center" Width="100" Visibility="Hidden">
+            <Label x:Name="BXA3" Grid.Column="2" HorizontalAlignment="center" Height="100" Grid.Row="0" VerticalAlignment="center" Width="100" Visibility="Collapsed">
                 <Label.Background>
                     <ImageBrush ImageSource="/X.png"/>
                 </Label.Background>
             </Label>
-            <Label x:Name="BOA3" Grid.Column="2" HorizontalAlignment="center" Height="100" Grid.Row="0" VerticalAlignment="center" Width="100" Visibility="Hidden">
+            <Label x:Name="BOA3" Grid.Column="2" HorizontalAlignment="center" Height="100" Grid.Row="0" VerticalAlignment="center" Width="100" Visibility="Collapsed">
                 <Label.Background>
                     <ImageBrush ImageSource="/O.png"/>
                 </Label.Background>
@@ -124,25 +124,25 @@
 
             <Button x:Name="BB1" Grid.Column="0" HorizontalAlignment="center" Height="100" Grid.Row="1" VerticalAlignment="center" Width="100" Click="BB1_Click" Visibility="Visible">
                 <Button.Background>
-                    <ImageBrush Stretch="None" ImageSource="/Muster.png"/>
+                    <ImageBrush Stretch="None" ImageSource="/SpielfeldSnow.png"/>
                 </Button.Background>
             </Button>
-            <Label x:Name="BXB1" Grid.Column="0" HorizontalAlignment="center" Height="100" Grid.Row="1" VerticalAlignment="center" Width="100" Visibility="Hidden">
+            <Label x:Name="BXB1" Grid.Column="0" HorizontalAlignment="center" Height="100" Grid.Row="1" VerticalAlignment="center" Width="100" Visibility="Collapsed">
                 <Label.Background>
                     <ImageBrush ImageSource="/X.png"/>
                 </Label.Background>
             </Label>
-            <Label x:Name="BOB1" Grid.Column="0" HorizontalAlignment="center" Height="100" Grid.Row="1" VerticalAlignment="center" Width="100" Visibility="Hidden">
+            <Label x:Name="BOB1" Grid.Column="0" HorizontalAlignment="center" Height="100" Grid.Row="1" VerticalAlignment="center" Width="100" Visibility="Collapsed">
                 <Label.Background>
                     <ImageBrush ImageSource="/O.png"/>
                 </Label.Background>
             </Label>
             <Button x:Name="BB2" Grid.Column="1" HorizontalAlignment="center" Height="100" Grid.Row="1" VerticalAlignment="center" Width="100" Click="BB2_Click" Visibility="Visible">
                 <Button.Background>
-                    <ImageBrush Stretch="None" ImageSource="/Muster.png"/>
+                    <ImageBrush Stretch="None" ImageSource="/SpielfeldSnow.png"/>
                 </Button.Background>
             </Button>
-            <Label x:Name="BXB2" Grid.Column="1" HorizontalAlignment="center" Height="100" Grid.Row="1" VerticalAlignment="center" Width="100" Visibility="Hidden">
+            <Label x:Name="BXB2" Grid.Column="1" HorizontalAlignment="center" Height="100" Grid.Row="1" VerticalAlignment="center" Width="100" Visibility="Collapsed">
                 <Label.Background>
                     <ImageBrush ImageSource="/X.png"/>
                 </Label.Background>
@@ -154,7 +154,7 @@
             </Label>
             <Button x:Name="BB3" Grid.Column="2" HorizontalAlignment="center" Height="100" Grid.Row="1" VerticalAlignment="center" Width="100" Click="BB3_Click" Visibility="Visible">
                 <Button.Background>
-                    <ImageBrush Stretch="None" ImageSource="/Muster.png"/>
+                    <ImageBrush Stretch="None" ImageSource="/SpielfeldSnow.png"/>
                 </Button.Background>
             </Button>
             <Label x:Name="BXB3" Grid.Column="2" HorizontalAlignment="center" Height="100" Grid.Row="1" VerticalAlignment="center" Width="100" Visibility="Hidden">
@@ -170,7 +170,7 @@
 
             <Button x:Name="BC1" Grid.Column="0" HorizontalAlignment="center" Height="100" Grid.Row="2" VerticalAlignment="center" Width="100" Click="BC1_Click" Visibility="Visible">
                 <Button.Background>
-                    <ImageBrush Stretch="None" ImageSource="/Muster.png"/>
+                    <ImageBrush Stretch="None" ImageSource="/SpielfeldSnow.png"/>
                 </Button.Background>
             </Button>
             <Label x:Name="BXC1" Grid.Column="0" HorizontalAlignment="center" Height="100" Grid.Row="2" VerticalAlignment="center" Width="100" Visibility="Hidden">
@@ -185,7 +185,7 @@
             </Label>
             <Button x:Name="BC2" Grid.Column="1" HorizontalAlignment="center" Height="100" Grid.Row="2" VerticalAlignment="center" Width="100" Click="BC2_Click" Visibility="Visible">
                 <Button.Background>
-                    <ImageBrush Stretch="None" ImageSource="/Muster.png"/>
+                    <ImageBrush Stretch="None" ImageSource="/SpielfeldSnow.png"/>
                 </Button.Background>
             </Button>
             <Label x:Name="BXC2" Grid.Column="1" HorizontalAlignment="center" Height="100" Grid.Row="2" VerticalAlignment="center" Width="100" Visibility="Hidden">
@@ -200,7 +200,7 @@
             </Label>
             <Button x:Name="BC3" Grid.Column="2" HorizontalAlignment="center" Height="100" Grid.Row="2" VerticalAlignment="center" Width="100" Click="BC3_Click" Visibility="Visible">
                 <Button.Background>
-                    <ImageBrush Stretch="None" ImageSource="/Muster.png"/>
+                    <ImageBrush Stretch="None" ImageSource="/SpielfeldSnow.png"/>
                 </Button.Background>
             </Button>
             <Label x:Name="BXC3" Grid.Column="2" HorizontalAlignment="center" Height="100" Grid.Row="2" VerticalAlignment="center" Width="100" Visibility="Hidden">

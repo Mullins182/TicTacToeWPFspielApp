@@ -10,8 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="e797539a1376987930021d2cf4ef74dd5e2ea131.png" />
-    <None Remove="Muster.png" />
+    <None Remove="SpielfeldSnow.png" />
     <None Remove="O.png" />
     <None Remove="X.png" />
   </ItemGroup>
@@ -21,8 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="e797539a1376987930021d2cf4ef74dd5e2ea131.png" />
-    <Resource Include="Muster.png" />
+    <Resource Include="SpielfeldSnow.png" />
     <Resource Include="O.png" />
     <Resource Include="X.png" />
   </ItemGroup>
