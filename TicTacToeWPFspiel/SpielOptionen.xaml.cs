@@ -13,6 +13,7 @@ namespace TicTacToeWPFspiel
     public partial class SpielOptionen : Page
     {
         public static event EventHandler<string>? BGvideoChanged;
+        public static event EventHandler<string>? BGaudioChanged;
 
         public SpielOptionen(string bgVid) 
         {
@@ -43,6 +44,18 @@ namespace TicTacToeWPFspiel
             MainWindow.BG_Video = "SnowfallStreet1.mp4";
             BGvideoChanged?.Invoke(this, "...");      // Invoke ist der Trigger !
 
+        }
+
+        private void BGm_1_Checked(object sender, RoutedEventArgs e)
+        {
+            MainWindow.BG_Music = "ChristmasSwing.mp3";
+            BGaudioChanged?.Invoke(this, "...");
+        }
+
+        private void BGm_2_Checked(object sender, RoutedEventArgs e)
+        {
+            MainWindow.BG_Music = "Schneefloeckchen.mp3";
+            BGaudioChanged?.Invoke(this, "...");
         }
     }
 }

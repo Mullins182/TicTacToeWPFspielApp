@@ -12,6 +12,8 @@ using static System.Net.Mime.MediaTypeNames;
 using Color = System.Windows.Media.Color;
 
 
+// Soundeffekte und Musik für Spiele gibt es u.A. bei "pixabay.com" !!!
+
 namespace TicTacToeWPFspiel
 {
 
@@ -21,6 +23,7 @@ namespace TicTacToeWPFspiel
     public partial class MainWindow : Window
     {
         public static string BG_Video       = "SnowfallStreet2.mp4";
+        public static string BG_Music       = "ChristmasSwing.mp3";
         public static string confettiCannon = "ConfettiCannon.mp4";
         public static string gameOverVideo  = "GameOver.mp4";
         public SpielOptionen _options;
@@ -44,6 +47,11 @@ namespace TicTacToeWPFspiel
             BackgroundVideo.ApplyTemplate();
         }
 
+        private void ChangeBGmusic(object? sender, string e)
+        {
+            BGmusic.Source = new Uri(BG_Music, UriKind.RelativeOrAbsolute); // Quellangabe für Mediaelement !
+        }
+
         public MainWindow()
         {
             
@@ -62,14 +70,16 @@ namespace TicTacToeWPFspiel
                 }
             }
 
-            BackgroundVideo.Source = new Uri(BG_Video, UriKind.RelativeOrAbsolute); // Quellangabe für Mediaelement !
             BackgroundVideo.ApplyTemplate();
+            BackgroundVideo.Source = new Uri(BG_Video, UriKind.RelativeOrAbsolute); // Quellangabe für Mediaelement !
+            BGmusic.Source = new Uri(BG_Music, UriKind.RelativeOrAbsolute); // Quellangabe für Mediaelement !
 
             _options = new SpielOptionen(BG_Video);
 
             NavigationFrame.Content = _runningGame;
 
             SpielOptionen.BGvideoChanged    += ChangeBackgroundVideo;
+            SpielOptionen.BGaudioChanged    += ChangeBGmusic;
             Game.PlayerWins                 += ConfettiCannon;
             Game.GameOver                   += GameOverVideo;
             Game.ResetBGvideo               += ChangeBackgroundVideo;
@@ -188,11 +198,15 @@ namespace TicTacToeWPFspiel
         {
             ButtonReverseAnimation(quitGame.Name, quitGame);
         }
-                private void BackgroundVideo_MediaEnded(object sender, RoutedEventArgs e)   // Ereignishandler bei Playbackposition Video-Ende !
+        private void BackgroundVideo_MediaEnded(object sender, RoutedEventArgs e)   // Ereignishandler bei Playbackposition Video-Ende !
         {
             BackgroundVideo.Position = TimeSpan.FromMilliseconds(50);           // Bei erreichen von Video-Ende wird die Playbackposition auf NULL zurückgesetzt und das Video beginnt von Neuem !
             //_runningGame.INFO.Visibility = Visibility.Visible;
         }
 
+        private void BGmusic_MediaEnded(object sender, RoutedEventArgs e)
+        {
+            BGmusic.Position = TimeSpan.Zero;           // Bei erreichen von Video-Ende wird die Playbackposition auf NULL zurückgesetzt und das Video beginnt von Neuem !
+        }
     }
 }
