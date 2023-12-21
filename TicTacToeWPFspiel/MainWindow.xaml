@@ -50,5 +50,6 @@
 
         <MediaElement x:Name="BackgroundVideo" Grid.Column="0" Grid.Row="1" Stretch="Fill"  MediaEnded="BackgroundVideo_MediaEnded" Panel.ZIndex="0" IsMuted="False" VerticalAlignment="Top"/>
         <MediaElement x:Name="BGmusic" MediaEnded="BGmusic_MediaEnded"/>
+        
     </Grid>
 </Window>

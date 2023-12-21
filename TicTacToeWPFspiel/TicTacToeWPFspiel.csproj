@@ -22,6 +22,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Accord.Video.FFMPEG.x64" Version="3.8.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="Donut.jpg" />
     <Resource Include="SpielfeldSnow.png" />
     <Resource Include="O.png" />

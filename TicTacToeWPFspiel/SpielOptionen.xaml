@@ -82,6 +82,8 @@
             </RibbonRadioButton>
 
         </StackPanel>
-        
+
+        <MediaElement x:Name="PlaySound" IsEnabled="True" IsMuted="False" MediaEnded="PlaySound_MediaEnded"/>
+
     </Grid>
 </Page>

@@ -26,6 +26,7 @@ namespace TicTacToeWPFspiel
         public static string BG_Music       = @"Music\ChristmasSwing.mp3";
         public static string confettiCannon = @"BG_Videos\ConfettiCannon.mp4";
         public static string gameOverVideo  = @"BG_Videos\GameOver.mp4";
+        public static string Sound          = @"Sounds\Menu_Choice.mp3";
         public SpielOptionen _options;
         public Game _runningGame            = new Game();
 
@@ -50,6 +51,14 @@ namespace TicTacToeWPFspiel
         private void ChangeBGmusic(object? sender, string e)
         {
             BGmusic.Source = new Uri(BG_Music, UriKind.RelativeOrAbsolute); // Quellangabe für Mediaelement !
+        }
+
+        private void MenuChoiceSound(object? sender, string e)                      // Funktioniert noch nicht !!!
+        {
+            MediaElement PlaySound = new MediaElement();
+            PlaySound.Source = new Uri(Sound, UriKind.RelativeOrAbsolute); // Quellangabe für Mediaelement !
+            //PlaySound.ApplyTemplate();
+            //PlaySound.Play();
         }
 
         public MainWindow()
@@ -80,9 +89,10 @@ namespace TicTacToeWPFspiel
 
             SpielOptionen.BGvideoChanged    += ChangeBackgroundVideo;
             SpielOptionen.BGaudioChanged    += ChangeBGmusic;
+            SpielOptionen.Menu_Choice_Sound += MenuChoiceSound;
             Game.PlayerWins                 += ConfettiCannon;
             Game.GameOver                   += GameOverVideo;
-            Game.ResetBGvideo               += ChangeBackgroundVideo;
+            Game.ResetBGvideo               += ChangeBackgroundVideo;            
         }
 
         private void options_Click(object sender, RoutedEventArgs e)
