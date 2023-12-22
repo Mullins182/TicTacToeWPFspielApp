@@ -2291,7 +2291,7 @@ namespace TicTacToeWPFspiel
         private void Restart_Click(object sender, RoutedEventArgs e)
         {
             ResetBGvideo?.Invoke(this, "Reset");      // Invoke ist der Trigger !
-            PlayGrid.Opacity = 0.6;
+            PlayGrid.Opacity = 0.70;
 
             cpu_choice = 0;
             cpu_choosed1 = false;
