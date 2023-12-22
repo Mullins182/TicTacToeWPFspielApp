@@ -10,8 +10,8 @@
 
     <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="2*"/>
-            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="30*"/>
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
@@ -21,8 +21,11 @@
 
         </Grid.RowDefinitions>
 
-        <Label x:Name="optionsLabel" Width="auto" Height="70" Content="OPTIONEN" Foreground="Goldenrod" FontSize="40" FontWeight="Bold" BorderThickness="2" BorderBrush="Goldenrod" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" Grid.RowSpan="2" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" Margin="-30,30,0,0" HorizontalAlignment="center" VerticalAlignment="Top"/>
-        <StackPanel Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Width="400" VerticalAlignment="top" HorizontalAlignment="Center">
+        <Label x:Name="optionsLabel" Width="auto" Height="70" Content="OPTIONEN" Foreground="Goldenrod" FontSize="40" FontWeight="Bold" BorderThickness="1.5" BorderBrush="Goldenrod" Grid.Column="1" Grid.Row="0" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" Margin="85,20,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="Hintergrund wählen" HorizontalContentAlignment="Center" Grid.Row="0" Grid.Column="1" Height="auto" Width="300" FontFamily="chiller" FontSize="40" Foreground="OrangeRed" Margin="50,140,0,0" HorizontalAlignment="Left"/>
+        <Label Content="Musik wählen" HorizontalContentAlignment="Center" Grid.Row="1" Grid.Column="1" Height="auto" Width="300" FontFamily="chiller" FontSize="40" Foreground="OrangeRed" Margin="50,140,0,0" HorizontalAlignment="Left"/>
+
+        <StackPanel Grid.Column="1" Grid.Row="1" Width="400" VerticalAlignment="top" HorizontalAlignment="left">
             <RibbonRadioButton x:Name="BG_4" Height="30" Width="400" Background="DarkRed" FontFamily="Arial" FontSize="18" FontWeight="Bold" Label="Snow Under The Lantern At Night" Foreground="PaleGoldenrod" MouseOverBorderBrush="LawnGreen" CheckedBorderBrush="LawnGreen" CheckedBackground="DarkGreen" Padding="0,8,0,0" CornerRadius="10,10,10,10" Checked="BG_4_Checked">
                 <RibbonRadioButton.MouseOverBackground>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -61,7 +64,7 @@
             
         </StackPanel>
 
-        <StackPanel Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" Width="400" VerticalAlignment="top" HorizontalAlignment="Center">
+        <StackPanel Grid.Column="1" Grid.Row="2" Width="400" VerticalAlignment="top" HorizontalAlignment="left">
                 
             <RibbonRadioButton x:Name="BGm_1" IsChecked="True" Height="30" Width="400" Background="DarkRed" FontFamily="Arial" FontSize="18" FontWeight="Bold" Label="Christmas Swing" Foreground="PaleGoldenrod" MouseOverBorderBrush="LawnGreen" CheckedBorderBrush="LawnGreen" CheckedBackground="DarkGreen" Padding="0,8,0,0" CornerRadius="10,10,10,10" Checked="BGm_1_Checked">
                 <RibbonRadioButton.MouseOverBackground>
