@@ -55,7 +55,7 @@ namespace TicTacToeWPFspiel
         bool player_choosed8 = false;
         bool player_choosed9 = false;
 
-        private void InfoLabelAnimation(string x, Label y)
+        private static void InfoLabelAnimation(string x, Label y)
         {
             ColorAnimation LabelColorEffect = new ColorAnimation();
             LabelColorEffect.Duration = new Duration(TimeSpan.FromSeconds(1));
@@ -106,7 +106,7 @@ namespace TicTacToeWPFspiel
             //FarbAnimation.Begin(y);
         }
 
-        private void ButtonAnimation(string x, Button y)
+        private static void ButtonAnimation(string x, Button y)
         {
 
             ColorAnimationUsingKeyFrames ButtonColorEffect = new ColorAnimationUsingKeyFrames();
@@ -129,7 +129,7 @@ namespace TicTacToeWPFspiel
             FarbAnimation.Begin(y);
         }
 
-        private void ButtonReverseAnimation(string x, Button y)
+        private static void ButtonReverseAnimation(string x, Button y)
         {
             ColorAnimationUsingKeyFrames ButtonColorEffect = new ColorAnimationUsingKeyFrames();
             ColorAnimationUsingKeyFrames BackgroundAnimation = new ColorAnimationUsingKeyFrames();
@@ -2291,7 +2291,7 @@ namespace TicTacToeWPFspiel
         private void Restart_Click(object sender, RoutedEventArgs e)
         {
             ResetBGvideo?.Invoke(this, "Reset");      // Invoke ist der Trigger !
-            PlayGrid.Opacity = 0.70;
+            PlayGrid.Opacity = 0.75;
 
             cpu_choice = 0;
             cpu_choosed1 = false;

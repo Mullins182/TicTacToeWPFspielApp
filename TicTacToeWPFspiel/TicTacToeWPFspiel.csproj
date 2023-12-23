@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
-    <ApplicationIcon>my_comp.ico</ApplicationIcon>
+    <ApplicationIcon>Petalart-Christmas-Cookie-Christmas-bell.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="my_comp.ico" />
+    <Content Include="Petalart-Christmas-Cookie-Christmas-bell.ico" />
   </ItemGroup>
 
   <ItemGroup>
