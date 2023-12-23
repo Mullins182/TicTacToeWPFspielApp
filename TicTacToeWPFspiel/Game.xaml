@@ -77,7 +77,7 @@
             </Grid.RowDefinitions>
             <!--<Image x:Name="TicTacToeRaster" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" Grid.RowSpan="3" Height="300" Width="300" VerticalAlignment="center" HorizontalAlignment="Center"/>-->
 
-            <Button x:Name="BA1" Grid.Column="0" HorizontalAlignment="center" Height="100" Grid.Row="0" VerticalAlignment="center" Width="100" Click="BA1_Click" Visibility="Visible">
+            <Button x:Name="BA1" Grid.Column="0" HorizontalAlignment="center" Height="100" Grid.Row="0" VerticalAlignment="center" Template="{StaticResource NoMouseOverButtonTemplate}" Width="100" Click="BA1_Click" Visibility="Visible">
                 <Button.Background>
                     <ImageBrush Stretch="None" ImageSource="/SpielfeldSnow.png"/>
                 </Button.Background>
@@ -93,7 +93,7 @@
                 </Label.Background>
             </Label>
 
-            <Button x:Name="BA2" Grid.Column="1" HorizontalAlignment="center" Height="100" Grid.Row="0" VerticalAlignment="center" Width="100" Click="BA2_Click" Visibility="Visible">
+            <Button x:Name="BA2" Grid.Column="1" HorizontalAlignment="center" Height="100" Grid.Row="0" VerticalAlignment="center" Template="{StaticResource NoMouseOverButtonTemplate}" Width="100" Click="BA2_Click" Visibility="Visible">
                 <Button.Background>
                     <ImageBrush Stretch="None" ImageSource="/SpielfeldSnow.png"/>
                 </Button.Background>
@@ -109,7 +109,7 @@
                 </Label.Background>
             </Label>
 
-            <Button x:Name="BA3" Grid.Column="2" HorizontalAlignment="center" Height="100" Grid.Row="0" VerticalAlignment="center" Width="100" Click="BA3_Click" Visibility="Visible">
+            <Button x:Name="BA3" Grid.Column="2" HorizontalAlignment="center" Height="100" Grid.Row="0" VerticalAlignment="center" Template="{StaticResource NoMouseOverButtonTemplate}" Width="100" Click="BA3_Click" Visibility="Visible">
                 <Button.Background>
                     <ImageBrush Stretch="None" ImageSource="/SpielfeldSnow.png"/>
                 </Button.Background>
@@ -125,7 +125,7 @@
                 </Label.Background>
             </Label>
 
-            <Button x:Name="BB1" Grid.Column="0" HorizontalAlignment="center" Height="100" Grid.Row="1" VerticalAlignment="center" Width="100" Click="BB1_Click" Visibility="Visible">
+            <Button x:Name="BB1" Grid.Column="0" HorizontalAlignment="center" Height="100" Grid.Row="1" VerticalAlignment="center" Template="{StaticResource NoMouseOverButtonTemplate}" Width="100" Click="BB1_Click" Visibility="Visible">
                 <Button.Background>
                     <ImageBrush Stretch="None" ImageSource="/SpielfeldSnow.png"/>
                 </Button.Background>
@@ -140,7 +140,7 @@
                     <ImageBrush ImageSource="/Donut.png"/>
                 </Label.Background>
             </Label>
-            <Button x:Name="BB2" Grid.Column="1" HorizontalAlignment="center" Height="100" Grid.Row="1" VerticalAlignment="center" Width="100" Click="BB2_Click" Visibility="Visible">
+            <Button x:Name="BB2" Grid.Column="1" HorizontalAlignment="center" Height="100" Grid.Row="1" VerticalAlignment="center" Template="{StaticResource NoMouseOverButtonTemplate}" Width="100" Click="BB2_Click" Visibility="Visible">
                 <Button.Background>
                     <ImageBrush Stretch="None" ImageSource="/SpielfeldSnow.png"/>
                 </Button.Background>
@@ -155,7 +155,7 @@
                     <ImageBrush ImageSource="/Donut.png"/>
                 </Label.Background>
             </Label>
-            <Button x:Name="BB3" Grid.Column="2" HorizontalAlignment="center" Height="100" Grid.Row="1" VerticalAlignment="center" Width="100" Click="BB3_Click" Visibility="Visible">
+            <Button x:Name="BB3" Grid.Column="2" HorizontalAlignment="center" Height="100" Grid.Row="1" VerticalAlignment="center" Template="{StaticResource NoMouseOverButtonTemplate}" Width="100" Click="BB3_Click" Visibility="Visible">
                 <Button.Background>
                     <ImageBrush Stretch="None" ImageSource="/SpielfeldSnow.png"/>
                 </Button.Background>
@@ -171,7 +171,7 @@
                 </Label.Background>
             </Label>
 
-            <Button x:Name="BC1" Grid.Column="0" HorizontalAlignment="center" Height="100" Grid.Row="2" VerticalAlignment="center" Width="100" Click="BC1_Click" Visibility="Visible">
+            <Button x:Name="BC1" Grid.Column="0" HorizontalAlignment="center" Height="100" Grid.Row="2" VerticalAlignment="center" Template="{StaticResource NoMouseOverButtonTemplate}" Width="100" Click="BC1_Click" Visibility="Visible">
                 <Button.Background>
                     <ImageBrush Stretch="None" ImageSource="/SpielfeldSnow.png"/>
                 </Button.Background>
@@ -186,7 +186,7 @@
                     <ImageBrush ImageSource="/Donut.png"/>
                 </Label.Background>
             </Label>
-            <Button x:Name="BC2" Grid.Column="1" HorizontalAlignment="center" Height="100" Grid.Row="2" VerticalAlignment="center" Width="100" Click="BC2_Click" Visibility="Visible">
+            <Button x:Name="BC2" Grid.Column="1" HorizontalAlignment="center" Height="100" Grid.Row="2" VerticalAlignment="center" Template="{StaticResource NoMouseOverButtonTemplate}" Width="100" Click="BC2_Click" Visibility="Visible">
                 <Button.Background>
                     <ImageBrush Stretch="None" ImageSource="/SpielfeldSnow.png"/>
                 </Button.Background>
@@ -201,7 +201,7 @@
                     <ImageBrush ImageSource="/Donut.png"/>
                 </Label.Background>
             </Label>
-            <Button x:Name="BC3" Grid.Column="2" HorizontalAlignment="center" Height="100" Grid.Row="2" VerticalAlignment="center" Width="100" Click="BC3_Click" Visibility="Visible">
+            <Button x:Name="BC3" Grid.Column="2" HorizontalAlignment="center" Height="100" Grid.Row="2" VerticalAlignment="center" Template="{StaticResource NoMouseOverButtonTemplate}" Width="100" Click="BC3_Click" Visibility="Visible">
                 <Button.Background>
                     <ImageBrush Stretch="None" ImageSource="/SpielfeldSnow.png"/>
                 </Button.Background>

@@ -26,7 +26,7 @@ namespace TicTacToeWPFspiel
         public static string BG_Music       = @"Music\ChristmasSwing.mp3";
         public static string confettiCannon = @"BG_Videos\ConfettiCannon.mp4";
         public static string gameOverVideo  = @"BG_Videos\GameOver.mp4";
-        public static string Sound          = @"Sounds\Menu_Choice.mp3";
+        public static string Sound          = @"Sounds\Decide.mp3";
         public SpielOptionen _options;
         public Game _runningGame            = new Game();
 
@@ -53,12 +53,10 @@ namespace TicTacToeWPFspiel
             BGmusic.Source = new Uri(BG_Music, UriKind.RelativeOrAbsolute); // Quellangabe für Mediaelement !
         }
 
-        private void MenuChoiceSound(object? sender, string e)                      // Funktioniert noch nicht !!!
+        private void MenuChoiceSound(object? sender, string e)
         {
-            MediaElement PlaySound = new MediaElement();
             PlaySound.Source = new Uri(Sound, UriKind.RelativeOrAbsolute); // Quellangabe für Mediaelement !
-            //PlaySound.ApplyTemplate();
-            //PlaySound.Play();
+            PlaySound.Play();
         }
 
         public MainWindow()
@@ -79,9 +77,9 @@ namespace TicTacToeWPFspiel
                 }
             }
 
-            BackgroundVideo.ApplyTemplate();
             BackgroundVideo.Source = new Uri(BG_Video, UriKind.RelativeOrAbsolute); // Quellangabe für Mediaelement !
             BGmusic.Source = new Uri(BG_Music, UriKind.RelativeOrAbsolute); // Quellangabe für Mediaelement !
+            BGmusic.Play();
 
             _options = new SpielOptionen(BG_Video);
 
@@ -180,7 +178,6 @@ namespace TicTacToeWPFspiel
 
         private void backToGame_MouseEnter(object sender, System.Windows.Input.MouseEventArgs e)
         {
-
             ButtonAnimation(backToGame.Name, backToGame);
         }
 
@@ -218,5 +215,10 @@ namespace TicTacToeWPFspiel
         {
             BGmusic.Position = TimeSpan.Zero;           // Bei erreichen von Video-Ende wird die Playbackposition auf NULL zurückgesetzt und das Video beginnt von Neuem !
         }
+
+        //private void PlaySound_MediaEnded(object sender, RoutedEventArgs e)
+        //{
+
+        //}
     }
 }
