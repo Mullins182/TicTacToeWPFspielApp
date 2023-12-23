@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TicTacToeWPFspiel"
         mc:Ignorable="d"
-        Title="TicTacToe Game | Version 3.0 | by Mullins182" Height="800" Width="700" Background="Transparent" x:Name="TicTacToeHauptfenster">
+        Title="TicTacToe Game | Version 3.3 | by Mullins182" Height="800" Width="700" Background="Black" x:Name="TicTacToeHauptfenster">
     <!--Control Template Override für Buttons um Highlighting bei Mouseover zu verhindern !-->
     <Window.Resources>
         <ControlTemplate x:Key="NoMouseOverButtonTemplate"
@@ -46,9 +46,9 @@
             <Button x:Name="quitGame" Opacity="0.80" OverridesDefaultStyle="True" Content="Quit Game" Template="{StaticResource NoMouseOverButtonTemplate}" HorizontalContentAlignment="Center" Width="350" Background="DarkRed" Foreground="Yellow" FontWeight="Bold" FontFamily="chiller" FontSize="30" Visibility="Visible" Click="quitGame_Click" MouseEnter="quitGame_MouseEnter" MouseLeave="quitGame_MouseLeave" UseLayoutRounding="True"/>
         </StackPanel>
 
-        <Frame x:Name="NavigationFrame" Grid.Row="1" Panel.ZIndex="1" Background="Transparent" NavigationUIVisibility="Hidden"/>
+        <Frame x:Name="NavigationFrame" Grid.Row="1" Panel.ZIndex="1" NavigationUIVisibility="Hidden"/>
 
-        <MediaElement x:Name="BackgroundVideo" Grid.Column="0" Grid.Row="1" Stretch="Fill"  MediaEnded="BackgroundVideo_MediaEnded" Panel.ZIndex="0" IsMuted="False" VerticalAlignment="Top"/>
+        <MediaElement x:Name="BackgroundVideo" Grid.Column="0" Grid.Row="1" Stretch="Fill" MediaEnded="BackgroundVideo_MediaEnded" Panel.ZIndex="0" IsMuted="False" VerticalAlignment="Top"/>
         <MediaElement x:Name="BGmusic" MediaEnded="BGmusic_MediaEnded" LoadedBehavior="Manual" UnloadedBehavior="Manual"/>
         <MediaElement x:Name="PlaySound" IsMuted="False" LoadedBehavior="Manual" UnloadedBehavior="Manual"/>
 

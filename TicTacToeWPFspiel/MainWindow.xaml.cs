@@ -33,24 +33,27 @@ namespace TicTacToeWPFspiel
         public void ChangeBackgroundVideo(object? sender, string e)
         {
             BackgroundVideo.Source = new Uri(BG_Video, UriKind.RelativeOrAbsolute); // Quellangabe für Mediaelement !
-            BackgroundVideo.ApplyTemplate();
         }
 
         public void ConfettiCannon(object? sender, string e)
         {
             BackgroundVideo.Source = new Uri(confettiCannon, UriKind.RelativeOrAbsolute); // Quellangabe für Mediaelement !
-            BackgroundVideo.ApplyTemplate();
         }
 
         private void GameOverVideo(object? sender, string e)
         {            
             BackgroundVideo.Source = new Uri(gameOverVideo, UriKind.RelativeOrAbsolute); // Quellangabe für Mediaelement !
-            BackgroundVideo.ApplyTemplate();
         }
 
         private void ChangeBGmusic(object? sender, string e)
         {
             BGmusic.Source = new Uri(BG_Music, UriKind.RelativeOrAbsolute); // Quellangabe für Mediaelement !
+            BGmusic.Play();
+        }
+
+        private void BGmusicOff(object? sender, string e)
+        {
+            BGmusic.Stop();
         }
 
         private void MenuChoiceSound(object? sender, string e)
@@ -87,6 +90,7 @@ namespace TicTacToeWPFspiel
 
             SpielOptionen.BGvideoChanged    += ChangeBackgroundVideo;
             SpielOptionen.BGaudioChanged    += ChangeBGmusic;
+            SpielOptionen.BGmusicOff        += BGmusicOff;
             SpielOptionen.Menu_Choice_Sound += MenuChoiceSound;
             Game.PlayerWins                 += ConfettiCannon;
             Game.GameOver                   += GameOverVideo;

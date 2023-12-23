@@ -14,6 +14,7 @@ namespace TicTacToeWPFspiel
     {
         public static event EventHandler<string>? BGvideoChanged;
         public static event EventHandler<string>? BGaudioChanged;
+        public static event EventHandler<string>? BGmusicOff;
         public static event EventHandler<string>? Menu_Choice_Sound;
 
 
@@ -52,6 +53,13 @@ namespace TicTacToeWPFspiel
 
         }
 
+        private void BG_5_Checked(object sender, RoutedEventArgs e)
+        {
+            Menu_Choice_Sound?.Invoke(this, "...");
+            MainWindow.BG_Video = @"BG_Videos\Snowflakes2.mp4";
+            BGvideoChanged?.Invoke(this, "Snowflake");      // Invoke ist der Trigger !
+        }
+
         private void BGm_1_Checked(object sender, RoutedEventArgs e)
         {
             Menu_Choice_Sound?.Invoke(this, "...");
@@ -64,6 +72,12 @@ namespace TicTacToeWPFspiel
             Menu_Choice_Sound?.Invoke(this, "...");
             MainWindow.BG_Music = @"Music\Schneefloeckchen.mp3";
             BGaudioChanged?.Invoke(this, "...");
+        }
+
+        private void BGm_2_Off(object sender, RoutedEventArgs e)
+        {
+            Menu_Choice_Sound?.Invoke(this, "...");
+            BGmusicOff?.Invoke(this, "...");
         }
     }
 }
