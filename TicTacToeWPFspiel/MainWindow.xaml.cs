@@ -27,6 +27,8 @@ namespace TicTacToeWPFspiel
         public static string confettiCannon = @"BG_Videos\ConfettiCannon.mp4";
         public static string gameOverVideo  = @"BG_Videos\GameOver.mp4";
         public static string Sound          = @"Sounds\Decide.mp3";
+        public static string ChooseSound    = @"Sounds\PencilX.wav";
+        //public static string ChooseSoundO = @"Sounds\PencilO.wav";
         public SpielOptionen _options;
         public Game _runningGame            = new Game();
 
@@ -62,6 +64,12 @@ namespace TicTacToeWPFspiel
             PlaySound.Play();
         }
 
+        private void ChoosedFieldSound(object? sender, string e)
+        {
+            PlaySound.Source = new Uri(ChooseSound, UriKind.RelativeOrAbsolute); // Quellangabe für Mediaelement !
+            PlaySound.Play();
+        }
+
         public MainWindow()
         {
             
@@ -94,7 +102,8 @@ namespace TicTacToeWPFspiel
             SpielOptionen.Menu_Choice_Sound += MenuChoiceSound;
             Game.PlayerWins                 += ConfettiCannon;
             Game.GameOver                   += GameOverVideo;
-            Game.ResetBGvideo               += ChangeBackgroundVideo;            
+            Game.ResetBGvideo               += ChangeBackgroundVideo;
+            Game.ChoosedFieldSound          += ChoosedFieldSound;
         }
 
         private void options_Click(object sender, RoutedEventArgs e)

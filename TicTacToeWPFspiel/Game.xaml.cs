@@ -16,9 +16,11 @@ namespace TicTacToeWPFspiel
         public static event EventHandler<string>? PlayerWins;
         public static event EventHandler<string>? GameOver;
         public static event EventHandler<string>? ResetBGvideo;
+        public static event EventHandler<string>? ChoosedFieldSound;
 
         int cpu_choice          = 0;
         int NpcThinkTime        = 2266;
+        int wait_for_snd_played = 333;
         bool game_ended         = false;
         bool leaveClickEventNow = false;
         bool waitForNpc         = false;
@@ -1986,6 +1988,11 @@ namespace TicTacToeWPFspiel
 
             INFO.Visibility = Visibility.Visible;
 
+            MainWindow.ChooseSound = @"Sounds\PencilX.wav";
+            ChoosedFieldSound?.Invoke(this, "...");      // Invoke ist der Trigger !
+
+            await Task.Delay(wait_for_snd_played);
+
             PlayerWinCheck();
 
             if (leaveClickEventNow)
@@ -1994,6 +2001,11 @@ namespace TicTacToeWPFspiel
             }
 
             await Task.Delay(NpcThinkTime);
+
+            MainWindow.ChooseSound = @"Sounds\PencilO.wav";
+            ChoosedFieldSound?.Invoke(this, "...");      // Invoke ist der Trigger !
+
+            await Task.Delay(wait_for_snd_played);
 
             NpcLogic();
 
@@ -2022,6 +2034,11 @@ namespace TicTacToeWPFspiel
 
             INFO.Visibility = Visibility.Visible;
 
+            MainWindow.ChooseSound = @"Sounds\PencilX.wav";
+            ChoosedFieldSound?.Invoke(this, "...");      // Invoke ist der Trigger !
+
+            await Task.Delay(wait_for_snd_played);
+
             PlayerWinCheck();
 
             if (leaveClickEventNow)
@@ -2030,6 +2047,11 @@ namespace TicTacToeWPFspiel
             }
 
             await Task.Delay(NpcThinkTime);
+
+            MainWindow.ChooseSound = @"Sounds\PencilO.wav";
+            ChoosedFieldSound?.Invoke(this, "...");      // Invoke ist der Trigger !
+
+            await Task.Delay(wait_for_snd_played);
 
             NpcLogic();
 
@@ -2058,6 +2080,11 @@ namespace TicTacToeWPFspiel
 
             INFO.Visibility = Visibility.Visible;
 
+            MainWindow.ChooseSound = @"Sounds\PencilX.wav";
+            ChoosedFieldSound?.Invoke(this, "...");      // Invoke ist der Trigger !
+
+            await Task.Delay(wait_for_snd_played);
+
             PlayerWinCheck();
 
             if (leaveClickEventNow)
@@ -2066,6 +2093,11 @@ namespace TicTacToeWPFspiel
             }
 
             await Task.Delay(NpcThinkTime);
+
+            MainWindow.ChooseSound = @"Sounds\PencilO.wav";
+            ChoosedFieldSound?.Invoke(this, "...");      // Invoke ist der Trigger !
+
+            await Task.Delay(wait_for_snd_played);
 
             NpcLogic();
 
@@ -2094,6 +2126,11 @@ namespace TicTacToeWPFspiel
 
             INFO.Visibility = Visibility.Visible;
 
+            MainWindow.ChooseSound = @"Sounds\PencilX.wav";
+            ChoosedFieldSound?.Invoke(this, "...");      // Invoke ist der Trigger !
+
+            await Task.Delay(wait_for_snd_played);
+
             PlayerWinCheck();
 
             if (leaveClickEventNow)
@@ -2102,6 +2139,11 @@ namespace TicTacToeWPFspiel
             }
 
             await Task.Delay(NpcThinkTime);
+
+            MainWindow.ChooseSound = @"Sounds\PencilO.wav";
+            ChoosedFieldSound?.Invoke(this, "...");      // Invoke ist der Trigger !
+
+            await Task.Delay(wait_for_snd_played);
 
             NpcLogic();
 
@@ -2130,6 +2172,11 @@ namespace TicTacToeWPFspiel
 
             INFO.Visibility = Visibility.Visible;
 
+            MainWindow.ChooseSound = @"Sounds\PencilX.wav";
+            ChoosedFieldSound?.Invoke(this, "...");      // Invoke ist der Trigger !
+
+            await Task.Delay(wait_for_snd_played);
+
             PlayerWinCheck();
 
             if (leaveClickEventNow)
@@ -2138,6 +2185,11 @@ namespace TicTacToeWPFspiel
             }
 
             await Task.Delay(NpcThinkTime);
+
+            MainWindow.ChooseSound = @"Sounds\PencilO.wav";
+            ChoosedFieldSound?.Invoke(this, "...");      // Invoke ist der Trigger !
+
+            await Task.Delay(wait_for_snd_played);
 
             NpcLogic();
 
@@ -2166,6 +2218,11 @@ namespace TicTacToeWPFspiel
 
             INFO.Visibility = Visibility.Visible;
 
+            MainWindow.ChooseSound = @"Sounds\PencilX.wav";
+            ChoosedFieldSound?.Invoke(this, "...");      // Invoke ist der Trigger !
+
+            await Task.Delay(wait_for_snd_played);
+
             PlayerWinCheck();
 
             if (leaveClickEventNow)
@@ -2174,6 +2231,11 @@ namespace TicTacToeWPFspiel
             }
 
             await Task.Delay(NpcThinkTime);
+
+            MainWindow.ChooseSound = @"Sounds\PencilO.wav";
+            ChoosedFieldSound?.Invoke(this, "...");      // Invoke ist der Trigger !
+
+            await Task.Delay(wait_for_snd_played);
 
             NpcLogic();
 
@@ -2202,6 +2264,11 @@ namespace TicTacToeWPFspiel
 
             INFO.Visibility = Visibility.Visible;
 
+            MainWindow.ChooseSound = @"Sounds\PencilX.wav";
+            ChoosedFieldSound?.Invoke(this, "...");      // Invoke ist der Trigger !
+
+            await Task.Delay(wait_for_snd_played);
+
             PlayerWinCheck();
 
             if (leaveClickEventNow)
@@ -2210,6 +2277,11 @@ namespace TicTacToeWPFspiel
             }
 
             await Task.Delay(NpcThinkTime);
+
+            MainWindow.ChooseSound = @"Sounds\PencilO.wav";
+            ChoosedFieldSound?.Invoke(this, "...");      // Invoke ist der Trigger !
+
+            await Task.Delay(wait_for_snd_played);
 
             NpcLogic();
 
@@ -2238,6 +2310,11 @@ namespace TicTacToeWPFspiel
 
             INFO.Visibility = Visibility.Visible;
 
+            MainWindow.ChooseSound = @"Sounds\PencilX.wav";
+            ChoosedFieldSound?.Invoke(this, "...");      // Invoke ist der Trigger !
+
+            await Task.Delay(wait_for_snd_played);
+
             PlayerWinCheck();
 
             if (leaveClickEventNow)
@@ -2246,6 +2323,11 @@ namespace TicTacToeWPFspiel
             }
 
             await Task.Delay(NpcThinkTime);
+
+            MainWindow.ChooseSound = @"Sounds\PencilO.wav";
+            ChoosedFieldSound?.Invoke(this, "...");      // Invoke ist der Trigger !
+
+            await Task.Delay(wait_for_snd_played);
 
             NpcLogic();
 
@@ -2274,6 +2356,11 @@ namespace TicTacToeWPFspiel
 
             INFO.Visibility = Visibility.Visible;
 
+            MainWindow.ChooseSound = @"Sounds\PencilX.wav";
+            ChoosedFieldSound?.Invoke(this, "...");      // Invoke ist der Trigger !
+
+            await Task.Delay(wait_for_snd_played);
+
             PlayerWinCheck();
 
             if (leaveClickEventNow)
@@ -2282,6 +2369,11 @@ namespace TicTacToeWPFspiel
             }
 
             await Task.Delay(NpcThinkTime);
+
+            MainWindow.ChooseSound = @"Sounds\PencilO.wav";
+            ChoosedFieldSound?.Invoke(this, "...");      // Invoke ist der Trigger !
+
+            await Task.Delay(wait_for_snd_played);
 
             NpcLogic();
 
