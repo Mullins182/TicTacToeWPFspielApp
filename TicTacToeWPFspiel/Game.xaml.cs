@@ -4,6 +4,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
+using System.Windows.Media.Imaging;
 using System.Windows.Media.Media3D;
 
 namespace TicTacToeWPFspiel
@@ -57,57 +58,70 @@ namespace TicTacToeWPFspiel
         bool player_choosed8 = false;
         bool player_choosed9 = false;
 
-        private static void InfoLabelAnimation(string x, Label y)
+        //private static void InfoLabelAnimation(string x, Label y)
+        //{
+        //    ColorAnimation LabelColorEffect = new ColorAnimation();
+        //    LabelColorEffect.Duration = new Duration(TimeSpan.FromSeconds(1));
+        //    LabelColorEffect.From = Colors.LimeGreen;
+        //    LabelColorEffect.To = Colors.OrangeRed;
+        //    //ButtonColorEffect.KeyFrames.Add(new LinearColorKeyFrame(Colors.Black, KeyTime.FromTimeSpan(TimeSpan.FromSeconds(1))));
+        //    Storyboard FarbAnimation = new Storyboard();
+        //    Storyboard.SetTargetName(LabelColorEffect, x);
+        //    Storyboard.SetTargetProperty(LabelColorEffect, new PropertyPath
+        //    ("(Label.Foreground).(SolidColorBrush.Color)"));
+        //    FarbAnimation.Children.Add(LabelColorEffect);
+        //    FarbAnimation.AutoReverse = true;
+        //    FarbAnimation.RepeatBehavior = RepeatBehavior.Forever;
+        //    FarbAnimation.Begin(y);
+
+        //    //ColorAnimation ButtonColorEffect = new ColorAnimation();
+        //    //ButtonColorEffect.Duration = new Duration(TimeSpan.FromSeconds(2));
+        //    //ButtonColorEffect.From = Colors.GreenYellow;
+        //    //ButtonColorEffect.To = Colors.DarkRed;
+        //    //Storyboard.SetTargetName(ButtonColorEffect, x);
+        //    //Storyboard.SetTargetProperty(ButtonColorEffect, new PropertyPath
+        //    //("(Button.Background).(SolidColorBrush.Color)"));
+        //    ////Storyboard.SetTargetProperty(ButtonColorEffect, new PropertyPath
+        //    ////("(Button.Foreground).(SolidColorBrush.Color)"));
+        //    //Storyboard FarbAnimation = new Storyboard();
+        //    ////FarbAnimation.AutoReverse = true;
+        //    ////FarbAnimation.RepeatBehavior = RepeatBehavior.Forever;
+        //    //FarbAnimation.Children.Add(ButtonColorEffect);
+        //    //FarbAnimation.Begin(y);
+
+        //    //ColorAnimationUsingKeyFrames ButtonColorEffect = new ColorAnimationUsingKeyFrames();
+        //    //ColorAnimationUsingKeyFrames BackgroundAnimation = new ColorAnimationUsingKeyFrames();
+        //    //BackgroundAnimation.Duration = new Duration(TimeSpan.FromSeconds(1));
+        //    //BackgroundAnimation.KeyFrames.Add(new LinearColorKeyFrame(Colors.Yellow, KeyTime.FromTimeSpan(TimeSpan.FromMilliseconds(100))));
+        //    //ButtonColorEffect.Duration = new Duration(TimeSpan.FromSeconds(1));
+        //    //ButtonColorEffect.KeyFrames.Add(new LinearColorKeyFrame(Colors.Black, KeyTime.FromTimeSpan(TimeSpan.FromMilliseconds(100))));
+        //    ////ButtonColorEffect.KeyFrames.Add(new LinearColorKeyFrame(Colors.Black, KeyTime.FromTimeSpan(TimeSpan.FromSeconds(1))));
+        //    //Storyboard.SetTargetName(ButtonColorEffect, x);
+        //    //Storyboard.SetTargetProperty(BackgroundAnimation, new PropertyPath
+        //    //("(Button.Background).(SolidColorBrush.Color)"));
+        //    //Storyboard.SetTargetProperty(ButtonColorEffect, new PropertyPath
+        //    //("(Button.Foreground).(SolidColorBrush.Color)"));
+        //    //Storyboard FarbAnimation = new Storyboard();
+        //    ////FarbAnimation.AutoReverse = true;
+        //    ////FarbAnimation.RepeatBehavior = RepeatBehavior.Forever;
+        //    //FarbAnimation.Children.Add(BackgroundAnimation);
+        //    //FarbAnimation.Children.Add(ButtonColorEffect);
+        //    //FarbAnimation.Begin(y);
+        //}
+
+        private async void BulbAnimation()
         {
-            ColorAnimation LabelColorEffect = new ColorAnimation();
-            LabelColorEffect.Duration = new Duration(TimeSpan.FromSeconds(1));
-            LabelColorEffect.From = Colors.LimeGreen;
-            LabelColorEffect.To = Colors.OrangeRed;
-            //ButtonColorEffect.KeyFrames.Add(new LinearColorKeyFrame(Colors.Black, KeyTime.FromTimeSpan(TimeSpan.FromSeconds(1))));
-            Storyboard FarbAnimation = new Storyboard();
-            Storyboard.SetTargetName(LabelColorEffect, x);
-            Storyboard.SetTargetProperty(LabelColorEffect, new PropertyPath
-            ("(Label.Foreground).(SolidColorBrush.Color)"));
-            FarbAnimation.Children.Add(LabelColorEffect);
-            FarbAnimation.AutoReverse = true;
-            FarbAnimation.RepeatBehavior = RepeatBehavior.Forever;
-            FarbAnimation.Begin(y);
+            Bulb.Source = new BitmapImage(new Uri(@"Bulb1.png", UriKind.Relative));
+            Bulb.Visibility = Visibility.Visible;
 
-            //ColorAnimation ButtonColorEffect = new ColorAnimation();
-            //ButtonColorEffect.Duration = new Duration(TimeSpan.FromSeconds(2));
-            //ButtonColorEffect.From = Colors.GreenYellow;
-            //ButtonColorEffect.To = Colors.DarkRed;
-            //Storyboard.SetTargetName(ButtonColorEffect, x);
-            //Storyboard.SetTargetProperty(ButtonColorEffect, new PropertyPath
-            //("(Button.Background).(SolidColorBrush.Color)"));
-            ////Storyboard.SetTargetProperty(ButtonColorEffect, new PropertyPath
-            ////("(Button.Foreground).(SolidColorBrush.Color)"));
-            //Storyboard FarbAnimation = new Storyboard();
-            ////FarbAnimation.AutoReverse = true;
-            ////FarbAnimation.RepeatBehavior = RepeatBehavior.Forever;
-            //FarbAnimation.Children.Add(ButtonColorEffect);
-            //FarbAnimation.Begin(y);
-
-            //ColorAnimationUsingKeyFrames ButtonColorEffect = new ColorAnimationUsingKeyFrames();
-            //ColorAnimationUsingKeyFrames BackgroundAnimation = new ColorAnimationUsingKeyFrames();
-            //BackgroundAnimation.Duration = new Duration(TimeSpan.FromSeconds(1));
-            //BackgroundAnimation.KeyFrames.Add(new LinearColorKeyFrame(Colors.Yellow, KeyTime.FromTimeSpan(TimeSpan.FromMilliseconds(100))));
-            //ButtonColorEffect.Duration = new Duration(TimeSpan.FromSeconds(1));
-            //ButtonColorEffect.KeyFrames.Add(new LinearColorKeyFrame(Colors.Black, KeyTime.FromTimeSpan(TimeSpan.FromMilliseconds(100))));
-            ////ButtonColorEffect.KeyFrames.Add(new LinearColorKeyFrame(Colors.Black, KeyTime.FromTimeSpan(TimeSpan.FromSeconds(1))));
-            //Storyboard.SetTargetName(ButtonColorEffect, x);
-            //Storyboard.SetTargetProperty(BackgroundAnimation, new PropertyPath
-            //("(Button.Background).(SolidColorBrush.Color)"));
-            //Storyboard.SetTargetProperty(ButtonColorEffect, new PropertyPath
-            //("(Button.Foreground).(SolidColorBrush.Color)"));
-            //Storyboard FarbAnimation = new Storyboard();
-            ////FarbAnimation.AutoReverse = true;
-            ////FarbAnimation.RepeatBehavior = RepeatBehavior.Forever;
-            //FarbAnimation.Children.Add(BackgroundAnimation);
-            //FarbAnimation.Children.Add(ButtonColorEffect);
-            //FarbAnimation.Begin(y);
+            for (int i = 0; i < 30; i++)
+            {
+                await Task.Delay(333);
+                Bulb.Source = new BitmapImage(new Uri(@"Bulb2.png", UriKind.Relative));
+                await Task.Delay(333);
+                Bulb.Source = new BitmapImage(new Uri(@"Bulb1.png", UriKind.Relative));
+            }
         }
-
         private static void ButtonAnimation(string x, Button y)
         {
 
@@ -202,8 +216,8 @@ namespace TicTacToeWPFspiel
         public Game()        
         {
             InitializeComponent();
-            
-            InfoLabelAnimation(INFO.Name, INFO);
+
+            //InfoLabelAnimation(INFO.Name, INFO);
         }
 
 
@@ -2004,7 +2018,11 @@ namespace TicTacToeWPFspiel
                 return;
             }
 
+            BulbAnimation();
+
             await Task.Delay(NpcThinkTime);
+
+            Bulb.Visibility = Visibility.Collapsed;
 
             MainWindow.ChooseSound = @"Sounds\PencilO.wav";
             ChoosedFieldSound?.Invoke(this, "...");      // Invoke ist der Trigger !

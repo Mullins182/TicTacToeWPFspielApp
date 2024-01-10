@@ -11,6 +11,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Bulb1.png" />
+	<None Remove="Bulb2.png" />
+	<None Remove="CPU_Thinking.gif" />
     <None Remove="Donut.png" />
     <None Remove="SpielfeldSnow.png" />
     <None Remove="Zuckerstangen.png" />
@@ -25,7 +28,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Donut.png" />
+    <Content Include="CPU_Thinking.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Bulb1.png" />
+	<Resource Include="Bulb2.png" />
+	<Resource Include="Donut.png" />
     <Resource Include="SpielfeldSnow.png" />
     <Resource Include="Zuckerstangen.png" />
   </ItemGroup>
