@@ -58,8 +58,9 @@
 
 
         <Label Height="160" Width="500" Grid.Column="1" Opacity="0.73" Grid.Row="0" Grid.RowSpan="5" Grid.ColumnSpan="5" Margin="0,40,0,0" VerticalAlignment="Top" HorizontalAlignment="center" HorizontalContentAlignment="center" VerticalContentAlignment="center" FontFamily="chiller" FontSize="120" Foreground="DarkOrange" FontWeight="Bold" Content="TicTacToe"/>
-        <Image x:Name="Bulb" Height="100" Width="100" Grid.Row="2" Grid.Column="0" Visibility="Collapsed" Source="/Bulb1.png"/>
-        <Label x:Name="INFO" Visibility="Collapsed" Foreground="Goldenrod" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="6" Grid.RowSpan="2" Height="150" Width="700" Content="CPU THINKING ... PLEASE WAIT !" FontFamily="chiller" FontSize="35" FontWeight="Bold" HorizontalContentAlignment="center" VerticalContentAlignment="Top"/>
+        <Image x:Name="Bulb" Height="50" Width="50" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" Visibility="Visible" Source="/Bulb1.png"/>
+        <Image x:Name="Bulb2" Height="50" Width="50" Grid.Row="2" Grid.Column="6" VerticalAlignment="Center" HorizontalAlignment="Left" Visibility="Visible" Source="/Bulb1.png"/>
+        <Label x:Name="INFO" Visibility="Collapsed" Foreground="Goldenrod" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="6" Grid.RowSpan="2" Height="150" Width="700" Content="CPU thinking ... please wait !" FontFamily="chiller" FontSize="35" FontWeight="Bold" HorizontalContentAlignment="center" VerticalContentAlignment="Top"/>
 
 
         <Button x:Name="restart" Opacity="0.70" Content="Restart" Grid.Column="5" Grid.Row="5" Grid.ColumnSpan="2" Template="{StaticResource NoMouseOverButtonTemplate}" MaxWidth="150" MaxHeight="70" BorderThickness="3" BorderBrush="Black" Background="DarkRed" Foreground="LawnGreen" FontFamily="chiller" FontSize="45" Click="Restart_Click" MouseEnter="restart_MouseEnter" MouseLeave="restart_MouseLeave" Visibility="Collapsed"/>

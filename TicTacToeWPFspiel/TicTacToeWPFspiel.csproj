@@ -13,7 +13,6 @@
   <ItemGroup>
     <None Remove="Bulb1.png" />
 	<None Remove="Bulb2.png" />
-	<None Remove="CPU_Thinking.gif" />
     <None Remove="Donut.png" />
     <None Remove="SpielfeldSnow.png" />
     <None Remove="Zuckerstangen.png" />

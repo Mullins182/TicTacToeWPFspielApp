@@ -20,7 +20,7 @@ namespace TicTacToeWPFspiel
         public static event EventHandler<string>? ChoosedFieldSound;
 
         int cpu_choice          = 0;
-        int NpcThinkTime        = 2266;
+        int NpcThinkTime        = 3333;
         int wait_for_snd_played = 444;
         bool game_ended         = false;
         bool leaveClickEventNow = false;
@@ -111,15 +111,19 @@ namespace TicTacToeWPFspiel
 
         private async void BulbAnimation()
         {
-            Bulb.Source = new BitmapImage(new Uri(@"Bulb1.png", UriKind.Relative));
-            Bulb.Visibility = Visibility.Visible;
+            Bulb.Source         = new BitmapImage(new Uri(@"Bulb1.png", UriKind.Relative));
+            Bulb2.Source        = new BitmapImage(new Uri(@"Bulb2.png", UriKind.Relative));
+            Bulb.Visibility     = Visibility.Visible;
+            Bulb2.Visibility    = Visibility.Visible;
 
-            for (int i = 0; i < 30; i++)
+            for (int i = 0; i < 12; i++)
             {
-                await Task.Delay(333);
-                Bulb.Source = new BitmapImage(new Uri(@"Bulb2.png", UriKind.Relative));
-                await Task.Delay(333);
-                Bulb.Source = new BitmapImage(new Uri(@"Bulb1.png", UriKind.Relative));
+                await Task.Delay(170);
+                Bulb.Source     = new BitmapImage(new Uri(@"Bulb2.png", UriKind.Relative));
+                Bulb2.Source    = new BitmapImage(new Uri(@"Bulb1.png", UriKind.Relative));
+                await Task.Delay(170);
+                Bulb.Source     = new BitmapImage(new Uri(@"Bulb1.png", UriKind.Relative));
+                Bulb2.Source    = new BitmapImage(new Uri(@"Bulb2.png", UriKind.Relative));
             }
         }
         private static void ButtonAnimation(string x, Button y)
@@ -2023,6 +2027,7 @@ namespace TicTacToeWPFspiel
             await Task.Delay(NpcThinkTime);
 
             Bulb.Visibility = Visibility.Collapsed;
+            Bulb2.Visibility = Visibility.Collapsed;
 
             MainWindow.ChooseSound = @"Sounds\PencilO.wav";
             ChoosedFieldSound?.Invoke(this, "...");      // Invoke ist der Trigger !
