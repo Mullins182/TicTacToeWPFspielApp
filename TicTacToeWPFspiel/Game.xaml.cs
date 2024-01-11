@@ -1,11 +1,8 @@
-﻿using System.IO;
-using System.Runtime.CompilerServices;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
-using System.Windows.Media.Media3D;
 
 namespace TicTacToeWPFspiel
 {
@@ -2073,7 +2070,12 @@ namespace TicTacToeWPFspiel
                 return;
             }
 
+            BulbAnimation();
+
             await Task.Delay(NpcThinkTime);
+
+            Bulb.Visibility = Visibility.Collapsed;
+            Bulb2.Visibility = Visibility.Collapsed;
 
             MainWindow.ChooseSound = @"Sounds\PencilO.wav";
             ChoosedFieldSound?.Invoke(this, "...");      // Invoke ist der Trigger !
@@ -2119,7 +2121,12 @@ namespace TicTacToeWPFspiel
                 return;
             }
 
+            BulbAnimation();
+
             await Task.Delay(NpcThinkTime);
+
+            Bulb.Visibility = Visibility.Collapsed;
+            Bulb2.Visibility = Visibility.Collapsed;
 
             MainWindow.ChooseSound = @"Sounds\PencilO.wav";
             ChoosedFieldSound?.Invoke(this, "...");      // Invoke ist der Trigger !
@@ -2165,7 +2172,12 @@ namespace TicTacToeWPFspiel
                 return;
             }
 
+            BulbAnimation();
+
             await Task.Delay(NpcThinkTime);
+
+            Bulb.Visibility = Visibility.Collapsed;
+            Bulb2.Visibility = Visibility.Collapsed;
 
             MainWindow.ChooseSound = @"Sounds\PencilO.wav";
             ChoosedFieldSound?.Invoke(this, "...");      // Invoke ist der Trigger !
@@ -2211,7 +2223,12 @@ namespace TicTacToeWPFspiel
                 return;
             }
 
+            BulbAnimation();
+
             await Task.Delay(NpcThinkTime);
+
+            Bulb.Visibility = Visibility.Collapsed;
+            Bulb2.Visibility = Visibility.Collapsed;
 
             MainWindow.ChooseSound = @"Sounds\PencilO.wav";
             ChoosedFieldSound?.Invoke(this, "...");      // Invoke ist der Trigger !
@@ -2257,7 +2274,12 @@ namespace TicTacToeWPFspiel
                 return;
             }
 
+            BulbAnimation();
+
             await Task.Delay(NpcThinkTime);
+
+            Bulb.Visibility = Visibility.Collapsed;
+            Bulb2.Visibility = Visibility.Collapsed;
 
             MainWindow.ChooseSound = @"Sounds\PencilO.wav";
             ChoosedFieldSound?.Invoke(this, "...");      // Invoke ist der Trigger !
@@ -2303,7 +2325,12 @@ namespace TicTacToeWPFspiel
                 return;
             }
 
+            BulbAnimation();
+
             await Task.Delay(NpcThinkTime);
+
+            Bulb.Visibility = Visibility.Collapsed;
+            Bulb2.Visibility = Visibility.Collapsed;
 
             MainWindow.ChooseSound = @"Sounds\PencilO.wav";
             ChoosedFieldSound?.Invoke(this, "...");      // Invoke ist der Trigger !
@@ -2349,7 +2376,12 @@ namespace TicTacToeWPFspiel
                 return;
             }
 
+            BulbAnimation();
+
             await Task.Delay(NpcThinkTime);
+
+            Bulb.Visibility = Visibility.Collapsed;
+            Bulb2.Visibility = Visibility.Collapsed;
 
             MainWindow.ChooseSound = @"Sounds\PencilO.wav";
             ChoosedFieldSound?.Invoke(this, "...");      // Invoke ist der Trigger !
@@ -2395,7 +2427,12 @@ namespace TicTacToeWPFspiel
                 return;
             }
 
+            BulbAnimation();
+
             await Task.Delay(NpcThinkTime);
+
+            Bulb.Visibility = Visibility.Collapsed;
+            Bulb2.Visibility = Visibility.Collapsed;
 
             MainWindow.ChooseSound = @"Sounds\PencilO.wav";
             ChoosedFieldSound?.Invoke(this, "...");      // Invoke ist der Trigger !
