@@ -115,10 +115,10 @@ namespace TicTacToeWPFspiel
 
             for (int i = 0; i < 12; i++)
             {
-                await Task.Delay(170);
+                await Task.Delay(150);
                 Bulb.Source     = new BitmapImage(new Uri(@"Bulb2.png", UriKind.Relative));
                 Bulb2.Source    = new BitmapImage(new Uri(@"Bulb1.png", UriKind.Relative));
-                await Task.Delay(170);
+                await Task.Delay(150);
                 Bulb.Source     = new BitmapImage(new Uri(@"Bulb1.png", UriKind.Relative));
                 Bulb2.Source    = new BitmapImage(new Uri(@"Bulb2.png", UriKind.Relative));
             }
