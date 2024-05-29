@@ -18,7 +18,7 @@ namespace TicTacToeWPFspiel
         public static event EventHandler<string>? Menu_Choice_Sound;
 
 
-        public SpielOptionen(string bgVid) 
+        public SpielOptionen(string bgVid)
         {
             InitializeComponent();
         }
@@ -73,8 +73,21 @@ namespace TicTacToeWPFspiel
             MainWindow.BG_Music = @"Music\Schneefloeckchen.mp3";
             BGaudioChanged?.Invoke(this, "...");
         }
+        private void BGm_3_Checked(object sender, RoutedEventArgs e)
+        {
+            Menu_Choice_Sound?.Invoke(this, "...");
+            MainWindow.BG_Music = @"Music\retro_wave_style_track.mp3";
+            BGaudioChanged?.Invoke(this, "...");
+        }
 
-        private void BGm_2_Off(object sender, RoutedEventArgs e)
+        private void BGm_4_Checked(object sender, RoutedEventArgs e)
+        {
+            Menu_Choice_Sound?.Invoke(this, "...");
+            MainWindow.BG_Music = @"Music\alone_by_the_river.mp3";
+            BGaudioChanged?.Invoke(this, "...");
+        }
+
+        private void BGmOff(object sender, RoutedEventArgs e)
         {
             Menu_Choice_Sound?.Invoke(this, "...");
             BGmusicOff?.Invoke(this, "...");

@@ -16,10 +16,6 @@ using Color = System.Windows.Media.Color;
 
 namespace TicTacToeWPFspiel
 {
-
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public static string BG_Video       = @"BG_Videos\SnowfallStreet2.mp4";
@@ -122,9 +118,9 @@ namespace TicTacToeWPFspiel
         private void backToGame_Click(object sender, RoutedEventArgs e)
         {
             NavigationFrame.NavigationService.Navigate(_runningGame);
-            backToGame.Visibility = Visibility.Collapsed;
-            options.Visibility = Visibility.Visible;
-            quitGame.Visibility = Visibility.Visible;
+            backToGame.Visibility   = Visibility.Collapsed;
+            options.Visibility      = Visibility.Visible;
+            quitGame.Visibility     = Visibility.Visible;
             //BackgroundVideo.Source = new Uri(BG_Video, UriKind.RelativeOrAbsolute); // Quellangabe für Mediaelement !
         }
 
@@ -220,18 +216,13 @@ namespace TicTacToeWPFspiel
         }
         private void BackgroundVideo_MediaEnded(object sender, RoutedEventArgs e)   // Ereignishandler bei Playbackposition Video-Ende !
         {
-            BackgroundVideo.Position = TimeSpan.FromMilliseconds(50);           // Bei erreichen von Video-Ende wird die Playbackposition auf NULL zurückgesetzt und das Video beginnt von Neuem !
+            BackgroundVideo.Position = TimeSpan.FromMilliseconds(50);
             //_runningGame.INFO.Visibility = Visibility.Visible;
         }
 
         private void BGmusic_MediaEnded(object sender, RoutedEventArgs e)
         {
-            BGmusic.Position = TimeSpan.Zero;           // Bei erreichen von Video-Ende wird die Playbackposition auf NULL zurückgesetzt und das Video beginnt von Neuem !
+            BGmusic.Position = TimeSpan.Zero;   // Bei erreichen von Media-Ende wird die Playbackposition auf NULL zurückgesetzt und das Medium beginnt von Neuem !
         }
-
-        //private void PlaySound_MediaEnded(object sender, RoutedEventArgs e)
-        //{
-
-        //}
     }
 }

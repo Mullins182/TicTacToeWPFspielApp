@@ -93,7 +93,7 @@
                 </RibbonRadioButton.MouseOverBackground>
             </RibbonRadioButton>
 
-            <RibbonRadioButton x:Name="BGm_3" Height="30" Width="400" Background="DarkRed" FontFamily="Arial" FontSize="18" FontWeight="Bold" Label="X" Foreground="PaleGoldenrod" MouseOverBorderBrush="LawnGreen" CheckedBorderBrush="LawnGreen" CheckedBackground="DarkGreen" Padding="0,8,0,0" CornerRadius="10,10,10,10" Checked="BGm_2_Checked">
+            <RibbonRadioButton x:Name="BGm_3" Height="30" Width="400" Background="DarkRed" FontFamily="Arial" FontSize="18" FontWeight="Bold" Label="Retro Wave Style Track" Foreground="PaleGoldenrod" MouseOverBorderBrush="LawnGreen" CheckedBorderBrush="LawnGreen" CheckedBackground="DarkGreen" Padding="0,8,0,0" CornerRadius="10,10,10,10" Checked="BGm_3_Checked">
                 <RibbonRadioButton.MouseOverBackground>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="#FF5B8612" Offset="0.293"/>
@@ -102,7 +102,7 @@
                 </RibbonRadioButton.MouseOverBackground>
             </RibbonRadioButton>
 
-            <RibbonRadioButton x:Name="BGm_4" Height="30" Width="400" Background="DarkRed" FontFamily="Arial" FontSize="18" FontWeight="Bold" Label="Y" Foreground="PaleGoldenrod" MouseOverBorderBrush="LawnGreen" CheckedBorderBrush="LawnGreen" CheckedBackground="DarkGreen" Padding="0,8,0,0" CornerRadius="10,10,10,10" Checked="BGm_2_Checked">
+            <RibbonRadioButton x:Name="BGm_4" Height="30" Width="400" Background="DarkRed" FontFamily="Arial" FontSize="18" FontWeight="Bold" Label="Alone By The River" Foreground="PaleGoldenrod" MouseOverBorderBrush="LawnGreen" CheckedBorderBrush="LawnGreen" CheckedBackground="DarkGreen" Padding="0,8,0,0" CornerRadius="10,10,10,10" Checked="BGm_4_Checked">
                 <RibbonRadioButton.MouseOverBackground>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="#FF5B8612" Offset="0.293"/>
@@ -111,7 +111,7 @@
                 </RibbonRadioButton.MouseOverBackground>
             </RibbonRadioButton>
 
-            <RibbonRadioButton x:Name="BGm_Off" Height="30" Width="400" Background="DarkRed" FontFamily="Arial" FontSize="18" FontWeight="Bold" Label="Music off" Foreground="PaleGoldenrod" MouseOverBorderBrush="LawnGreen" CheckedBorderBrush="LawnGreen" CheckedBackground="DarkGreen" Padding="0,8,0,0" CornerRadius="10,10,10,10" Checked="BGm_2_Off">
+            <RibbonRadioButton x:Name="BGm_Off" Height="30" Width="400" Background="DarkRed" FontFamily="Arial" FontSize="18" FontWeight="Bold" Label="Music off" Foreground="PaleGoldenrod" MouseOverBorderBrush="LawnGreen" CheckedBorderBrush="LawnGreen" CheckedBackground="DarkGreen" Padding="0,8,0,0" CornerRadius="10,10,10,10" Checked="BGmOff">
                 <RibbonRadioButton.MouseOverBackground>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="#FF5B8612" Offset="0.293"/>
