@@ -6,15 +6,17 @@ using System.Windows.Media.Imaging;
 
 namespace TicTacToeWPFspiel
 {
-    /// <summary>
-    /// Interaktionslogik für Game.xaml
-    /// </summary>
     public partial class Game : Page
     {
         public static event EventHandler<string>? PlayerWins;
         public static event EventHandler<string>? GameOver;
         public static event EventHandler<string>? ResetBGvideo;
         public static event EventHandler<string>? ChoosedFieldSound;
+
+        public ImageBrush playerSymbolImage     = new();
+        public ImageBrush npcSymbolImage        = new();
+        public static string playerSymbol       = "pack://application:,,,/Images/X.png";
+        public static string npcSymbol          = "pack://application:,,,/Images/O.png";
 
         int cpu_choice          = 0;
         int NpcThinkTime        = 3333;
@@ -108,19 +110,19 @@ namespace TicTacToeWPFspiel
 
         private async void BulbAnimation()
         {
-            Bulb.Source         = new BitmapImage(new Uri(@"Bulb1.png", UriKind.Relative));
-            Bulb2.Source        = new BitmapImage(new Uri(@"Bulb2.png", UriKind.Relative));
+            Bulb.Source         = new BitmapImage(new Uri("Images/Bulb1.png", UriKind.Relative));
+            Bulb2.Source        = new BitmapImage(new Uri("Images/Bulb2.png", UriKind.Relative));
             Bulb.Visibility     = Visibility.Visible;
             Bulb2.Visibility    = Visibility.Visible;
 
             for (int i = 0; i < 12; i++)
             {
                 await Task.Delay(150);
-                Bulb.Source     = new BitmapImage(new Uri(@"Bulb2.png", UriKind.Relative));
-                Bulb2.Source    = new BitmapImage(new Uri(@"Bulb1.png", UriKind.Relative));
+                Bulb.Source     = new BitmapImage(new Uri("Images/Bulb2.png", UriKind.Relative));
+                Bulb2.Source    = new BitmapImage(new Uri("Images/Bulb1.png", UriKind.Relative));
                 await Task.Delay(150);
-                Bulb.Source     = new BitmapImage(new Uri(@"Bulb1.png", UriKind.Relative));
-                Bulb2.Source    = new BitmapImage(new Uri(@"Bulb2.png", UriKind.Relative));
+                Bulb.Source     = new BitmapImage(new Uri("Images/Bulb1.png", UriKind.Relative));
+                Bulb2.Source    = new BitmapImage(new Uri("Images/Bulb2.png", UriKind.Relative));
             }
         }
         private static void ButtonAnimation(string x, Button y)
@@ -219,9 +221,37 @@ namespace TicTacToeWPFspiel
             InitializeComponent();
 
             //InfoLabelAnimation(INFO.Name, INFO);
+
+            SpielOptionen.PlayersymbolChanged   += SpielOptionen_PlayersymbolChanged;
+
+            playerSymbolImage.ImageSource       = new BitmapImage(new Uri(playerSymbol, UriKind.RelativeOrAbsolute));
+            //BXA1.Background                     = playerSymbolImage;
+            //BXA2.Background                     = playerSymbolImage;
+            //BXA3.Background                     = playerSymbolImage;
+            //BXB1.Background                     = playerSymbolImage;
+            //BXB2.Background                     = playerSymbolImage;
+            //BXB3.Background                     = playerSymbolImage;
+            //BXC1.Background                     = playerSymbolImage;
+            //BXC2.Background                     = playerSymbolImage;
+            //BXC3.Background                     = playerSymbolImage;
+
+            npcSymbolImage.ImageSource          = new BitmapImage(new Uri(npcSymbol, UriKind.RelativeOrAbsolute));
+            //BOA1.Background                     = npcSymbolImage;
+            //BOA2.Background                     = npcSymbolImage;
+            //BOA3.Background                     = npcSymbolImage;
+            //BOB1.Background                     = npcSymbolImage;
+            //BOB2.Background                     = npcSymbolImage;
+            //BOB3.Background                     = npcSymbolImage;
+            //BOC1.Background                     = npcSymbolImage;
+            //BOC2.Background                     = npcSymbolImage;
+            //BOC3.Background                     = npcSymbolImage;
         }
 
-
+        private void SpielOptionen_PlayersymbolChanged(object? sender, string e)
+        {
+            BXA1.Background = playerSymbolImage;
+            BOA1.Background = npcSymbolImage;
+        }
 
         public void NpcLeaveClickEventAndCheckLooseCondition()
         {

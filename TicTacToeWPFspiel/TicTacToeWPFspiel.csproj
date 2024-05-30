@@ -24,7 +24,9 @@
     <None Remove="Donut.png" />
     <None Remove="Images\Bulb1.jpg" />
     <None Remove="Images\Bulb2.jpg" />
+    <None Remove="Images\O.png" />
     <None Remove="Images\SplashScreen1.png" />
+    <None Remove="Images\X.png" />
     <None Remove="Music\alone_by_the_river.mp3" />
     <None Remove="Music\ChristmasSwing.mp3" />
     <None Remove="Music\retro_wave_style_track.mp3" />
@@ -48,18 +50,18 @@
     <Resource Include="Images\CPU_Thinking.gif">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
-    <EmbeddedResource Include="Images\Bulb1.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Images\Bulb1.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Images\Bulb2.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-	<EmbeddedResource Include="Images\Bulb2.png">
-	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-	</EmbeddedResource>
+    <Resource Include="Images\Bulb1.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Bulb1.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Bulb2.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+	<Resource Include="Images\Bulb2.png">
+	  <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+	</Resource>
 	<Resource Include="Images\Donut.png">
 	  <CopyToOutputDirectory>Never</CopyToOutputDirectory>
 	</Resource>
@@ -99,10 +101,16 @@
 	<EmbeddedResource Include="Sounds\PencilX.wav">
 	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	</EmbeddedResource>
+	<Resource Include="Images\O.png">
+	  <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+	</Resource>
     <Resource Include="Images\SpielfeldSnow.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\SplashScreen1.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\X.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\Zuckerstangen.png">

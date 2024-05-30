@@ -16,7 +16,7 @@ namespace TicTacToeWPFspiel
         public static event EventHandler<string>? BGaudioChanged;
         public static event EventHandler<string>? BGmusicOff;
         public static event EventHandler<string>? Menu_Choice_Sound;
-
+        public static event EventHandler<string>? PlayersymbolChanged;
 
         public SpielOptionen(string bgVid)
         {
@@ -91,6 +91,38 @@ namespace TicTacToeWPFspiel
         {
             Menu_Choice_Sound?.Invoke(this, "...");
             BGmusicOff?.Invoke(this, "...");
+        }
+
+        private void Symbol1_Checked(object sender, RoutedEventArgs e)
+        {
+            Menu_Choice_Sound?.Invoke(this, "...");
+            Game.playerSymbol   = "pack://application:,,,/Images/Zuckerstangen.png";
+            Game.npcSymbol      = "pack://application:,,,/Images/Donut.png";
+            PlayersymbolChanged?.Invoke(this, "...");
+        }
+
+        private void Symbol2_Checked(object sender, RoutedEventArgs e)
+        {
+            Menu_Choice_Sound?.Invoke(this, "...");
+            Game.playerSymbol   = "pack://application:,,,/Images/Donut.png";
+            Game.npcSymbol      = "pack://application:,,,/Images/Zuckerstangen.png";
+            PlayersymbolChanged?.Invoke(this, "...");
+        }
+
+        private void Symbol3_Checked(object sender, RoutedEventArgs e)
+        {
+            Menu_Choice_Sound?.Invoke(this, "...");
+            Game.playerSymbol   = "pack://application:,,,/Images/X.png";
+            Game.npcSymbol      = "pack://application:,,,/Images/O.png";
+            PlayersymbolChanged?.Invoke(this, "...");
+        }
+
+        private void Symbol4_Checked(object sender, RoutedEventArgs e)
+        {
+            Menu_Choice_Sound?.Invoke(this, "...");
+            Game.playerSymbol   = "pack://application:,,,/Images/O.png";
+            Game.npcSymbol      = "pack://application:,,,/Images/X.png";
+            PlayersymbolChanged?.Invoke(this, "...");
         }
     }
 }

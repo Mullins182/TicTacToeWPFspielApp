@@ -60,16 +60,19 @@
         <Label Height="160" Width="500" Grid.Column="1" Opacity="0.73" Grid.Row="0" Grid.RowSpan="5" Grid.ColumnSpan="5" Margin="0,40,0,0" 
                VerticalAlignment="Top" HorizontalAlignment="center" HorizontalContentAlignment="center" VerticalContentAlignment="center" 
                FontFamily="chiller" FontSize="120" Foreground="DarkOrange" FontWeight="Bold" Content="TicTacToe"/>
-        <Image x:Name="Bulb" Height="50" Width="50" Grid.Row="2" Grid.Column="0" VerticalAlignment="Bottom" HorizontalAlignment="Right" 
-               Visibility="Collapsed" Source="Images/Bulb1.png"/>
-        <Image x:Name="Bulb2" Height="50" Width="50" Grid.Row="2" Grid.Column="6" VerticalAlignment="Bottom" HorizontalAlignment="Left" 
-               Visibility="Collapsed" Source="Images/Bulb1.png"/>
-        <Label x:Name="INFO" Visibility="Collapsed" Foreground="GreenYellow" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="7" Height="45" 
-               VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="700" Content="CPU IS THINKING ... PLEASE WAIT!" FontFamily="chiller" 
-               FontSize="35" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="8,0,0,0"/>
+        <Image x:Name="Bulb" Height="50" Width="50" Grid.Row="0" Grid.Column="0" VerticalAlignment="Top" HorizontalAlignment="Right" 
+               Visibility="Collapsed" Source="Images/Bulb1.png" Margin="0,15,0,0"/>
+        <Image x:Name="Bulb2" Height="50" Width="50" Grid.Row="0" Grid.Column="6" VerticalAlignment="Top" HorizontalAlignment="Left" 
+               Visibility="Collapsed" Source="Images/Bulb1.png" Margin="0,15,0,0"/>
+        <Label x:Name="INFO" Visibility="Collapsed" Foreground="GreenYellow" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="7" Height="45" 
+               VerticalAlignment="Top" HorizontalAlignment="Center" Width="700" Content="CPU IS THINKING ... PLEASE WAIT!" FontFamily="chiller" 
+               FontSize="35" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="8,15,0,0"/>
 
 
-        <Button x:Name="restart" Opacity="0.70" Content="Restart" Grid.Column="5" Grid.Row="5" Grid.ColumnSpan="2" Template="{StaticResource NoMouseOverButtonTemplate}" MaxWidth="150" MaxHeight="70" BorderThickness="3" BorderBrush="Black" Background="DarkRed" Foreground="LawnGreen" FontFamily="chiller" FontSize="45" Click="Restart_Click" MouseEnter="restart_MouseEnter" MouseLeave="restart_MouseLeave" Visibility="Collapsed"/>
+        <Button x:Name="restart" Opacity="0.70" Content="Restart" Grid.Column="5" Grid.Row="5" Grid.ColumnSpan="2" 
+                Template="{StaticResource NoMouseOverButtonTemplate}" MaxWidth="150" MaxHeight="70" BorderThickness="3" BorderBrush="Black" 
+                Background="DarkRed" Foreground="LawnGreen" FontFamily="chiller" FontSize="45" Click="Restart_Click" 
+                MouseEnter="restart_MouseEnter" MouseLeave="restart_MouseLeave" Visibility="Collapsed"/>
 
         <Grid x:Name="PlayGrid" Grid.Column="2" Grid.Row="3" Grid.RowSpan="3" Grid.ColumnSpan="3" Opacity="0.75">
             <Grid.Background>
@@ -95,15 +98,9 @@
             </Button>
             <Label x:Name="BXA1" Grid.Column="0" HorizontalAlignment="center" Height="100" Grid.Row="0" VerticalAlignment="center" Width="100" 
                    Visibility="Collapsed">
-                <Label.Background>
-                    <ImageBrush ImageSource="Images/Zuckerstangen.png"/>
-                </Label.Background>
             </Label>
             <Label x:Name="BOA1" Grid.Column="0" HorizontalAlignment="center" Height="100" Grid.Row="0" VerticalAlignment="center" Width="100" 
                    Visibility="Collapsed">
-                <Label.Background>
-                    <ImageBrush ImageSource="Images/Donut.png" Stretch="Fill"/>
-                </Label.Background>
             </Label>
 
             <Button x:Name="BA2" Grid.Column="1" HorizontalAlignment="center" Height="100" Grid.Row="0" VerticalAlignment="center" 
@@ -114,15 +111,9 @@
             </Button>
             <Label x:Name="BXA2" Grid.Column="1" HorizontalAlignment="center" Height="100" Grid.Row="0" VerticalAlignment="center" Width="100" 
                    Visibility="Collapsed">
-                <Label.Background>
-                    <ImageBrush ImageSource="Images/Zuckerstangen.png"/>
-                </Label.Background>
             </Label>
             <Label x:Name="BOA2" Grid.Column="1" HorizontalAlignment="center" Height="100" Grid.Row="0" VerticalAlignment="center" Width="100" 
                    Visibility="Collapsed">
-                <Label.Background>
-                    <ImageBrush ImageSource="Images/Donut.png"/>
-                </Label.Background>
             </Label>
 
             <Button x:Name="BA3" Grid.Column="2" HorizontalAlignment="center" Height="100" Grid.Row="0" VerticalAlignment="center" 
@@ -133,15 +124,9 @@
             </Button>
             <Label x:Name="BXA3" Grid.Column="2" HorizontalAlignment="center" Height="100" Grid.Row="0" VerticalAlignment="center" Width="100" 
                    Visibility="Collapsed">
-                <Label.Background>
-                    <ImageBrush ImageSource="Images/Zuckerstangen.png"/>
-                </Label.Background>
             </Label>
             <Label x:Name="BOA3" Grid.Column="2" HorizontalAlignment="center" Height="100" Grid.Row="0" VerticalAlignment="center" Width="100" 
                    Visibility="Collapsed">
-                <Label.Background>
-                    <ImageBrush ImageSource="Images/Donut.png"/>
-                </Label.Background>
             </Label>
 
             <Button x:Name="BB1" Grid.Column="0" HorizontalAlignment="center" Height="100" Grid.Row="1" VerticalAlignment="center" 
@@ -152,15 +137,9 @@
             </Button>
             <Label x:Name="BXB1" Grid.Column="0" HorizontalAlignment="center" Height="100" Grid.Row="1" VerticalAlignment="center" Width="100" 
                    Visibility="Collapsed">
-                <Label.Background>
-                    <ImageBrush ImageSource="Images/Zuckerstangen.png"/>
-                </Label.Background>
             </Label>
             <Label x:Name="BOB1" Grid.Column="0" HorizontalAlignment="center" Height="100" Grid.Row="1" VerticalAlignment="center" Width="100" 
                    Visibility="Collapsed">
-                <Label.Background>
-                    <ImageBrush ImageSource="Images/Donut.png"/>
-                </Label.Background>
             </Label>
             <Button x:Name="BB2" Grid.Column="1" HorizontalAlignment="center" Height="100" Grid.Row="1" VerticalAlignment="center" 
                     Template="{StaticResource NoMouseOverButtonTemplate}" Width="100" Click="BB2_Click" Visibility="Visible">
@@ -170,15 +149,9 @@
             </Button>
             <Label x:Name="BXB2" Grid.Column="1" HorizontalAlignment="center" Height="100" Grid.Row="1" VerticalAlignment="center" Width="100" 
                    Visibility="Collapsed">
-                <Label.Background>
-                    <ImageBrush ImageSource="Images/Zuckerstangen.png"/>
-                </Label.Background>
             </Label>
             <Label x:Name="BOB2" Grid.Column="1" HorizontalAlignment="center" Height="100" Grid.Row="1" VerticalAlignment="center" Width="100" 
                    Visibility="Collapsed">
-                <Label.Background>
-                    <ImageBrush ImageSource="Images/Donut.png"/>
-                </Label.Background>
             </Label>
             <Button x:Name="BB3" Grid.Column="2" HorizontalAlignment="center" Height="100" Grid.Row="1" VerticalAlignment="center" 
                     Template="{StaticResource NoMouseOverButtonTemplate}" Width="100" Click="BB3_Click" Visibility="Visible">
@@ -188,15 +161,9 @@
             </Button>
             <Label x:Name="BXB3" Grid.Column="2" HorizontalAlignment="center" Height="100" Grid.Row="1" VerticalAlignment="center" Width="100" 
                    Visibility="Collapsed">
-                <Label.Background>
-                    <ImageBrush ImageSource="Images/Zuckerstangen.png"/>
-                </Label.Background>
             </Label>
             <Label x:Name="BOB3" Grid.Column="2" HorizontalAlignment="center" Height="100" Grid.Row="1" VerticalAlignment="center" Width="100" 
                    Visibility="Collapsed">
-                <Label.Background>
-                    <ImageBrush ImageSource="Images/Donut.png"/>
-                </Label.Background>
             </Label>
 
             <Button x:Name="BC1" Grid.Column="0" HorizontalAlignment="center" Height="100" Grid.Row="2" VerticalAlignment="center" 
@@ -207,15 +174,9 @@
             </Button>
             <Label x:Name="BXC1" Grid.Column="0" HorizontalAlignment="center" Height="100" Grid.Row="2" VerticalAlignment="center" Width="100" 
                    Visibility="Collapsed">
-                <Label.Background>
-                    <ImageBrush ImageSource="Images/Zuckerstangen.png"/>
-                </Label.Background>
             </Label>
             <Label x:Name="BOC1" Grid.Column="0" HorizontalAlignment="center" Height="100" Grid.Row="2" VerticalAlignment="center" Width="100" 
                    Visibility="Collapsed">
-                <Label.Background>
-                    <ImageBrush ImageSource="Images/Donut.png"/>
-                </Label.Background>
             </Label>
             <Button x:Name="BC2" Grid.Column="1" HorizontalAlignment="center" Height="100" Grid.Row="2" VerticalAlignment="center" 
                     Template="{StaticResource NoMouseOverButtonTemplate}" Width="100" Click="BC2_Click" Visibility="Visible">
@@ -225,15 +186,9 @@
             </Button>
             <Label x:Name="BXC2" Grid.Column="1" HorizontalAlignment="center" Height="100" Grid.Row="2" VerticalAlignment="center" Width="100" 
                    Visibility="Collapsed">
-                <Label.Background>
-                    <ImageBrush ImageSource="Images/Zuckerstangen.png"/>
-                </Label.Background>
             </Label>
             <Label x:Name="BOC2" Grid.Column="1" HorizontalAlignment="center" Height="100" Grid.Row="2" VerticalAlignment="center" Width="100" 
                    Visibility="Collapsed">
-                <Label.Background>
-                    <ImageBrush ImageSource="Images/Donut.png"/>
-                </Label.Background>
             </Label>
             <Button x:Name="BC3" Grid.Column="2" HorizontalAlignment="center" Height="100" Grid.Row="2" VerticalAlignment="center" 
                     Template="{StaticResource NoMouseOverButtonTemplate}" Width="100" Click="BC3_Click" Visibility="Visible">
@@ -243,15 +198,9 @@
             </Button>
             <Label x:Name="BXC3" Grid.Column="2" HorizontalAlignment="center" Height="100" Grid.Row="2" VerticalAlignment="center" Width="100" 
                    Visibility="Collapsed">
-                <Label.Background>
-                    <ImageBrush ImageSource="Images/Zuckerstangen.png"/>
-                </Label.Background>
             </Label>
             <Label x:Name="BOC3" Grid.Column="2" HorizontalAlignment="center" Height="100" Grid.Row="2" VerticalAlignment="center" Width="100" 
                    Visibility="Collapsed">
-                <Label.Background>
-                    <ImageBrush ImageSource="Images/Donut.png"/>
-                </Label.Background>
             </Label>
         </Grid>
     </Grid>
