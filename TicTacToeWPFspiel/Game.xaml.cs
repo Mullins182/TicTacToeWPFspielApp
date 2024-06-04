@@ -224,33 +224,33 @@ namespace TicTacToeWPFspiel
 
             SpielOptionen.PlayersymbolChanged   += SpielOptionen_PlayersymbolChanged;
 
-            playerSymbolImage.ImageSource       = new BitmapImage(new Uri(playerSymbol, UriKind.RelativeOrAbsolute));
-            //BXA1.Background                     = playerSymbolImage;
-            //BXA2.Background                     = playerSymbolImage;
-            //BXA3.Background                     = playerSymbolImage;
-            //BXB1.Background                     = playerSymbolImage;
-            //BXB2.Background                     = playerSymbolImage;
-            //BXB3.Background                     = playerSymbolImage;
-            //BXC1.Background                     = playerSymbolImage;
-            //BXC2.Background                     = playerSymbolImage;
-            //BXC3.Background                     = playerSymbolImage;
+            playerSymbolImage.ImageSource = new BitmapImage(new Uri(playerSymbol, UriKind.RelativeOrAbsolute));
+            BXA1.Background = playerSymbolImage;
+            BXA2.Background = playerSymbolImage;
+            BXA3.Background = playerSymbolImage;
+            BXB1.Background = playerSymbolImage;
+            BXB2.Background = playerSymbolImage;
+            BXB3.Background = playerSymbolImage;
+            BXC1.Background = playerSymbolImage;
+            BXC2.Background = playerSymbolImage;
+            BXC3.Background = playerSymbolImage;
 
-            npcSymbolImage.ImageSource          = new BitmapImage(new Uri(npcSymbol, UriKind.RelativeOrAbsolute));
-            //BOA1.Background                     = npcSymbolImage;
-            //BOA2.Background                     = npcSymbolImage;
-            //BOA3.Background                     = npcSymbolImage;
-            //BOB1.Background                     = npcSymbolImage;
-            //BOB2.Background                     = npcSymbolImage;
-            //BOB3.Background                     = npcSymbolImage;
-            //BOC1.Background                     = npcSymbolImage;
-            //BOC2.Background                     = npcSymbolImage;
-            //BOC3.Background                     = npcSymbolImage;
+            npcSymbolImage.ImageSource = new BitmapImage(new Uri(npcSymbol, UriKind.RelativeOrAbsolute));
+            BOA1.Background = npcSymbolImage;
+            BOA2.Background = npcSymbolImage;
+            BOA3.Background = npcSymbolImage;
+            BOB1.Background = npcSymbolImage;
+            BOB2.Background = npcSymbolImage;
+            BOB3.Background = npcSymbolImage;
+            BOC1.Background = npcSymbolImage;
+            BOC2.Background = npcSymbolImage;
+            BOC3.Background = npcSymbolImage;
         }
 
         private void SpielOptionen_PlayersymbolChanged(object? sender, string e)
         {
-            BXA1.Background = playerSymbolImage;
-            BOA1.Background = npcSymbolImage;
+            playerSymbolImage.ImageSource   = new BitmapImage(new Uri(playerSymbol, UriKind.RelativeOrAbsolute));
+            npcSymbolImage.ImageSource      = new BitmapImage(new Uri(npcSymbol, UriKind.RelativeOrAbsolute));
         }
 
         public void NpcLeaveClickEventAndCheckLooseCondition()
