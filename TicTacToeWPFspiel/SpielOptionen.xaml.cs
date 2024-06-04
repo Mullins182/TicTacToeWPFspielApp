@@ -7,9 +7,6 @@ using TicTacToeWPFspiel;
 
 namespace TicTacToeWPFspiel
 {
-    /// <summary>
-    /// Interaktionslogik für SpielOptionen.xaml
-    /// </summary>
     public partial class SpielOptionen : Page
     {
         public static event EventHandler<string>? BGvideoChanged;

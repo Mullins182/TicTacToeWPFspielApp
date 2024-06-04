@@ -71,7 +71,16 @@
 	<EmbeddedResource Include="BG_Videos\ConfettiCannon.mp4">
 	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	</EmbeddedResource>
+	<EmbeddedResource Include="BG_Videos\GameOver.mp4">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</EmbeddedResource>
+	<EmbeddedResource Include="BG_Videos\SnowfallStreet1.mp4">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</EmbeddedResource>
 	<EmbeddedResource Include="BG_Videos\SnowfallStreet2.mp4">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</EmbeddedResource>
+	<EmbeddedResource Include="BG_Videos\Snowflakes.mp4">
 	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	</EmbeddedResource>
 	<EmbeddedResource Include="BG_Videos\Snowflakes2.mp4">

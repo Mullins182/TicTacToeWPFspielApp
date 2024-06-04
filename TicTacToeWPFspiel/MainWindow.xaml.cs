@@ -24,7 +24,6 @@ namespace TicTacToeWPFspiel
         public static string gameOverVideo  = @"BG_Videos\GameOver.mp4";
         public static string Sound          = @"Sounds\Decide.mp3";
         public static string ChooseSound    = @"Sounds\PencilX.wav";
-        //public static string ChooseSoundO = @"Sounds\PencilO.wav";
         public SpielOptionen _options;
         public Game _runningGame            = new();
 
