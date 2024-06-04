@@ -312,7 +312,7 @@ namespace TicTacToeWPFspiel
             {
                 FC3 = true;
                 cpu_choosed9 = true;
-                BC3.Visibility = Visibility.Collapsed;
+                BC3.Visibility = Visibility.Hidden;
                 BOC3.Visibility = Visibility.Visible;
                 NpcLeaveClickEventAndCheckLooseCondition();
             }
@@ -320,7 +320,7 @@ namespace TicTacToeWPFspiel
             {
                 FA1 = true;
                 cpu_choosed1 = true;
-                BA1.Visibility = Visibility.Collapsed;
+                BA1.Visibility = Visibility.Hidden;
                 BOA1.Visibility = Visibility.Visible;
                 NpcLeaveClickEventAndCheckLooseCondition();
             }
@@ -328,7 +328,7 @@ namespace TicTacToeWPFspiel
             {
                 FB2 = true;
                 cpu_choosed5 = true;
-                BB2.Visibility = Visibility.Collapsed;
+                BB2.Visibility = Visibility.Hidden;
                 BOB2.Visibility = Visibility.Visible;
                 NpcLeaveClickEventAndCheckLooseCondition();
             }
@@ -336,7 +336,7 @@ namespace TicTacToeWPFspiel
             {
                 FA3 = true;
                 cpu_choosed3 = true;
-                BA3.Visibility = Visibility.Collapsed;
+                BA3.Visibility = Visibility.Hidden;
                 BOA3.Visibility = Visibility.Visible;
                 NpcLeaveClickEventAndCheckLooseCondition();
             }
@@ -344,7 +344,7 @@ namespace TicTacToeWPFspiel
             {
                 FA2 = true;
                 cpu_choosed2 = true;
-                BA2.Visibility = Visibility.Collapsed;
+                BA2.Visibility = Visibility.Hidden;
                 BOA2.Visibility = Visibility.Visible;
                 NpcLeaveClickEventAndCheckLooseCondition();
             }
@@ -352,7 +352,7 @@ namespace TicTacToeWPFspiel
             {
                 FA1 = true;
                 cpu_choosed1 = true;
-                BA1.Visibility = Visibility.Collapsed;
+                BA1.Visibility = Visibility.Hidden;
                 BOA1.Visibility = Visibility.Visible;
                 NpcLeaveClickEventAndCheckLooseCondition();
             }
@@ -360,7 +360,7 @@ namespace TicTacToeWPFspiel
             {
                 FB3 = true;
                 cpu_choosed6 = true;
-                BB3.Visibility = Visibility.Collapsed;
+                BB3.Visibility = Visibility.Hidden;
                 BOB3.Visibility = Visibility.Visible;
                 NpcLeaveClickEventAndCheckLooseCondition();
             }
@@ -368,7 +368,7 @@ namespace TicTacToeWPFspiel
             {
                 FB2 = true;
                 cpu_choosed5 = true;
-                BB2.Visibility = Visibility.Collapsed;
+                BB2.Visibility = Visibility.Hidden;
                 BOB2.Visibility = Visibility.Visible;
                 NpcLeaveClickEventAndCheckLooseCondition();
             }
@@ -376,7 +376,7 @@ namespace TicTacToeWPFspiel
             {
                 FB1 = true;
                 cpu_choosed4 = true;
-                BB1.Visibility = Visibility.Collapsed;
+                BB1.Visibility = Visibility.Hidden;
                 BOB1.Visibility = Visibility.Visible;
                 NpcLeaveClickEventAndCheckLooseCondition();
             }
@@ -384,7 +384,7 @@ namespace TicTacToeWPFspiel
             {
                 FC1 = true;
                 cpu_choosed7 = true;
-                BC1.Visibility = Visibility.Collapsed;
+                BC1.Visibility = Visibility.Hidden;
                 BOC1.Visibility = Visibility.Visible;
                 NpcLeaveClickEventAndCheckLooseCondition();
             }
@@ -392,7 +392,7 @@ namespace TicTacToeWPFspiel
             {
                 FA3 = true;
                 cpu_choosed3 = true;
-                BA3.Visibility = Visibility.Collapsed;
+                BA3.Visibility = Visibility.Hidden;
                 BOA3.Visibility = Visibility.Visible;
                 NpcLeaveClickEventAndCheckLooseCondition();
             }
@@ -400,7 +400,7 @@ namespace TicTacToeWPFspiel
             {
                 FB2 = true;
                 cpu_choosed5 = true;
-                BB2.Visibility = Visibility.Collapsed;
+                BB2.Visibility = Visibility.Hidden;
                 BOB2.Visibility = Visibility.Visible;
                 NpcLeaveClickEventAndCheckLooseCondition();
             }
@@ -408,7 +408,7 @@ namespace TicTacToeWPFspiel
             {
                 FC3 = true;
                 cpu_choosed9 = true;
-                BC3.Visibility = Visibility.Collapsed;
+                BC3.Visibility = Visibility.Hidden;
                 BOC3.Visibility = Visibility.Visible;
                 NpcLeaveClickEventAndCheckLooseCondition();
             }
@@ -416,7 +416,7 @@ namespace TicTacToeWPFspiel
             {
                 FB2 = true;
                 cpu_choosed5 = true;
-                BB2.Visibility = Visibility.Collapsed;
+                BB2.Visibility = Visibility.Hidden;
                 BOB2.Visibility = Visibility.Visible;
                 NpcLeaveClickEventAndCheckLooseCondition();
             }
@@ -424,7 +424,7 @@ namespace TicTacToeWPFspiel
             {
                 FA1 = true;
                 cpu_choosed1 = true;
-                BA1.Visibility = Visibility.Collapsed;
+                BA1.Visibility = Visibility.Hidden;
                 BOA1.Visibility = Visibility.Visible;
                 NpcLeaveClickEventAndCheckLooseCondition();
             }
@@ -432,7 +432,7 @@ namespace TicTacToeWPFspiel
             {
                 FC3 = true;
                 cpu_choosed9 = true;
-                BC3.Visibility = Visibility.Collapsed;
+                BC3.Visibility = Visibility.Hidden;
                 BOC3.Visibility = Visibility.Visible;
                 NpcLeaveClickEventAndCheckLooseCondition();
             }
@@ -440,7 +440,7 @@ namespace TicTacToeWPFspiel
             {
                 FC2 = true;
                 cpu_choosed8 = true;
-                BC2.Visibility = Visibility.Collapsed;
+                BC2.Visibility = Visibility.Hidden;
                 BOC2.Visibility = Visibility.Visible;
                 NpcLeaveClickEventAndCheckLooseCondition();
             }
@@ -448,7 +448,7 @@ namespace TicTacToeWPFspiel
             {
                 FC1 = true;
                 cpu_choosed7 = true;
-                BC1.Visibility = Visibility.Collapsed;
+                BC1.Visibility = Visibility.Hidden;
                 BOC1.Visibility = Visibility.Visible;
                 NpcLeaveClickEventAndCheckLooseCondition();
             }
@@ -456,7 +456,7 @@ namespace TicTacToeWPFspiel
             {
                 FC1 = true;
                 cpu_choosed7 = true;
-                BC1.Visibility = Visibility.Collapsed;
+                BC1.Visibility = Visibility.Hidden;
                 BOC1.Visibility = Visibility.Visible;
                 NpcLeaveClickEventAndCheckLooseCondition();
             }
@@ -464,7 +464,7 @@ namespace TicTacToeWPFspiel
             {
                 FB1 = true;
                 cpu_choosed4 = true;
-                BB1.Visibility = Visibility.Collapsed;
+                BB1.Visibility = Visibility.Hidden;
                 BOB1.Visibility = Visibility.Visible;
                 NpcLeaveClickEventAndCheckLooseCondition();
             }
@@ -472,7 +472,7 @@ namespace TicTacToeWPFspiel
             {
                 FA1 = true;
                 cpu_choosed1 = true;
-                BA1.Visibility = Visibility.Collapsed;
+                BA1.Visibility = Visibility.Hidden;
                 BOA1.Visibility = Visibility.Visible;
                 NpcLeaveClickEventAndCheckLooseCondition();
             }
@@ -480,7 +480,7 @@ namespace TicTacToeWPFspiel
             {
                 FC2 = true;
                 cpu_choosed8 = true;
-                BC2.Visibility = Visibility.Collapsed;
+                BC2.Visibility = Visibility.Hidden;
                 BOC2.Visibility = Visibility.Visible;
                 NpcLeaveClickEventAndCheckLooseCondition();
             }
@@ -488,7 +488,7 @@ namespace TicTacToeWPFspiel
             {
                 FB2 = true;
                 cpu_choosed5 = true;
-                BB2.Visibility = Visibility.Collapsed;
+                BB2.Visibility = Visibility.Hidden;
                 BOB2.Visibility = Visibility.Visible;
                 NpcLeaveClickEventAndCheckLooseCondition();
             }
@@ -496,7 +496,7 @@ namespace TicTacToeWPFspiel
             {
                 FA2 = true;
                 cpu_choosed2 = true;
-                BA2.Visibility = Visibility.Collapsed;
+                BA2.Visibility = Visibility.Hidden;
                 BOA2.Visibility = Visibility.Visible;
                 NpcLeaveClickEventAndCheckLooseCondition();
             }
@@ -504,7 +504,7 @@ namespace TicTacToeWPFspiel
             {
                 FC3 = true;
                 cpu_choosed9 = true;
-                BC3.Visibility = Visibility.Collapsed;
+                BC3.Visibility = Visibility.Hidden;
                 BOC3.Visibility = Visibility.Visible;
                 NpcLeaveClickEventAndCheckLooseCondition();
             }
@@ -512,7 +512,7 @@ namespace TicTacToeWPFspiel
             {
                 FB3 = true;
                 cpu_choosed6 = true;
-                BB3.Visibility = Visibility.Collapsed;
+                BB3.Visibility = Visibility.Hidden;
                 BOB3.Visibility = Visibility.Visible;
                 NpcLeaveClickEventAndCheckLooseCondition();
             }
@@ -520,7 +520,7 @@ namespace TicTacToeWPFspiel
             {
                 FA3 = true;
                 cpu_choosed3 = true;
-                BA3.Visibility = Visibility.Collapsed;
+                BA3.Visibility = Visibility.Hidden;
                 BOA3.Visibility = Visibility.Visible;
                 NpcLeaveClickEventAndCheckLooseCondition();
             }
@@ -532,7 +532,7 @@ namespace TicTacToeWPFspiel
             {
                 FA2 = true;
                 cpu_choosed2 = true;
-                BA2.Visibility = Visibility.Collapsed;
+                BA2.Visibility = Visibility.Hidden;
                 BOA2.Visibility = Visibility.Visible;
                 leaveClickEventNow = true;
                 NpcLeaveClickEventAndCheckLooseCondition();
@@ -541,7 +541,7 @@ namespace TicTacToeWPFspiel
             {
                 FA3 = true;
                 cpu_choosed3 = true;
-                BA3.Visibility = Visibility.Collapsed;
+                BA3.Visibility = Visibility.Hidden;
                 BOA3.Visibility = Visibility.Visible;
                 leaveClickEventNow = true;
                 NpcLeaveClickEventAndCheckLooseCondition();
@@ -550,7 +550,7 @@ namespace TicTacToeWPFspiel
             {
                 FA1 = true;
                 cpu_choosed1 = true;
-                BA1.Visibility = Visibility.Collapsed;
+                BA1.Visibility = Visibility.Hidden;
                 BOA1.Visibility = Visibility.Visible;
                 leaveClickEventNow = true;
                 NpcLeaveClickEventAndCheckLooseCondition();
@@ -559,7 +559,7 @@ namespace TicTacToeWPFspiel
             {
                 FA2 = true;
                 cpu_choosed2 = true;
-                BA2.Visibility = Visibility.Collapsed;
+                BA2.Visibility = Visibility.Hidden;
                 BOA2.Visibility = Visibility.Visible;
                 leaveClickEventNow = true;
                 NpcLeaveClickEventAndCheckLooseCondition();
@@ -568,7 +568,7 @@ namespace TicTacToeWPFspiel
             {
                 FB3 = true;
                 cpu_choosed6 = true;
-                BB3.Visibility = Visibility.Collapsed;
+                BB3.Visibility = Visibility.Hidden;
                 BOB3.Visibility = Visibility.Visible;
                 leaveClickEventNow = true;
                 NpcLeaveClickEventAndCheckLooseCondition();
@@ -577,7 +577,7 @@ namespace TicTacToeWPFspiel
             {
                 FB1 = true;
                 cpu_choosed4 = true;
-                BB1.Visibility = Visibility.Collapsed;
+                BB1.Visibility = Visibility.Hidden;
                 BOB1.Visibility = Visibility.Visible;
                 leaveClickEventNow = true;
                 NpcLeaveClickEventAndCheckLooseCondition();
@@ -586,7 +586,7 @@ namespace TicTacToeWPFspiel
             {
                 FB2 = true;
                 cpu_choosed5 = true;
-                BB2.Visibility = Visibility.Collapsed;
+                BB2.Visibility = Visibility.Hidden;
                 BOB2.Visibility = Visibility.Visible;
                 leaveClickEventNow = true;
                 NpcLeaveClickEventAndCheckLooseCondition();
@@ -595,7 +595,7 @@ namespace TicTacToeWPFspiel
             {
                 FC3 = true;
                 cpu_choosed9 = true;
-                BC3.Visibility = Visibility.Collapsed;
+                BC3.Visibility = Visibility.Hidden;
                 BOC3.Visibility = Visibility.Visible;
                 leaveClickEventNow = true;
                 NpcLeaveClickEventAndCheckLooseCondition();
@@ -604,7 +604,7 @@ namespace TicTacToeWPFspiel
             {
                 FC1 = true;
                 cpu_choosed7 = true;
-                BC1.Visibility = Visibility.Collapsed;
+                BC1.Visibility = Visibility.Hidden;
                 BOC1.Visibility = Visibility.Visible;
                 leaveClickEventNow = true;
                 NpcLeaveClickEventAndCheckLooseCondition();
@@ -613,7 +613,7 @@ namespace TicTacToeWPFspiel
             {
                 FC2 = true;
                 cpu_choosed8 = true;
-                BC2.Visibility = Visibility.Collapsed;
+                BC2.Visibility = Visibility.Hidden;
                 BOC2.Visibility = Visibility.Visible;
                 leaveClickEventNow = true;
                 NpcLeaveClickEventAndCheckLooseCondition();
@@ -622,7 +622,7 @@ namespace TicTacToeWPFspiel
             {
                 FC1 = true;
                 cpu_choosed7 = true;
-                BC1.Visibility = Visibility.Collapsed;
+                BC1.Visibility = Visibility.Hidden;
                 BOC1.Visibility = Visibility.Visible;
                 leaveClickEventNow = true;
                 NpcLeaveClickEventAndCheckLooseCondition();
@@ -631,7 +631,7 @@ namespace TicTacToeWPFspiel
             {
                 FA1 = true;
                 cpu_choosed1 = true;
-                BA1.Visibility = Visibility.Collapsed;
+                BA1.Visibility = Visibility.Hidden;
                 BOA1.Visibility = Visibility.Visible;
                 leaveClickEventNow = true;
                 NpcLeaveClickEventAndCheckLooseCondition();
@@ -640,7 +640,7 @@ namespace TicTacToeWPFspiel
             {
                 FB1 = true;
                 cpu_choosed4 = true;
-                BB1.Visibility = Visibility.Collapsed;
+                BB1.Visibility = Visibility.Hidden;
                 BOB1.Visibility = Visibility.Visible;
                 leaveClickEventNow = true;
                 NpcLeaveClickEventAndCheckLooseCondition();
@@ -649,7 +649,7 @@ namespace TicTacToeWPFspiel
             {
                 FC2 = true;
                 cpu_choosed8 = true;
-                BC2.Visibility = Visibility.Collapsed;
+                BC2.Visibility = Visibility.Hidden;
                 BOC2.Visibility = Visibility.Visible;
                 leaveClickEventNow = true;
                 NpcLeaveClickEventAndCheckLooseCondition();
@@ -658,7 +658,7 @@ namespace TicTacToeWPFspiel
             {
                 FA2 = true;
                 cpu_choosed2 = true;
-                BA2.Visibility = Visibility.Collapsed;
+                BA2.Visibility = Visibility.Hidden;
                 BOA2.Visibility = Visibility.Visible;
                 leaveClickEventNow = true;
                 NpcLeaveClickEventAndCheckLooseCondition();
@@ -667,7 +667,7 @@ namespace TicTacToeWPFspiel
             {
                 FB2 = true;
                 cpu_choosed5 = true;
-                BB2.Visibility = Visibility.Collapsed;
+                BB2.Visibility = Visibility.Hidden;
                 BOB2.Visibility = Visibility.Visible;
                 leaveClickEventNow = true;
                 NpcLeaveClickEventAndCheckLooseCondition();
@@ -676,7 +676,7 @@ namespace TicTacToeWPFspiel
             {
                 FC3 = true;
                 cpu_choosed9 = true;
-                BC3.Visibility = Visibility.Collapsed;
+                BC3.Visibility = Visibility.Hidden;
                 BOC3.Visibility = Visibility.Visible;
                 leaveClickEventNow = true;
                 NpcLeaveClickEventAndCheckLooseCondition();
@@ -685,7 +685,7 @@ namespace TicTacToeWPFspiel
             {
                 FA3 = true;
                 cpu_choosed3 = true;
-                BA3.Visibility = Visibility.Collapsed;
+                BA3.Visibility = Visibility.Hidden;
                 BOA3.Visibility = Visibility.Visible;
                 leaveClickEventNow = true;
                 NpcLeaveClickEventAndCheckLooseCondition();
@@ -694,7 +694,7 @@ namespace TicTacToeWPFspiel
             {
                 FB3 = true;
                 cpu_choosed6 = true;
-                BB3.Visibility = Visibility.Collapsed;
+                BB3.Visibility = Visibility.Hidden;
                 BOB3.Visibility = Visibility.Visible;
                 leaveClickEventNow = true;
                 NpcLeaveClickEventAndCheckLooseCondition();
@@ -703,7 +703,7 @@ namespace TicTacToeWPFspiel
             {
                 FC3 = true;
                 cpu_choosed9 = true;
-                BC3.Visibility = Visibility.Collapsed;
+                BC3.Visibility = Visibility.Hidden;
                 BOC3.Visibility = Visibility.Visible;
                 leaveClickEventNow = true;
                 NpcLeaveClickEventAndCheckLooseCondition();
@@ -712,7 +712,7 @@ namespace TicTacToeWPFspiel
             {
                 FA1 = true;
                 cpu_choosed1 = true;
-                BA1.Visibility = Visibility.Collapsed;
+                BA1.Visibility = Visibility.Hidden;
                 BOA1.Visibility = Visibility.Visible;
                 leaveClickEventNow = true;
                 NpcLeaveClickEventAndCheckLooseCondition();
@@ -721,7 +721,7 @@ namespace TicTacToeWPFspiel
             {
                 FB2 = true;
                 cpu_choosed5 = true;
-                BB2.Visibility = Visibility.Collapsed;
+                BB2.Visibility = Visibility.Hidden;
                 BOB2.Visibility = Visibility.Visible;
                 leaveClickEventNow = true;
                 NpcLeaveClickEventAndCheckLooseCondition();
@@ -730,7 +730,7 @@ namespace TicTacToeWPFspiel
             {
                 FB2 = true;
                 cpu_choosed5 = true;
-                BB2.Visibility = Visibility.Collapsed;
+                BB2.Visibility = Visibility.Hidden;
                 BOB2.Visibility = Visibility.Visible;
                 leaveClickEventNow = true;
                 NpcLeaveClickEventAndCheckLooseCondition();
@@ -739,7 +739,7 @@ namespace TicTacToeWPFspiel
             {
                 FA3 = true;
                 cpu_choosed3 = true;
-                BA3.Visibility = Visibility.Collapsed;
+                BA3.Visibility = Visibility.Hidden;
                 BOA3.Visibility = Visibility.Visible;
                 leaveClickEventNow = true;
                 NpcLeaveClickEventAndCheckLooseCondition();
@@ -748,7 +748,7 @@ namespace TicTacToeWPFspiel
             {
                 FC1 = true;
                 cpu_choosed7 = true;
-                BC1.Visibility = Visibility.Collapsed;
+                BC1.Visibility = Visibility.Hidden;
                 BOC1.Visibility = Visibility.Visible;
                 leaveClickEventNow = true;
                 NpcLeaveClickEventAndCheckLooseCondition();
@@ -823,7 +823,7 @@ namespace TicTacToeWPFspiel
 
             cpu_choice = rd_number_generated.Next(1, 10);
 
-            INFO.Visibility = Visibility.Collapsed;
+            INFO.Visibility = Visibility.Hidden;
 
             NpcWinningMove();
 
@@ -849,14 +849,14 @@ namespace TicTacToeWPFspiel
                         {
                             FA3 = true;
                             cpu_choosed3 = true;
-                            BA3.Visibility = Visibility.Collapsed;
+                            BA3.Visibility = Visibility.Hidden;
                             BOA3.Visibility = Visibility.Visible;
                         }
                         else if (cpu_choosed2 != true)
                         {
                             FA2 = true;
                             cpu_choosed2 = true;
-                            BA2.Visibility = Visibility.Collapsed;
+                            BA2.Visibility = Visibility.Hidden;
                             BOA2.Visibility = Visibility.Visible;
                         }
                     }
@@ -866,14 +866,14 @@ namespace TicTacToeWPFspiel
                         {
                             FC1 = true;
                             cpu_choosed7 = true;
-                            BC1.Visibility = Visibility.Collapsed;
+                            BC1.Visibility = Visibility.Hidden;
                             BOC1.Visibility = Visibility.Visible;
                         }
                         else if (cpu_choosed4 != true)
                         {
                             FB1 = true;
                             cpu_choosed4 = true;
-                            BB1.Visibility = Visibility.Collapsed;
+                            BB1.Visibility = Visibility.Hidden;
                             BOB1.Visibility = Visibility.Visible;
                         }
                     }
@@ -883,14 +883,14 @@ namespace TicTacToeWPFspiel
                         {
                             FC3 = true;
                             cpu_choosed9 = true;
-                            BC3.Visibility = Visibility.Collapsed;
+                            BC3.Visibility = Visibility.Hidden;
                             BOC3.Visibility = Visibility.Visible;
                         }
                         else if (cpu_choosed5 != true)
                         {
                             FB2 = true;
                             cpu_choosed5 = true;
-                            BB2.Visibility = Visibility.Collapsed;
+                            BB2.Visibility = Visibility.Hidden;
                             BOB2.Visibility = Visibility.Visible;
                         }
                     }
@@ -905,7 +905,7 @@ namespace TicTacToeWPFspiel
                     {
                         FA1 = true;
                         cpu_choosed1 = true;
-                        BA1.Visibility = Visibility.Collapsed;
+                        BA1.Visibility = Visibility.Hidden;
                         BOA1.Visibility = Visibility.Visible;
                     }
                     else
@@ -914,63 +914,63 @@ namespace TicTacToeWPFspiel
                         {
                             FA1 = true;
                             cpu_choosed1 = true;
-                            BA1.Visibility = Visibility.Collapsed;
+                            BA1.Visibility = Visibility.Hidden;
                             BOA1.Visibility = Visibility.Visible;
                         }
                         else if (!FA2)
                         {
                             FA2 = true;
                             cpu_choosed2 = true;
-                            BA2.Visibility = Visibility.Collapsed;
+                            BA2.Visibility = Visibility.Hidden;
                             BOA2.Visibility = Visibility.Visible;
                         }
                         else if (!FA3)
                         {
                             FA3 = true;
                             cpu_choosed3 = true;
-                            BA3.Visibility = Visibility.Collapsed;
+                            BA3.Visibility = Visibility.Hidden;
                             BOA3.Visibility = Visibility.Visible;
                         }
                         else if (!FB1)
                         {
                             FB1 = true;
                             cpu_choosed4 = true;
-                            BB1.Visibility = Visibility.Collapsed;
+                            BB1.Visibility = Visibility.Hidden;
                             BOB1.Visibility = Visibility.Visible;
                         }
                         else if (!FB2)
                         {
                             FB2 = true;
                             cpu_choosed5 = true;
-                            BB2.Visibility = Visibility.Collapsed;
+                            BB2.Visibility = Visibility.Hidden;
                             BOB2.Visibility = Visibility.Visible;
                         }
                         else if (!FB3)
                         {
                             FB3 = true;
                             cpu_choosed6 = true;
-                            BB3.Visibility = Visibility.Collapsed;
+                            BB3.Visibility = Visibility.Hidden;
                             BOB3.Visibility = Visibility.Visible;
                         }
                         else if (!FC1)
                         {
                             FC1 = true;
                             cpu_choosed7 = true;
-                            BC1.Visibility = Visibility.Collapsed;
+                            BC1.Visibility = Visibility.Hidden;
                             BOC1.Visibility = Visibility.Visible;
                         }
                         else if (!FC2)
                         {
                             FC2 = true;
                             cpu_choosed8 = true;
-                            BC2.Visibility = Visibility.Collapsed;
+                            BC2.Visibility = Visibility.Hidden;
                             BOC2.Visibility = Visibility.Visible;
                         }
                         else
                         {
                             FC3 = true;
                             cpu_choosed9 = true;
-                            BC3.Visibility = Visibility.Collapsed;
+                            BC3.Visibility = Visibility.Hidden;
                             BOC3.Visibility = Visibility.Visible;
                         }
                     }
@@ -986,14 +986,14 @@ namespace TicTacToeWPFspiel
                         {
                             FA3 = true;
                             cpu_choosed3 = true;
-                            BA3.Visibility = Visibility.Collapsed;
+                            BA3.Visibility = Visibility.Hidden;
                             BOA3.Visibility = Visibility.Visible;
                         }
                         else if (cpu_choosed1 != true)
                         {
                             FA1 = true;
                             cpu_choosed1 = true;
-                            BA1.Visibility = Visibility.Collapsed;
+                            BA1.Visibility = Visibility.Hidden;
                             BOA1.Visibility = Visibility.Visible;
                         }
                     }
@@ -1003,14 +1003,14 @@ namespace TicTacToeWPFspiel
                         {
                             FC2 = true;
                             cpu_choosed8 = true;
-                            BC2.Visibility = Visibility.Collapsed;
+                            BC2.Visibility = Visibility.Hidden;
                             BOC2.Visibility = Visibility.Visible;
                         }
                         else if (cpu_choosed5 != true)
                         {
                             FB2 = true;
                             cpu_choosed5 = true;
-                            BB2.Visibility = Visibility.Collapsed;
+                            BB2.Visibility = Visibility.Hidden;
                             BOB2.Visibility = Visibility.Visible;
                         }
                     }
@@ -1025,7 +1025,7 @@ namespace TicTacToeWPFspiel
                     {
                         FA2 = true;
                         cpu_choosed2 = true;
-                        BA2.Visibility = Visibility.Collapsed;
+                        BA2.Visibility = Visibility.Hidden;
                         BOA2.Visibility = Visibility.Visible;
                     }
                     else
@@ -1034,63 +1034,63 @@ namespace TicTacToeWPFspiel
                         {
                             FA1 = true;
                             cpu_choosed1 = true;
-                            BA1.Visibility = Visibility.Collapsed;
+                            BA1.Visibility = Visibility.Hidden;
                             BOA1.Visibility = Visibility.Visible;
                         }
                         else if (!FA2)
                         {
                             FA2 = true;
                             cpu_choosed2 = true;
-                            BA2.Visibility = Visibility.Collapsed;
+                            BA2.Visibility = Visibility.Hidden;
                             BOA2.Visibility = Visibility.Visible;
                         }
                         else if (!FA3)
                         {
                             FA3 = true;
                             cpu_choosed3 = true;
-                            BA3.Visibility = Visibility.Collapsed;
+                            BA3.Visibility = Visibility.Hidden;
                             BOA3.Visibility = Visibility.Visible;
                         }
                         else if (!FB1)
                         {
                             FB1 = true;
                             cpu_choosed4 = true;
-                            BB1.Visibility = Visibility.Collapsed;
+                            BB1.Visibility = Visibility.Hidden;
                             BOB1.Visibility = Visibility.Visible;
                         }
                         else if (!FB2)
                         {
                             FB2 = true;
                             cpu_choosed5 = true;
-                            BB2.Visibility = Visibility.Collapsed;
+                            BB2.Visibility = Visibility.Hidden;
                             BOB2.Visibility = Visibility.Visible;
                         }
                         else if (!FB3)
                         {
                             FB3 = true;
                             cpu_choosed6 = true;
-                            BB3.Visibility = Visibility.Collapsed;
+                            BB3.Visibility = Visibility.Hidden;
                             BOB3.Visibility = Visibility.Visible;
                         }
                         else if (!FC1)
                         {
                             FC1 = true;
                             cpu_choosed7 = true;
-                            BC1.Visibility = Visibility.Collapsed;
+                            BC1.Visibility = Visibility.Hidden;
                             BOC1.Visibility = Visibility.Visible;
                         }
                         else if (!FC2)
                         {
                             FC2 = true;
                             cpu_choosed8 = true;
-                            BC2.Visibility = Visibility.Collapsed;
+                            BC2.Visibility = Visibility.Hidden;
                             BOC2.Visibility = Visibility.Visible;
                         }
                         else
                         {
                             FC3 = true;
                             cpu_choosed9 = true;
-                            BC3.Visibility = Visibility.Collapsed;
+                            BC3.Visibility = Visibility.Hidden;
                             BOC3.Visibility = Visibility.Visible;
                         }
                     }
@@ -1108,14 +1108,14 @@ namespace TicTacToeWPFspiel
                         {
                             FA1 = true;
                             cpu_choosed1 = true;
-                            BA1.Visibility = Visibility.Collapsed;
+                            BA1.Visibility = Visibility.Hidden;
                             BOA1.Visibility = Visibility.Visible;
                         }
                         else if (cpu_choosed2 != true)
                         {
                             FA2 = true;
                             cpu_choosed2 = true;
-                            BA2.Visibility = Visibility.Collapsed;
+                            BA2.Visibility = Visibility.Hidden;
                             BOA2.Visibility = Visibility.Visible;
                         }
                     }
@@ -1125,14 +1125,14 @@ namespace TicTacToeWPFspiel
                         {
                             FC3 = true;
                             cpu_choosed9 = true;
-                            BC3.Visibility = Visibility.Collapsed;
+                            BC3.Visibility = Visibility.Hidden;
                             BOC3.Visibility = Visibility.Visible;
                         }
                         else if (cpu_choosed6 != true)
                         {
                             FB3 = true;
                             cpu_choosed6 = true;
-                            BB3.Visibility = Visibility.Collapsed;
+                            BB3.Visibility = Visibility.Hidden;
                             BOB3.Visibility = Visibility.Visible;
                         }
                     }
@@ -1147,7 +1147,7 @@ namespace TicTacToeWPFspiel
                     {
                         FA3 = true;
                         cpu_choosed3 = true;
-                        BA3.Visibility = Visibility.Collapsed;
+                        BA3.Visibility = Visibility.Hidden;
                         BOA3.Visibility = Visibility.Visible;
                     }
                     else
@@ -1156,63 +1156,63 @@ namespace TicTacToeWPFspiel
                         {
                             FA1 = true;
                             cpu_choosed1 = true;
-                            BA1.Visibility = Visibility.Collapsed;
+                            BA1.Visibility = Visibility.Hidden;
                             BOA1.Visibility = Visibility.Visible;
                         }
                         else if (!FA2)
                         {
                             FA2 = true;
                             cpu_choosed2 = true;
-                            BA2.Visibility = Visibility.Collapsed;
+                            BA2.Visibility = Visibility.Hidden;
                             BOA2.Visibility = Visibility.Visible;
                         }
                         else if (!FA3)
                         {
                             FA3 = true;
                             cpu_choosed3 = true;
-                            BA3.Visibility = Visibility.Collapsed;
+                            BA3.Visibility = Visibility.Hidden;
                             BOA3.Visibility = Visibility.Visible;
                         }
                         else if (!FB1)
                         {
                             FB1 = true;
                             cpu_choosed4 = true;
-                            BB1.Visibility = Visibility.Collapsed;
+                            BB1.Visibility = Visibility.Hidden;
                             BOB1.Visibility = Visibility.Visible;
                         }
                         else if (!FB2)
                         {
                             FB2 = true;
                             cpu_choosed5 = true;
-                            BB2.Visibility = Visibility.Collapsed;
+                            BB2.Visibility = Visibility.Hidden;
                             BOB2.Visibility = Visibility.Visible;
                         }
                         else if (!FB3)
                         {
                             FB3 = true;
                             cpu_choosed6 = true;
-                            BB3.Visibility = Visibility.Collapsed;
+                            BB3.Visibility = Visibility.Hidden;
                             BOB3.Visibility = Visibility.Visible;
                         }
                         else if (!FC1)
                         {
                             FC1 = true;
                             cpu_choosed7 = true;
-                            BC1.Visibility = Visibility.Collapsed;
+                            BC1.Visibility = Visibility.Hidden;
                             BOC1.Visibility = Visibility.Visible;
                         }
                         else if (!FC2)
                         {
                             FC2 = true;
                             cpu_choosed8 = true;
-                            BC2.Visibility = Visibility.Collapsed;
+                            BC2.Visibility = Visibility.Hidden;
                             BOC2.Visibility = Visibility.Visible;
                         }
                         else
                         {
                             FC3 = true;
                             cpu_choosed9 = true;
-                            BC3.Visibility = Visibility.Collapsed;
+                            BC3.Visibility = Visibility.Hidden;
                             BOC3.Visibility = Visibility.Visible;
                         }
                     }
@@ -1229,14 +1229,14 @@ namespace TicTacToeWPFspiel
                         {
                             FB3 = true;
                             cpu_choosed6 = true;
-                            BB3.Visibility = Visibility.Collapsed;
+                            BB3.Visibility = Visibility.Hidden;
                             BOB3.Visibility = Visibility.Visible;
                         }
                         else if (cpu_choosed5 != true)
                         {
                             FB2 = true;
                             cpu_choosed5 = true;
-                            BB2.Visibility = Visibility.Collapsed;
+                            BB2.Visibility = Visibility.Hidden;
                             BOB2.Visibility = Visibility.Visible;
                         }
                     }
@@ -1246,14 +1246,14 @@ namespace TicTacToeWPFspiel
                         {
                             FC1 = true;
                             cpu_choosed7 = true;
-                            BC1.Visibility = Visibility.Collapsed;
+                            BC1.Visibility = Visibility.Hidden;
                             BOC1.Visibility = Visibility.Visible;
                         }
                         else if (cpu_choosed1 != true)
                         {
                             FA1 = true;
                             cpu_choosed1 = true;
-                            BA1.Visibility = Visibility.Collapsed;
+                            BA1.Visibility = Visibility.Hidden;
                             BOA1.Visibility = Visibility.Visible;
                         }
                     }
@@ -1268,7 +1268,7 @@ namespace TicTacToeWPFspiel
                     {
                         FB1 = true;
                         cpu_choosed4 = true;
-                        BB1.Visibility = Visibility.Collapsed;
+                        BB1.Visibility = Visibility.Hidden;
                         BOB1.Visibility = Visibility.Visible;
                     }
                     else
@@ -1277,63 +1277,63 @@ namespace TicTacToeWPFspiel
                         {
                             FA1 = true;
                             cpu_choosed1 = true;
-                            BA1.Visibility = Visibility.Collapsed;
+                            BA1.Visibility = Visibility.Hidden;
                             BOA1.Visibility = Visibility.Visible;
                         }
                         else if (!FA2)
                         {
                             FA2 = true;
                             cpu_choosed2 = true;
-                            BA2.Visibility = Visibility.Collapsed;
+                            BA2.Visibility = Visibility.Hidden;
                             BOA2.Visibility = Visibility.Visible;
                         }
                         else if (!FA3)
                         {
                             FA3 = true;
                             cpu_choosed3 = true;
-                            BA3.Visibility = Visibility.Collapsed;
+                            BA3.Visibility = Visibility.Hidden;
                             BOA3.Visibility = Visibility.Visible;
                         }
                         else if (!FB1)
                         {
                             FB1 = true;
                             cpu_choosed4 = true;
-                            BB1.Visibility = Visibility.Collapsed;
+                            BB1.Visibility = Visibility.Hidden;
                             BOB1.Visibility = Visibility.Visible;
                         }
                         else if (!FB2)
                         {
                             FB2 = true;
                             cpu_choosed5 = true;
-                            BB2.Visibility = Visibility.Collapsed;
+                            BB2.Visibility = Visibility.Hidden;
                             BOB2.Visibility = Visibility.Visible;
                         }
                         else if (!FB3)
                         {
                             FB3 = true;
                             cpu_choosed6 = true;
-                            BB3.Visibility = Visibility.Collapsed;
+                            BB3.Visibility = Visibility.Hidden;
                             BOB3.Visibility = Visibility.Visible;
                         }
                         else if (!FC1)
                         {
                             FC1 = true;
                             cpu_choosed7 = true;
-                            BC1.Visibility = Visibility.Collapsed;
+                            BC1.Visibility = Visibility.Hidden;
                             BOC1.Visibility = Visibility.Visible;
                         }
                         else if (!FC2)
                         {
                             FC2 = true;
                             cpu_choosed8 = true;
-                            BC2.Visibility = Visibility.Collapsed;
+                            BC2.Visibility = Visibility.Hidden;
                             BOC2.Visibility = Visibility.Visible;
                         }
                         else
                         {
                             FC3 = true;
                             cpu_choosed9 = true;
-                            BC3.Visibility = Visibility.Collapsed;
+                            BC3.Visibility = Visibility.Hidden;
                             BOC3.Visibility = Visibility.Visible;
                         }
                     }
@@ -1350,14 +1350,14 @@ namespace TicTacToeWPFspiel
                         {
                             FB1 = true;
                             cpu_choosed4 = true;
-                            BB1.Visibility = Visibility.Collapsed;
+                            BB1.Visibility = Visibility.Hidden;
                             BOB1.Visibility = Visibility.Visible;
                         }
                         else if (cpu_choosed6 != true)
                         {
                             FB3 = true;
                             cpu_choosed6 = true;
-                            BB3.Visibility = Visibility.Collapsed;
+                            BB3.Visibility = Visibility.Hidden;
                             BOB3.Visibility = Visibility.Visible;
                         }
                     }
@@ -1367,14 +1367,14 @@ namespace TicTacToeWPFspiel
                         {
                             FC2 = true;
                             cpu_choosed8 = true;
-                            BC2.Visibility = Visibility.Collapsed;
+                            BC2.Visibility = Visibility.Hidden;
                             BOC2.Visibility = Visibility.Visible;
                         }
                         else if (cpu_choosed2 != true)
                         {
                             FA2 = true;
                             cpu_choosed2 = true;
-                            BA2.Visibility = Visibility.Collapsed;
+                            BA2.Visibility = Visibility.Hidden;
                             BOA2.Visibility = Visibility.Visible;
                         }
                     }
@@ -1384,14 +1384,14 @@ namespace TicTacToeWPFspiel
                         {
                             FA1 = true;
                             cpu_choosed1 = true;
-                            BA1.Visibility = Visibility.Collapsed;
+                            BA1.Visibility = Visibility.Hidden;
                             BOA2.Visibility = Visibility.Visible;
                         }
                         else if (cpu_choosed9 != true)
                         {
                             FC3 = true;
                             cpu_choosed9 = true;
-                            BC3.Visibility = Visibility.Collapsed;
+                            BC3.Visibility = Visibility.Hidden;
                             BOC3.Visibility = Visibility.Visible;
                         }
                     }
@@ -1401,14 +1401,14 @@ namespace TicTacToeWPFspiel
                         {
                             FC1 = true;
                             cpu_choosed7 = true;
-                            BC1.Visibility = Visibility.Collapsed;
+                            BC1.Visibility = Visibility.Hidden;
                             BOC1.Visibility = Visibility.Visible;
                         }
                         else if (cpu_choosed3 != true)
                         {
                             FA3 = true;
                             cpu_choosed3 = true;
-                            BA3.Visibility = Visibility.Collapsed;
+                            BA3.Visibility = Visibility.Hidden;
                             BOA3.Visibility = Visibility.Visible;
                         }
                     }
@@ -1423,7 +1423,7 @@ namespace TicTacToeWPFspiel
                     {
                         FB2 = true;
                         cpu_choosed5 = true;
-                        BB2.Visibility = Visibility.Collapsed;
+                        BB2.Visibility = Visibility.Hidden;
                         BOB2.Visibility = Visibility.Visible;
                     }
                     else
@@ -1432,63 +1432,63 @@ namespace TicTacToeWPFspiel
                         {
                             FA1 = true;
                             cpu_choosed1 = true;
-                            BA1.Visibility = Visibility.Collapsed;
+                            BA1.Visibility = Visibility.Hidden;
                             BOA1.Visibility = Visibility.Visible;
                         }
                         else if (!FA2)
                         {
                             FA2 = true;
                             cpu_choosed2 = true;
-                            BA2.Visibility = Visibility.Collapsed;
+                            BA2.Visibility = Visibility.Hidden;
                             BOA2.Visibility = Visibility.Visible;
                         }
                         else if (!FA3)
                         {
                             FA3 = true;
                             cpu_choosed3 = true;
-                            BA3.Visibility = Visibility.Collapsed;
+                            BA3.Visibility = Visibility.Hidden;
                             BOA3.Visibility = Visibility.Visible;
                         }
                         else if (!FB1)
                         {
                             FB1 = true;
                             cpu_choosed4 = true;
-                            BB1.Visibility = Visibility.Collapsed;
+                            BB1.Visibility = Visibility.Hidden;
                             BOB1.Visibility = Visibility.Visible;
                         }
                         else if (!FB2)
                         {
                             FB2 = true;
                             cpu_choosed5 = true;
-                            BB2.Visibility = Visibility.Collapsed;
+                            BB2.Visibility = Visibility.Hidden;
                             BOB2.Visibility = Visibility.Visible;
                         }
                         else if (!FB3)
                         {
                             FB3 = true;
                             cpu_choosed6 = true;
-                            BB3.Visibility = Visibility.Collapsed;
+                            BB3.Visibility = Visibility.Hidden;
                             BOB3.Visibility = Visibility.Visible;
                         }
                         else if (!FC1)
                         {
                             FC1 = true;
                             cpu_choosed7 = true;
-                            BC1.Visibility = Visibility.Collapsed;
+                            BC1.Visibility = Visibility.Hidden;
                             BOC1.Visibility = Visibility.Visible;
                         }
                         else if (!FC2)
                         {
                             FC2 = true;
                             cpu_choosed8 = true;
-                            BC2.Visibility = Visibility.Collapsed;
+                            BC2.Visibility = Visibility.Hidden;
                             BOC2.Visibility = Visibility.Visible;
                         }
                         else
                         {
                             FC3 = true;
                             cpu_choosed9 = true;
-                            BC3.Visibility = Visibility.Collapsed;
+                            BC3.Visibility = Visibility.Hidden;
                             BOC3.Visibility = Visibility.Visible;
                         }
                     }
@@ -1505,14 +1505,14 @@ namespace TicTacToeWPFspiel
                         {
                             FB1 = true;
                             cpu_choosed4 = true;
-                            BB1.Visibility = Visibility.Collapsed;
+                            BB1.Visibility = Visibility.Hidden;
                             BOB1.Visibility = Visibility.Visible;
                         }
                         else if (cpu_choosed5 != true)
                         {
                             FB2 = true;
                             cpu_choosed5 = true;
-                            BB2.Visibility = Visibility.Collapsed;
+                            BB2.Visibility = Visibility.Hidden;
                             BOB2.Visibility = Visibility.Visible;
                         }
                     }
@@ -1522,14 +1522,14 @@ namespace TicTacToeWPFspiel
                         {
                             FC3 = true;
                             cpu_choosed9 = true;
-                            BC3.Visibility = Visibility.Collapsed;
+                            BC3.Visibility = Visibility.Hidden;
                             BOC3.Visibility = Visibility.Visible;
                         }
                         else if (cpu_choosed3 != true)
                         {
                             FA3 = true;
                             cpu_choosed3 = true;
-                            BA3.Visibility = Visibility.Collapsed;
+                            BA3.Visibility = Visibility.Hidden;
                             BOA3.Visibility = Visibility.Visible;
                         }
                     }
@@ -1544,7 +1544,7 @@ namespace TicTacToeWPFspiel
                     {
                         FB3 = true;
                         cpu_choosed6 = true;
-                        BB3.Visibility = Visibility.Collapsed;
+                        BB3.Visibility = Visibility.Hidden;
                         BOB3.Visibility = Visibility.Visible;
                     }
                     else
@@ -1553,63 +1553,63 @@ namespace TicTacToeWPFspiel
                         {
                             FA1 = true;
                             cpu_choosed1 = true;
-                            BA1.Visibility = Visibility.Collapsed;
+                            BA1.Visibility = Visibility.Hidden;
                             BOA1.Visibility = Visibility.Visible;
                         }
                         else if (!FA2)
                         {
                             FA2 = true;
                             cpu_choosed2 = true;
-                            BA2.Visibility = Visibility.Collapsed;
+                            BA2.Visibility = Visibility.Hidden;
                             BOA2.Visibility = Visibility.Visible;
                         }
                         else if (!FA3)
                         {
                             FA3 = true;
                             cpu_choosed3 = true;
-                            BA3.Visibility = Visibility.Collapsed;
+                            BA3.Visibility = Visibility.Hidden;
                             BOA3.Visibility = Visibility.Visible;
                         }
                         else if (!FB1)
                         {
                             FB1 = true;
                             cpu_choosed4 = true;
-                            BB1.Visibility = Visibility.Collapsed;
+                            BB1.Visibility = Visibility.Hidden;
                             BOB1.Visibility = Visibility.Visible;
                         }
                         else if (!FB2)
                         {
                             FB2 = true;
                             cpu_choosed5 = true;
-                            BB2.Visibility = Visibility.Collapsed;
+                            BB2.Visibility = Visibility.Hidden;
                             BOB2.Visibility = Visibility.Visible;
                         }
                         else if (!FB3)
                         {
                             FB3 = true;
                             cpu_choosed6 = true;
-                            BB3.Visibility = Visibility.Collapsed;
+                            BB3.Visibility = Visibility.Hidden;
                             BOB3.Visibility = Visibility.Visible;
                         }
                         else if (!FC1)
                         {
                             FC1 = true;
                             cpu_choosed7 = true;
-                            BC1.Visibility = Visibility.Collapsed;
+                            BC1.Visibility = Visibility.Hidden;
                             BOC1.Visibility = Visibility.Visible;
                         }
                         else if (!FC2)
                         {
                             FC2 = true;
                             cpu_choosed8 = true;
-                            BC2.Visibility = Visibility.Collapsed;
+                            BC2.Visibility = Visibility.Hidden;
                             BOC2.Visibility = Visibility.Visible;
                         }
                         else
                         {
                             FC3 = true;
                             cpu_choosed9 = true;
-                            BC3.Visibility = Visibility.Collapsed;
+                            BC3.Visibility = Visibility.Hidden;
                             BOC3.Visibility = Visibility.Visible;
                         }
                     }
@@ -1626,14 +1626,14 @@ namespace TicTacToeWPFspiel
                         {
                             FC3 = true;
                             cpu_choosed9 = true;
-                            BC3.Visibility = Visibility.Collapsed;
+                            BC3.Visibility = Visibility.Hidden;
                             BOC3.Visibility = Visibility.Visible;
                         }
                         else if (cpu_choosed8 != true)
                         {
                             FC2 = true;
                             cpu_choosed8 = true;
-                            BC2.Visibility = Visibility.Collapsed;
+                            BC2.Visibility = Visibility.Hidden;
                             BOC2.Visibility = Visibility.Visible;
                         }
                     }
@@ -1643,14 +1643,14 @@ namespace TicTacToeWPFspiel
                         {
                             FA1 = true;
                             cpu_choosed1 = true;
-                            BA1.Visibility = Visibility.Collapsed;
+                            BA1.Visibility = Visibility.Hidden;
                             BOA1.Visibility = Visibility.Visible;
                         }
                         else if (cpu_choosed4 != true)
                         {
                             FB1 = true;
                             cpu_choosed4 = true;
-                            BB1.Visibility = Visibility.Collapsed;
+                            BB1.Visibility = Visibility.Hidden;
                             BOB1.Visibility = Visibility.Visible;
                         }
                     }
@@ -1660,14 +1660,14 @@ namespace TicTacToeWPFspiel
                         {
                             FA3 = true;
                             cpu_choosed3 = true;
-                            BA3.Visibility = Visibility.Collapsed;
+                            BA3.Visibility = Visibility.Hidden;
                             BOA3.Visibility = Visibility.Visible;
                         }
                         else if (cpu_choosed5 != true)
                         {
                             FB2 = true;
                             cpu_choosed5 = true;
-                            BB2.Visibility = Visibility.Collapsed;
+                            BB2.Visibility = Visibility.Hidden;
                             BOB2.Visibility = Visibility.Visible;
                         }
                     }
@@ -1682,7 +1682,7 @@ namespace TicTacToeWPFspiel
                     {
                         FC1 = true;
                         cpu_choosed7 = true;
-                        BC1.Visibility = Visibility.Collapsed;
+                        BC1.Visibility = Visibility.Hidden;
                         BOC1.Visibility = Visibility.Visible;
                     }
                     else
@@ -1691,63 +1691,63 @@ namespace TicTacToeWPFspiel
                         {
                             FA1 = true;
                             cpu_choosed1 = true;
-                            BA1.Visibility = Visibility.Collapsed;
+                            BA1.Visibility = Visibility.Hidden;
                             BOA1.Visibility = Visibility.Visible;
                         }
                         else if (!FA2)
                         {
                             FA2 = true;
                             cpu_choosed2 = true;
-                            BA2.Visibility = Visibility.Collapsed;
+                            BA2.Visibility = Visibility.Hidden;
                             BOA2.Visibility = Visibility.Visible;
                         }
                         else if (!FA3)
                         {
                             FA3 = true;
                             cpu_choosed3 = true;
-                            BA3.Visibility = Visibility.Collapsed;
+                            BA3.Visibility = Visibility.Hidden;
                             BOA3.Visibility = Visibility.Visible;
                         }
                         else if (!FB1)
                         {
                             FB1 = true;
                             cpu_choosed4 = true;
-                            BB1.Visibility = Visibility.Collapsed;
+                            BB1.Visibility = Visibility.Hidden;
                             BOB1.Visibility = Visibility.Visible;
                         }
                         else if (!FB2)
                         {
                             FB2 = true;
                             cpu_choosed5 = true;
-                            BB2.Visibility = Visibility.Collapsed;
+                            BB2.Visibility = Visibility.Hidden;
                             BOB2.Visibility = Visibility.Visible;
                         }
                         else if (!FB3)
                         {
                             FB3 = true;
                             cpu_choosed6 = true;
-                            BB3.Visibility = Visibility.Collapsed;
+                            BB3.Visibility = Visibility.Hidden;
                             BOB3.Visibility = Visibility.Visible;
                         }
                         else if (!FC1)
                         {
                             FC1 = true;
                             cpu_choosed7 = true;
-                            BC1.Visibility = Visibility.Collapsed;
+                            BC1.Visibility = Visibility.Hidden;
                             BOC1.Visibility = Visibility.Visible;
                         }
                         else if (!FC2)
                         {
                             FC2 = true;
                             cpu_choosed8 = true;
-                            BC2.Visibility = Visibility.Collapsed;
+                            BC2.Visibility = Visibility.Hidden;
                             BOC2.Visibility = Visibility.Visible;
                         }
                         else
                         {
                             FC3 = true;
                             cpu_choosed9 = true;
-                            BC3.Visibility = Visibility.Collapsed;
+                            BC3.Visibility = Visibility.Hidden;
                             BOC3.Visibility = Visibility.Visible;
                         }
                     }
@@ -1764,14 +1764,14 @@ namespace TicTacToeWPFspiel
                         {
                             FA2 = true;
                             cpu_choosed2 = true;
-                            BA2.Visibility = Visibility.Collapsed;
+                            BA2.Visibility = Visibility.Hidden;
                             BOA2.Visibility = Visibility.Visible;
                         }
                         else if (cpu_choosed5 != true)
                         {
                             FB2 = true;
                             cpu_choosed5 = true;
-                            BB2.Visibility = Visibility.Collapsed;
+                            BB2.Visibility = Visibility.Hidden;
                             BOB2.Visibility = Visibility.Visible;
                         }
                     }
@@ -1781,14 +1781,14 @@ namespace TicTacToeWPFspiel
                         {
                             FC1 = true;
                             cpu_choosed7 = true;
-                            BC1.Visibility = Visibility.Collapsed;
+                            BC1.Visibility = Visibility.Hidden;
                             BOC1.Visibility = Visibility.Visible;
                         }
                         else if (cpu_choosed9 != true)
                         {
                             FC3 = true;
                             cpu_choosed9 = true;
-                            BC3.Visibility = Visibility.Collapsed;
+                            BC3.Visibility = Visibility.Hidden;
                             BOC3.Visibility = Visibility.Visible;
                         }
                     }
@@ -1803,7 +1803,7 @@ namespace TicTacToeWPFspiel
                     {
                         FC2 = true;
                         cpu_choosed8 = true;
-                        BC2.Visibility = Visibility.Collapsed;
+                        BC2.Visibility = Visibility.Hidden;
                         BOC2.Visibility = Visibility.Visible;
                     }
                     else
@@ -1812,63 +1812,63 @@ namespace TicTacToeWPFspiel
                         {
                             FA1 = true;
                             cpu_choosed1 = true;
-                            BA1.Visibility = Visibility.Collapsed;
+                            BA1.Visibility = Visibility.Hidden;
                             BOA1.Visibility = Visibility.Visible;
                         }
                         else if (!FA2)
                         {
                             FA2 = true;
                             cpu_choosed2 = true;
-                            BA2.Visibility = Visibility.Collapsed;
+                            BA2.Visibility = Visibility.Hidden;
                             BOA2.Visibility = Visibility.Visible;
                         }
                         else if (!FA3)
                         {
                             FA3 = true;
                             cpu_choosed3 = true;
-                            BA3.Visibility = Visibility.Collapsed;
+                            BA3.Visibility = Visibility.Hidden;
                             BOA3.Visibility = Visibility.Visible;
                         }
                         else if (!FB1)
                         {
                             FB1 = true;
                             cpu_choosed4 = true;
-                            BB1.Visibility = Visibility.Collapsed;
+                            BB1.Visibility = Visibility.Hidden;
                             BOB1.Visibility = Visibility.Visible;
                         }
                         else if (!FB2)
                         {
                             FB2 = true;
                             cpu_choosed5 = true;
-                            BB2.Visibility = Visibility.Collapsed;
+                            BB2.Visibility = Visibility.Hidden;
                             BOB2.Visibility = Visibility.Visible;
                         }
                         else if (!FB3)
                         {
                             FB3 = true;
                             cpu_choosed6 = true;
-                            BB3.Visibility = Visibility.Collapsed;
+                            BB3.Visibility = Visibility.Hidden;
                             BOB3.Visibility = Visibility.Visible;
                         }
                         else if (!FC1)
                         {
                             FC1 = true;
                             cpu_choosed7 = true;
-                            BC1.Visibility = Visibility.Collapsed;
+                            BC1.Visibility = Visibility.Hidden;
                             BOC1.Visibility = Visibility.Visible;
                         }
                         else if (!FC2)
                         {
                             FC2 = true;
                             cpu_choosed8 = true;
-                            BC2.Visibility = Visibility.Collapsed;
+                            BC2.Visibility = Visibility.Hidden;
                             BOC2.Visibility = Visibility.Visible;
                         }
                         else
                         {
                             FC3 = true;
                             cpu_choosed9 = true;
-                            BC3.Visibility = Visibility.Collapsed;
+                            BC3.Visibility = Visibility.Hidden;
                             BOC3.Visibility = Visibility.Visible;
                         }
                     }
@@ -1885,14 +1885,14 @@ namespace TicTacToeWPFspiel
                         {
                             FC1 = true;
                             cpu_choosed7 = true;
-                            BC1.Visibility = Visibility.Collapsed;
+                            BC1.Visibility = Visibility.Hidden;
                             BOC1.Visibility = Visibility.Visible;
                         }
                         else if (cpu_choosed8 != true)
                         {
                             FC2 = true;
                             cpu_choosed8 = true;
-                            BC2.Visibility = Visibility.Collapsed;
+                            BC2.Visibility = Visibility.Hidden;
                             BOC2.Visibility = Visibility.Visible;
                         }
                     }
@@ -1902,14 +1902,14 @@ namespace TicTacToeWPFspiel
                         {
                             FA3 = true;
                             cpu_choosed3 = true;
-                            BA3.Visibility = Visibility.Collapsed;
+                            BA3.Visibility = Visibility.Hidden;
                             BOA3.Visibility = Visibility.Visible;
                         }
                         else if (cpu_choosed6 != true)
                         {
                             FB3 = true;
                             cpu_choosed6 = true;
-                            BB3.Visibility = Visibility.Collapsed;
+                            BB3.Visibility = Visibility.Hidden;
                             BOB3.Visibility = Visibility.Visible;
                         }
                     }
@@ -1924,7 +1924,7 @@ namespace TicTacToeWPFspiel
                     {
                         FC3 = true;
                         cpu_choosed9 = true;
-                        BC3.Visibility = Visibility.Collapsed;
+                        BC3.Visibility = Visibility.Hidden;
                         BOC3.Visibility = Visibility.Visible;
                     }
                     else
@@ -1933,63 +1933,63 @@ namespace TicTacToeWPFspiel
                         {
                             FA1 = true;
                             cpu_choosed1 = true;
-                            BA1.Visibility = Visibility.Collapsed;
+                            BA1.Visibility = Visibility.Hidden;
                             BOA1.Visibility = Visibility.Visible;
                         }
                         else if (!FA2)
                         {
                             FA2 = true;
                             cpu_choosed2 = true;
-                            BA2.Visibility = Visibility.Collapsed;
+                            BA2.Visibility = Visibility.Hidden;
                             BOA2.Visibility = Visibility.Visible;
                         }
                         else if (!FA3)
                         {
                             FA3 = true;
                             cpu_choosed3 = true;
-                            BA3.Visibility = Visibility.Collapsed;
+                            BA3.Visibility = Visibility.Hidden;
                             BOA3.Visibility = Visibility.Visible;
                         }
                         else if (!FB1)
                         {
                             FB1 = true;
                             cpu_choosed4 = true;
-                            BB1.Visibility = Visibility.Collapsed;
+                            BB1.Visibility = Visibility.Hidden;
                             BOB1.Visibility = Visibility.Visible;
                         }
                         else if (!FB2)
                         {
                             FB2 = true;
                             cpu_choosed5 = true;
-                            BB2.Visibility = Visibility.Collapsed;
+                            BB2.Visibility = Visibility.Hidden;
                             BOB2.Visibility = Visibility.Visible;
                         }
                         else if (!FB3)
                         {
                             FB3 = true;
                             cpu_choosed6 = true;
-                            BB3.Visibility = Visibility.Collapsed;
+                            BB3.Visibility = Visibility.Hidden;
                             BOB3.Visibility = Visibility.Visible;
                         }
                         else if (!FC1)
                         {
                             FC1 = true;
                             cpu_choosed7 = true;
-                            BC1.Visibility = Visibility.Collapsed;
+                            BC1.Visibility = Visibility.Hidden;
                             BOC1.Visibility = Visibility.Visible;
                         }
                         else if (!FC2)
                         {
                             FC2 = true;
                             cpu_choosed8 = true;
-                            BC2.Visibility = Visibility.Collapsed;
+                            BC2.Visibility = Visibility.Hidden;
                             BOC2.Visibility = Visibility.Visible;
                         }
                         else
                         {
                             FC3 = true;
                             cpu_choosed9 = true;
-                            BC3.Visibility = Visibility.Collapsed;
+                            BC3.Visibility = Visibility.Hidden;
                             BOC3.Visibility = Visibility.Visible;
                         }
                     }
@@ -2035,7 +2035,7 @@ namespace TicTacToeWPFspiel
 
             await Task.Delay(wait_for_snd_played);
 
-            BA1.Visibility = Visibility.Collapsed;
+            BA1.Visibility = Visibility.Hidden;
             BXA1.Visibility = Visibility.Visible;
 
             await Task.Delay(wait_for_snd_played);
@@ -2053,8 +2053,8 @@ namespace TicTacToeWPFspiel
 
             await Task.Delay(NpcThinkTime);
 
-            Bulb.Visibility = Visibility.Collapsed;
-            Bulb2.Visibility = Visibility.Collapsed;
+            Bulb.Visibility = Visibility.Hidden;
+            Bulb2.Visibility = Visibility.Hidden;
 
             MainWindow.ChooseSound = @"Sounds\PencilO.wav";
             ChoosedFieldSound?.Invoke(this, "...");      // Invoke ist der Trigger !
@@ -2086,7 +2086,7 @@ namespace TicTacToeWPFspiel
 
             await Task.Delay(wait_for_snd_played);
 
-            BA2.Visibility = Visibility.Collapsed;
+            BA2.Visibility = Visibility.Hidden;
             BXA2.Visibility = Visibility.Visible;
 
             await Task.Delay(wait_for_snd_played);
@@ -2104,8 +2104,8 @@ namespace TicTacToeWPFspiel
 
             await Task.Delay(NpcThinkTime);
 
-            Bulb.Visibility = Visibility.Collapsed;
-            Bulb2.Visibility = Visibility.Collapsed;
+            Bulb.Visibility = Visibility.Hidden;
+            Bulb2.Visibility = Visibility.Hidden;
 
             MainWindow.ChooseSound = @"Sounds\PencilO.wav";
             ChoosedFieldSound?.Invoke(this, "...");      // Invoke ist der Trigger !
@@ -2137,7 +2137,7 @@ namespace TicTacToeWPFspiel
 
             await Task.Delay(wait_for_snd_played);
 
-            BA3.Visibility = Visibility.Collapsed;
+            BA3.Visibility = Visibility.Hidden;
             BXA3.Visibility = Visibility.Visible;
 
             await Task.Delay(wait_for_snd_played);
@@ -2155,8 +2155,8 @@ namespace TicTacToeWPFspiel
 
             await Task.Delay(NpcThinkTime);
 
-            Bulb.Visibility = Visibility.Collapsed;
-            Bulb2.Visibility = Visibility.Collapsed;
+            Bulb.Visibility = Visibility.Hidden;
+            Bulb2.Visibility = Visibility.Hidden;
 
             MainWindow.ChooseSound = @"Sounds\PencilO.wav";
             ChoosedFieldSound?.Invoke(this, "...");      // Invoke ist der Trigger !
@@ -2188,7 +2188,7 @@ namespace TicTacToeWPFspiel
 
             await Task.Delay(wait_for_snd_played);
 
-            BB1.Visibility = Visibility.Collapsed;
+            BB1.Visibility = Visibility.Hidden;
             BXB1.Visibility = Visibility.Visible;
 
             await Task.Delay(wait_for_snd_played);
@@ -2206,8 +2206,8 @@ namespace TicTacToeWPFspiel
 
             await Task.Delay(NpcThinkTime);
 
-            Bulb.Visibility = Visibility.Collapsed;
-            Bulb2.Visibility = Visibility.Collapsed;
+            Bulb.Visibility = Visibility.Hidden;
+            Bulb2.Visibility = Visibility.Hidden;
 
             MainWindow.ChooseSound = @"Sounds\PencilO.wav";
             ChoosedFieldSound?.Invoke(this, "...");      // Invoke ist der Trigger !
@@ -2239,7 +2239,7 @@ namespace TicTacToeWPFspiel
 
             await Task.Delay(wait_for_snd_played);
 
-            BB2.Visibility = Visibility.Collapsed;
+            BB2.Visibility = Visibility.Hidden;
             BXB2.Visibility = Visibility.Visible;
 
             await Task.Delay(wait_for_snd_played);
@@ -2257,8 +2257,8 @@ namespace TicTacToeWPFspiel
 
             await Task.Delay(NpcThinkTime);
 
-            Bulb.Visibility = Visibility.Collapsed;
-            Bulb2.Visibility = Visibility.Collapsed;
+            Bulb.Visibility = Visibility.Hidden;
+            Bulb2.Visibility = Visibility.Hidden;
 
             MainWindow.ChooseSound = @"Sounds\PencilO.wav";
             ChoosedFieldSound?.Invoke(this, "...");      // Invoke ist der Trigger !
@@ -2290,7 +2290,7 @@ namespace TicTacToeWPFspiel
 
             await Task.Delay(wait_for_snd_played);
 
-            BB3.Visibility = Visibility.Collapsed;
+            BB3.Visibility = Visibility.Hidden;
             BXB3.Visibility = Visibility.Visible;
 
             await Task.Delay(wait_for_snd_played);
@@ -2308,8 +2308,8 @@ namespace TicTacToeWPFspiel
 
             await Task.Delay(NpcThinkTime);
 
-            Bulb.Visibility = Visibility.Collapsed;
-            Bulb2.Visibility = Visibility.Collapsed;
+            Bulb.Visibility = Visibility.Hidden;
+            Bulb2.Visibility = Visibility.Hidden;
 
             MainWindow.ChooseSound = @"Sounds\PencilO.wav";
             ChoosedFieldSound?.Invoke(this, "...");      // Invoke ist der Trigger !
@@ -2341,7 +2341,7 @@ namespace TicTacToeWPFspiel
 
             await Task.Delay(wait_for_snd_played);
 
-            BC1.Visibility = Visibility.Collapsed;
+            BC1.Visibility = Visibility.Hidden;
             BXC1.Visibility = Visibility.Visible;
 
             await Task.Delay(wait_for_snd_played);
@@ -2359,8 +2359,8 @@ namespace TicTacToeWPFspiel
 
             await Task.Delay(NpcThinkTime);
 
-            Bulb.Visibility = Visibility.Collapsed;
-            Bulb2.Visibility = Visibility.Collapsed;
+            Bulb.Visibility = Visibility.Hidden;
+            Bulb2.Visibility = Visibility.Hidden;
 
             MainWindow.ChooseSound = @"Sounds\PencilO.wav";
             ChoosedFieldSound?.Invoke(this, "...");      // Invoke ist der Trigger !
@@ -2392,7 +2392,7 @@ namespace TicTacToeWPFspiel
 
             await Task.Delay(wait_for_snd_played);
 
-            BC2.Visibility = Visibility.Collapsed;
+            BC2.Visibility = Visibility.Hidden;
             BXC2.Visibility = Visibility.Visible;
 
             await Task.Delay(wait_for_snd_played);
@@ -2410,8 +2410,8 @@ namespace TicTacToeWPFspiel
 
             await Task.Delay(NpcThinkTime);
 
-            Bulb.Visibility = Visibility.Collapsed;
-            Bulb2.Visibility = Visibility.Collapsed;
+            Bulb.Visibility = Visibility.Hidden;
+            Bulb2.Visibility = Visibility.Hidden;
 
             MainWindow.ChooseSound = @"Sounds\PencilO.wav";
             ChoosedFieldSound?.Invoke(this, "...");      // Invoke ist der Trigger !
@@ -2443,7 +2443,7 @@ namespace TicTacToeWPFspiel
 
             await Task.Delay(wait_for_snd_played);
 
-            BC3.Visibility = Visibility.Collapsed;
+            BC3.Visibility = Visibility.Hidden;
             BXC3.Visibility = Visibility.Visible;
 
             await Task.Delay(wait_for_snd_played);
@@ -2461,8 +2461,8 @@ namespace TicTacToeWPFspiel
 
             await Task.Delay(NpcThinkTime);
 
-            Bulb.Visibility = Visibility.Collapsed;
-            Bulb2.Visibility = Visibility.Collapsed;
+            Bulb.Visibility = Visibility.Hidden;
+            Bulb2.Visibility = Visibility.Hidden;
 
             MainWindow.ChooseSound = @"Sounds\PencilO.wav";
             ChoosedFieldSound?.Invoke(this, "...");      // Invoke ist der Trigger !
@@ -2508,7 +2508,7 @@ namespace TicTacToeWPFspiel
 
 
 
-            INFO.Visibility = Visibility.Collapsed;
+            INFO.Visibility = Visibility.Hidden;
             INFO.Content = "CPU DENKT ... BITTE WARTEN !";
             BA1.Visibility = Visibility.Visible;
             BA2.Visibility = Visibility.Visible;
@@ -2519,25 +2519,25 @@ namespace TicTacToeWPFspiel
             BC1.Visibility = Visibility.Visible;
             BC2.Visibility = Visibility.Visible;
             BC3.Visibility = Visibility.Visible;
-            BXA1.Visibility = Visibility.Collapsed;
-            BXA2.Visibility = Visibility.Collapsed;
-            BXA3.Visibility = Visibility.Collapsed;
-            BOA1.Visibility = Visibility.Collapsed;
-            BOA2.Visibility = Visibility.Collapsed;
-            BOA3.Visibility = Visibility.Collapsed;
-            BXB1.Visibility = Visibility.Collapsed;
-            BXB2.Visibility = Visibility.Collapsed;
-            BXB3.Visibility = Visibility.Collapsed;
-            BOB1.Visibility = Visibility.Collapsed;
-            BOB2.Visibility = Visibility.Collapsed;
-            BOB3.Visibility = Visibility.Collapsed;
-            BXC1.Visibility = Visibility.Collapsed;
-            BXC2.Visibility = Visibility.Collapsed;
-            BXC3.Visibility = Visibility.Collapsed;
-            BOC1.Visibility = Visibility.Collapsed;
-            BOC2.Visibility = Visibility.Collapsed;
-            BOC3.Visibility = Visibility.Collapsed;
-            restart.Visibility = Visibility.Collapsed;
+            BXA1.Visibility = Visibility.Hidden;
+            BXA2.Visibility = Visibility.Hidden;
+            BXA3.Visibility = Visibility.Hidden;
+            BOA1.Visibility = Visibility.Hidden;
+            BOA2.Visibility = Visibility.Hidden;
+            BOA3.Visibility = Visibility.Hidden;
+            BXB1.Visibility = Visibility.Hidden;
+            BXB2.Visibility = Visibility.Hidden;
+            BXB3.Visibility = Visibility.Hidden;
+            BOB1.Visibility = Visibility.Hidden;
+            BOB2.Visibility = Visibility.Hidden;
+            BOB3.Visibility = Visibility.Hidden;
+            BXC1.Visibility = Visibility.Hidden;
+            BXC2.Visibility = Visibility.Hidden;
+            BXC3.Visibility = Visibility.Hidden;
+            BOC1.Visibility = Visibility.Hidden;
+            BOC2.Visibility = Visibility.Hidden;
+            BOC3.Visibility = Visibility.Hidden;
+            restart.Visibility = Visibility.Hidden;
             
             game_ended = false;
 

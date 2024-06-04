@@ -104,8 +104,8 @@ namespace TicTacToeWPFspiel
         private void options_Click(object sender, RoutedEventArgs e)
         {
             NavigationFrame.NavigationService.Navigate(_options);
-            options.Visibility = Visibility.Collapsed;
-            quitGame.Visibility = Visibility.Collapsed;
+            options.Visibility = Visibility.Hidden;
+            quitGame.Visibility = Visibility.Hidden;
             backToGame.Visibility = Visibility.Visible;
         }
 
