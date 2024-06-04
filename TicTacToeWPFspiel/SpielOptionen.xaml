@@ -4,28 +4,44 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:TicTacToeWPFspiel"
-      mc:Ignorable="d" 
+      mc:Ignorable="d"
       d:DesignHeight="800" d:DesignWidth="715"
-        Title="TicTacToe Game | Version 1.0 | by Mullins182" Height="800" Width="715" Background="Black" x:Name="Optionen">
+        Title="TicTacToe Game | Version 1.0 | by Mullins182" Height="800" Width="715" x:Name="Optionen">
 
-    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="250"/>
-            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="3.5*"/>
+            <ColumnDefinition Width="30*"/>
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="200"/>
-            <RowDefinition Height="80"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
 
         </Grid.RowDefinitions>
 
-        <MediaElement x:Name="BackgroundVideoOptions" Grid.RowSpan="2" Grid.ColumnSpan="2" Stretch="Fill" MediaEnded="BackgroundVideoOptions_MediaEnded" IsMuted="False" Margin="0,0,-212,-491"/>
+        <Label x:Name="optionsLabel" Width="auto" Height="70" Content="OPTIONS" Foreground="Goldenrod" FontSize="40" FontWeight="Bold" 
+               BorderThickness="1.5" BorderBrush="Goldenrod" Grid.Column="1" Grid.Row="0" VerticalContentAlignment="Top" 
+               HorizontalContentAlignment="Center" Margin="100,20,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        
+        <Label Content="Choose Background" HorizontalContentAlignment="Center" Grid.Row="0" Grid.Column="1" Height="auto" Width="300" 
+               FontFamily="chiller" FontSize="40" Foreground="YellowGreen" Margin="50,140,0,0" HorizontalAlignment="Left"
+               Background="Black" Opacity="0.7"/>
+        
+        <Label Content="Choose Music" HorizontalContentAlignment="Center" Grid.Row="1" Grid.Column="1" Height="auto" Width="300" 
+               FontFamily="chiller" FontSize="40" Foreground="YellowGreen" Margin="50,150,0,0" HorizontalAlignment="Left"
+               Background="Black" Opacity="0.7"/>
 
-        <Label x:Name="optionsLabel" Width="250" Height="100" Content="OPTIONEN" Foreground="Goldenrod" FontSize="40" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" Grid.RowSpan="2" VerticalContentAlignment="Top" Margin="30,0,0,0" HorizontalAlignment="left"/>
+        <Label Content="Choose Player Symbol" HorizontalContentAlignment="Center" Grid.Row="2" Grid.Column="1" Height="60" Width="300" 
+               FontFamily="chiller" FontSize="40" Foreground="YellowGreen" Margin="50,30,0,0" HorizontalAlignment="Left"
+               Background="Black" Opacity="0.7"/>
 
-        <StackPanel Grid.Column="1" Grid.Row="1">
-            <RibbonRadioButton x:Name="BG_1" Height="30" Background="black" Label="Hintergrund-Video 1 wählen" Checked="BG_1_Checked" IsChecked="True" Foreground="#FFEF9E0C" CheckedBorderBrush="#FF4DFD00">
+        <StackPanel Grid.Column="1" Grid.Row="1" Width="400" VerticalAlignment="top" HorizontalAlignment="left">
+            <RibbonRadioButton x:Name="BG_4" Height="30" Width="400" Background="DarkRed" FontFamily="Arial" FontSize="18" 
+                               FontWeight="Bold" Label="Snow Under The Lantern At Night" Foreground="PaleGoldenrod" 
+                               MouseOverBorderBrush="LawnGreen" CheckedBorderBrush="LawnGreen" CheckedBackground="DarkGreen" 
+                               Padding="0,8,0,0" CornerRadius="10,10,10,10" Checked="BG_4_Checked">
                 <RibbonRadioButton.MouseOverBackground>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="#FF5B8612" Offset="0.293"/>
@@ -33,7 +49,111 @@
                     </LinearGradientBrush>
                 </RibbonRadioButton.MouseOverBackground>
             </RibbonRadioButton>
-            <RibbonRadioButton x:Name="BG_2" Height="30" Background="black" Label="Hintergrund-Video 2 wählen" Checked="BG_2_Checked" IsChecked="False" Foreground="#FFEF9E0C" CheckedBorderBrush="#FF4DFD00">
+
+            <RibbonRadioButton x:Name="BG_1" Height="30" Width="400" Background="DarkRed" FontFamily="Arial" FontSize="18" 
+                               FontWeight="Bold" Label="Snowy Street Evening" Checked="BG_1_Checked" IsChecked="True" 
+                               Foreground="PaleGoldenrod" MouseOverBorderBrush="LawnGreen" CheckedBorderBrush="LawnGreen" 
+                               CheckedBackground="DarkGreen" Padding="0,8,0,0" CornerRadius="10,10,10,10">
+                <RibbonRadioButton.MouseOverBackground>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF5B8612" Offset="0.293"/>
+                        <GradientStop Color="#FF28C857" Offset="1"/>
+                    </LinearGradientBrush>
+                </RibbonRadioButton.MouseOverBackground>
+            </RibbonRadioButton>
+
+            <RibbonRadioButton x:Name="BG_2" Height="30" Width="400" Background="DarkRed" FontFamily="Arial" FontSize="18" 
+                               FontWeight="Bold" Label="Snowflakes" Checked="BG_2_Checked" Foreground="PaleGoldenrod" 
+                               MouseOverBorderBrush="LawnGreen" CheckedBorderBrush="LawnGreen" CheckedBackground="DarkGreen" 
+                               Padding="0,8,0,0" CornerRadius="10,10,10,10">
+                <RibbonRadioButton.MouseOverBackground>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF5B8612" Offset="0.293"/>
+                        <GradientStop Color="#FF28C857" Offset="1"/>
+                    </LinearGradientBrush>
+                </RibbonRadioButton.MouseOverBackground>
+            </RibbonRadioButton>
+
+            <RibbonRadioButton x:Name="BG_5" Height="30" Width="400" Background="DarkRed" FontFamily="Arial" FontSize="18" 
+                               FontWeight="Bold" Label="Snowflakes 2" Checked="BG_5_Checked" Foreground="PaleGoldenrod" 
+                               MouseOverBorderBrush="LawnGreen" CheckedBorderBrush="LawnGreen" CheckedBackground="DarkGreen" 
+                               Padding="0,8,0,0" CornerRadius="10,10,10,10">
+                <RibbonRadioButton.MouseOverBackground>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF5B8612" Offset="0.293"/>
+                        <GradientStop Color="#FF28C857" Offset="1"/>
+                    </LinearGradientBrush>
+                </RibbonRadioButton.MouseOverBackground>
+            </RibbonRadioButton>
+
+            <RibbonRadioButton x:Name="BG_3" Height="30" Width="400" Background="DarkRed" FontFamily="Arial" FontSize="18" 
+                               FontWeight="Bold" Label="Exploding Star" Foreground="PaleGoldenrod" MouseOverBorderBrush="LawnGreen" 
+                               CheckedBorderBrush="LawnGreen" CheckedBackground="DarkGreen" Checked="BG_3_Checked" Padding="0,8,0,0" 
+                               CornerRadius="10,10,10,10">
+                <RibbonRadioButton.MouseOverBackground>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF5B8612" Offset="0.293"/>
+                        <GradientStop Color="#FF28C857" Offset="1"/>
+                    </LinearGradientBrush>
+                </RibbonRadioButton.MouseOverBackground>
+            </RibbonRadioButton>
+
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Grid.Row="2" Width="400" VerticalAlignment="top" HorizontalAlignment="left">
+
+            <RibbonRadioButton x:Name="BGm_1" Height="30" Width="400" Background="DarkRed" FontFamily="Arial" 
+                               FontSize="18" FontWeight="Bold" Label="Christmas Swing" Foreground="PaleGoldenrod" 
+                               MouseOverBorderBrush="LawnGreen" CheckedBorderBrush="LawnGreen" CheckedBackground="DarkGreen" 
+                               Padding="0,8,0,0" CornerRadius="10,10,10,10" Checked="BGm_1_Checked">
+                <RibbonRadioButton.MouseOverBackground>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF5B8612" Offset="0.293"/>
+                        <GradientStop Color="#FF28C857" Offset="1"/>
+                    </LinearGradientBrush>
+                </RibbonRadioButton.MouseOverBackground>
+            </RibbonRadioButton>
+
+            <RibbonRadioButton x:Name="BGm_2" Height="30" Width="400" Background="DarkRed" FontFamily="Arial" FontSize="18" 
+                               FontWeight="Bold" Label="Schneeflöckchen Weißröckchen" Foreground="PaleGoldenrod" 
+                               MouseOverBorderBrush="LawnGreen" CheckedBorderBrush="LawnGreen" CheckedBackground="DarkGreen" 
+                               Padding="0,8,0,0" CornerRadius="10,10,10,10" Checked="BGm_2_Checked">
+                <RibbonRadioButton.MouseOverBackground>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF5B8612" Offset="0.293"/>
+                        <GradientStop Color="#FF28C857" Offset="1"/>
+                    </LinearGradientBrush>
+                </RibbonRadioButton.MouseOverBackground>
+            </RibbonRadioButton>
+
+            <RibbonRadioButton x:Name="BGm_3" Height="30" Width="400" Background="DarkRed" FontFamily="Arial" FontSize="18" 
+                               FontWeight="Bold" Label="Retro Wave Style Track" Foreground="PaleGoldenrod" 
+                               MouseOverBorderBrush="LawnGreen" CheckedBorderBrush="LawnGreen" CheckedBackground="DarkGreen" 
+                               Padding="0,8,0,0" CornerRadius="10,10,10,10" Checked="BGm_3_Checked">
+                <RibbonRadioButton.MouseOverBackground>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF5B8612" Offset="0.293"/>
+                        <GradientStop Color="#FF28C857" Offset="1"/>
+                    </LinearGradientBrush>
+                </RibbonRadioButton.MouseOverBackground>
+            </RibbonRadioButton>
+
+            <RibbonRadioButton x:Name="BGm_4" Height="30" Width="400" Background="DarkRed" FontFamily="Arial" FontSize="18" 
+                               FontWeight="Bold" Label="Alone By The River" Foreground="PaleGoldenrod" 
+                               MouseOverBorderBrush="LawnGreen" CheckedBorderBrush="LawnGreen" CheckedBackground="DarkGreen" 
+                               Padding="0,8,0,0" CornerRadius="10,10,10,10" Checked="BGm_4_Checked" IsChecked="True">
+                <RibbonRadioButton.MouseOverBackground>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF5B8612" Offset="0.293"/>
+                        <GradientStop Color="#FF28C857" Offset="1"/>
+                    </LinearGradientBrush>
+                </RibbonRadioButton.MouseOverBackground>
+            </RibbonRadioButton>
+
+            <RibbonRadioButton x:Name="BGm_Off" Height="30" Width="400" Background="DarkRed" FontFamily="Arial" FontSize="18" 
+                               FontWeight="Bold" Label="Music off" Foreground="PaleGoldenrod" MouseOverBorderBrush="LawnGreen" 
+                               CheckedBorderBrush="LawnGreen" CheckedBackground="DarkGreen" Padding="0,8,0,0" 
+                               CornerRadius="10,10,10,10" Checked="BGmOff">
                 <RibbonRadioButton.MouseOverBackground>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="#FF5B8612" Offset="0.293"/>
@@ -43,5 +163,73 @@
             </RibbonRadioButton>
         </StackPanel>
 
+        <StackPanel Grid.Row="2" Width="400" Height="auto" Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Center" 
+                    Grid.ColumnSpan="2" Margin="0,230,0,0" Background="Black" Opacity="0.85">
+            
+            <RibbonRadioButton x:Name="Symbol1" Height="100" Width="100" FontFamily="Arial" FontSize="18" 
+                               FontWeight="Bold" Foreground="PaleGoldenrod" MouseOverBorderBrush="LawnGreen" 
+                               CheckedBorderBrush="LawnGreen" Padding="0,8,0,0" CornerRadius="10,10,10,10" Checked="Symbol1_Checked">
+                <RibbonRadioButton.Background>
+                    <ImageBrush ImageSource="Images/Zuckerstangen.png"/>
+                </RibbonRadioButton.Background>
+
+                <RibbonRadioButton.MouseOverBackground>
+                    <ImageBrush ImageSource="Images/Zuckerstangen.png"/>
+                </RibbonRadioButton.MouseOverBackground>
+
+                <RibbonRadioButton.CheckedBackground>
+                    <ImageBrush ImageSource="Images/Zuckerstangen.png"/>
+                </RibbonRadioButton.CheckedBackground>
+            </RibbonRadioButton>
+            
+            <RibbonRadioButton x:Name="Symbol2" Height="100" Width="100" FontFamily="Arial" FontSize="18" 
+                               FontWeight="Bold" Foreground="PaleGoldenrod" MouseOverBorderBrush="LawnGreen" 
+                               CheckedBorderBrush="LawnGreen" Padding="0,8,0,0" CornerRadius="10,10,10,10" Checked="Symbol2_Checked">
+                <RibbonRadioButton.Background>
+                    <ImageBrush ImageSource="Images/Donut.png"/>
+                </RibbonRadioButton.Background>
+
+                <RibbonRadioButton.MouseOverBackground>
+                    <ImageBrush ImageSource="Images/Donut.png"/>
+                </RibbonRadioButton.MouseOverBackground>
+
+                <RibbonRadioButton.CheckedBackground>
+                    <ImageBrush ImageSource="Images/Donut.png"/>
+                </RibbonRadioButton.CheckedBackground>
+            </RibbonRadioButton>
+            
+            <RibbonRadioButton x:Name="Symbol3" Height="100" Width="100" FontFamily="Arial" FontSize="18" FontWeight="Bold" 
+                               Foreground="PaleGoldenrod" MouseOverBorderBrush="LawnGreen" CheckedBorderBrush="LawnGreen" 
+                               Padding="0,8,0,0" CornerRadius="10,10,10,10" IsChecked="True" Checked="Symbol3_Checked">
+                <RibbonRadioButton.Background>
+                    <ImageBrush ImageSource="Images/X.png"/>
+                </RibbonRadioButton.Background>
+
+                <RibbonRadioButton.MouseOverBackground>
+                    <ImageBrush ImageSource="Images/X.png"/>
+                </RibbonRadioButton.MouseOverBackground>
+
+                <RibbonRadioButton.CheckedBackground>
+                    <ImageBrush ImageSource="Images/X.png"/>
+                </RibbonRadioButton.CheckedBackground>
+            </RibbonRadioButton>
+            
+            <RibbonRadioButton x:Name="Symbol4" Height="100" Width="100" FontFamily="Arial" FontSize="18" FontWeight="Bold" 
+                               Foreground="PaleGoldenrod" MouseOverBorderBrush="LawnGreen" CheckedBorderBrush="LawnGreen" 
+                               Padding="0,8,0,0" CornerRadius="10,10,10,10" Checked="Symbol4_Checked">
+                <RibbonRadioButton.Background>
+                    <ImageBrush ImageSource="Images/O.png"/>
+                </RibbonRadioButton.Background>
+
+                <RibbonRadioButton.MouseOverBackground>
+                    <ImageBrush ImageSource="Images/O.png"/>
+                </RibbonRadioButton.MouseOverBackground>
+
+                <RibbonRadioButton.CheckedBackground>
+                    <ImageBrush ImageSource="Images/O.png"/>
+                </RibbonRadioButton.CheckedBackground>
+            </RibbonRadioButton>
+
+        </StackPanel>
     </Grid>
 </Page>

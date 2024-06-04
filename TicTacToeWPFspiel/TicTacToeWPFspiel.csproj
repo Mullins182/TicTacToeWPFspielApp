@@ -6,25 +6,125 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
-    <ApplicationIcon>my_comp.ico</ApplicationIcon>
+    <ApplicationIcon>Petalart-Christmas-Cookie-Christmas-bell.ico</ApplicationIcon>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="e797539a1376987930021d2cf4ef74dd5e2ea131.png" />
-    <None Remove="Muster.png" />
-    <None Remove="O.png" />
-    <None Remove="X.png" />
+    <None Remove="BG_Videos\ChristmasTree.mp4" />
+    <None Remove="BG_Videos\ConfettiCannon.mp4" />
+    <None Remove="BG_Videos\GameOver.mp4" />
+    <None Remove="BG_Videos\SnowfallStreet1.mp4" />
+    <None Remove="BG_Videos\SnowfallStreet2.mp4" />
+    <None Remove="BG_Videos\Snowflakes.mp4" />
+    <None Remove="BG_Videos\Snowflakes2.mp4" />
+    <None Remove="BG_Videos\StarExploding.mp4" />
+    <None Remove="Bulb1.png" />
+	<None Remove="Bulb2.png" />
+    <None Remove="Donut.png" />
+    <None Remove="Images\Bulb1.jpg" />
+    <None Remove="Images\Bulb2.jpg" />
+    <None Remove="Images\O.png" />
+    <None Remove="Images\SplashScreen1.png" />
+    <None Remove="Images\X.png" />
+    <None Remove="Music\alone_by_the_river.mp3" />
+    <None Remove="Music\ChristmasSwing.mp3" />
+    <None Remove="Music\retro_wave_style_track.mp3" />
+    <None Remove="Music\Schneefloeckchen.mp3" />
+    <None Remove="Sounds\Decide.mp3" />
+    <None Remove="Sounds\PencilO.wav" />
+    <None Remove="Sounds\PencilX.wav" />
+    <None Remove="SpielfeldSnow.png" />
+    <None Remove="Zuckerstangen.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="my_comp.ico" />
+    <Content Include="Petalart-Christmas-Cookie-Christmas-bell.ico" />
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="e797539a1376987930021d2cf4ef74dd5e2ea131.png" />
-    <Resource Include="Muster.png" />
-    <Resource Include="O.png" />
-    <Resource Include="X.png" />
+    <PackageReference Include="Accord.Video.FFMPEG.x64" Version="3.8.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\CPU_Thinking.gif">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Bulb1.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Bulb1.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Bulb2.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+	<Resource Include="Images\Bulb2.png">
+	  <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+	</Resource>
+	<Resource Include="Images\Donut.png">
+	  <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+	</Resource>
+	<EmbeddedResource Include="BG_Videos\ChristmasTree.mp4">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</EmbeddedResource>
+	<EmbeddedResource Include="BG_Videos\ConfettiCannon.mp4">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</EmbeddedResource>
+	<EmbeddedResource Include="BG_Videos\GameOver.mp4">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</EmbeddedResource>
+	<EmbeddedResource Include="BG_Videos\SnowfallStreet1.mp4">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</EmbeddedResource>
+	<EmbeddedResource Include="BG_Videos\SnowfallStreet2.mp4">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</EmbeddedResource>
+	<EmbeddedResource Include="BG_Videos\Snowflakes.mp4">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</EmbeddedResource>
+	<EmbeddedResource Include="BG_Videos\Snowflakes2.mp4">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</EmbeddedResource>
+	<EmbeddedResource Include="BG_Videos\StarExploding.mp4">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</EmbeddedResource>
+	<EmbeddedResource Include="Music\alone_by_the_river.mp3">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</EmbeddedResource>
+	<EmbeddedResource Include="Music\ChristmasSwing.mp3">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</EmbeddedResource>
+	<EmbeddedResource Include="Music\retro_wave_style_track.mp3">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</EmbeddedResource>
+	<EmbeddedResource Include="Music\Schneefloeckchen.mp3">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</EmbeddedResource>
+	<EmbeddedResource Include="Sounds\Decide.mp3">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</EmbeddedResource>
+	<EmbeddedResource Include="Sounds\PencilO.wav">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</EmbeddedResource>
+	<EmbeddedResource Include="Sounds\PencilX.wav">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</EmbeddedResource>
+	<Resource Include="Images\O.png">
+	  <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+	</Resource>
+    <Resource Include="Images\SpielfeldSnow.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\SplashScreen1.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\X.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Zuckerstangen.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
   <ItemGroup>
