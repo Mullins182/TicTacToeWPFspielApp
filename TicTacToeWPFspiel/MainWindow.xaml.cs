@@ -24,7 +24,8 @@ namespace TicTacToeWPFspiel
         public static string gameOverVideo  = @"BG_Videos\GameOver.mp4";
         public static string Sound          = @"Sounds\Decide.mp3";
         public static string ChooseSound    = @"Sounds\PencilX.wav";
-        public SpielOptionen _options;
+
+        public SpielOptionen _options       = new(BG_Video);
         public Game _runningGame            = new();
 
         public void ChangeBackgroundVideo(object? sender, string e)
@@ -70,6 +71,12 @@ namespace TicTacToeWPFspiel
             
             InitializeComponent();
 
+            Game_ini();
+
+        }
+
+        private void Game_ini()
+        {
             if (!File.Exists(BG_Video))  // Dialogfenster öffnet wenn die Datei nicht im Programmverzeichnis existiert !
             {
 
@@ -87,18 +94,18 @@ namespace TicTacToeWPFspiel
             BGmusic.Source = new Uri(BG_Music, UriKind.RelativeOrAbsolute); // Quellangabe für Mediaelement !
             BGmusic.Play();
 
-            _options = new SpielOptionen(BG_Video);
+            //_options = new SpielOptionen(BG_Video);
 
             NavigationFrame.Content = _runningGame;
 
-            SpielOptionen.BGvideoChanged    += ChangeBackgroundVideo;
-            SpielOptionen.BGaudioChanged    += ChangeBGmusic;
-            SpielOptionen.BGmusicOff        += BGmusicOff;
+            SpielOptionen.BGvideoChanged += ChangeBackgroundVideo;
+            SpielOptionen.BGaudioChanged += ChangeBGmusic;
+            SpielOptionen.BGmusicOff += BGmusicOff;
             SpielOptionen.Menu_Choice_Sound += MenuChoiceSound;
-            Game.PlayerWins                 += ConfettiCannon;
-            Game.GameOver                   += GameOverVideo;
-            Game.ResetBGvideo               += ChangeBackgroundVideo;
-            Game.ChoosedFieldSound          += ChoosedFieldSound;
+            Game.PlayerWins += ConfettiCannon;
+            Game.GameOver += GameOverVideo;
+            Game.ResetBGvideo += ChangeBackgroundVideo;
+            Game.ChoosedFieldSound += ChoosedFieldSound;
         }
 
         private void options_Click(object sender, RoutedEventArgs e)
@@ -123,11 +130,11 @@ namespace TicTacToeWPFspiel
             //BackgroundVideo.Source = new Uri(BG_Video, UriKind.RelativeOrAbsolute); // Quellangabe für Mediaelement !
         }
 
-        private void ButtonAnimation(string x, Button y)
+        private static void ButtonAnimation(string x, Button y)
         {
             
-            ColorAnimationUsingKeyFrames ButtonColorEffect = new ColorAnimationUsingKeyFrames();
-            ColorAnimationUsingKeyFrames BackgroundAnimation = new ColorAnimationUsingKeyFrames();
+            ColorAnimationUsingKeyFrames ButtonColorEffect = new();
+            ColorAnimationUsingKeyFrames BackgroundAnimation = new();
             ButtonColorEffect.Duration = new Duration(TimeSpan.FromSeconds(0.5));
             ButtonColorEffect.KeyFrames.Add(new LinearColorKeyFrame(Colors.Black,KeyTime.FromTimeSpan(TimeSpan.FromMilliseconds(200))));
             //BackgroundAnimation.Duration = new Duration(TimeSpan.FromSeconds(0.5));
@@ -146,7 +153,7 @@ namespace TicTacToeWPFspiel
             FarbAnimation.Begin(y);
         }
 
-        private void ButtonReverseAnimation(string x, Button y)
+        private static void ButtonReverseAnimation(string x, Button y)
         {
             ColorAnimationUsingKeyFrames ButtonColorEffect = new ColorAnimationUsingKeyFrames();
             ColorAnimationUsingKeyFrames BackgroundAnimation = new ColorAnimationUsingKeyFrames();
