@@ -2033,8 +2033,6 @@ namespace TicTacToeWPFspiel
             MainWindow.ChooseSound = @"Sounds\PencilX.wav";
             ChoosedFieldSound?.Invoke(this, "...");      // Invoke ist der Trigger !
 
-            await Task.Delay(wait_for_snd_played);
-
             BA1.Visibility = Visibility.Hidden;
             BXA1.Visibility = Visibility.Visible;
 
@@ -2083,8 +2081,6 @@ namespace TicTacToeWPFspiel
 
             MainWindow.ChooseSound = @"Sounds\PencilX.wav";
             ChoosedFieldSound?.Invoke(this, "...");      // Invoke ist der Trigger !
-
-            await Task.Delay(wait_for_snd_played);
 
             BA2.Visibility = Visibility.Hidden;
             BXA2.Visibility = Visibility.Visible;
@@ -2135,8 +2131,6 @@ namespace TicTacToeWPFspiel
             MainWindow.ChooseSound = @"Sounds\PencilX.wav";
             ChoosedFieldSound?.Invoke(this, "...");      // Invoke ist der Trigger !
 
-            await Task.Delay(wait_for_snd_played);
-
             BA3.Visibility = Visibility.Hidden;
             BXA3.Visibility = Visibility.Visible;
 
@@ -2185,8 +2179,6 @@ namespace TicTacToeWPFspiel
 
             MainWindow.ChooseSound = @"Sounds\PencilX.wav";
             ChoosedFieldSound?.Invoke(this, "...");      // Invoke ist der Trigger !
-
-            await Task.Delay(wait_for_snd_played);
 
             BB1.Visibility = Visibility.Hidden;
             BXB1.Visibility = Visibility.Visible;
@@ -2237,8 +2229,6 @@ namespace TicTacToeWPFspiel
             MainWindow.ChooseSound = @"Sounds\PencilX.wav";
             ChoosedFieldSound?.Invoke(this, "...");      // Invoke ist der Trigger !
 
-            await Task.Delay(wait_for_snd_played);
-
             BB2.Visibility = Visibility.Hidden;
             BXB2.Visibility = Visibility.Visible;
 
@@ -2287,8 +2277,6 @@ namespace TicTacToeWPFspiel
 
             MainWindow.ChooseSound = @"Sounds\PencilX.wav";
             ChoosedFieldSound?.Invoke(this, "...");      // Invoke ist der Trigger !
-
-            await Task.Delay(wait_for_snd_played);
 
             BB3.Visibility = Visibility.Hidden;
             BXB3.Visibility = Visibility.Visible;
@@ -2339,8 +2327,6 @@ namespace TicTacToeWPFspiel
             MainWindow.ChooseSound = @"Sounds\PencilX.wav";
             ChoosedFieldSound?.Invoke(this, "...");      // Invoke ist der Trigger !
 
-            await Task.Delay(wait_for_snd_played);
-
             BC1.Visibility = Visibility.Hidden;
             BXC1.Visibility = Visibility.Visible;
 
@@ -2390,8 +2376,6 @@ namespace TicTacToeWPFspiel
             MainWindow.ChooseSound = @"Sounds\PencilX.wav";
             ChoosedFieldSound?.Invoke(this, "...");      // Invoke ist der Trigger !
 
-            await Task.Delay(wait_for_snd_played);
-
             BC2.Visibility = Visibility.Hidden;
             BXC2.Visibility = Visibility.Visible;
 
@@ -2440,8 +2424,6 @@ namespace TicTacToeWPFspiel
 
             MainWindow.ChooseSound = @"Sounds\PencilX.wav";
             ChoosedFieldSound?.Invoke(this, "...");      // Invoke ist der Trigger !
-
-            await Task.Delay(wait_for_snd_played);
 
             BC3.Visibility = Visibility.Hidden;
             BXC3.Visibility = Visibility.Visible;
