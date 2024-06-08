@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TicTacToeWPFspiel"
         mc:Ignorable="d"
-        Title="TicTacToe Game | Version 4.2 | by Mullins182" Height="900" Width="700" Background="Black" x:Name="TicTacToeHauptfenster"
+        Title="TicTacToe Game | Version 4.5 | by Mullins182" Height="900" Width="800" Background="Black" x:Name="TicTacToeHauptfenster"
         WindowStartupLocation="CenterScreen">
     <!--Control Template Override für Buttons um Highlighting bei Mouseover zu verhindern !-->
     <Window.Resources>
@@ -41,17 +41,17 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <StackPanel x:Name="MenuPanel" Orientation="Horizontal" HorizontalAlignment="Center" Width="715" Background="Black">
+        <StackPanel x:Name="MenuPanel" Orientation="Horizontal" HorizontalAlignment="Center" Width="800" Background="Black">
             <Button x:Name="backToGame" Opacity="0.80" OverridesDefaultStyle="True" Content="Back to Game" 
-                    Template="{StaticResource NoMouseOverButtonTemplate}" HorizontalContentAlignment="Center" Width="700" Background="DarkRed" 
+                    Template="{StaticResource NoMouseOverButtonTemplate}" HorizontalContentAlignment="Center" Width="800" Background="DarkRed" 
                     Foreground="Yellow" FontWeight="Bold" FontFamily="chiller" FontSize="30" Visibility="Collapsed" 
                     Click="backToGame_Click" MouseEnter="backToGame_MouseEnter" MouseLeave="backToGame_MouseLeave" UseLayoutRounding="True"/>
             <Button x:Name="options" Opacity="0.80" OverridesDefaultStyle="True" Content="Options" 
-                    Template="{StaticResource NoMouseOverButtonTemplate}" HorizontalContentAlignment="Center" Width="350" Background="DarkRed" 
+                    Template="{StaticResource NoMouseOverButtonTemplate}" HorizontalContentAlignment="Center" Width="400" Background="DarkRed" 
                     Foreground="Yellow" FontWeight="Bold" FontFamily="chiller" FontSize="30" Visibility="Visible" Click="options_Click" 
                     MouseEnter="options_MouseEnter" MouseLeave="options_MouseLeave" UseLayoutRounding="True"/>
             <Button x:Name="quitGame" Opacity="0.80" OverridesDefaultStyle="True" Content="Quit Game" 
-                    Template="{StaticResource NoMouseOverButtonTemplate}" HorizontalContentAlignment="Center" Width="350" Background="DarkRed" 
+                    Template="{StaticResource NoMouseOverButtonTemplate}" HorizontalContentAlignment="Center" Width="400" Background="DarkRed" 
                     Foreground="Yellow" FontWeight="Bold" FontFamily="chiller" FontSize="30" Visibility="Visible" Click="quitGame_Click" 
                     MouseEnter="quitGame_MouseEnter" MouseLeave="quitGame_MouseLeave" UseLayoutRounding="True"/>
         </StackPanel>
@@ -59,7 +59,7 @@
         <Frame x:Name="NavigationFrame" Grid.Row="1" Panel.ZIndex="1" NavigationUIVisibility="Hidden"/>
 
         <MediaElement x:Name="BackgroundVideo" Grid.Column="0" Grid.Row="1" Stretch="Fill" MediaEnded="BackgroundVideo_MediaEnded" 
-                      Panel.ZIndex="0" IsMuted="False" VerticalAlignment="Top"/>
+                      Panel.ZIndex="0" IsMuted="False" VerticalAlignment="Top" LoadedBehavior="Manual" UnloadedBehavior="Manual"/>
         <MediaElement x:Name="BGmusic" MediaEnded="BGmusic_MediaEnded" LoadedBehavior="Manual" UnloadedBehavior="Manual"/>
         <MediaElement x:Name="PlaySound" IsMuted="False" LoadedBehavior="Manual" UnloadedBehavior="Manual"/>
 
