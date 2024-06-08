@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:TicTacToeWPFspiel"
       mc:Ignorable="d"
       d:DesignHeight="800" d:DesignWidth="715"
-        Title="TicTacToe Game | Version 1.0 | by Mullins182" Height="800" Width="715" x:Name="Optionen">
+        Title="OPTIONS" Height="800" Width="715" x:Name="Optionen">
 
     <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
         <Grid.ColumnDefinitions>

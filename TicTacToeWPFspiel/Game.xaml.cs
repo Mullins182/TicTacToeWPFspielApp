@@ -11,7 +11,7 @@ namespace TicTacToeWPFspiel
         public static event EventHandler<string>? PlayerWins;
         public static event EventHandler<string>? GameOver;
         public static event EventHandler<string>? ResetBGvideo;
-        public static event EventHandler<string>? ChoosedFieldSound;
+        public static event EventHandler<string>? ChosenFieldSound;
 
         public ImageBrush playerSymbolImage     = new();
         public ImageBrush npcSymbolImage        = new();
@@ -192,10 +192,10 @@ namespace TicTacToeWPFspiel
             restart.Opacity     = 0.45;
             //INFO.BorderBrush = new SolidColorBrush(Colors.Green);
             //INFO.BorderThickness = new Thickness(5);
-            INFO.Content = "DU HAST GEWONNEN !!!";
-            INFO.Visibility = Visibility.Visible;
+            INFO.Content        = "DU HAST GEWONNEN !!!";
+            INFO.Visibility     = Visibility.Visible;
             game_ended = true;
-            restart.Visibility = Visibility.Visible;
+            restart.Visibility  = Visibility.Visible;
             PlayerWins?.Invoke(this, "DU HAST GEWONNEN !!!");      // Invoke ist der Trigger !
 
             NpcLeaveClickEventAndCheckLooseCondition();
@@ -203,14 +203,14 @@ namespace TicTacToeWPFspiel
 
         private void LoosingConditionOrders()
         {
-            PlayGrid.Opacity = 0.40;
-            restart.Opacity = 0.45;
+            PlayGrid.Opacity    = 0.40;
+            restart.Opacity     = 0.45;
             //INFO.BorderBrush = new SolidColorBrush(Colors.Green);
             //INFO.BorderThickness = new Thickness(5);
-            INFO.Content = "DU HAST LEIDER VERLOREN !!!";
-            INFO.Visibility = Visibility.Visible;
-            game_ended = true;
-            restart.Visibility = Visibility.Visible;
+            INFO.Content        = "DU HAST LEIDER VERLOREN !!!";
+            INFO.Visibility     = Visibility.Visible;
+            game_ended          = true;
+            restart.Visibility  = Visibility.Visible;
             GameOver?.Invoke(this, "GAME OVER");
 
             //leaveClickEventNow = true;
@@ -2015,29 +2015,18 @@ namespace TicTacToeWPFspiel
             }
         }
 
-        private async void BA1_Click(object sender, RoutedEventArgs e)
+        private async void GameProgress(string playerSound, string npcSound)
         {
+            waitForNpc              = true;
+            leaveClickEventNow      = false;
 
-            if (game_ended || waitForNpc)
-            {
-                return;
-            }
+            MainWindow.ChooseSound  = playerSound;
 
-            waitForNpc = true;
-            leaveClickEventNow = false;
-
-            FA1 = true;
-
-            player_choosed1 = true;
-
-            MainWindow.ChooseSound = @"Sounds\PencilX.wav";
-            ChoosedFieldSound?.Invoke(this, "...");      // Invoke ist der Trigger !
-
-            BA1.Visibility = Visibility.Hidden;
-            BXA1.Visibility = Visibility.Visible;
+            ChosenFieldSound?.Invoke(this, "...");      // Invoke ist der Trigger !
 
             await Task.Delay(wait_for_snd_played);
-            INFO.Visibility = Visibility.Visible;
+
+            INFO.Visibility         = Visibility.Visible;
 
 
             PlayerWinCheck();
@@ -2051,477 +2040,273 @@ namespace TicTacToeWPFspiel
 
             await Task.Delay(NpcThinkTime);
 
-            Bulb.Visibility = Visibility.Hidden;
-            Bulb2.Visibility = Visibility.Hidden;
+            Bulb.Visibility         = Visibility.Hidden;
+            Bulb2.Visibility        = Visibility.Hidden;
 
-            MainWindow.ChooseSound = @"Sounds\PencilO.wav";
-            ChoosedFieldSound?.Invoke(this, "...");      // Invoke ist der Trigger !
+            MainWindow.ChooseSound  = npcSound;
+
+            ChosenFieldSound?.Invoke(this, "...");      // Invoke ist der Trigger !
 
             NpcLogic();
-
             NpcLeaveClickEventAndCheckLooseCondition();
         }
 
-        private async void BA2_Click(object sender, RoutedEventArgs e)
+        private void BA1_Click(object sender, RoutedEventArgs e)
         {
+            if (game_ended || waitForNpc) { return; }
 
-            if (game_ended || waitForNpc)
-            {
-                return;
-            }
+            string playerSound  = "";
+            string npcSound     = "";
 
-            waitForNpc = true;
-            leaveClickEventNow = false;
+            FA1                 = true;
+            player_choosed1     = true;
+            BA1.Visibility      = Visibility.Hidden;
+            BXA1.Visibility     = Visibility.Visible;
 
-            FA2 = true;
+            playerSound = Game.playerSymbol == "pack://application:,,,/Images/Zuckerstangen.png" ? playerSound = @"Sounds\PencilX.wav"
+                                                : Game.playerSymbol == "pack://application:,,,/Images/X.png"
+                                                ? playerSound = @"Sounds\PencilX.wav" : @"Sounds\PencilO.wav";
 
-            var rd_number_generated = new Random();
+            npcSound            = playerSound == @"Sounds\PencilX.wav" ? npcSound = @"Sounds\PencilO.wav" : npcSound = @"Sounds\PencilX.wav";
 
-            player_choosed2 = true;
-
-            MainWindow.ChooseSound = @"Sounds\PencilX.wav";
-            ChoosedFieldSound?.Invoke(this, "...");      // Invoke ist der Trigger !
-
-            BA2.Visibility = Visibility.Hidden;
-            BXA2.Visibility = Visibility.Visible;
-
-            await Task.Delay(wait_for_snd_played);
-            INFO.Visibility = Visibility.Visible;
-
-
-            PlayerWinCheck();
-
-            if (leaveClickEventNow)
-            {
-                return;
-            }
-
-            BulbAnimation();
-
-            await Task.Delay(NpcThinkTime);
-
-            Bulb.Visibility = Visibility.Hidden;
-            Bulb2.Visibility = Visibility.Hidden;
-
-            MainWindow.ChooseSound = @"Sounds\PencilO.wav";
-            ChoosedFieldSound?.Invoke(this, "...");      // Invoke ist der Trigger !
-
-            NpcLogic();
-
-            NpcLeaveClickEventAndCheckLooseCondition();
+            GameProgress(playerSound, npcSound);
         }
 
-        private async void BA3_Click(object sender, RoutedEventArgs e)
+        private void BA2_Click(object sender, RoutedEventArgs e)
         {
+            if (game_ended || waitForNpc) { return; }
 
-            if (game_ended || waitForNpc)
-            {
-                return;
-            }
+            string playerSound  = "";
+            string npcSound     = "";
 
-            waitForNpc = true;
-            leaveClickEventNow = false;
+            FA2                 = true;
+            player_choosed2     = true;
+            BA2.Visibility      = Visibility.Hidden;
+            BXA2.Visibility     = Visibility.Visible;
 
-            FA3 = true;
+            playerSound         = Game.playerSymbol == "pack://application:,,,/Images/Zuckerstangen.png" ? playerSound = @"Sounds\PencilX.wav"
+                                                : Game.playerSymbol == "pack://application:,,,/Images/X.png"
+                                                ? playerSound = @"Sounds\PencilX.wav" : @"Sounds\PencilO.wav";
 
-            var rd_number_generated = new Random();
+            npcSound            = playerSound == @"Sounds\PencilX.wav" ? npcSound = @"Sounds\PencilO.wav" : npcSound = @"Sounds\PencilX.wav";
 
-            player_choosed3 = true;
-
-            MainWindow.ChooseSound = @"Sounds\PencilX.wav";
-            ChoosedFieldSound?.Invoke(this, "...");      // Invoke ist der Trigger !
-
-            BA3.Visibility = Visibility.Hidden;
-            BXA3.Visibility = Visibility.Visible;
-
-            await Task.Delay(wait_for_snd_played);
-            INFO.Visibility = Visibility.Visible;
-
-
-            PlayerWinCheck();
-
-            if (leaveClickEventNow)
-            {
-                return;
-            }
-
-            BulbAnimation();
-
-            await Task.Delay(NpcThinkTime);
-
-            Bulb.Visibility = Visibility.Hidden;
-            Bulb2.Visibility = Visibility.Hidden;
-
-            MainWindow.ChooseSound = @"Sounds\PencilO.wav";
-            ChoosedFieldSound?.Invoke(this, "...");      // Invoke ist der Trigger !
-
-            NpcLogic();
-
-            NpcLeaveClickEventAndCheckLooseCondition();
+            GameProgress(playerSound, npcSound);
         }
 
-        private async void BB1_Click(object sender, RoutedEventArgs e)
+        private void BA3_Click(object sender, RoutedEventArgs e)
         {
+            if (game_ended || waitForNpc) { return; }
 
-            if (game_ended || waitForNpc)
-            {
-                return;
-            }
+            string playerSound  = "";
+            string npcSound     = "";
 
-            waitForNpc = true;
-            leaveClickEventNow = false;
+            FA3                 = true;
+            player_choosed3     = true;
+            BA3.Visibility      = Visibility.Hidden;
+            BXA3.Visibility     = Visibility.Visible;
 
-            FB1 = true;
+            playerSound         = Game.playerSymbol == "pack://application:,,,/Images/Zuckerstangen.png" ? playerSound = @"Sounds\PencilX.wav"
+                                                : Game.playerSymbol == "pack://application:,,,/Images/X.png"
+                                                ? playerSound = @"Sounds\PencilX.wav" : @"Sounds\PencilO.wav";
 
-            var rd_number_generated = new Random();
+            npcSound            = playerSound == @"Sounds\PencilX.wav" ? npcSound = @"Sounds\PencilO.wav" : npcSound = @"Sounds\PencilX.wav";
 
-            player_choosed4 = true;
-
-            MainWindow.ChooseSound = @"Sounds\PencilX.wav";
-            ChoosedFieldSound?.Invoke(this, "...");      // Invoke ist der Trigger !
-
-            BB1.Visibility = Visibility.Hidden;
-            BXB1.Visibility = Visibility.Visible;
-
-            await Task.Delay(wait_for_snd_played);
-            INFO.Visibility = Visibility.Visible;
-
-
-            PlayerWinCheck();
-
-            if (leaveClickEventNow)
-            {
-                return;
-            }
-
-            BulbAnimation();
-
-            await Task.Delay(NpcThinkTime);
-
-            Bulb.Visibility = Visibility.Hidden;
-            Bulb2.Visibility = Visibility.Hidden;
-
-            MainWindow.ChooseSound = @"Sounds\PencilO.wav";
-            ChoosedFieldSound?.Invoke(this, "...");      // Invoke ist der Trigger !
-
-            NpcLogic();
-
-            NpcLeaveClickEventAndCheckLooseCondition();
+            GameProgress(playerSound, npcSound);
         }
 
-        private async void BB2_Click(object sender, RoutedEventArgs e)
+        private void BB1_Click(object sender, RoutedEventArgs e)
         {
+            if (game_ended || waitForNpc) { return; }
 
-            if (game_ended || waitForNpc)
-            {
-                return;
-            }
+            string playerSound  = "";
+            string npcSound     = "";
 
-            waitForNpc = true;
-            leaveClickEventNow = false;
+            FB1                 = true;
+            player_choosed4     = true;
+            BB1.Visibility      = Visibility.Hidden;
+            BXB1.Visibility     = Visibility.Visible;
 
-            FB2 = true;
+            playerSound         = Game.playerSymbol == "pack://application:,,,/Images/Zuckerstangen.png" ? playerSound = @"Sounds\PencilX.wav"
+                                                : Game.playerSymbol == "pack://application:,,,/Images/X.png"
+                                                ? playerSound = @"Sounds\PencilX.wav" : @"Sounds\PencilO.wav";
 
-            var rd_number_generated = new Random();
+            npcSound            = playerSound == @"Sounds\PencilX.wav" ? npcSound = @"Sounds\PencilO.wav" : npcSound = @"Sounds\PencilX.wav";
 
-            player_choosed5 = true;
-
-            MainWindow.ChooseSound = @"Sounds\PencilX.wav";
-            ChoosedFieldSound?.Invoke(this, "...");      // Invoke ist der Trigger !
-
-            BB2.Visibility = Visibility.Hidden;
-            BXB2.Visibility = Visibility.Visible;
-
-            await Task.Delay(wait_for_snd_played);
-            INFO.Visibility = Visibility.Visible;
-
-
-            PlayerWinCheck();
-
-            if (leaveClickEventNow)
-            {
-                return;
-            }
-
-            BulbAnimation();
-
-            await Task.Delay(NpcThinkTime);
-
-            Bulb.Visibility = Visibility.Hidden;
-            Bulb2.Visibility = Visibility.Hidden;
-
-            MainWindow.ChooseSound = @"Sounds\PencilO.wav";
-            ChoosedFieldSound?.Invoke(this, "...");      // Invoke ist der Trigger !
-
-            NpcLogic();
-
-            NpcLeaveClickEventAndCheckLooseCondition();
+            GameProgress(playerSound, npcSound);
         }
 
-        private async void BB3_Click(object sender, RoutedEventArgs e)
+        private void BB2_Click(object sender, RoutedEventArgs e)
         {
+            if (game_ended || waitForNpc) { return; }
 
-            if (game_ended || waitForNpc)
-            {
-                return;
-            }
+            string playerSound  = "";
+            string npcSound     = "";
 
-            waitForNpc = true;
-            leaveClickEventNow = false;
+            FB2                 = true;
+            player_choosed5     = true;
+            BB2.Visibility      = Visibility.Hidden;
+            BXB2.Visibility     = Visibility.Visible;
 
-            FB3 = true;
+            playerSound         = Game.playerSymbol == "pack://application:,,,/Images/Zuckerstangen.png" ? playerSound = @"Sounds\PencilX.wav"
+                                                : Game.playerSymbol == "pack://application:,,,/Images/X.png"
+                                                ? playerSound = @"Sounds\PencilX.wav" : @"Sounds\PencilO.wav";
 
-            var rd_number_generated = new Random();
+            npcSound            = playerSound == @"Sounds\PencilX.wav" ? npcSound = @"Sounds\PencilO.wav" : npcSound = @"Sounds\PencilX.wav";
 
-            player_choosed6 = true;
-
-            MainWindow.ChooseSound = @"Sounds\PencilX.wav";
-            ChoosedFieldSound?.Invoke(this, "...");      // Invoke ist der Trigger !
-
-            BB3.Visibility = Visibility.Hidden;
-            BXB3.Visibility = Visibility.Visible;
-
-            await Task.Delay(wait_for_snd_played);
-            INFO.Visibility = Visibility.Visible;
-
-
-            PlayerWinCheck();
-
-            if (leaveClickEventNow)
-            {
-                return;
-            }
-
-            BulbAnimation();
-
-            await Task.Delay(NpcThinkTime);
-
-            Bulb.Visibility = Visibility.Hidden;
-            Bulb2.Visibility = Visibility.Hidden;
-
-            MainWindow.ChooseSound = @"Sounds\PencilO.wav";
-            ChoosedFieldSound?.Invoke(this, "...");      // Invoke ist der Trigger !
-
-            NpcLogic();
-
-            NpcLeaveClickEventAndCheckLooseCondition();
+            GameProgress(playerSound, npcSound);
         }
 
-        private async void BC1_Click(object sender, RoutedEventArgs e)
+        private void BB3_Click(object sender, RoutedEventArgs e)
         {
+            if (game_ended || waitForNpc) { return; }
 
-            if (game_ended || waitForNpc)
-            {
-                return;
-            }
+            string playerSound  = "";
+            string npcSound     = "";
 
-            waitForNpc = true;
-            leaveClickEventNow = false;
+            FB3                 = true;
+            player_choosed6     = true;
+            BB3.Visibility      = Visibility.Hidden;
+            BXB3.Visibility     = Visibility.Visible;
 
-            FC1 = true;
+            playerSound         = Game.playerSymbol == "pack://application:,,,/Images/Zuckerstangen.png" ? playerSound = @"Sounds\PencilX.wav"
+                                                : Game.playerSymbol == "pack://application:,,,/Images/X.png"
+                                                ? playerSound = @"Sounds\PencilX.wav" : @"Sounds\PencilO.wav";
 
-            var rd_number_generated = new Random();
+            npcSound            = playerSound == @"Sounds\PencilX.wav" ? npcSound = @"Sounds\PencilO.wav" : npcSound = @"Sounds\PencilX.wav";
 
-            player_choosed7 = true;
-
-            MainWindow.ChooseSound = @"Sounds\PencilX.wav";
-            ChoosedFieldSound?.Invoke(this, "...");      // Invoke ist der Trigger !
-
-            BC1.Visibility = Visibility.Hidden;
-            BXC1.Visibility = Visibility.Visible;
-
-            await Task.Delay(wait_for_snd_played);
-            INFO.Visibility = Visibility.Visible;
-
-
-            PlayerWinCheck();
-
-            if (leaveClickEventNow)
-            {
-                return;
-            }
-
-            BulbAnimation();
-
-            await Task.Delay(NpcThinkTime);
-
-            Bulb.Visibility = Visibility.Hidden;
-            Bulb2.Visibility = Visibility.Hidden;
-
-            MainWindow.ChooseSound = @"Sounds\PencilO.wav";
-            ChoosedFieldSound?.Invoke(this, "...");      // Invoke ist der Trigger !
-
-            NpcLogic();
-
-            NpcLeaveClickEventAndCheckLooseCondition();
+            GameProgress(playerSound, npcSound);
         }
 
-        private async void BC2_Click(object sender, RoutedEventArgs e)
+        private void BC1_Click(object sender, RoutedEventArgs e)
         {
+            if (game_ended || waitForNpc) { return; }
 
-            if (game_ended || waitForNpc)
-            {
-                return;
-            }
+            string playerSound  = "";
+            string npcSound     = "";
 
-            waitForNpc = true;
-            leaveClickEventNow = false;
+            FC1                 = true;
+            player_choosed7     = true;
+            BC1.Visibility      = Visibility.Hidden;
+            BXC1.Visibility     = Visibility.Visible;
 
-            FC2 = true;
+            playerSound         = Game.playerSymbol == "pack://application:,,,/Images/Zuckerstangen.png" ? playerSound = @"Sounds\PencilX.wav"
+                                                : Game.playerSymbol == "pack://application:,,,/Images/X.png"
+                                                ? playerSound = @"Sounds\PencilX.wav" : @"Sounds\PencilO.wav";
 
-            var rd_number_generated = new Random();
+            npcSound            = playerSound == @"Sounds\PencilX.wav" ? npcSound = @"Sounds\PencilO.wav" : npcSound = @"Sounds\PencilX.wav";
 
-            player_choosed8 = true;
-
-            MainWindow.ChooseSound = @"Sounds\PencilX.wav";
-            ChoosedFieldSound?.Invoke(this, "...");      // Invoke ist der Trigger !
-
-            BC2.Visibility = Visibility.Hidden;
-            BXC2.Visibility = Visibility.Visible;
-
-            await Task.Delay(wait_for_snd_played);
-            INFO.Visibility = Visibility.Visible;
-
-
-            PlayerWinCheck();
-
-            if (leaveClickEventNow)
-            {
-                return;
-            }
-
-            BulbAnimation();
-
-            await Task.Delay(NpcThinkTime);
-
-            Bulb.Visibility = Visibility.Hidden;
-            Bulb2.Visibility = Visibility.Hidden;
-
-            MainWindow.ChooseSound = @"Sounds\PencilO.wav";
-            ChoosedFieldSound?.Invoke(this, "...");      // Invoke ist der Trigger !
-
-            NpcLogic();
-
-            NpcLeaveClickEventAndCheckLooseCondition();
+            GameProgress(playerSound, npcSound);
         }
 
-        private async void BC3_Click(object sender, RoutedEventArgs e)
+        private void BC2_Click(object sender, RoutedEventArgs e)
         {
+            if (game_ended || waitForNpc) { return; }
 
-            if (game_ended || waitForNpc)
-            {
-                return;
-            }
+            string playerSound  = "";
+            string npcSound     = "";
 
-            waitForNpc = true;
-            leaveClickEventNow = false;
+            FC2                 = true;
+            player_choosed8     = true;
+            BC2.Visibility      = Visibility.Hidden;
+            BXC2.Visibility     = Visibility.Visible;
 
-            FC3 = true;
+            playerSound         = Game.playerSymbol == "pack://application:,,,/Images/Zuckerstangen.png" ? playerSound = @"Sounds\PencilX.wav"
+                                                : Game.playerSymbol == "pack://application:,,,/Images/X.png"
+                                                ? playerSound = @"Sounds\PencilX.wav" : @"Sounds\PencilO.wav";
 
-            var rd_number_generated = new Random();
+            npcSound            = playerSound == @"Sounds\PencilX.wav" ? npcSound = @"Sounds\PencilO.wav" : npcSound = @"Sounds\PencilX.wav";
 
-            player_choosed9 = true;
+            GameProgress(playerSound, npcSound);
+        }
 
-            MainWindow.ChooseSound = @"Sounds\PencilX.wav";
-            ChoosedFieldSound?.Invoke(this, "...");      // Invoke ist der Trigger !
+        private void BC3_Click(object sender, RoutedEventArgs e)
+        {
+            if (game_ended || waitForNpc) { return; }
 
-            BC3.Visibility = Visibility.Hidden;
-            BXC3.Visibility = Visibility.Visible;
+            string playerSound  = "";
+            string npcSound     = "";
 
-            await Task.Delay(wait_for_snd_played);
-            INFO.Visibility = Visibility.Visible;
+            FC3                 = true;
+            player_choosed9     = true;
+            BC3.Visibility      = Visibility.Hidden;
+            BXC3.Visibility     = Visibility.Visible;
 
+            playerSound         = Game.playerSymbol == "pack://application:,,,/Images/Zuckerstangen.png" ? playerSound = @"Sounds\PencilX.wav"
+                                                : Game.playerSymbol == "pack://application:,,,/Images/X.png"
+                                                ? playerSound = @"Sounds\PencilX.wav" : @"Sounds\PencilO.wav";
 
-            PlayerWinCheck();
+            npcSound            = playerSound == @"Sounds\PencilX.wav" ? npcSound = @"Sounds\PencilO.wav" : npcSound = @"Sounds\PencilX.wav";
 
-            if (leaveClickEventNow)
-            {
-                return;
-            }
-
-            BulbAnimation();
-
-            await Task.Delay(NpcThinkTime);
-
-            Bulb.Visibility = Visibility.Hidden;
-            Bulb2.Visibility = Visibility.Hidden;
-
-            MainWindow.ChooseSound = @"Sounds\PencilO.wav";
-            ChoosedFieldSound?.Invoke(this, "...");      // Invoke ist der Trigger !
-
-            NpcLogic();
-
-            NpcLeaveClickEventAndCheckLooseCondition();
+            GameProgress(playerSound, npcSound);
         }
 
         private void Restart_Click(object sender, RoutedEventArgs e)
         {
             ResetBGvideo?.Invoke(this, "Reset");      // Invoke ist der Trigger !
-            PlayGrid.Opacity = 0.75;
 
-            cpu_choice = 0;
-            cpu_choosed1 = false;
-            cpu_choosed2 = false;
-            cpu_choosed3 = false;
-            cpu_choosed4 = false;
-            cpu_choosed5 = false;
-            cpu_choosed6 = false;
-            cpu_choosed7 = false;
-            cpu_choosed8 = false;
-            cpu_choosed9 = false;
-            player_choosed1 = false;
-            player_choosed2 = false;
-            player_choosed3 = false;
-            player_choosed4 = false;
-            player_choosed5 = false;
-            player_choosed6 = false;
-            player_choosed7 = false;
-            player_choosed8 = false;
-            player_choosed9 = false;
-            FA1 = false;
-            FA2 = false;
-            FA3 = false;
-            FB1 = false;
-            FB2 = false;
-            FB3 = false;
-            FC1 = false;
-            FC2 = false;
-            FC3 = false;
+            PlayGrid.Opacity    = 0.75;
 
+            cpu_choice          = 0;
+            cpu_choosed1        = false;
+            cpu_choosed2        = false;
+            cpu_choosed3        = false;
+            cpu_choosed4        = false;
+            cpu_choosed5        = false;
+            cpu_choosed6        = false;
+            cpu_choosed7        = false;
+            cpu_choosed8        = false;
+            cpu_choosed9        = false;
+            player_choosed1     = false;
+            player_choosed2     = false;
+            player_choosed3     = false;
+            player_choosed4     = false;
+            player_choosed5     = false;
+            player_choosed6     = false;
+            player_choosed7     = false;
+            player_choosed8     = false;
+            player_choosed9     = false;
+            FA1                 = false;
+            FA2                 = false;
+            FA3                 = false;
+            FB1                 = false;
+            FB2                 = false;
+            FB3                 = false;
+            FC1                 = false;
+            FC2                 = false;
+            FC3                 = false;
 
-
-            INFO.Visibility = Visibility.Hidden;
-            INFO.Content = "CPU DENKT ... BITTE WARTEN !";
-            BA1.Visibility = Visibility.Visible;
-            BA2.Visibility = Visibility.Visible;
-            BA3.Visibility = Visibility.Visible;
-            BB1.Visibility = Visibility.Visible;
-            BB2.Visibility = Visibility.Visible;
-            BB3.Visibility = Visibility.Visible;
-            BC1.Visibility = Visibility.Visible;
-            BC2.Visibility = Visibility.Visible;
-            BC3.Visibility = Visibility.Visible;
-            BXA1.Visibility = Visibility.Hidden;
-            BXA2.Visibility = Visibility.Hidden;
-            BXA3.Visibility = Visibility.Hidden;
-            BOA1.Visibility = Visibility.Hidden;
-            BOA2.Visibility = Visibility.Hidden;
-            BOA3.Visibility = Visibility.Hidden;
-            BXB1.Visibility = Visibility.Hidden;
-            BXB2.Visibility = Visibility.Hidden;
-            BXB3.Visibility = Visibility.Hidden;
-            BOB1.Visibility = Visibility.Hidden;
-            BOB2.Visibility = Visibility.Hidden;
-            BOB3.Visibility = Visibility.Hidden;
-            BXC1.Visibility = Visibility.Hidden;
-            BXC2.Visibility = Visibility.Hidden;
-            BXC3.Visibility = Visibility.Hidden;
-            BOC1.Visibility = Visibility.Hidden;
-            BOC2.Visibility = Visibility.Hidden;
-            BOC3.Visibility = Visibility.Hidden;
-            restart.Visibility = Visibility.Hidden;
+            INFO.Visibility     = Visibility.Hidden;
+            INFO.Content        = "CPU DENKT ... BITTE WARTEN !";
+            BA1.Visibility      = Visibility.Visible;
+            BA2.Visibility      = Visibility.Visible;
+            BA3.Visibility      = Visibility.Visible;
+            BB1.Visibility      = Visibility.Visible;
+            BB2.Visibility      = Visibility.Visible;
+            BB3.Visibility      = Visibility.Visible;
+            BC1.Visibility      = Visibility.Visible;
+            BC2.Visibility      = Visibility.Visible;
+            BC3.Visibility      = Visibility.Visible;
+            BXA1.Visibility     = Visibility.Hidden;
+            BXA2.Visibility     = Visibility.Hidden;
+            BXA3.Visibility     = Visibility.Hidden;
+            BOA1.Visibility     = Visibility.Hidden;
+            BOA2.Visibility     = Visibility.Hidden;
+            BOA3.Visibility     = Visibility.Hidden;
+            BXB1.Visibility     = Visibility.Hidden;
+            BXB2.Visibility     = Visibility.Hidden;
+            BXB3.Visibility     = Visibility.Hidden;
+            BOB1.Visibility     = Visibility.Hidden;
+            BOB2.Visibility     = Visibility.Hidden;
+            BOB3.Visibility     = Visibility.Hidden;
+            BXC1.Visibility     = Visibility.Hidden;
+            BXC2.Visibility     = Visibility.Hidden;
+            BXC3.Visibility     = Visibility.Hidden;
+            BOC1.Visibility     = Visibility.Hidden;
+            BOC2.Visibility     = Visibility.Hidden;
+            BOC3.Visibility     = Visibility.Hidden;
+            restart.Visibility  = Visibility.Hidden;
             
-            game_ended = false;
+            game_ended          = false;
 
         }
 
