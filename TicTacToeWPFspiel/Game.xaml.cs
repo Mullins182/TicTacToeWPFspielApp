@@ -1,8 +1,10 @@
-﻿using System.Windows;
+﻿using System.Linq.Expressions;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 
 namespace TicTacToeWPFspiel
 {
@@ -18,44 +20,44 @@ namespace TicTacToeWPFspiel
         public static string playerSymbol       = "pack://application:,,,/Images/X.png";
         public static string npcSymbol          = "pack://application:,,,/Images/O.png";
 
-        int cpu_choice          = 0;
-        int NpcThinkTime        = 3333;
-        int wait_for_snd_played = 444;
-        bool game_ended         = false;
-        bool leaveClickEventNow = false;
-        bool waitForNpc         = false;
+        private int cpu_choice              = 0;
+        private int NpcThinkTime            = 3333;
+        private int wait_for_snd_played     = 444;
+        private bool game_ended             = false;
+        private bool leaveClickEventNow     = false;
+        private bool waitForNpc             = false;
 
         // Diese Variablen bestimmen ob ein Feld von Spieler oder CPU bereits gewählt wurde !
-        bool FA1 = false;
-        bool FA2 = false;
-        bool FA3 = false;
-        bool FB1 = false;
-        bool FB2 = false;
-        bool FB3 = false;
-        bool FC1 = false;
-        bool FC2 = false;
-        bool FC3 = false;
+        private bool FA1                    = false;
+        private bool FA2                    = false;
+        private bool FA3                    = false;
+        private bool FB1                    = false;
+        private bool FB2                    = false;
+        private bool FB3                    = false;
+        private bool FC1                    = false;
+        private bool FC2                    = false;
+        private bool FC3                    = false;
 
         // NPC hat folgende Felder "geklickt"
-        bool cpu_choosed1 = false;
-        bool cpu_choosed2 = false;
-        bool cpu_choosed3 = false;
-        bool cpu_choosed4 = false;
-        bool cpu_choosed5 = false;
-        bool cpu_choosed6 = false;
-        bool cpu_choosed7 = false;
-        bool cpu_choosed8 = false;
-        bool cpu_choosed9 = false;
+        private bool cpu_choosed1           = false;
+        private bool cpu_choosed2           = false;
+        private bool cpu_choosed3           = false;
+        private bool cpu_choosed4           = false;
+        private bool cpu_choosed5           = false;
+        private bool cpu_choosed6           = false;
+        private bool cpu_choosed7           = false;
+        private bool cpu_choosed8           = false;
+        private bool cpu_choosed9           = false;
         // Player hat folgende Felder geklickt !
-        bool player_choosed1 = false;
-        bool player_choosed2 = false;
-        bool player_choosed3 = false;
-        bool player_choosed4 = false;
-        bool player_choosed5 = false;
-        bool player_choosed6 = false;
-        bool player_choosed7 = false;
-        bool player_choosed8 = false;
-        bool player_choosed9 = false;
+        private bool player_choosed1        = false;
+        private bool player_choosed2        = false;
+        private bool player_choosed3        = false;
+        private bool player_choosed4        = false;
+        private bool player_choosed5        = false;
+        private bool player_choosed6        = false;
+        private bool player_choosed7        = false;
+        private bool player_choosed8        = false;
+        private bool player_choosed9        = false;
 
         //private static void InfoLabelAnimation(string x, Label y)
         //{
@@ -186,43 +188,18 @@ namespace TicTacToeWPFspiel
             //FarbAnimation.Begin(y);
         }
 
-        private void WinningConditionOrders()
-        {
-            PlayGrid.Opacity    = 0.49;
-            restart.Opacity     = 0.45;
-            //INFO.BorderBrush = new SolidColorBrush(Colors.Green);
-            //INFO.BorderThickness = new Thickness(5);
-            INFO.Content        = "DU HAST GEWONNEN !!!";
-            INFO.Visibility     = Visibility.Visible;
-            game_ended = true;
-            restart.Visibility  = Visibility.Visible;
-            PlayerWins?.Invoke(this, "DU HAST GEWONNEN !!!");      // Invoke ist der Trigger !
-
-            NpcLeaveClickEventAndCheckLooseCondition();
-        }
-
-        private void LoosingConditionOrders()
-        {
-            PlayGrid.Opacity    = 0.40;
-            restart.Opacity     = 0.45;
-            //INFO.BorderBrush = new SolidColorBrush(Colors.Green);
-            //INFO.BorderThickness = new Thickness(5);
-            INFO.Content        = "DU HAST LEIDER VERLOREN !!!";
-            INFO.Visibility     = Visibility.Visible;
-            game_ended          = true;
-            restart.Visibility  = Visibility.Visible;
-            GameOver?.Invoke(this, "GAME OVER");
-
-            //leaveClickEventNow = true;
-        }
-
         public Game()        
         {
             InitializeComponent();
 
+            Game_ini();
+        }
+
+        private void Game_ini()
+        {
             //InfoLabelAnimation(INFO.Name, INFO);
 
-            SpielOptionen.PlayersymbolChanged   += SpielOptionen_PlayersymbolChanged;
+            SpielOptionen.PlayersymbolChanged += SpielOptionen_PlayersymbolChanged;
 
             playerSymbolImage.ImageSource = new BitmapImage(new Uri(playerSymbol, UriKind.RelativeOrAbsolute));
             LPA1.Background = playerSymbolImage;
@@ -253,7 +230,37 @@ namespace TicTacToeWPFspiel
             npcSymbolImage.ImageSource      = new BitmapImage(new Uri(npcSymbol, UriKind.RelativeOrAbsolute));
         }
 
-        public void NpcLeaveClickEventAndCheckLooseCondition()
+        private void WinningConditionOrders()
+        {
+            PlayGrid.Opacity = 0.49;
+            restart.Opacity = 0.45;
+            //INFO.BorderBrush = new SolidColorBrush(Colors.Green);
+            //INFO.BorderThickness = new Thickness(5);
+            INFO.Content = "DU HAST GEWONNEN !!!";
+            INFO.Visibility = Visibility.Visible;
+            game_ended = true;
+            restart.Visibility = Visibility.Visible;
+            PlayerWins?.Invoke(this, "DU HAST GEWONNEN !!!");      // Invoke ist der Trigger !
+
+            NpcLeaveClickEventAndCheckLooseCondition();
+        }
+
+        private void LoosingConditionOrders()
+        {
+            PlayGrid.Opacity = 0.40;
+            restart.Opacity = 0.45;
+            //INFO.BorderBrush = new SolidColorBrush(Colors.Green);
+            //INFO.BorderThickness = new Thickness(5);
+            INFO.Content = "DU HAST LEIDER VERLOREN !!!";
+            INFO.Visibility = Visibility.Visible;
+            game_ended = true;
+            restart.Visibility = Visibility.Visible;
+            GameOver?.Invoke(this, "GAME OVER");
+
+            //leaveClickEventNow = true;
+        }
+
+        private void NpcLeaveClickEventAndCheckLooseCondition()
         {
             if (cpu_choosed1 && cpu_choosed2 && cpu_choosed3 == true)
             {
@@ -306,7 +313,7 @@ namespace TicTacToeWPFspiel
             waitForNpc = false;
             leaveClickEventNow = true;
         }
-        public void NpcPlayerBlocksHumanPLayer()
+        private void NpcPlayerBlocksHumanPLayer()
         {
             if (player_choosed1 && player_choosed5 && !cpu_choosed9)
             {
@@ -526,7 +533,7 @@ namespace TicTacToeWPFspiel
             }
         }
 
-        public void NpcWinningMove()
+        private void NpcWinningMove()
         {
             if (cpu_choosed1 && cpu_choosed3 && !player_choosed2)
             {
@@ -755,7 +762,7 @@ namespace TicTacToeWPFspiel
             }
         }
 
-        public void PlayerWinCheck()
+        private void PlayerWinCheck()
         {
             if (player_choosed1 && player_choosed2 && player_choosed3)
             {
@@ -815,7 +822,7 @@ namespace TicTacToeWPFspiel
             }
         }
 
-        public async void NpcLogic()
+        private async void NpcLogic()
         {
             var rN = new Random();
 
@@ -2012,6 +2019,154 @@ namespace TicTacToeWPFspiel
                 }
 
                 goto J1;
+            }
+        }
+
+        private void NpcLogicHard()
+        {
+            var rN = new Random();
+
+            if (cpu_choosed1 || cpu_choosed2 || cpu_choosed3 || cpu_choosed4 || cpu_choosed5 || cpu_choosed6 || cpu_choosed7 || cpu_choosed8 || cpu_choosed9)
+            {
+                goto MovingOn;
+            }
+
+            new_rD:
+                        
+            cpu_choice = rN.Next(1, 10);
+
+            if (cpu_choice == 1)
+            {
+                LNA1.Visibility = FA1 ? Visibility.Hidden : FA2 ? Visibility.Hidden : FA3 ? Visibility.Hidden : Visibility.Visible;
+
+                if (LNA1.Visibility == Visibility.Hidden)
+                {
+                    LNA1.Visibility = FA1 ? Visibility.Hidden : FB2 ? Visibility.Hidden : FC3 ? Visibility.Hidden : Visibility.Visible;
+                    
+                    if (LNA1.Visibility == Visibility.Hidden)
+                    {
+                        LNA1.Visibility = FA1 ? Visibility.Hidden : FB1 ? Visibility.Hidden : FC1 ? Visibility.Hidden : Visibility.Visible;
+
+                        if (LNA1.Visibility == Visibility.Hidden) { goto new_rD; } else { FA1 = true; BA1.Visibility = Visibility.Hidden; cpu_choosed1 = true; }
+                    }
+                }
+
+                FA1 = true;
+                cpu_choosed1 = true;
+                BA1.Visibility = Visibility.Hidden;
+
+                return;
+            }
+            else if (cpu_choice == 2)
+            {
+                LNA2.Visibility = FA1 ? Visibility.Hidden : FA2 ? Visibility.Hidden : FA3 ? Visibility.Hidden : Visibility.Visible;
+
+                if (LNA2.Visibility == Visibility.Hidden)
+                {
+                    LNA2.Visibility = FA2 ? Visibility.Hidden : FB2 ? Visibility.Hidden : FC2 ? Visibility.Hidden : Visibility.Visible;
+
+                    if (LNA1.Visibility == Visibility.Hidden) { goto new_rD; } else { FA1 = true; BA1.Visibility = Visibility.Hidden; cpu_choosed1 = true; }
+                }
+
+                FA2 = true;
+                cpu_choosed2 = true;
+                BA2.Visibility = Visibility.Hidden;
+
+                return;
+            }
+            else if (cpu_choice == 3)
+            {
+                LNA3.Visibility = FA1 ? Visibility.Hidden : FA2 ? Visibility.Hidden : FA3 ? Visibility.Hidden : Visibility.Visible;
+
+                if (LNA1.Visibility == Visibility.Hidden)
+                {
+                    LNA1.Visibility = FA1 ? Visibility.Hidden : FB2 ? Visibility.Hidden : FC3 ? Visibility.Hidden : Visibility.Visible;
+
+                    if (LNA1.Visibility == Visibility.Hidden)
+                    {
+                        LNA1.Visibility = FA1 ? Visibility.Hidden : FB1 ? Visibility.Hidden : FC1 ? Visibility.Hidden : Visibility.Visible;
+
+                        if (LNA1.Visibility == Visibility.Hidden) { goto new_rD; } else { FA1 = true; BA1.Visibility = Visibility.Hidden; cpu_choosed1 = true; }
+                    }
+                }
+
+                FA3 = true;
+                cpu_choosed3 = true;
+                BA3.Visibility = Visibility.Hidden;
+
+                return;
+            }
+            else if (cpu_choice == 4)
+            {
+
+                return;
+            }
+            else if (cpu_choice == 5)
+            {
+
+                return;
+            }
+            else if (cpu_choice == 6)
+            {
+
+                return;
+            }
+            else if (cpu_choice == 7)
+            {
+
+                return;
+            }
+            else if (cpu_choice == 8)
+            {
+
+                return;
+            }
+            else if (cpu_choice == 9)
+            {
+
+                return;
+            }
+
+            MovingOn:
+
+            if (cpu_choosed1)
+            {
+                if (!FA2 && !FA3) { cpu_choosed2 = true; BA1.Visibility = Visibility.Hidden; FA2 = true; }
+                if (!FB2 && !FC3) { cpu_choosed5 = true; BB2.Visibility = Visibility.Hidden; FB2 = true; }
+                if (!FB1 && !FC1) { cpu_choosed4 = true; BB1.Visibility = Visibility.Hidden; FB1 = true; }
+            }
+            else if (cpu_choosed2)
+            {
+                if (!FA1 && !FA3) { cpu_choosed3 = true; BA3.Visibility = Visibility.Hidden; FA3 = true; }
+                if (!FB2 && !FC2) { cpu_choosed5 = true; BB2.Visibility = Visibility.Hidden; FB2 = true; }
+            }
+            else if (cpu_choosed3)
+            {
+
+            }
+            else if (cpu_choosed4)
+            {
+
+            }
+            else if (cpu_choosed5)
+            {
+
+            }
+            else if (cpu_choosed6)
+            {
+
+            }
+            else if (cpu_choosed7)
+            {
+
+            }
+            else if (cpu_choosed8)
+            {
+
+            }
+            else if (cpu_choosed9)
+            {
+
             }
         }
 
