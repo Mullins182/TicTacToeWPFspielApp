@@ -74,7 +74,7 @@
 
         <Button x:Name="restart" Opacity="0.70" Content="Restart" Grid.Column="1" Grid.Row="3"
                 Template="{StaticResource NoMouseOverButtonTemplate}" MaxWidth="150" MaxHeight="70" BorderThickness="3" BorderBrush="Black" 
-                Background="DarkRed" Foreground="LawnGreen" FontFamily="chiller" FontSize="45" Click="Restart_Click" 
+                Background="DarkRed" Foreground="LawnGreen" FontFamily="{StaticResource BradleyHandITC}" FontSize="45" Click="Restart_Click" 
                 MouseEnter="restart_MouseEnter" MouseLeave="restart_MouseLeave" Visibility="Hidden"/>
 
         <Grid x:Name="PlayGrid" Grid.Column="1" Grid.Row="2" Opacity="0.75" Width="390" Height="390">
