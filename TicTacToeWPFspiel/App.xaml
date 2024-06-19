@@ -4,6 +4,7 @@
              xmlns:local="clr-namespace:TicTacToeWPFspiel"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <FontFamily x:Key="CurlzMT">pack://application:,,,/Fonts/#Curlz MT</FontFamily>
+        <FontFamily x:Key="BradleyHandITC">pack://application:,,,/Fonts/#Bradley Hand ITC</FontFamily>
     </Application.Resources>
 </Application>

@@ -6,12 +6,11 @@
       xmlns:local="clr-namespace:TicTacToeWPFspiel"
       mc:Ignorable="d"
       d:DesignHeight="800" d:DesignWidth="715"
-        Title="OPTIONS" Height="800" Width="715" x:Name="Optionen">
+        Title="OPTIONS" Height="800" Width="715" MinHeight="800" MinWidth="715" x:Name="Optionen">
 
     <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="3.5*"/>
-            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="715"/>
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
@@ -23,21 +22,21 @@
 
         <Label x:Name="optionsLabel" Width="auto" Height="70" Content="OPTIONS" Foreground="Goldenrod" FontSize="40" FontWeight="Bold" 
                BorderThickness="1.5" BorderBrush="Goldenrod" Grid.Column="1" Grid.Row="0" VerticalContentAlignment="Top" 
-               HorizontalContentAlignment="Center" Margin="100,20,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+               HorizontalContentAlignment="Center" Margin="0,20,0,0" HorizontalAlignment="Center" VerticalAlignment="Top"/>
         
-        <Label Content="Choose Background" HorizontalContentAlignment="Center" Grid.Row="0" Grid.Column="1" Height="auto" Width="300" 
-               FontFamily="chiller" FontSize="40" Foreground="YellowGreen" Margin="50,140,0,0" HorizontalAlignment="Left"
+        <Label Content="Choose Background" HorizontalContentAlignment="Center" Grid.Row="0" Grid.Column="1" Height="auto" Width="400" 
+               FontFamily="{StaticResource BradleyHandITC}" FontSize="40" Foreground="YellowGreen" Margin="0,140,0,0" HorizontalAlignment="Center"
                Background="Black" Opacity="0.7"/>
         
-        <Label Content="Choose Music" HorizontalContentAlignment="Center" Grid.Row="1" Grid.Column="1" Height="auto" Width="300" 
-               FontFamily="chiller" FontSize="40" Foreground="YellowGreen" Margin="50,150,0,0" HorizontalAlignment="Left"
+        <Label Content="Choose Music" HorizontalContentAlignment="Center" Grid.Row="1" Grid.Column="1" Height="auto" Width="400" 
+               FontFamily="{StaticResource BradleyHandITC}" FontSize="40" Foreground="YellowGreen" Margin="0,150,0,0" HorizontalAlignment="Center"
                Background="Black" Opacity="0.7"/>
 
-        <Label Content="Choose Player Symbol" HorizontalContentAlignment="Center" Grid.Row="2" Grid.Column="1" Height="60" Width="300" 
-               FontFamily="chiller" FontSize="40" Foreground="YellowGreen" Margin="50,30,0,0" HorizontalAlignment="Left"
+        <Label Content="Choose Player Symbol" HorizontalContentAlignment="Center" Grid.Row="2" Grid.Column="1" Height="60" Width="400" 
+               FontFamily="{StaticResource BradleyHandITC}" FontSize="40" Foreground="YellowGreen" Margin="0,30,0,0" HorizontalAlignment="Center"
                Background="Black" Opacity="0.7"/>
 
-        <StackPanel Grid.Column="1" Grid.Row="1" Width="400" VerticalAlignment="top" HorizontalAlignment="left">
+        <StackPanel Grid.Column="1" Grid.Row="1" Width="400" VerticalAlignment="top" HorizontalAlignment="Center">
             <RibbonRadioButton x:Name="BG_4" Height="30" Width="400" Background="DarkRed" FontFamily="Arial" FontSize="18" 
                                FontWeight="Bold" Label="Snow Under The Lantern At Night" Foreground="PaleGoldenrod" 
                                MouseOverBorderBrush="LawnGreen" CheckedBorderBrush="LawnGreen" CheckedBackground="DarkGreen" 
@@ -100,7 +99,7 @@
 
         </StackPanel>
 
-        <StackPanel Grid.Column="1" Grid.Row="2" Width="400" VerticalAlignment="top" HorizontalAlignment="left">
+        <StackPanel Grid.Column="1" Grid.Row="2" Width="400" VerticalAlignment="top" HorizontalAlignment="Center">
 
             <RibbonRadioButton x:Name="BGm_1" Height="30" Width="400" Background="DarkRed" FontFamily="Arial" 
                                FontSize="18" FontWeight="Bold" Label="Christmas Swing" Foreground="PaleGoldenrod" 

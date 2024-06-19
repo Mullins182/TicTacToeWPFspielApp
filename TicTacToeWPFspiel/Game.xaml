@@ -60,13 +60,14 @@
 
         <Label Height="160" Width="500" Grid.Column="1" Opacity="0.73" Grid.Row="0" Margin="0,0,0,0" 
                VerticalAlignment="Top" HorizontalAlignment="center" HorizontalContentAlignment="center" VerticalContentAlignment="center" 
-               FontFamily="chiller" FontSize="120" Foreground="DarkOrange" FontWeight="Bold" Content="TicTacToe"/>
+               FontFamily="{StaticResource CurlzMT}" FontSize="120" Foreground="DarkOrange" FontWeight="Bold" Content="TicTacToe"/>
         <Image x:Name="Bulb" Height="40" Width="40" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" 
                Visibility="Hidden" Source="Images/Bulb1.png" Margin="0,0,0,0" Grid.ColumnSpan="1"/>
         <Image x:Name="Bulb2" Height="40" Width="40" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right" 
                Visibility="Hidden" Source="Images/Bulb1.png" Margin="0,0,0,0" Grid.ColumnSpan="1"/>
-        <Label x:Name="INFO" Visibility="Hidden" Foreground="GreenYellow" Grid.Column="1" Grid.Row="1" Height="45" 
-               VerticalAlignment="Center" HorizontalAlignment="Center" Width="auto" Content="CPU IS 'THINKING' ... PLEASE WAIT!" FontFamily="chiller" 
+        <Label x:Name="INFO" Visibility="Hidden" Foreground="GreenYellow" Grid.Column="1" Grid.Row="1" Height="55" 
+               VerticalAlignment="Center" HorizontalAlignment="Center" Width="auto" Content="Cpu is thinking...Please wait !" 
+               FontFamily="{StaticResource BradleyHandITC}" 
                FontSize="35" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="0,0,0,0"
                Background="#50000000"/>
 
@@ -98,10 +99,10 @@
                     <ImageBrush Stretch="None" ImageSource="Images/SpielfeldSnow.png"/>
                 </Button.Background>
             </Button>
-            <Label x:Name="BXA1" Grid.Column="0" HorizontalAlignment="center" Height="130" Grid.Row="0" VerticalAlignment="center" Width="130" 
+            <Label x:Name="LPA1" Grid.Column="0" HorizontalAlignment="center" Height="130" Grid.Row="0" VerticalAlignment="center" Width="130" 
                    Visibility="Hidden">
             </Label>
-            <Label x:Name="BOA1" Grid.Column="0" HorizontalAlignment="center" Height="130" Grid.Row="0" VerticalAlignment="center" Width="130" 
+            <Label x:Name="LNA1" Grid.Column="0" HorizontalAlignment="center" Height="130" Grid.Row="0" VerticalAlignment="center" Width="130" 
                    Visibility="Hidden">
             </Label>
 
@@ -111,10 +112,10 @@
                     <ImageBrush Stretch="None" ImageSource="Images/SpielfeldSnow.png"/>
                 </Button.Background>
             </Button>
-            <Label x:Name="BXA2" Grid.Column="1" HorizontalAlignment="center" Height="130" Grid.Row="0" VerticalAlignment="center" Width="130" 
+            <Label x:Name="LPA2" Grid.Column="1" HorizontalAlignment="center" Height="130" Grid.Row="0" VerticalAlignment="center" Width="130" 
                    Visibility="Hidden">
             </Label>
-            <Label x:Name="BOA2" Grid.Column="1" HorizontalAlignment="center" Height="130" Grid.Row="0" VerticalAlignment="center" Width="130" 
+            <Label x:Name="LNA2" Grid.Column="1" HorizontalAlignment="center" Height="130" Grid.Row="0" VerticalAlignment="center" Width="130" 
                    Visibility="Hidden">
             </Label>
 
@@ -124,10 +125,10 @@
                     <ImageBrush Stretch="None" ImageSource="Images/SpielfeldSnow.png"/>
                 </Button.Background>
             </Button>
-            <Label x:Name="BXA3" Grid.Column="2" HorizontalAlignment="center" Height="130" Grid.Row="0" VerticalAlignment="center" Width="130" 
+            <Label x:Name="LPA3" Grid.Column="2" HorizontalAlignment="center" Height="130" Grid.Row="0" VerticalAlignment="center" Width="130" 
                    Visibility="Hidden">
             </Label>
-            <Label x:Name="BOA3" Grid.Column="2" HorizontalAlignment="center" Height="130" Grid.Row="0" VerticalAlignment="center" Width="130" 
+            <Label x:Name="LNA3" Grid.Column="2" HorizontalAlignment="center" Height="130" Grid.Row="0" VerticalAlignment="center" Width="130" 
                    Visibility="Hidden">
             </Label>
 
@@ -137,10 +138,10 @@
                     <ImageBrush Stretch="None" ImageSource="Images/SpielfeldSnow.png"/>
                 </Button.Background>
             </Button>
-            <Label x:Name="BXB1" Grid.Column="0" HorizontalAlignment="center" Height="130" Grid.Row="1" VerticalAlignment="center" Width="130" 
+            <Label x:Name="LPB1" Grid.Column="0" HorizontalAlignment="center" Height="130" Grid.Row="1" VerticalAlignment="center" Width="130" 
                    Visibility="Hidden">
             </Label>
-            <Label x:Name="BOB1" Grid.Column="0" HorizontalAlignment="center" Height="130" Grid.Row="1" VerticalAlignment="center" Width="130" 
+            <Label x:Name="LNB1" Grid.Column="0" HorizontalAlignment="center" Height="130" Grid.Row="1" VerticalAlignment="center" Width="130" 
                    Visibility="Hidden">
             </Label>
             <Button x:Name="BB2" Grid.Column="1" HorizontalAlignment="center" Height="130" Grid.Row="1" VerticalAlignment="center" 
@@ -149,10 +150,10 @@
                     <ImageBrush Stretch="None" ImageSource="Images/SpielfeldSnow.png"/>
                 </Button.Background>
             </Button>
-            <Label x:Name="BXB2" Grid.Column="1" HorizontalAlignment="center" Height="130" Grid.Row="1" VerticalAlignment="center" Width="130" 
+            <Label x:Name="LPB2" Grid.Column="1" HorizontalAlignment="center" Height="130" Grid.Row="1" VerticalAlignment="center" Width="130" 
                    Visibility="Hidden">
             </Label>
-            <Label x:Name="BOB2" Grid.Column="1" HorizontalAlignment="center" Height="130" Grid.Row="1" VerticalAlignment="center" Width="130" 
+            <Label x:Name="LNB2" Grid.Column="1" HorizontalAlignment="center" Height="130" Grid.Row="1" VerticalAlignment="center" Width="130" 
                    Visibility="Hidden">
             </Label>
             <Button x:Name="BB3" Grid.Column="2" HorizontalAlignment="center" Height="130" Grid.Row="1" VerticalAlignment="center" 
@@ -161,10 +162,10 @@
                     <ImageBrush Stretch="None" ImageSource="Images/SpielfeldSnow.png"/>
                 </Button.Background>
             </Button>
-            <Label x:Name="BXB3" Grid.Column="2" HorizontalAlignment="center" Height="130" Grid.Row="1" VerticalAlignment="center" Width="130" 
+            <Label x:Name="LPB3" Grid.Column="2" HorizontalAlignment="center" Height="130" Grid.Row="1" VerticalAlignment="center" Width="130" 
                    Visibility="Hidden">
             </Label>
-            <Label x:Name="BOB3" Grid.Column="2" HorizontalAlignment="center" Height="130" Grid.Row="1" VerticalAlignment="center" Width="130" 
+            <Label x:Name="LNB3" Grid.Column="2" HorizontalAlignment="center" Height="130" Grid.Row="1" VerticalAlignment="center" Width="130" 
                    Visibility="Hidden">
             </Label>
 
@@ -174,10 +175,10 @@
                     <ImageBrush Stretch="None" ImageSource="Images/SpielfeldSnow.png"/>
                 </Button.Background>
             </Button>
-            <Label x:Name="BXC1" Grid.Column="0" HorizontalAlignment="center" Height="130" Grid.Row="2" VerticalAlignment="center" Width="130" 
+            <Label x:Name="LPC1" Grid.Column="0" HorizontalAlignment="center" Height="130" Grid.Row="2" VerticalAlignment="center" Width="130" 
                    Visibility="Hidden">
             </Label>
-            <Label x:Name="BOC1" Grid.Column="0" HorizontalAlignment="center" Height="130" Grid.Row="2" VerticalAlignment="center" Width="130" 
+            <Label x:Name="LNC1" Grid.Column="0" HorizontalAlignment="center" Height="130" Grid.Row="2" VerticalAlignment="center" Width="130" 
                    Visibility="Hidden">
             </Label>
             <Button x:Name="BC2" Grid.Column="1" HorizontalAlignment="center" Height="130" Grid.Row="2" VerticalAlignment="center" 
@@ -186,10 +187,10 @@
                     <ImageBrush Stretch="None" ImageSource="Images/SpielfeldSnow.png"/>
                 </Button.Background>
             </Button>
-            <Label x:Name="BXC2" Grid.Column="1" HorizontalAlignment="center" Height="130" Grid.Row="2" VerticalAlignment="center" Width="130" 
+            <Label x:Name="LPC2" Grid.Column="1" HorizontalAlignment="center" Height="130" Grid.Row="2" VerticalAlignment="center" Width="130" 
                    Visibility="Hidden">
             </Label>
-            <Label x:Name="BOC2" Grid.Column="1" HorizontalAlignment="center" Height="130" Grid.Row="2" VerticalAlignment="center" Width="130" 
+            <Label x:Name="LNC2" Grid.Column="1" HorizontalAlignment="center" Height="130" Grid.Row="2" VerticalAlignment="center" Width="130" 
                    Visibility="Hidden">
             </Label>
             <Button x:Name="BC3" Grid.Column="2" HorizontalAlignment="center" Height="130" Grid.Row="2" VerticalAlignment="center" 
@@ -198,10 +199,10 @@
                     <ImageBrush Stretch="None" ImageSource="Images/SpielfeldSnow.png"/>
                 </Button.Background>
             </Button>
-            <Label x:Name="BXC3" Grid.Column="2" HorizontalAlignment="center" Height="130" Grid.Row="2" VerticalAlignment="center" Width="130" 
+            <Label x:Name="LPC3" Grid.Column="2" HorizontalAlignment="center" Height="130" Grid.Row="2" VerticalAlignment="center" Width="130" 
                    Visibility="Hidden">
             </Label>
-            <Label x:Name="BOC3" Grid.Column="2" HorizontalAlignment="center" Height="130" Grid.Row="2" VerticalAlignment="center" Width="130" 
+            <Label x:Name="LNC3" Grid.Column="2" HorizontalAlignment="center" Height="130" Grid.Row="2" VerticalAlignment="center" Width="130" 
                    Visibility="Hidden">
             </Label>
         </Grid>
