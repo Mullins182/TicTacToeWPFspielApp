@@ -102,14 +102,14 @@ namespace TicTacToeWPFspiel
 
             NavigationFrame.Content = _runningGame;
 
-            SpielOptionen.BGvideoChanged += ChangeBackgroundVideo;
-            SpielOptionen.BGaudioChanged += ChangeBGmusic;
-            SpielOptionen.BGmusicOff += BGmusicOff;
+            SpielOptionen.BGvideoChanged    += ChangeBackgroundVideo;
+            SpielOptionen.BGaudioChanged    += ChangeBGmusic;
+            SpielOptionen.BGmusicOff        += BGmusicOff;
             SpielOptionen.Menu_Choice_Sound += MenuChoiceSound;
-            Game.PlayerWins += ConfettiCannon;
-            Game.GameOver += GameOverVideo;
-            Game.ResetBGvideo += ChangeBackgroundVideo;
-            Game.ChosenFieldSound += ChoosedFieldSound;
+            Game.PlayerWins                 += ConfettiCannon;
+            Game.GameOver                   += GameOverVideo;
+            Game.ResetBGvideo               += ChangeBackgroundVideo;
+            Game.ChosenFieldSound           += ChoosedFieldSound;
         }
 
         private void options_Click(object sender, RoutedEventArgs e)
