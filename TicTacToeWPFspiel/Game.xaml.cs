@@ -323,12 +323,28 @@ namespace TicTacToeWPFspiel
                 LNC3.Visibility = Visibility.Visible;
                 NpcLeaveClickEventAndCheckLooseCondition();
             }
+            else if (player_choosed5 && player_choosed7 && !cpu_choosed3)
+            {
+                FA3 = true;
+                cpu_choosed3 = true;
+                BA3.Visibility = Visibility.Hidden;
+                LNA3.Visibility = Visibility.Visible;
+                NpcLeaveClickEventAndCheckLooseCondition();
+            }
             else if (player_choosed9 && player_choosed5 && !cpu_choosed1)
             {
                 FA1 = true;
                 cpu_choosed1 = true;
                 BA1.Visibility = Visibility.Hidden;
                 LNA1.Visibility = Visibility.Visible;
+                NpcLeaveClickEventAndCheckLooseCondition();
+            }
+            else if (player_choosed5 && player_choosed3 && !cpu_choosed7)
+            {
+                FC1 = true;
+                cpu_choosed7 = true;
+                BC1.Visibility = Visibility.Hidden;
+                LNC1.Visibility = Visibility.Visible;
                 NpcLeaveClickEventAndCheckLooseCondition();
             }
             else if (player_choosed1 && player_choosed9 && !cpu_choosed5)
@@ -387,22 +403,6 @@ namespace TicTacToeWPFspiel
                 LNB1.Visibility = Visibility.Visible;
                 NpcLeaveClickEventAndCheckLooseCondition();
             }
-            else if (player_choosed5 && player_choosed3 && !cpu_choosed7)
-            {
-                FC1 = true;
-                cpu_choosed7 = true;
-                BC1.Visibility = Visibility.Hidden;
-                LNC1.Visibility = Visibility.Visible;
-                NpcLeaveClickEventAndCheckLooseCondition();
-            }
-            else if (player_choosed5 && player_choosed7 && !cpu_choosed3)
-            {
-                FA3 = true;
-                cpu_choosed3 = true;
-                BA3.Visibility = Visibility.Hidden;
-                LNA3.Visibility = Visibility.Visible;
-                NpcLeaveClickEventAndCheckLooseCondition();
-            }
             else if (player_choosed7 && player_choosed3 && !cpu_choosed5)
             {
                 FB2 = true;
@@ -425,14 +425,6 @@ namespace TicTacToeWPFspiel
                 cpu_choosed5 = true;
                 BB2.Visibility = Visibility.Hidden;
                 LNB2.Visibility = Visibility.Visible;
-                NpcLeaveClickEventAndCheckLooseCondition();
-            }
-            else if (player_choosed5 && player_choosed9 && !cpu_choosed1)
-            {
-                FA1 = true;
-                cpu_choosed1 = true;
-                BA1.Visibility = Visibility.Hidden;
-                LNA1.Visibility = Visibility.Visible;
                 NpcLeaveClickEventAndCheckLooseCondition();
             }
             else if (player_choosed7 && player_choosed8 && !cpu_choosed9)
