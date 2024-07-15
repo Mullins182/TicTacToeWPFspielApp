@@ -27,6 +27,10 @@ namespace TicTacToeWPFspiel
         private bool leaveClickEventNow     = false;
         private bool waitForNpc             = false;
 
+        // Festlegen der Maße der Labels im 'PlayGrid' in Pixel!
+        public int playGridLabelWidth      = 130;
+        public int playGridLabelHeight     = 130;
+
         // Diese Variablen bestimmen ob ein Feld von Spieler oder CPU bereits gewählt wurde !
         private bool FA1                    = false;
         private bool FA2                    = false;
@@ -222,6 +226,71 @@ namespace TicTacToeWPFspiel
             LNC1.Background = npcSymbolImage;
             LNC2.Background = npcSymbolImage;
             LNC3.Background = npcSymbolImage;
+
+            PlayGridSizeIni();
+        }
+
+        public void PlayGridSizeIni()
+        {
+            BA1.Width = playGridLabelWidth;
+            BA2.Width = playGridLabelWidth;
+            BA3.Width = playGridLabelWidth;
+            BB1.Width = playGridLabelWidth;
+            BB2.Width = playGridLabelWidth;
+            BB3.Width = playGridLabelWidth;
+            BC1.Width = playGridLabelWidth;
+            BC2.Width = playGridLabelWidth;
+            BC3.Width = playGridLabelWidth;
+
+            LPA1.Width = playGridLabelWidth;
+            LPA2.Width = playGridLabelWidth;
+            LPA3.Width = playGridLabelWidth;
+            LPB1.Width = playGridLabelWidth;
+            LPB2.Width = playGridLabelWidth;
+            LPB3.Width = playGridLabelWidth;
+            LPC1.Width = playGridLabelWidth;
+            LPC2.Width = playGridLabelWidth;
+            LPC3.Width = playGridLabelWidth;
+
+            LNA1.Width = playGridLabelWidth;
+            LNA2.Width = playGridLabelWidth;
+            LNA3.Width = playGridLabelWidth;
+            LNB1.Width = playGridLabelWidth;
+            LNB2.Width = playGridLabelWidth;
+            LNB3.Width = playGridLabelWidth;
+            LNC1.Width = playGridLabelWidth;
+            LNC2.Width = playGridLabelWidth;
+            LNC3.Width = playGridLabelWidth;
+
+            BA1.Height = playGridLabelHeight;
+            BA2.Height = playGridLabelHeight;
+            BA3.Height = playGridLabelHeight;
+            BB1.Height = playGridLabelHeight;
+            BB2.Height = playGridLabelHeight;
+            BB3.Height = playGridLabelHeight;
+            BC1.Height = playGridLabelHeight;
+            BC2.Height = playGridLabelHeight;
+            BC3.Height = playGridLabelHeight;
+
+            LPA1.Height = playGridLabelHeight;
+            LPA2.Height = playGridLabelHeight;
+            LPA3.Height = playGridLabelHeight;
+            LPB1.Height = playGridLabelHeight;
+            LPB2.Height = playGridLabelHeight;
+            LPB3.Height = playGridLabelHeight;
+            LPC1.Height = playGridLabelHeight;
+            LPC2.Height = playGridLabelHeight;
+            LPC3.Height = playGridLabelHeight;
+
+            LNA1.Height = playGridLabelHeight;
+            LNA2.Height = playGridLabelHeight;
+            LNA3.Height = playGridLabelHeight;
+            LNB1.Height = playGridLabelHeight;
+            LNB2.Height = playGridLabelHeight;
+            LNB3.Height = playGridLabelHeight;
+            LNC1.Height = playGridLabelHeight;
+            LNC2.Height = playGridLabelHeight;
+            LNC3.Height = playGridLabelHeight;
         }
 
         private void SpielOptionen_PlayersymbolChanged(object? sender, string e)
