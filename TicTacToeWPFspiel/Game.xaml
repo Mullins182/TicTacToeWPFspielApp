@@ -66,7 +66,7 @@
                 Background="DarkRed" Foreground="LawnGreen" FontFamily="{StaticResource BradleyHandITC}" FontSize="45" Click="Restart_Click" 
                 MouseEnter="restart_MouseEnter" MouseLeave="restart_MouseLeave" Visibility="Hidden"/>
 
-        <Grid x:Name="PlayGrid" Grid.Column="1" Grid.Row="2" Opacity="0.75" Width="390" Height="390" VerticalAlignment="Center">
+        <Grid x:Name="PlayGrid" Grid.Column="1" Grid.Row="2" Opacity="0.75" Width="390" Height="390" VerticalAlignment="Top">
             <Grid.Background>
                 <ImageBrush ImageSource="Images/SpielfeldSnow.png"/>
             </Grid.Background>

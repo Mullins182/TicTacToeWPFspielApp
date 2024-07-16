@@ -43,7 +43,7 @@
 
         <Grid x:Name="MenuGrid" HorizontalAlignment="left" Background="Black" Width="800">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="20*"/>
+                <ColumnDefinition Width="15*"/>
                 <ColumnDefinition Width="15*"/>
                 <ColumnDefinition Width="15*"/>
             </Grid.ColumnDefinitions>
@@ -54,7 +54,7 @@
                     Template="{StaticResource NoMouseOverButtonTemplate}" HorizontalContentAlignment="Center" Background="DarkRed" 
                     Foreground="Yellow" FontWeight="Bold" FontFamily="{StaticResource BradleyHandITC}" FontSize="30" Visibility="Collapsed" 
                     Click="backToGame_Click" MouseEnter="backToGame_MouseEnter" MouseLeave="backToGame_MouseLeave" UseLayoutRounding="True"/>
-            <Button x:Name="FullscreenModeBtn" Opacity="0.80" Content="Fullscreen Mode Off" 
+            <Button x:Name="FullscreenModeBtn" Opacity="0.80" Content="Fullscreen Off" 
                     Template="{StaticResource NoMouseOverButtonTemplate}" HorizontalContentAlignment="Center" Width="auto" Background="DarkRed" 
                     Foreground="Yellow" FontWeight="Bold" FontFamily="{StaticResource BradleyHandITC}" FontSize="30" Visibility="Visible"  
                     UseLayoutRounding="True" Grid.Column="0" Grid.Row="0" MouseEnter="FullscreenModeBtn_MouseEnter" MouseLeave="FullscreenModeBtn_MouseLeave"

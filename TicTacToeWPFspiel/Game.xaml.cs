@@ -28,8 +28,8 @@ namespace TicTacToeWPFspiel
         private bool waitForNpc             = false;
 
         // Festlegen der Maße der Labels im 'PlayGrid' in Pixel!
-        public int playGridLabelWidth      = 130;
-        public int playGridLabelHeight     = 130;
+        public int playGridLabelWidth       = 130;
+        public int playGridLabelHeight      = 130;
 
         // Diese Variablen bestimmen ob ein Feld von Spieler oder CPU bereits gewählt wurde !
         private bool FA1                    = false;
@@ -305,11 +305,11 @@ namespace TicTacToeWPFspiel
             restart.Opacity = 0.45;
             //INFO.BorderBrush = new SolidColorBrush(Colors.Green);
             //INFO.BorderThickness = new Thickness(5);
-            INFO.Content = "You have won !!!";
+            INFO.Content = "You Have Won !!!";
             INFO.Visibility = Visibility.Visible;
             game_ended = true;
             restart.Visibility = Visibility.Visible;
-            PlayerWins?.Invoke(this, "You have won !!!");      // Invoke ist der Trigger !
+            PlayerWins?.Invoke(this, "You Have Won !!!");      // Invoke ist der Trigger !
 
             NpcLeaveClickEventAndCheckLooseCondition();
         }
@@ -320,11 +320,11 @@ namespace TicTacToeWPFspiel
             restart.Opacity = 0.45;
             //INFO.BorderBrush = new SolidColorBrush(Colors.Green);
             //INFO.BorderThickness = new Thickness(5);
-            INFO.Content = "Unfortunately you lost !!!";
+            INFO.Content = "Unfortunately You Lost !!!";
             INFO.Visibility = Visibility.Visible;
             game_ended = true;
             restart.Visibility = Visibility.Visible;
-            GameOver?.Invoke(this, "Unfortunately you lost !!!");
+            GameOver?.Invoke(this, "Unfortunately You Lost !!!");
 
             //leaveClickEventNow = true;
         }
@@ -370,7 +370,7 @@ namespace TicTacToeWPFspiel
                 restart.Opacity = 0.45;
                 //INFO.BorderBrush = new SolidColorBrush(Colors.Green);
                 //INFO.BorderThickness = new Thickness(5);
-                INFO.Content = "Nobody has won !!!";
+                INFO.Content = "Nobody Has Won !!!";
                 INFO.Visibility = Visibility.Visible;
                 game_ended = true;
                 restart.Visibility = Visibility.Visible;
@@ -872,7 +872,7 @@ namespace TicTacToeWPFspiel
                 restart.Opacity = 0.45;
                 //INFO.BorderBrush = new SolidColorBrush(Colors.Green);
                 //INFO.BorderThickness = new Thickness(5);
-                INFO.Content = "Nobody has won !!!";
+                INFO.Content = "Nobody Has Won !!!";
                 INFO.Visibility = Visibility.Visible;
                 game_ended = true;
                 restart.Visibility = Visibility.Visible;
@@ -2070,7 +2070,7 @@ namespace TicTacToeWPFspiel
                 {
                     await Task.Delay(wait_for_snd_played);
 
-                    INFO.Content = "Nobody has won !!!";
+                    INFO.Content = "Nobody Has Won !!!";
                     INFO.Visibility = Visibility.Visible;
                     game_ended = true;
                     restart.Visibility = Visibility.Visible;
