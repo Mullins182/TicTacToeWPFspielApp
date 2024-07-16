@@ -25,6 +25,8 @@ namespace TicTacToeWPFspiel
         public static string Sound          = @"Sounds\Decide.mp3";
         public static string ChooseSound    = @"Sounds\PencilX.wav";
 
+        private bool isFullscreenModeOn     = false;
+
         public SpielOptionen _options       = new(BG_Video);
         public Game _runningGame            = new();
 
@@ -92,6 +94,8 @@ namespace TicTacToeWPFspiel
                 }
             }
 
+            MenuGrid.Width = this.Width;
+
             BackgroundVideo.BeginInit();
             BackgroundVideo.Source = new Uri(BG_Video, UriKind.RelativeOrAbsolute); // Quellangabe für Mediaelement !
             BGmusic.Source = new Uri(BG_Music, UriKind.RelativeOrAbsolute); // Quellangabe für Mediaelement !
@@ -112,12 +116,47 @@ namespace TicTacToeWPFspiel
             Game.ChosenFieldSound           += ChoosedFieldSound;
         }
 
+        private void FullscreenModeBtn_Click(object sender, RoutedEventArgs e)
+        {
+            isFullscreenModeOn  = isFullscreenModeOn ? false : true;
+            this.WindowState    = isFullscreenModeOn ? WindowState.Maximized : WindowState.Normal;
+            this.WindowStyle    = isFullscreenModeOn ? WindowStyle.None : WindowStyle.SingleBorderWindow;
+
+            _runningGame.GameGrid.RowDefinitions[0].Height      = isFullscreenModeOn ? new GridLength(50, GridUnitType.Star) : new GridLength(30, GridUnitType.Star);
+            _runningGame.GameGrid.RowDefinitions[1].Height      = isFullscreenModeOn ? new GridLength(13, GridUnitType.Star) : new GridLength(15, GridUnitType.Star);
+            _runningGame.GameGrid.RowDefinitions[2].Height      = isFullscreenModeOn ? new GridLength(130, GridUnitType.Star) : new GridLength(100, GridUnitType.Star);
+            _runningGame.GameGrid.RowDefinitions[3].Height      = isFullscreenModeOn ? new GridLength(15, GridUnitType.Star) : new GridLength(20, GridUnitType.Star);
+
+            _runningGame.PlayGrid.ColumnDefinitions[0].Width    = isFullscreenModeOn ? new GridLength(167, GridUnitType.Pixel) : new GridLength(130, GridUnitType.Pixel);
+            _runningGame.PlayGrid.ColumnDefinitions[1].Width    = isFullscreenModeOn ? new GridLength(167, GridUnitType.Pixel) : new GridLength(130, GridUnitType.Pixel);
+            _runningGame.PlayGrid.ColumnDefinitions[2].Width    = isFullscreenModeOn ? new GridLength(167, GridUnitType.Pixel) : new GridLength(130, GridUnitType.Pixel);
+
+            _runningGame.PlayGrid.RowDefinitions[0].Height      = isFullscreenModeOn ? new GridLength(167, GridUnitType.Pixel) : new GridLength(130, GridUnitType.Pixel);
+            _runningGame.PlayGrid.RowDefinitions[1].Height      = isFullscreenModeOn ? new GridLength(167, GridUnitType.Pixel) : new GridLength(130, GridUnitType.Pixel);
+            _runningGame.PlayGrid.RowDefinitions[2].Height      = isFullscreenModeOn ? new GridLength(167, GridUnitType.Pixel) : new GridLength(130, GridUnitType.Pixel);
+
+            _runningGame.PlayGrid.Width         = isFullscreenModeOn ? 500 : 390;
+            _runningGame.PlayGrid.Height        = isFullscreenModeOn ? 500 : 390;
+
+            _runningGame.playGridLabelHeight    = isFullscreenModeOn ? 167 : 130;
+            _runningGame.playGridLabelWidth     = isFullscreenModeOn ? 167 : 130;
+
+            _runningGame.GameLabel.Height       = isFullscreenModeOn ? 200 : 180;
+            _runningGame.GameLabel.Width        = isFullscreenModeOn ? 770 : 590;
+            _runningGame.GameLabel.FontSize     = isFullscreenModeOn ? 170 : 120;
+
+            FullscreenModeBtn.Content = isFullscreenModeOn ? "Fullscreen On" : "Fullscreen Off";
+
+            _runningGame.PlayGridSizeIni();
+        }
+
         private void options_Click(object sender, RoutedEventArgs e)
         {
             NavigationFrame.NavigationService.Navigate(_options);
-            options.Visibility = Visibility.Hidden;
-            quitGame.Visibility = Visibility.Hidden;
-            backToGame.Visibility = Visibility.Visible;
+            options.Visibility              = Visibility.Hidden;
+            quitGame.Visibility             = Visibility.Hidden;
+            FullscreenModeBtn.Visibility    = Visibility.Hidden;
+            backToGame.Visibility           = Visibility.Visible;
         }
 
         private void quitGame_Click(object sender, RoutedEventArgs e)
@@ -128,6 +167,7 @@ namespace TicTacToeWPFspiel
         private void backToGame_Click(object sender, RoutedEventArgs e)
         {
             NavigationFrame.NavigationService.Navigate(_runningGame);
+            FullscreenModeBtn.Visibility = Visibility.Visible;
             backToGame.Visibility   = Visibility.Collapsed;
             options.Visibility      = Visibility.Visible;
             quitGame.Visibility     = Visibility.Visible;
@@ -195,6 +235,11 @@ namespace TicTacToeWPFspiel
             //FarbAnimation.Begin(y);
         }
 
+        private void TicTacToeHauptfenster_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            MenuGrid.Width = this.Width;
+        }
+
         private void backToGame_MouseEnter(object sender, System.Windows.Input.MouseEventArgs e)
         {
             ButtonAnimation(backToGame.Name, backToGame);
@@ -203,6 +248,15 @@ namespace TicTacToeWPFspiel
         private void backToGame_MouseLeave(object sender, System.Windows.Input.MouseEventArgs e)
         {
             ButtonReverseAnimation(backToGame.Name, backToGame);
+        }
+        private void FullscreenModeBtn_MouseEnter(object sender, MouseEventArgs e)
+        {
+            ButtonAnimation(FullscreenModeBtn.Name, FullscreenModeBtn);
+        }
+
+        private void FullscreenModeBtn_MouseLeave(object sender, MouseEventArgs e)
+        {
+            ButtonReverseAnimation(FullscreenModeBtn.Name, FullscreenModeBtn);
         }
 
         private void options_MouseEnter(object sender, System.Windows.Input.MouseEventArgs e)
